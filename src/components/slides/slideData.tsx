@@ -313,19 +313,98 @@ export const slides: SlideData[] = [
   {
     id: "solfy-timeline",
     title: "Critical Timeline",
-    component: (props) => (
-      <ProcessSlideTemplate
-        {...props}
-        pillLabel="THE CRITICAL TEN-DAY WINDOW"
-        headline="March 17-27, 2026: From settlement counter-proposal to criminal charges"
-        steps={[
-          { step: "MAR 17", title: "Settlement Proposal", desc: "Investor side submits detailed settlement counter-proposal via Amsterdam & Partners. Demands criminal complaint withdrawal as condition precedent." },
-          { step: "MAR 25", title: "Deadline Letter", desc: "After 8 days of silence, Amsterdam & Partners sends formal deadline letter. States firm will pursue all available remedies if no response by 5 PM GMT." },
-          { step: "MAR 26", title: "Rejection", desc: "NBU rejects criminal complaint withdrawal. References its own procedural powers within the criminal proceedings in the context of settlement negotiations." },
-          { step: "MAR 27", title: "Charges Filed", desc: "Major B.G. Giyasov formally charges Hasanov. Four counts under Article 167(3)(a). Hasanov taken into custody in Tashkent." },
-        ]}
-      />
-    ),
+    component: (props) => {
+      const steps = [
+        { date: "MAR 17", title: "Settlement Proposal", desc: "Investor side submits detailed settlement counter-proposal via Amsterdam & Partners. Demands criminal complaint withdrawal as condition precedent.", accent: false },
+        { date: "MAR 25", title: "Deadline Letter", desc: "After 8 days of silence, Amsterdam & Partners sends formal deadline letter. States firm will pursue all available remedies if no response by 5 PM GMT.", accent: false },
+        { date: "MAR 26", title: "Rejection", desc: "NBU rejects criminal complaint withdrawal. References its own procedural powers within the criminal proceedings in the context of settlement negotiations.", accent: false },
+        { date: "MAR 27", title: "Charges Filed", desc: "Major B.G. Giyasov formally charges Hasanov. Four counts under Article 167(3)(a). Hasanov taken into custody in Tashkent.", accent: true },
+      ];
+      return (
+        <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+          <div className="flex flex-col h-full p-[80px]">
+            <div className="flex items-center justify-between mb-6">
+              <SlidePill label="THE CRITICAL TEN-DAY WINDOW" variant="light" />
+              <OmniStratLogo />
+            </div>
+            <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">
+              March 17-27, 2026: From settlement counter-proposal to criminal charges
+            </h2>
+
+            <div className="flex-1 flex items-center">
+              <div className="w-full relative">
+                {/* Horizontal line */}
+                <div className="absolute left-0 right-0 top-[40px] h-[3px] bg-slide-foreground/10">
+                  <div
+                    className="h-full bg-slide-primary rounded-full"
+                    style={{
+                      animation: "timeline-fill 1.8s ease-out 0.3s forwards",
+                      width: "0%",
+                    }}
+                  />
+                </div>
+
+                <div className="grid grid-cols-4 gap-8 relative">
+                  {steps.map((step, i) => (
+                    <div
+                      key={step.date}
+                      className="flex flex-col items-center text-center"
+                      style={{
+                        animation: `fade-in 0.5s ease-out ${0.4 + i * 0.35}s both`,
+                      }}
+                    >
+                      {/* Node */}
+                      <div
+                        className={`w-[80px] h-[80px] rounded-full flex items-center justify-center text-[18px] font-extrabold tracking-wide relative z-10 ${
+                          step.accent
+                            ? "bg-slide-primary text-white shadow-[0_0_30px_hsl(var(--slide-primary)/0.4)]"
+                            : "bg-white border-[3px] border-slide-primary text-slide-primary"
+                        }`}
+                        style={{
+                          animation: `scale-in 0.4s ease-out ${0.3 + i * 0.35}s both`,
+                        }}
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </div>
+
+                      {/* Date badge */}
+                      <div
+                        className={`mt-5 px-5 py-2 rounded-full text-[16px] font-bold tracking-wider ${
+                          step.accent
+                            ? "bg-slide-primary text-white"
+                            : "bg-slide-primary/10 text-slide-primary"
+                        }`}
+                      >
+                        {step.date}
+                      </div>
+
+                      {/* Title */}
+                      <h3 className={`mt-4 text-[22px] font-bold leading-tight ${
+                        step.accent ? "text-slide-primary" : "text-slide-foreground"
+                      }`}>
+                        {step.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="mt-3 text-[16px] text-slide-muted leading-relaxed max-w-[360px]">
+                        {step.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <style>{`
+            @keyframes timeline-fill {
+              from { width: 0%; }
+              to { width: 100%; }
+            }
+          `}</style>
+        </SlideLayout>
+      );
+    },
   },
   // 6. NBU's Irreconcilable Dual Role
   {
