@@ -596,7 +596,7 @@ export const slides: SlideData[] = [
                       }`}>
                         {String(i + 1).padStart(2, "0")}
                       </div>
-                      <div className={`mt-5 px-5 py-2 rounded-full text-[16px] font-bold tracking-wider ${
+                      <div className={`mt-5 px-5 py-2 rounded-full text-[14px] font-bold tracking-wider ${
                         step.accent ? "bg-slide-primary text-white" : "bg-slide-primary/10 text-slide-primary"
                       }`}>
                         {step.date}
