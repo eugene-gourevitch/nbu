@@ -656,7 +656,7 @@ export const CaseStudyDarkTemplate = ({
           <div className={`mt-10 grid grid-cols-${cards.length > 3 ? 2 : cards.length} gap-8`}>
             {cards.map((card) => (
               <div key={card.title} className="bg-white/10 backdrop-blur rounded-2xl p-8">
-                <h3 className="text-[26px] font-bold mb-3">{card.title}</h3>
+                <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
                 <p className="text-[19px] text-white/70 leading-relaxed">{card.desc}</p>
               </div>
             ))}
