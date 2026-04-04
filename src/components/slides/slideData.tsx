@@ -860,7 +860,7 @@ export const slides: SlideData[] = [
             A contractual dispute repackaged as criminal prosecution
           </h2>
           <div className="flex-1 grid grid-cols-3 gap-12">
-            <div>
+            <div style={{ animation: "slide-up 0.5s ease-out 0.2s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">01</div>
               <h3 className="text-[24px] font-bold mb-3">Allegation: Purposeless Squandering</h3>
               <p className="text-[19px] text-slide-muted leading-relaxed">
