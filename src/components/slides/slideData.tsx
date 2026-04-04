@@ -92,7 +92,7 @@ const disclaimerSlide: SlideData = {
           </h2>
           <div className="mt-10 space-y-6 text-[19px] leading-[1.7] text-slide-muted">
             <div>
-              <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
+              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
               <p>This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC and Amsterdam & Partners LLP. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
             </div>
             <div>
