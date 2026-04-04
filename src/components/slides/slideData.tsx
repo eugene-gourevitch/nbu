@@ -765,7 +765,7 @@ export const slides: SlideData[] = [
                 { num: "02", title: "No Risk of Evidence Tampering", text: "All evidence is documentary: bank records, contracts (No. 289/37), transfer statements. These are held by NBU and state institutions, entirely beyond Hasanov's ability to alter or destroy." },
                 { num: "03", title: "No Personal Enrichment Alleged", text: "The resolution charges \"purposeless squandering\" of company funds but identifies no personal enrichment, no offshore transfers, no asset concealment. All funds flowed through documented corporate channels to 2,134 contractual counterparties." },
               ].map((item) => (
-                <div key={item.num} className="bg-slide-surface rounded-2xl p-7">
+                <div key={item.num} className="bg-slide-surface rounded-2xl p-7" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[17px] font-bold text-slide-primary">{item.num}</div>
                     <h3 className="text-[22px] font-bold">{item.title}</h3>
