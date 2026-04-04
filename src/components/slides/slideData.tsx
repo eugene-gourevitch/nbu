@@ -380,7 +380,7 @@ export const slides: SlideData[] = [
 
           <div className="flex gap-12 flex-1">
             {/* Left column */}
-            <div className="w-[35%] flex flex-col">
+            <div className="w-[35%] flex flex-col anim-slide-left stagger-2">
               <div className="bg-slide-surface rounded-2xl p-8 flex flex-col items-center mb-6">
                 <img src={nbuLogo} alt="NBU Logo" className="w-[120px] h-[120px] object-contain mb-4" />
                 <h3 className="text-[24px] font-bold text-center leading-tight">National Bank for Foreign Economic Activity</h3>
