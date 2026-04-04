@@ -834,7 +834,7 @@ export const TrackRecordTemplate = ({
         {cards.map((card) => (
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
             <div className="w-8 h-1 bg-slide-primary rounded-full mb-3" />
-            <p className="text-[16px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
+            <p className="text-[14px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
             <p className="text-[19px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>
             <p className="text-[15px] text-slide-muted/70 mt-4 pt-4 border-t border-slide-foreground/8">{card.tag}</p>
