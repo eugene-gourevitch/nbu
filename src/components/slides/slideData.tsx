@@ -225,6 +225,9 @@ export const slides: SlideData[] = [
                 <p className="text-[19px] text-slide-muted leading-relaxed">
                   <span className="font-bold text-slide-foreground">Robert Amsterdam</span><br />robert.amsterdam@amsterdamandpartners.com
                 </p>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
+                  <a href="https://www.amsterdamandpartners.com" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">amsterdamandpartners.com</a>
+                </p>
               </div>
             </div>
           </div>
