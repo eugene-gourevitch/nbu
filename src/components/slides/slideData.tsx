@@ -1036,7 +1036,7 @@ export const slides: SlideData[] = [
           </div>
           <div className="mt-6 bg-slide-foreground text-white rounded-2xl px-8 py-5 flex items-center justify-between">
             <p className="text-[17px] font-semibold">Coverage is accelerating. Additional media placements are scheduled across tier-1 international outlets.</p>
-            <span className="text-[28px] font-bold text-slide-primary ml-6 shrink-0">→</span>
+            <span className="text-[24px] font-bold text-slide-primary ml-6 shrink-0">→</span>
           </div>
         </div>
       </SlideLayout>
