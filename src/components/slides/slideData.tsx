@@ -1059,7 +1059,7 @@ export const slides: SlideData[] = [
           </h2>
           <div className="flex-1 grid grid-cols-3 gap-12">
             <div>
-              <div className="text-[72px] font-extrabold text-slide-primary/15 leading-none mb-3">01</div>
+              <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">01</div>
               <h3 className="text-[28px] font-bold mb-3">ICSID BIT Arbitration</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 Investment treaty claim under the Russia-Uzbekistan bilateral investment treaty is imminent. Will invoke ICSID jurisdiction for violations of fair and equitable treatment, protection against expropriation, and full protection and security. Bluestone independent valuation: <span className="font-bold text-slide-foreground">$42-52 million</span>. This is not a nuisance claim.
