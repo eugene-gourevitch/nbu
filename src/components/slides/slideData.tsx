@@ -928,7 +928,7 @@ export const slides: SlideData[] = [
                   "BSA/AML obligations under FinCEN (31 CFR 1010.610)",
                   "EU 6AMLD Article 6(1)(c): aiding and abetting liability extends to correspondent channels",
                 ].map((item) => (
-                  <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[17px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
