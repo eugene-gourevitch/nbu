@@ -41,7 +41,13 @@ export const TitleSlideTemplate = ({
               <TypewriterText text={subtitleTyped} speed={20} delay={600} />
             </p>
           )}
-          {meta && <p className="mt-6 text-[16px] text-slide-muted/60 tracking-widest uppercase">{meta}</p>}
+          {meta && (
+            <div className="mt-6 text-[16px] text-slide-muted/60 tracking-widest uppercase leading-relaxed">
+              {meta.split('\n').map((line, i) => (
+                <div key={i}>{line}</div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <div className="w-[45%] flex items-center justify-center bg-slide-surface">
