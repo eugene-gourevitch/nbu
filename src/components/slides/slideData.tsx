@@ -170,7 +170,7 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-4">
             Why this briefing exists
           </h2>
-          <p className="text-[20px] text-slide-muted leading-relaxed max-w-[1100px] mb-12">
+          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1100px] mb-12">
             A fintech executive detained in Uzbekistan under circumstances that raise material concerns about rule of law and the investment climate.
           </p>
           <div className="grid grid-cols-3 gap-8 flex-1">
