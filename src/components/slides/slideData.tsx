@@ -1073,7 +1073,7 @@ export const slides: SlideData[] = [
               </p>
             </div>
             <div>
-              <div className="text-[72px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
+              <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
               <h3 className="text-[28px] font-bold mb-3">International Advocacy</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 Coordinated engagement with IFIs, rating agencies, correspondent banks, eurobond stakeholders, and international media to ensure transparency and accountability.
