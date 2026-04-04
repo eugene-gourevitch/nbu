@@ -701,9 +701,9 @@ export const ThankYouTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides} showConfidentiality={false}>
     <div className="flex flex-col items-center justify-center h-full text-center p-[80px]">
       <OmniStratLogo className="mb-16" />
-      <h2 className="text-[100px] font-extrabold leading-none tracking-tight text-slide-primary">THANK YOU</h2>
-      <p className="mt-8 text-[28px] text-slide-muted max-w-[700px]">{message}</p>
-      <div className="mt-16 flex gap-16 text-[20px] text-slide-muted">
+      <h2 className="text-[96px] font-extrabold leading-none tracking-tight text-slide-primary">THANK YOU</h2>
+      <p className="mt-8 text-[22px] text-slide-muted max-w-[700px]">{message}</p>
+      <div className="mt-16 flex gap-16 text-[19px] text-slide-muted">
         {contactItems.map((item) => (
           <span key={item}>{item}</span>
         ))}
