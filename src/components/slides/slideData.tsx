@@ -368,10 +368,10 @@ export const slides: SlideData[] = [
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6 mb-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
+                <h4 className="text-[22px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
                 <div className="space-y-3">
                   <div>
-                    <div className="flex justify-between text-[17px] font-semibold mb-1">
+                    <div className="flex justify-between text-[19px] font-semibold mb-1">
                       <span>Fund for Reconstruction & Development</span>
                       <span className="text-slide-primary">59.25%</span>
                     </div>
@@ -380,7 +380,7 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                   <div>
-                    <div className="flex justify-between text-[17px] font-semibold mb-1">
+                    <div className="flex justify-between text-[19px] font-semibold mb-1">
                       <span>Ministry of Economy & Finance</span>
                       <span className="text-slide-primary">40.75%</span>
                     </div>
@@ -389,12 +389,12 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                 </div>
-                <p className="text-[15px] text-slide-muted mt-3">100% state-owned. Total authorized capital: UZS 16.7 trillion.</p>
+                <p className="text-[17px] text-slide-muted mt-3">100% state-owned. Total authorized capital: UZS 16.7 trillion.</p>
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
-                <div className="space-y-2 text-[17px]">
+                <h4 className="text-[22px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
+                <div className="space-y-2 text-[19px]">
                   <div className="flex justify-between"><span className="text-slide-muted">S&P</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Fitch</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Moody's</span><span className="font-bold">Ba3 (stable)</span></div>
