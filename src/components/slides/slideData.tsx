@@ -768,7 +768,7 @@ export const slides: SlideData[] = [
                     <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[17px] font-bold text-slide-primary">{item.num}</div>
                     <h3 className="text-[22px] font-bold">{item.title}</h3>
                   </div>
-                  <p className="text-[18px] text-slide-muted leading-relaxed">{item.text}</p>
+                  <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
