@@ -426,7 +426,7 @@ export const slides: SlideData[] = [
             {/* Right column */}
             <div className="flex-1 flex flex-col gap-6">
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-4">Management Board</h4>
+                <h4 className="text-[19px] font-bold text-slide-primary mb-4">Management Board</h4>
                 <div className="space-y-3">
                   {[
                     { name: "Alisher Mirsoatov", role: "Chairman (since Nov 2017)", note: "Publicly identified as source of threats to investor" },
