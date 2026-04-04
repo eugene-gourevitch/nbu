@@ -1010,7 +1010,7 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold leading-[1.05] tracking-tight mb-2">
             The world is watching
           </h2>
-          <p className="text-[18px] text-slide-muted mb-10">
+          <p className="text-[17px] text-slide-muted mb-10">
             International media spotlight on NBU's conduct and Uzbekistan's investment climate. Coverage ongoing.
           </p>
           <div className="grid grid-cols-2 gap-6 flex-1">
