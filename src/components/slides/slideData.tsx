@@ -230,7 +230,7 @@ export const slides: SlideData[] = [
               </div>
             </div>
           </div>
-          <p className="text-[15px] text-slide-muted/60 mt-6 text-center">
+          <p className="text-[14px] text-slide-muted/60 mt-6 text-center">
             Prepared jointly by Amsterdam & Partners LLP (London / Washington, DC) and OmniStrat Group LLC (Dubai / Miami)
           </p>
         </div>
