@@ -593,18 +593,20 @@ export const slides: SlideData[] = [
                     <div key={step.date} className="flex flex-col items-center text-center">
                       <div className={`w-[80px] h-[80px] rounded-full flex items-center justify-center text-[17px] font-extrabold tracking-wide relative z-10 ${
                         step.accent ? "bg-slide-primary text-white shadow-[0_0_30px_hsl(var(--slide-primary)/0.4)]" : "bg-white border-[3px] border-slide-primary text-slide-primary"
-                      }`}>
+                      }`} style={{ animation: `scale-in 0.4s ease-out ${0.3 + i * 0.35}s both` }}>
                         {String(i + 1).padStart(2, "0")}
                       </div>
                       <div className={`mt-5 px-5 py-2 rounded-full text-[14px] font-bold tracking-wider ${
                         step.accent ? "bg-slide-primary text-white" : "bg-slide-primary/10 text-slide-primary"
-                      }`}>
+                      }`} style={{ animation: `fade-in 0.3s ease-out ${0.5 + i * 0.35}s both` }}>
                         {step.date}
                       </div>
-                      <h3 className={`mt-4 text-[22px] font-bold leading-tight ${step.accent ? "text-slide-primary" : "text-slide-foreground"}`}>
-                        {step.title}
-                      </h3>
-                      <p className="mt-3 text-[17px] text-slide-muted leading-relaxed max-w-[360px]">{step.desc}</p>
+                      <div style={{ animation: `slide-up 0.4s ease-out ${0.6 + i * 0.35}s both` }}>
+                        <h3 className={`mt-4 text-[22px] font-bold leading-tight ${step.accent ? "text-slide-primary" : "text-slide-foreground"}`}>
+                          {step.title}
+                        </h3>
+                        <p className="mt-3 text-[17px] text-slide-muted leading-relaxed max-w-[360px]">{step.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
