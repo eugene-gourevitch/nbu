@@ -166,7 +166,7 @@ export const MissionDarkTemplate = ({
   <SlideLayout variant="dark" backgroundImage={backgroundImage} slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col items-center justify-center h-full text-center p-[80px]">
       {pillLabel && <SlidePill label={pillLabel} variant="glass" />}
-      <h2 className={`${pillLabel ? "mt-10" : ""} text-[68px] font-semibold leading-[1.2] max-w-[1400px]`}>
+      <h2 className={`${pillLabel ? "mt-10" : ""} text-[64px] font-semibold leading-[1.2] max-w-[1400px]`}>
         {headline}
       </h2>
     </div>
