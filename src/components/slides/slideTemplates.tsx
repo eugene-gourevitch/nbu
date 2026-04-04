@@ -231,8 +231,8 @@ export const TwoColumnNumberedTemplate = ({
         {items.map((item) => (
           <div key={item.num}>
             <div className="text-[72px] font-extrabold text-slide-primary/15 leading-none mb-3">{item.num}</div>
-            <h3 className="text-[28px] font-bold mb-3">{item.title}</h3>
-            <p className="text-[20px] text-slide-muted leading-relaxed">{item.desc}</p>
+            <h3 className="text-[30px] font-bold mb-3">{item.title}</h3>
+            <p className="text-[22px] text-slide-muted leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>

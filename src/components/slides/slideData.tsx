@@ -1078,11 +1078,6 @@ export const slides: SlideData[] = [
             title: "International Advocacy",
             desc: "Coordinated engagement with IFIs, rating agencies, correspondent banks, eurobond stakeholders, and international media to ensure transparency and accountability.",
           },
-          {
-            num: "04",
-            title: "Valuation",
-            desc: "Independent valuation (Bluestone): USD 42-52 million fair value of Poletaev's 50% stake in Solfy CA.",
-          },
         ]}
       />
     ),
