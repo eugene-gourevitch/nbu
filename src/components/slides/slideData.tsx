@@ -414,7 +414,7 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                 </div>
-                <p className="text-[16px] text-slide-muted mt-3">100% state-owned. Total authorized capital: UZS 16.7 trillion.</p>
+                <p className="text-[16px] text-slide-muted mt-3">100% of shares held by state entities. Total authorized capital: UZS 16.7 trillion.</p>
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6">
