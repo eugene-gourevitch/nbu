@@ -860,8 +860,8 @@ export const slides: SlideData[] = [
           <div className="flex-1 grid grid-cols-3 gap-12">
             <div>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">01</div>
-              <h3 className="text-[26px] font-bold mb-3">Allegation: Purposeless Squandering</h3>
-              <p className="text-[20px] text-slide-muted leading-relaxed">
+              <h3 className="text-[24px] font-bold mb-3">Allegation: Purposeless Squandering</h3>
+              <p className="text-[19px] text-slide-muted leading-relaxed">
                 Charges allege misappropriation of ~17 billion soums in charter capital. Yet the prosecution's own evidence describes operational expenditures: staff salaries, technology development, merchant acquisition. Normal costs of running a fintech startup.
               </p>
             </div>
