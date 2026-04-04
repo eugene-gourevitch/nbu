@@ -878,9 +878,9 @@ export const NextStepsTemplate = ({
       <div className="mt-8 flex items-end justify-between">
         <div>
           <p className="text-[24px] font-bold">{contactName}</p>
-          <p className="text-[18px] text-slide-primary font-semibold">{contactRole}</p>
-          <p className="text-[18px] text-slide-muted mt-2">{contactDetails}</p>
-          {contactAddress && <p className="text-[16px] text-slide-muted">{contactAddress}</p>}
+          <p className="text-[17px] text-slide-primary font-semibold">{contactRole}</p>
+          <p className="text-[17px] text-slide-muted mt-2">{contactDetails}</p>
+          {contactAddress && <p className="text-[14px] text-slide-muted">{contactAddress}</p>}
         </div>
         <OmniStratLogo size={50} />
       </div>
