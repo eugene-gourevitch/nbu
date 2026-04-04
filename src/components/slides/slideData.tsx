@@ -290,7 +290,7 @@ export const slides: SlideData[] = [
             items: [
               "Director of Solfy CA LLC, the only individual charged",
               "Currently held in custody in Tashkent",
-              "Charged under Article 167(3)(a) -- embezzlement in large amounts",
+              "Charged under Article 167(3)(a), embezzlement in large amounts",
               "No personal enrichment alleged",
               "Lowest-ranking individual in the corporate chain",
             ],
