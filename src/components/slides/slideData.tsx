@@ -327,9 +327,9 @@ export const slides: SlideData[] = [
               <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Capital Markets Presence</h3>
               <div className="space-y-4 overflow-hidden">
                 <div className="bg-white rounded-xl p-5">
-                  <p className="text-[13px] text-slide-muted tracking-[0.15em] uppercase mb-1">LSE Eurobond</p>
-                  <p className="text-[18px] font-bold">2020 issuance, Reg S / 144A</p>
-                  <p className="text-[15px] text-slide-muted mt-1">Outstanding obligations to international bondholders</p>
+                  <p className="text-[14px] text-slide-muted tracking-[0.15em] uppercase mb-1">LSE Eurobond</p>
+                  <p className="text-[17px] font-bold">2020 issuance, Reg S / 144A</p>
+                  <p className="text-[14px] text-slide-muted mt-1">Outstanding obligations to international bondholders</p>
                 </div>
                 <div>
                   <p className="text-[13px] text-slide-primary font-bold tracking-[0.15em] uppercase mb-2">Correspondent Banks</p>
