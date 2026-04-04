@@ -449,7 +449,7 @@ export const slides: SlideData[] = [
                 </div>
               </div>
 
-              <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5">
+              <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5 anim-fade-up stagger-5">
                 <p className="text-[19px] text-slide-foreground leading-relaxed">
                   <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture's director.
                 </p>
