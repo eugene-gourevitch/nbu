@@ -15,8 +15,6 @@ import {
 import SlideLayout from "./SlideLayout";
 import SlidePill from "./SlidePill";
 import OmniStratLogo from "./OmniStratLogo";
-import hero3d from "@/assets/hero-3d.jpg";
-import missionBg from "@/assets/mission-bg.jpg";
 import detentionCell from "@/assets/uzbek-detention-cell.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
 import uktamPhoto from "@/assets/uktam-photo.jpg";
