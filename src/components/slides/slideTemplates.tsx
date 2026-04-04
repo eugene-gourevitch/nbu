@@ -560,10 +560,10 @@ export const TeamSlideTemplate = ({
                 <img src={person.photo} alt={person.name} className="w-full h-full object-cover" />
               )}
             </div>
-            <h3 className="text-[26px] font-bold">{person.name}</h3>
-            <p className="text-[20px] text-slide-primary font-semibold">{person.role}</p>
+            <h3 className="text-[24px] font-bold">{person.name}</h3>
+            <p className="text-[19px] text-slide-primary font-semibold">{person.role}</p>
             {person.bio && <p className="text-[17px] text-slide-muted mt-2 leading-relaxed">{person.bio}</p>}
-            {person.specialty && <p className="text-[18px] text-slide-muted mt-1">{person.specialty}</p>}
+            {person.specialty && <p className="text-[17px] text-slide-muted mt-1">{person.specialty}</p>}
           </div>
         ))}
       </div>
