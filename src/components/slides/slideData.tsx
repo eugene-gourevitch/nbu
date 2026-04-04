@@ -924,10 +924,10 @@ export const slides: SlideData[] = [
               <h3 className="text-[24px] font-bold mb-3">Correspondent Banks</h3>
               <ul className="space-y-3 flex-1">
                 {[
-                  "Wolfsberg Group CBDDQ: \"Adverse Information Screening\" section requires EDD on governance red flags",
-                  "OCC Bulletin 2016-32: foreign correspondent banking risk management requirements",
+                  "Wolfsberg CBDDQ: adverse information screening requires EDD",
+                  "OCC Bulletin 2016-32: correspondent banking risk management",
                   "BSA/AML obligations under FinCEN (31 CFR 1010.610)",
-                  "EU 6AMLD Article 6(1)(c): aiding and abetting liability extends to correspondent channels",
+                  "EU 6AMLD Art. 6(1)(c): aiding liability via correspondent channels",
                 ].map((item) => (
                   <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
