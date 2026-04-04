@@ -511,7 +511,7 @@ export const MultiColumnTableTemplate = ({
       <div className={`flex-1 grid grid-cols-${columns.length} gap-4`}>
         {columns.map((col) => (
           <div key={col.title} className="bg-slide-surface rounded-2xl p-6">
-            <h3 className="text-[22px] font-bold mb-4 text-slide-primary">{col.title}</h3>
+            <h3 className="text-[24px] font-bold mb-4 text-slide-primary">{col.title}</h3>
             <ul className="space-y-2">
               {col.items.map((item) => (
                 <li key={item} className="text-[17px] text-slide-muted leading-relaxed">&#8226; {item}</li>
