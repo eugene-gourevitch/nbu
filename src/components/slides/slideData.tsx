@@ -1054,7 +1054,7 @@ export const slides: SlideData[] = [
             <SlidePill label="LEGAL REMEDIES IN PROGRESS" />
             <OmniStratLogo />
           </div>
-          <h2 className="text-[48px] font-extrabold leading-[1.1] tracking-tight mb-16">
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">
             Three-track legal and advocacy strategy
           </h2>
           <div className="flex-1 grid grid-cols-3 gap-12">
