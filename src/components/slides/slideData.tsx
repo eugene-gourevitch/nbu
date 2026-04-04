@@ -703,7 +703,7 @@ export const slides: SlideData[] = [
                     { platform: "Telegram", handle: "@free_uktam_hasanov", url: "https://t.me/free_uktam_hasanov", icon: <Send size={20} /> },
                     { platform: "Threads", handle: "@free_uktam_hasanov", url: "https://www.threads.com/@free_uktam_hasanov", icon: <AtSign size={20} /> },
                     { platform: "TikTok", handle: "@hasanov.defense.i", url: "https://www.tiktok.com/@hasanov.defense.i", icon: <Music size={20} /> },
-                  ].map((link) => (
+                  ].map((link, i) => (
                     <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg px-4 py-3 transition-colors" style={{ animation: `fade-in 0.3s ease-out ${0.6 + i * 0.08}s both` }}>
                       <span className="text-slide-primary w-8 flex justify-center">{link.icon}</span>
