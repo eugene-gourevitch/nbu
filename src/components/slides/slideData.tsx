@@ -502,10 +502,10 @@ export const slides: SlideData[] = [
               </ul>
             </div>
             {/* Hasanov */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col border-2 border-red-500/20">
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col border-2 border-red-500/20 anim-scale-in stagger-3">
               <div className="flex items-center gap-5 mb-6">
                 <div className="relative">
-                  <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-red-500/30">
+                  <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-red-500/30" style={{ animation: "scale-in 0.4s ease-out 0.7s both" }}>
                     <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">
