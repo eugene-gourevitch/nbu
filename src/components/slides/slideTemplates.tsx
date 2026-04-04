@@ -37,7 +37,7 @@ export const TitleSlideTemplate = ({
             {subtitle}
           </p>
           {subtitleTyped && (
-            <p className="mt-4 text-[26px] font-medium text-slide-primary max-w-[640px] leading-snug tracking-tight">
+            <p className="mt-4 text-[22px] font-medium text-slide-primary max-w-[640px] leading-snug tracking-tight">
               <TypewriterText text={subtitleTyped} speed={20} delay={600} />
             </p>
           )}
