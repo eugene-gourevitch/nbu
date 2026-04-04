@@ -143,8 +143,8 @@ export const MissionWhiteTemplate = ({
       <div className={`grid grid-cols-${cards.length} gap-6`}>
         {cards.map((item) => (
           <div key={item.title} className="bg-slide-surface rounded-2xl p-8">
-            <h3 className="text-[26px] font-bold mb-2">{item.title}</h3>
-            <p className="text-[20px] text-slide-muted">{item.desc}</p>
+            <h3 className="text-[24px] font-bold mb-2">{item.title}</h3>
+            <p className="text-[19px] text-slide-muted">{item.desc}</p>
           </div>
         ))}
       </div>
