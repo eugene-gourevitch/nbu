@@ -1115,7 +1115,7 @@ export const slides: SlideData[] = [
               href="https://calendly.com/eugene-gourevitch-omnistratgroup/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full max-w-[1200px] flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl px-10 py-5 mb-10 transition-colors group"
+              className="w-full max-w-[1200px] flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
               <span className="text-[19px] font-bold">Schedule a Briefing</span>
