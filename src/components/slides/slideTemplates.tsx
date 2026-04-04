@@ -337,7 +337,7 @@ export const ServicesGridTemplate = ({
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
             <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-            {card.desc && <p className="text-[20px] text-slide-muted leading-relaxed">{card.desc}</p>}
+            {card.desc && <p className="text-[19px] text-slide-muted leading-relaxed">{card.desc}</p>}
             {card.items && (
               <ul className="space-y-3">
                 {card.items.map((item) => (
