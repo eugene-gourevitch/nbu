@@ -97,9 +97,9 @@ export const slides: SlideData[] = [
               Confidentiality Statement & Disclaimer
             </h2>
 
-            <div className="mt-10 space-y-8 text-[20px] leading-[1.7] text-slide-muted">
+            <div className="mt-10 space-y-8 text-[22px] leading-[1.7] text-slide-muted">
               <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
+                <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
                 <p>
                   This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without the prior written consent of OmniStrat Group LLC. Unauthorised disclosure, copying, or distribution of this material is strictly prohibited and may result in legal action.
                 </p>
