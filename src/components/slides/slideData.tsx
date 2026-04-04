@@ -971,7 +971,7 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold mt-6 leading-tight max-w-[1400px]">
             The Solfy case is not an isolated incident
           </h2>
-          <p className="text-[20px] text-slide-muted mt-3 max-w-[1200px]">
+          <p className="text-[19px] text-slide-muted mt-3 max-w-[1200px]">
             A pattern of investor-hostile actions undermines Uzbekistan's reform credibility
           </p>
           <div className="grid grid-cols-2 gap-8 mt-10 flex-1">
