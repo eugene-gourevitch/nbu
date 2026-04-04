@@ -823,7 +823,7 @@ export const slides: SlideData[] = [
         }
         rightContent={
           <div>
-            <h3 className="text-[32px] font-bold mb-6">Not Charged</h3>
+            <h3 className="text-[24px] font-bold mb-6">Not Charged</h3>
             <ul className="space-y-5">
               {[
                 "Foreign co-founders who directed corporate strategy",
