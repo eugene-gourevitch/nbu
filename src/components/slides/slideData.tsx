@@ -12,8 +12,12 @@ import {
   ComparisonTemplate,
   ContactSlideTemplate,
 } from "./slideTemplates";
+import SlideLayout from "./SlideLayout";
+import SlidePill from "./SlidePill";
+import OmniStratLogo from "./OmniStratLogo";
 import hero3d from "@/assets/hero-3d.jpg";
 import missionBg from "@/assets/mission-bg.jpg";
+import nbuLogo from "@/assets/nbu-logo.png";
 
 export interface SlideData {
   id: string;
