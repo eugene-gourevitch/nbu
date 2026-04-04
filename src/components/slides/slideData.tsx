@@ -1021,8 +1021,8 @@ export const slides: SlideData[] = [
               { source: "PR Newswire / Investing.com", date: "April 2026", quote: "Coverage calls for cessation of irregular detentions and adherence to international legal standards", detail: "Amsterdam & Partners formal press release distributed globally via PR Newswire. Covered by Investing.com, Yahoo Finance, and financial wire services.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
               { source: "UA.NEWS", date: "2025-2026", quote: "Ongoing reporting on NBU leadership's role in the dispute", detail: "Coverage naming specific individuals. Additional reporting across Russian-language Telegram channels and international outlets. (Source attribution maintained.)", color: "border-l-red-500", bg: "bg-red-50" },
               { source: "UzDaily.uz", date: "February 2026", quote: "Reports on Poletaev-Solfy legal engagement with NBU", detail: "Domestic Uzbek media reporting on investor engagement of Amsterdam & Partners LLP, signaling the dispute has entered the international arena.", color: "border-l-amber-500", bg: "bg-amber-50" },
-            ].map((item) => (
-              <div key={item.source} className={`${item.bg} border-l-4 ${item.color} rounded-r-2xl p-7 flex flex-col justify-between`}>
+            ].map((item, i) => (
+              <div key={item.source} className={`${item.bg} border-l-4 ${item.color} rounded-r-2xl p-7 flex flex-col justify-between`} style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-[24px] font-extrabold tracking-tight">{item.source}</span>
