@@ -106,7 +106,7 @@ export const slides: SlideData[] = [
               </div>
 
               <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
+                <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
                 <p>
                   This presentation has been prepared by OmniStrat Group LLC for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation to take any action. While every effort has been made to ensure the accuracy and completeness of the information presented, OmniStrat Group LLC makes no representations or warranties, express or implied, regarding the accuracy, reliability, or completeness of the content. Recipients should seek independent professional advice before making any decisions based on the information contained in this document.
                 </p>
