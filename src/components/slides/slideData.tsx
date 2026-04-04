@@ -907,10 +907,10 @@ export const slides: SlideData[] = [
             <OmniStratLogo />
           </div>
 
-          <h2 className="text-[36px] font-bold mt-6 leading-tight max-w-[1400px]">
+          <h2 className="text-[42px] font-extrabold mt-6 leading-tight max-w-[1400px]">
             The Solfy case is not an isolated incident
           </h2>
-          <p className="text-[20px] text-slide-muted mt-3 max-w-[1200px]">
+          <p className="text-[22px] text-slide-muted mt-3 max-w-[1200px]">
             A pattern of investor-hostile actions undermines Uzbekistan's reform credibility
           </p>
 
@@ -946,16 +946,16 @@ export const slides: SlideData[] = [
                 className="bg-slide-surface rounded-2xl p-8 flex flex-col"
                 style={{ animation: `fade-in 0.5s ease-out ${0.3 + i * 0.15}s both` }}
               >
-                <span className={`text-[13px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`}>
+                <span className={`text-[15px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`}>
                   {item.tag}
                 </span>
-                <h3 className="text-[26px] font-bold mb-3">{item.title}</h3>
-                <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
+                <h3 className="text-[28px] font-bold mb-3">{item.title}</h3>
+                <p className="text-[21px] text-slide-muted leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
 
-          <p className="text-[17px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
+          <p className="text-[19px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
             <span className="font-bold text-slide-foreground">Source:</span> NBU Chairman Mirsoatov publicly identified as source of threats to international investors (UA.NEWS, IBTimes)
           </p>
         </div>
