@@ -728,12 +728,12 @@ export const slides: SlideData[] = [
     title: "Dramatic Statement",
     component: (props) => (
       <SlideLayout variant="dark" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" style={{ animation: "slow-zoom 12s ease-out forwards" }}>
           <img src={detentionCell} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-[80px]">
-          <h2 className="text-[64px] font-semibold leading-[1.2] max-w-[1400px] text-white">
+          <h2 className="text-[64px] font-semibold leading-[1.2] max-w-[1400px] text-white" style={{ animation: "slide-up 1.2s ease-out 0.3s both" }}>
             An Uzbek citizen held as human collateral — detained not for justice, but as leverage. This is not prosecution. It is state-sponsored coercion.
           </h2>
         </div>
