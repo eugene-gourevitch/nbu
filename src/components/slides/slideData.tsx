@@ -355,7 +355,7 @@ export const slides: SlideData[] = [
                 ))}
               </div>
               <div className="mt-auto pt-4 border-t border-slide-foreground/8">
-                <p className="text-[15px] text-slide-foreground">
+                <p className="text-[14px] text-slide-foreground">
                   <span className="font-bold text-red-600">Key fact:</span> NBU holds a 5% equity stake in Solfy CA while acting as the criminal complainant against its director.
                 </p>
               </div>
