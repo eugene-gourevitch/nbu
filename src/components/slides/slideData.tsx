@@ -604,7 +604,7 @@ export const slides: SlideData[] = [
                       <h3 className={`mt-4 text-[22px] font-bold leading-tight ${step.accent ? "text-slide-primary" : "text-slide-foreground"}`}>
                         {step.title}
                       </h3>
-                      <p className="mt-3 text-[18px] text-slide-muted leading-relaxed max-w-[360px]">{step.desc}</p>
+                      <p className="mt-3 text-[17px] text-slide-muted leading-relaxed max-w-[360px]">{step.desc}</p>
                     </div>
                   ))}
                 </div>
