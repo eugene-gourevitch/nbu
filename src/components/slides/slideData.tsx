@@ -19,7 +19,7 @@ import hero3d from "@/assets/hero-3d.jpg";
 import missionBg from "@/assets/mission-bg.jpg";
 import detentionCell from "@/assets/uzbek-detention-cell.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
-import uktamPhoto from "@/assets/uktam-photo.png";
+import uktamPhoto from "@/assets/uktam-photo.jpg";
 import mirsoatovPhoto from "@/assets/mirsoatov-photo.jpg";
 import poletaevPhoto from "@/assets/poletaev-photo.jpg";
 import { Youtube, Instagram, Send, AtSign, Music } from "lucide-react";
