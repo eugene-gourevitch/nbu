@@ -136,7 +136,7 @@ export const slides: SlideData[] = [
           <>
             <h3 className="text-[32px] font-bold mb-6">The Situation</h3>
             <p className="text-[20px] text-slide-muted leading-relaxed">
-              The National Bank for Foreign Economic Activity of Uzbekistan (NBU) simultaneously holds equity in a joint venture and filed the criminal complaint against that venture's director -- during active settlement negotiations with the foreign investor.
+              The National Bank for Foreign Economic Activity of Uzbekistan (NBU) simultaneously holds equity in a joint venture and filed the criminal complaint against that venture's director during active settlement negotiations with the foreign investor.
             </p>
             <h3 className="text-[32px] font-bold mt-10 mb-6">The Audience</h3>
             <p className="text-[20px] text-slide-muted leading-relaxed">
