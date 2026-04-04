@@ -520,7 +520,7 @@ export const MultiColumnTableTemplate = ({
           </div>
         ))}
       </div>
-      {footer && <p className="mt-6 text-[20px] font-semibold text-slide-primary">{footer}</p>}
+      {footer && <p className="mt-6 text-[19px] font-semibold text-slide-primary">{footer}</p>}
     </div>
   </SlideLayout>
 );
