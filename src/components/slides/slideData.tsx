@@ -680,7 +680,7 @@ export const slides: SlideData[] = [
               <div className="mb-8">
                 <p className="text-[14px] text-white/50 tracking-[0.15em] uppercase mb-4">Wrongfully detained for</p>
                 <DetentionCounter />
-                <p className="text-[16px] text-white/40 mt-4 leading-relaxed max-w-[600px]">
+                <p className="text-[14px] text-white/40 mt-4 leading-relaxed max-w-[600px]">
                   Since March 27, 2026. A man held in a Tashkent detention facility as leverage in a commercial negotiation. Every day he remains detained erodes Uzbekistan's claim to be a rule-of-law jurisdiction.
                 </p>
               </div>
