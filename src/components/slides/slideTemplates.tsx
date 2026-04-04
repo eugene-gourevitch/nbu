@@ -230,9 +230,9 @@ export const TwoColumnNumberedTemplate = ({
       <div className={`flex-1 grid grid-cols-${columns} gap-16`}>
         {items.map((item) => (
           <div key={item.num}>
-            <div className="text-[72px] font-extrabold text-slide-primary/15 leading-none mb-3">{item.num}</div>
-            <h3 className="text-[30px] font-bold mb-3">{item.title}</h3>
-            <p className="text-[22px] text-slide-muted leading-relaxed">{item.desc}</p>
+            <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">{item.num}</div>
+            <h3 className="text-[24px] font-bold mb-3">{item.title}</h3>
+            <p className="text-[19px] text-slide-muted leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
