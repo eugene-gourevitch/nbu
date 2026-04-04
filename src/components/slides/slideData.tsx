@@ -751,48 +751,48 @@ export const slides: SlideData[] = [
             <SlidePill label="LEGAL ANALYSIS" />
             <OmniStratLogo />
           </div>
-          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-2">
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3">
             Why arrest is an excessive and disproportionate measure
           </h2>
-          <p className="text-[19px] text-slide-muted leading-relaxed mb-6 max-w-[1200px]">
-            Under Uzbek criminal procedure (Articles 236-243 CPC) and international standards, pre-trial detention is a measure of last resort. None of the legal prerequisites are satisfied.
+          <p className="text-[19px] text-slide-muted leading-relaxed mb-8 max-w-[1200px]">
+            Under Uzbek criminal procedure (Articles 236-243 CPC) and international standards, pre-trial detention is a measure of last resort.
           </p>
-          <div className="grid grid-cols-2 gap-5 flex-1">
-            <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-2 gap-6 flex-1">
+            <div className="flex flex-col gap-5">
               {[
-                { num: "01", title: "No Flight Risk", text: "Uzbek citizen with permanent residence, family ties, and no foreign passport. Travel restrictions or bail would suffice without detention." },
-                { num: "02", title: "No Evidence Tampering Risk", text: "All evidence is documentary: bank records, contracts (No. 289/37), transfer statements — held by NBU and state institutions, beyond Hasanov's ability to alter." },
-                { num: "03", title: "No Personal Enrichment", text: "Charges allege \"purposeless squandering\" but identify no personal enrichment, offshore transfers, or asset concealment. All funds flowed through documented corporate channels." },
+                { num: "01", title: "No Flight Risk", text: "Uzbek citizen with permanent residence, family ties, and no foreign passport. Travel restrictions or bail would suffice." },
+                { num: "02", title: "No Evidence Tampering Risk", text: "All evidence is documentary — bank records, contracts, transfer statements — held by state institutions beyond Hasanov's reach." },
+                { num: "03", title: "No Personal Enrichment", text: "No personal enrichment, offshore transfers, or asset concealment alleged. All funds flowed through documented corporate channels." },
               ].map((item, i) => (
-                <div key={item.num} className="bg-slide-surface rounded-2xl p-5" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-9 h-9 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[17px] font-bold text-slide-primary">{item.num}</div>
-                    <h3 className="text-[19px] font-bold">{item.title}</h3>
+                <div key={item.num} className="bg-slide-surface rounded-2xl p-6" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[18px] font-bold text-slide-primary">{item.num}</div>
+                    <h3 className="text-[20px] font-bold">{item.title}</h3>
                   </div>
-                  <p className="text-[17px] text-slide-muted leading-snug">{item.text}</p>
+                  <p className="text-[18px] text-slide-muted leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-5">
               {[
-                { num: "04", title: "Contractual Dispute, Not Crime", text: "Commercial disagreement over reward payments under Contract 289/37, already adjudicated in civil courts (Dec 2024, May 2025). Criminalizing this violates ultima ratio." },
-                { num: "05", title: "Arrest During Negotiations", text: "Charges filed March 27 — one day after NBU rejected withdrawal of its criminal complaint. Timing reveals a pressure tactic, not genuine law enforcement." },
+                { num: "04", title: "Contractual Dispute, Not Crime", text: "Commercial disagreement over Contract 289/37, already adjudicated in civil courts. Criminalizing this violates ultima ratio." },
+                { num: "05", title: "Arrest During Negotiations", text: "Charges filed one day after NBU rejected withdrawal of its complaint. Timing reveals a pressure tactic, not law enforcement." },
               ].map((item, i) => (
-                <div key={item.num} className="bg-slide-surface rounded-2xl p-5" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-9 h-9 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[17px] font-bold text-slide-primary">{item.num}</div>
-                    <h3 className="text-[19px] font-bold">{item.title}</h3>
+                <div key={item.num} className="bg-slide-surface rounded-2xl p-6" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[18px] font-bold text-slide-primary">{item.num}</div>
+                    <h3 className="text-[20px] font-bold">{item.title}</h3>
                   </div>
-                  <p className="text-[17px] text-slide-muted leading-snug">{item.text}</p>
+                  <p className="text-[18px] text-slide-muted leading-relaxed">{item.text}</p>
                 </div>
               ))}
-              <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-5" style={{ animation: "slide-up 0.5s ease-out 0.75s both" }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-lg bg-red-100 flex items-center justify-center text-[17px] font-bold text-red-600">!</div>
-                  <h3 className="text-[19px] font-bold text-red-700">International Law Violation</h3>
+              <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6" style={{ animation: "slide-up 0.5s ease-out 0.75s both" }}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-[18px] font-bold text-red-600">!</div>
+                  <h3 className="text-[20px] font-bold text-red-700">International Law Violation</h3>
                 </div>
-                <p className="text-[17px] text-red-800/80 leading-snug">
-                  Arbitrary pre-trial detention in a commercial dispute violates ICCPR Article 9, ICCPR Article 14, and ECHR Article 5 standards.
+                <p className="text-[18px] text-red-800/80 leading-relaxed">
+                  Arbitrary detention in a commercial dispute violates ICCPR Article 9, ICCPR Article 14, and ECHR Article 5.
                 </p>
               </div>
             </div>
