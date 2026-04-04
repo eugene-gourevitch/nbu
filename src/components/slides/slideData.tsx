@@ -303,16 +303,16 @@ export const slides: SlideData[] = [
             <OmniStratLogo />
           </div>
 
-          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3">
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3 anim-fade-up stagger-1">
             The sovereign's international face
           </h2>
-          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1200px] mb-8">
+          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1200px] mb-8 anim-fade-up stagger-1">
             NBU is not a peripheral institution. It is Uzbekistan's primary channel for international capital markets and development finance.
           </p>
 
           <div className="grid grid-cols-3 gap-6 flex-1 min-h-0">
             {/* Column 1: Identity */}
-            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden">
+            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden anim-fade-up stagger-2">
               <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Institutional Identity</h3>
               <div className="space-y-3 text-[17px] text-slide-muted leading-[1.6] overflow-hidden">
                 <p><span className="font-bold text-slide-foreground">Founded 1991</span> as Uzbekistan's primary foreign trade bank. Largest commercial bank by total assets.</p>
