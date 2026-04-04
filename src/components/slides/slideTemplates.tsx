@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import SlideLayout from "./SlideLayout";
 import SlidePill from "./SlidePill";
 import OmniStratLogo from "./OmniStratLogo";
+import TypewriterText from "./TypewriterText";
 
 // ─── Shared types ───
 
@@ -31,7 +32,9 @@ export const TitleSlideTemplate = ({
           <h1 className="text-[100px] font-bold leading-[1.05] tracking-tight text-slide-primary">
             {headline}
           </h1>
-          <p className="mt-8 text-[24px] text-slide-muted max-w-[620px] leading-relaxed">{subtitle}</p>
+          <p className="mt-8 text-[24px] text-slide-muted max-w-[620px] leading-relaxed">
+            <TypewriterText text={subtitle} speed={25} delay={600} />
+          </p>
           {meta && <p className="mt-6 text-[16px] text-slide-muted/60 tracking-widest uppercase">{meta}</p>}
         </div>
       </div>
