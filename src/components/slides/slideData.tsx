@@ -679,7 +679,7 @@ export const slides: SlideData[] = [
 
             {/* Right: Counter + Links */}
             <div className="flex-1 flex flex-col">
-              <div className="mb-8">
+              <div className="mb-8 anim-fade-up stagger-3">
                 <p className="text-[14px] text-white/50 tracking-[0.15em] uppercase mb-4">Wrongfully detained for</p>
                 <DetentionCounter />
                 <p className="text-[14px] text-white/40 mt-4 leading-relaxed max-w-[600px]">
