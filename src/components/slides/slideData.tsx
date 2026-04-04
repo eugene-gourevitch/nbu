@@ -263,85 +263,80 @@ export const slides: SlideData[] = [
     component: (props) => (
       <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
         <div className="flex flex-col h-full p-[80px]">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-8">
             <SlidePill label="PURPOSE OF THIS BRIEFING" />
             <OmniStratLogo />
           </div>
 
-          <p className="text-[20px] text-slide-muted mt-6 max-w-[1200px] leading-relaxed" style={{ animation: "fade-in 0.6s ease-out 0.2s both" }}>
-            This briefing addresses the detention and criminal prosecution of a fintech company executive in Uzbekistan under circumstances that raise material concerns about the investment climate and rule of law.
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-4" style={{ animation: "fade-in 0.5s ease-out 0.2s both" }}>
+            Why this briefing exists
+          </h2>
+          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1100px] mb-12" style={{ animation: "fade-in 0.5s ease-out 0.3s both" }}>
+            A fintech executive detained in Uzbekistan under circumstances that raise material concerns about rule of law and the investment climate.
           </p>
 
-          <div className="flex gap-10 flex-1 mt-10">
-            {/* Left column */}
-            <div className="flex-1 flex flex-col gap-8">
-              <div style={{ animation: "fade-in 0.6s ease-out 0.4s both" }}>
+          <div className="grid grid-cols-3 gap-8 flex-1">
+            {/* Column 1 */}
+            <div className="flex flex-col gap-6" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
+              <div className="bg-slide-surface rounded-2xl p-8 flex-1">
                 <h3 className="text-[28px] font-bold mb-4">The Situation</h3>
-                <p className="text-[19px] text-slide-muted leading-relaxed">
-                  The National Bank for Foreign Economic Activity of Uzbekistan (NBU) simultaneously holds equity in a joint venture and filed the criminal complaint against that venture's director during active settlement negotiations with the foreign investor.
+                <p className="text-[20px] text-slide-muted leading-relaxed">
+                  NBU simultaneously holds equity in a joint venture and filed the criminal complaint against its director during active settlement negotiations.
                 </p>
               </div>
-
-              <div style={{ animation: "fade-in 0.6s ease-out 0.6s both" }}>
+              <div className="bg-slide-surface rounded-2xl p-8 flex-1">
                 <h3 className="text-[28px] font-bold mb-4">The Audience</h3>
-                <p className="text-[19px] text-slide-muted leading-relaxed">
-                  IFI compliance officers, correspondent bank risk teams, eurobond investors, and rating agency analysts with exposure to NBU or the Republic of Uzbekistan.
+                <p className="text-[20px] text-slide-muted leading-relaxed">
+                  IFI compliance officers, correspondent bank risk teams, eurobond investors, and rating agency analysts with NBU exposure.
                 </p>
-              </div>
-
-              <div style={{ animation: "fade-in 0.6s ease-out 0.8s both" }}>
-                <h3 className="text-[28px] font-bold mb-4">Key Questions Addressed</h3>
-                <div className="space-y-3">
-                  {[
-                    "Was criminal prosecution used as commercial leverage during settlement talks?",
-                    "Does the dual role of NBU as shareholder and complainant represent a conflict of interest?",
-                    "What are the implications for international investors and correspondent banks?",
-                  ].map((q, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-slide-primary mt-2.5 shrink-0" />
-                      <p className="text-[18px] text-slide-muted leading-relaxed">{q}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
 
-            {/* Right column: The Ask + Booking */}
-            <div className="w-[420px] flex flex-col gap-6" style={{ animation: "fade-in 0.6s ease-out 0.6s both" }}>
-              <div className="bg-slide-surface rounded-2xl p-8">
-                <h4 className="text-[24px] font-bold text-slide-primary mb-4">The Ask</h4>
-                <p className="text-[19px] text-slide-muted leading-relaxed">
-                  We invite a 30-minute confidential Zoom briefing to present the documented facts and answer questions from your compliance or legal team.
-                </p>
+            {/* Column 2: Key Questions */}
+            <div className="bg-slide-surface rounded-2xl p-8" style={{ animation: "fade-in 0.5s ease-out 0.55s both" }}>
+              <h3 className="text-[28px] font-bold mb-6">Key Questions</h3>
+              <div className="space-y-5">
+                {[
+                  "Was criminal prosecution used as commercial leverage during settlement talks?",
+                  "Does NBU's dual role as shareholder and complainant represent a conflict of interest?",
+                  "What are the implications for international investors and correspondent banks?",
+                ].map((q, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <span className="text-[28px] font-extrabold text-slide-primary leading-none mt-0.5">{String(i + 1).padStart(2, "0")}</span>
+                    <p className="text-[20px] text-slide-muted leading-relaxed">{q}</p>
+                  </div>
+                ))}
               </div>
+            </div>
 
+            {/* Column 3: CTA */}
+            <div className="flex flex-col gap-6" style={{ animation: "fade-in 0.5s ease-out 0.7s both" }}>
               <a
                 href="https://calendly.com/eugene-gourevitch-omnistratgroup/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl p-8 transition-all duration-300 block"
-                style={{ animation: "fade-in 0.6s ease-out 1s both" }}
+                className="group relative overflow-hidden bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl p-8 transition-all duration-300 block flex-1"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <div className="relative">
-                  <p className="text-[14px] tracking-[0.15em] uppercase opacity-70 mb-2">Schedule Now</p>
-                  <h4 className="text-[24px] font-bold mb-2">Book a Confidential Briefing</h4>
-                  <p className="text-[17px] opacity-80 leading-relaxed">
-                    30-minute Zoom call with the OmniStrat team. Strictly confidential. No obligation.
+                  <p className="text-[14px] tracking-[0.15em] uppercase opacity-70 mb-3">Schedule Now</p>
+                  <h4 className="text-[26px] font-bold mb-3">Book a Confidential Briefing</h4>
+                  <p className="text-[19px] opacity-80 leading-relaxed">
+                    30-minute Zoom call with the OmniStrat team. Strictly confidential.
                   </p>
-                  <div className="flex items-center gap-2 mt-4 text-[16px] font-semibold opacity-90">
+                  <div className="flex items-center gap-2 mt-5 text-[18px] font-semibold opacity-90">
                     <span>Open Calendly</span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </div>
                 </div>
               </a>
 
-              <div className="bg-slide-foreground/5 rounded-2xl p-6 border border-slide-foreground/10 space-y-3" style={{ animation: "fade-in 0.6s ease-out 1.2s both" }}>
-                <p className="text-[15px] text-slide-muted leading-relaxed">
-                  <span className="font-bold text-slide-foreground">Eugene Gourevitch</span> — eugene.gourevitch@omnistratgroup.com
+              <div className="bg-slide-foreground/5 rounded-2xl p-6 border border-slide-foreground/10 space-y-3">
+                <p className="text-[17px] text-slide-muted leading-relaxed">
+                  <span className="font-bold text-slide-foreground">Eugene Gourevitch</span><br />eugene.gourevitch@omnistratgroup.com
                 </p>
-                <p className="text-[15px] text-slide-muted leading-relaxed">
-                  <span className="font-bold text-slide-foreground">Robert Amsterdam</span> — robert.amsterdam@amsterdamandpartners.com
+                <p className="text-[17px] text-slide-muted leading-relaxed">
+                  <span className="font-bold text-slide-foreground">Robert Amsterdam</span><br />robert.amsterdam@amsterdamandpartners.com
                 </p>
               </div>
             </div>
