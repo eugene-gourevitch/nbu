@@ -405,7 +405,7 @@ export const slides: SlideData[] = [
             {/* Right column: Management + Exposure */}
             <div className="flex-1 flex flex-col gap-6">
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-4">Management Board</h4>
+                <h4 className="text-[22px] font-bold text-slide-primary mb-4">Management Board</h4>
                 <div className="space-y-3">
                   {[
                     { name: "Alisher Mirsoatov", role: "Chairman (since Nov 2017)", note: "Publicly identified as source of threats to investor" },
@@ -419,9 +419,9 @@ export const slides: SlideData[] = [
                     <div key={person.name} className="flex items-start gap-3 pb-2 border-b border-slide-foreground/5 last:border-0 last:pb-0">
                       <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />
                       <div>
-                        <span className="text-[17px] font-bold">{person.name}</span>
-                        <span className="text-[16px] text-slide-primary ml-2">{person.role}</span>
-                        <p className="text-[15px] text-slide-muted">{person.note}</p>
+                        <span className="text-[19px] font-bold">{person.name}</span>
+                        <span className="text-[17px] text-slide-primary ml-2">{person.role}</span>
+                        <p className="text-[16px] text-slide-muted">{person.note}</p>
                       </div>
                     </div>
                   ))}
@@ -430,21 +430,21 @@ export const slides: SlideData[] = [
 
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-slide-surface rounded-2xl p-5">
-                  <h4 className="text-[16px] font-bold text-slide-primary mb-2">Correspondent Banks</h4>
-                  <p className="text-[15px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
+                  <h4 className="text-[18px] font-bold text-slide-primary mb-2">Correspondent Banks</h4>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
                 </div>
                 <div className="bg-slide-surface rounded-2xl p-5">
-                  <h4 className="text-[16px] font-bold text-slide-primary mb-2">IFI Credit Lines</h4>
-                  <p className="text-[15px] text-slide-muted leading-relaxed">EBRD, IFC (World Bank Group), ADB, MIGA guarantees</p>
+                  <h4 className="text-[18px] font-bold text-slide-primary mb-2">IFI Credit Lines</h4>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">EBRD, IFC (World Bank Group), ADB, MIGA guarantees</p>
                 </div>
                 <div className="bg-slide-surface rounded-2xl p-5">
-                  <h4 className="text-[16px] font-bold text-slide-primary mb-2">LSE Eurobonds</h4>
-                  <p className="text-[15px] text-slide-muted leading-relaxed">2020 issuance on London Stock Exchange. Outstanding obligations to international bondholders.</p>
+                  <h4 className="text-[18px] font-bold text-slide-primary mb-2">LSE Eurobonds</h4>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">2020 issuance on London Stock Exchange. Outstanding obligations to international bondholders.</p>
                 </div>
               </div>
 
               <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5">
-                <p className="text-[17px] text-slide-foreground leading-relaxed">
+                <p className="text-[19px] text-slide-foreground leading-relaxed">
                   <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture's director.
                 </p>
               </div>
