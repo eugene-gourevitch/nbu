@@ -256,7 +256,7 @@ export const slides: SlideData[] = [
               Solfy CA LLC was established in Tashkent in June 2020 as a fintech joint venture between Russian investor Maxim Poletaev (50% via Solvy Cyprus Limited), the National Bank for Foreign Economic Activity of Uzbekistan (NBU, 5%), and other shareholders including Full Stack Solution (20%).
             </p>
             <p className="text-[20px] text-slide-muted leading-relaxed mb-4">
-              The company launched a Buy Now, Pay Later (BNPL) installment card product in partnership with NBU, Uzbekistan's largest commercial bank by assets (73.8% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums.
+              The company launched a Buy Now, Pay Later (BNPL) installment card product in partnership with NBU, Uzbekistan's largest commercial bank by assets (100% state-owned via the Fund for Reconstruction & Development and the Ministry of Economy & Finance). NBU's investment committee authorized three capital infusions totaling over 17 billion soums.
             </p>
             <p className="text-[20px] text-slide-muted leading-relaxed">
               An independent valuation by Bluestone assessed the company at USD 42-52 million.
