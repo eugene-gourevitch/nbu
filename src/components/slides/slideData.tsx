@@ -20,6 +20,8 @@ import missionBg from "@/assets/mission-bg.jpg";
 import detentionCell from "@/assets/uzbek-detention-cell.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
 import uktamPhoto from "@/assets/uktam-photo.png";
+import mirsoatovPhoto from "@/assets/mirsoatov-photo.jpg";
+import poletaevPhoto from "@/assets/poletaev-photo.jpg";
 
 const DETENTION_DATE = new Date("2026-03-27T00:00:00+05:00"); // Tashkent time
 
@@ -462,44 +464,84 @@ export const slides: SlideData[] = [
     id: "solfy-parties",
     title: "The Parties",
     component: (props) => (
-      <ServicesGridTemplate
-        {...props}
-        pillLabel="THE PARTIES"
-        headline="Key stakeholders in the Solfy CA dispute"
-        columns={3}
-        cards={[
-          {
-            title: "Maxim V. Poletaev",
-            items: [
-              "Russian investor, 50% beneficial owner via Solvy Cyprus Limited",
-              "Former First Deputy Chairman of Sberbank",
-              "Board member of Nornickel, MegaFon, Metalloinvest",
-              "Chairman of Fortenova Group, co-founder of Gauss Ventures",
-              "Represented by Amsterdam & Partners LLP",
-            ],
-          },
-          {
-            title: "Hasanov Uktam N., Detained",
-            items: [
-              "Director of Solfy CA LLC, the only individual charged",
-              "Currently held in custody in Tashkent",
-              "Charged under Article 167(3)(a), embezzlement in large amounts",
-              "No personal enrichment alleged",
-              "Lowest-ranking individual in the corporate chain",
-            ],
-          },
-          {
-            title: "Solfy CA LLC",
-            items: [
-              "Fintech JV registered Tashkent, June 2020",
-              "BNPL installment card product in partnership with NBU",
-              "Declared bankrupt; liquidation not yet commenced",
-              "Independent valuation (Bluestone): USD 42-52 million",
-              "NBU holds 5% equity stake",
-            ],
-          },
-        ]}
-      />
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-6">
+            <SlidePill label="THE PARTIES" />
+            <OmniStratLogo />
+          </div>
+          <h2 className="text-[40px] font-extrabold leading-tight tracking-tight mb-10">
+            Key stakeholders in the Solfy CA dispute
+          </h2>
+
+          <div className="grid grid-cols-3 gap-8 flex-1">
+            {/* Poletaev */}
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: "fade-in 0.5s ease-out 0.3s both" }}>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="w-[80px] h-[80px] rounded-full overflow-hidden shrink-0 border-2 border-slide-primary/20">
+                  <img src={poletaevPhoto} alt="Maxim Poletaev" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-[22px] font-bold leading-tight">Maxim V. Poletaev</h3>
+                  <p className="text-[15px] text-slide-primary font-semibold">Foreign Investor</p>
+                </div>
+              </div>
+              <ul className="space-y-3 text-[17px] text-slide-muted leading-relaxed">
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Russian investor, 50% beneficial owner via Solvy Cyprus Limited</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Former First Deputy Chairman of Sberbank</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Board member of Nornickel, MegaFon, Metalloinvest</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Chairman of Fortenova Group, co-founder of Gauss Ventures</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Represented by Amsterdam & Partners LLP</li>
+              </ul>
+            </div>
+
+            {/* Hasanov */}
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col border-2 border-red-500/20" style={{ animation: "fade-in 0.5s ease-out 0.45s both" }}>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="relative">
+                  <div className="w-[80px] h-[80px] rounded-full overflow-hidden shrink-0 border-2 border-red-500/30">
+                    <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">
+                    Detained
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-[22px] font-bold leading-tight">Hasanov Uktam N.</h3>
+                  <p className="text-[15px] text-red-600 font-semibold">Detained Director</p>
+                </div>
+              </div>
+              <ul className="space-y-3 text-[17px] text-slide-muted leading-relaxed">
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Director of Solfy CA LLC, the only individual charged</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Currently held in custody in Tashkent</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Charged under Article 167(3)(a), embezzlement in large amounts</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />No personal enrichment alleged</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Lowest-ranking individual in the corporate chain</li>
+              </ul>
+            </div>
+
+            {/* Mirsoatov */}
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: "fade-in 0.5s ease-out 0.6s both" }}>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="w-[80px] h-[80px] rounded-full overflow-hidden shrink-0 border-2 border-slide-foreground/10">
+                  <img src={mirsoatovPhoto} alt="Alisher Mirsoatov" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-[22px] font-bold leading-tight">Alisher K. Mirsoatov</h3>
+                  <p className="text-[15px] text-slide-primary font-semibold">NBU Chairman</p>
+                </div>
+              </div>
+              <ul className="space-y-3 text-[17px] text-slide-muted leading-relaxed">
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Chairman of NBU since November 2017</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Born 1974, Tashkent. Career NBU insider since 1996</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Former Chairman of Uzpromstroybank (2016-2017)</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Publicly identified as source of threats to the investor</li>
+                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Chairman of Uzbekistan Winter Sports Association</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
     ),
   },
   // 5. The Critical Ten-Day Window
