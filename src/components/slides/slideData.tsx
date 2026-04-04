@@ -1089,6 +1089,9 @@ export const slides: SlideData[] = [
     ),
   },
 
+  // ═══ 18. DISCLAIMER ═══
+  disclaimerSlide,
+
   // ═══ 19. CONTACT ═══
   {
     id: "solfy-contact",
