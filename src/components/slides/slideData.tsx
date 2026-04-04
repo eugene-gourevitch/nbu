@@ -176,8 +176,8 @@ export const slides: SlideData[] = [
           <div className="grid grid-cols-3 gap-8 flex-1">
             <div className="flex flex-col gap-6">
               <div className="bg-slide-surface rounded-2xl p-8 flex-1">
-                <h3 className="text-[26px] font-bold mb-4">The Situation</h3>
-                <p className="text-[20px] text-slide-muted leading-relaxed">
+                <h3 className="text-[24px] font-bold mb-4">The Situation</h3>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
                   NBU simultaneously holds equity in a joint venture and filed the criminal complaint against its director during active settlement negotiations.
                 </p>
               </div>
