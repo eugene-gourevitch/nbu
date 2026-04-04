@@ -1101,7 +1101,7 @@ export const slides: SlideData[] = [
           </div>
 
           <div className="flex-1 flex flex-col justify-center items-center text-center">
-            <h2 className="text-[48px] font-extrabold text-white leading-[1.05] tracking-tight mb-4">
+            <h2 className="text-[44px] font-extrabold text-white leading-[1.05] tracking-tight mb-4">
               Request a Confidential Briefing
             </h2>
             <p className="text-[20px] text-white/60 max-w-[800px] leading-relaxed mb-10">
