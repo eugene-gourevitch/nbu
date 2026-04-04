@@ -137,8 +137,8 @@ export const MissionWhiteTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
       <div className="flex-1 flex flex-col justify-center max-w-[1200px]">
-        <h2 className="text-[72px] font-bold leading-[1.15] tracking-tight">{headline}</h2>
-        <p className="mt-8 text-[26px] text-slide-muted max-w-[800px] leading-relaxed">{subtitle}</p>
+        <h2 className="text-[44px] font-bold leading-[1.15] tracking-tight">{headline}</h2>
+        <p className="mt-8 text-[22px] text-slide-muted max-w-[800px] leading-relaxed">{subtitle}</p>
       </div>
       <div className={`grid grid-cols-${cards.length} gap-6`}>
         {cards.map((item) => (
