@@ -640,14 +640,14 @@ export const CaseStudyDarkTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
       <div className="flex-1 flex flex-col justify-center max-w-[1200px]">
-        <h2 className="text-[48px] font-extrabold leading-[1.1]">{headline}</h2>
-        {description && <p className="mt-8 text-[24px] text-white/70 leading-relaxed">{description}</p>}
+        <h2 className="text-[52px] font-extrabold leading-[1.1]">{headline}</h2>
+        {description && <p className="mt-8 text-[26px] text-white/70 leading-relaxed">{description}</p>}
         {stats && (
           <div className={`mt-12 grid grid-cols-${stats.length} gap-8`}>
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-[52px] font-extrabold text-slide-primary">{stat.num}</div>
-                <p className="text-[18px] text-white/60">{stat.label}</p>
+                <div className="text-[56px] font-extrabold text-slide-primary">{stat.num}</div>
+                <p className="text-[20px] text-white/60">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -656,8 +656,8 @@ export const CaseStudyDarkTemplate = ({
           <div className={`mt-10 grid grid-cols-${cards.length > 3 ? 2 : cards.length} gap-8`}>
             {cards.map((card) => (
               <div key={card.title} className="bg-white/10 backdrop-blur rounded-2xl p-8">
-                <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-                <p className="text-[17px] text-white/70 leading-relaxed">{card.desc}</p>
+                <h3 className="text-[26px] font-bold mb-3">{card.title}</h3>
+                <p className="text-[19px] text-white/70 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
