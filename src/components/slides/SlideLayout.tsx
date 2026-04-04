@@ -50,7 +50,7 @@ const SlideLayout = ({
       {(slideNumber || showConfidentiality) && (
         <div className={`absolute bottom-0 left-0 right-0 z-20 flex items-center justify-between px-[80px] py-[30px] ${footerTextColor[variant]}`}>
           <span className="text-[14px] tracking-wide">
-            {showConfidentiality && "CONFIDENTIAL — For internal use only. Do not distribute."}
+            {showConfidentiality && "CONFIDENTIAL. For internal use only. Do not distribute."}
           </span>
           {slideNumber && totalSlides && (
             <span className="text-[16px] font-semibold tabular-nums">

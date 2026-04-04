@@ -501,7 +501,7 @@ export const slides: SlideData[] = [
           {
             title: "Former Min. Voitov (2025)",
             items: [
-              "Convicted under Article 167(3)(a) -- same provision as Hasanov",
+              "Convicted under Article 167(3)(a), same provision as Hasanov",
               "No prison time after compensating damages",
               "Illustrates transactional nature of embezzlement prosecutions",
             ],
