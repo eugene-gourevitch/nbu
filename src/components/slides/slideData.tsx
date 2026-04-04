@@ -333,9 +333,12 @@ export const slides: SlideData[] = [
                 </div>
               </a>
 
-              <div className="bg-slide-foreground/5 rounded-2xl p-6 border border-slide-foreground/10" style={{ animation: "fade-in 0.6s ease-out 1.2s both" }}>
+              <div className="bg-slide-foreground/5 rounded-2xl p-6 border border-slide-foreground/10 space-y-3" style={{ animation: "fade-in 0.6s ease-out 1.2s both" }}>
                 <p className="text-[15px] text-slide-muted leading-relaxed">
-                  <span className="font-bold text-slide-foreground">Direct contact:</span> eugene@omnistratgroup.com
+                  <span className="font-bold text-slide-foreground">Eugene Gourevitch</span> — eugene.gourevitch@omnistratgroup.com
+                </p>
+                <p className="text-[15px] text-slide-muted leading-relaxed">
+                  <span className="font-bold text-slide-foreground">Robert Amsterdam</span> — robert.amsterdam@amsterdamandpartners.com
                 </p>
               </div>
             </div>
