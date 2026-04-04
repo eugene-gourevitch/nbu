@@ -197,8 +197,8 @@ export const slides: SlideData[] = [
                   "What are the implications for international investors and correspondent banks?",
                 ].map((q, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <span className="text-[26px] font-extrabold text-slide-primary leading-none mt-0.5">{String(i + 1).padStart(2, "0")}</span>
-                    <p className="text-[20px] text-slide-muted leading-relaxed">{q}</p>
+                    <span className="text-[24px] font-extrabold text-slide-primary leading-none mt-0.5">{String(i + 1).padStart(2, "0")}</span>
+                    <p className="text-[19px] text-slide-muted leading-relaxed">{q}</p>
                   </div>
                 ))}
               </div>
