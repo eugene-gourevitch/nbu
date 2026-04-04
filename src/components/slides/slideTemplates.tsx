@@ -837,7 +837,7 @@ export const TrackRecordTemplate = ({
             <p className="text-[14px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
             <p className="text-[19px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>
-            <p className="text-[15px] text-slide-muted/70 mt-4 pt-4 border-t border-slide-foreground/8">{card.tag}</p>
+            <p className="text-[14px] text-slide-muted/70 mt-4 pt-4 border-t border-slide-foreground/8">{card.tag}</p>
           </div>
         ))}
       </div>
