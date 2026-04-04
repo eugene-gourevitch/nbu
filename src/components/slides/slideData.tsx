@@ -20,6 +20,8 @@ import missionBg from "@/assets/mission-bg.jpg";
 import detentionCell from "@/assets/uzbek-detention-cell.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
 import uktamPhoto from "@/assets/uktam-photo.png";
+import mirsoatovPhoto from "@/assets/mirsoatov-photo.jpg";
+import poletaevPhoto from "@/assets/poletaev-photo.jpg";
 
 const DETENTION_DATE = new Date("2026-03-27T00:00:00+05:00"); // Tashkent time
 
