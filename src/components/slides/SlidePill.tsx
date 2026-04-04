@@ -6,8 +6,8 @@ interface SlidePillProps {
 const SlidePill = ({ label, variant = "light" }: SlidePillProps) => {
   const styles: Record<string, string> = {
     light: "border border-slide-foreground/20 text-slide-foreground bg-white",
-    dark: "border border-white/30 text-white bg-white/10",
-    glass: "border border-white/30 text-white bg-white/10 backdrop-blur-sm",
+    dark: "border border-white/30 text-white/90 bg-white/15",
+    glass: "border border-white/30 text-white/90 bg-white/15 backdrop-blur-sm",
   };
 
   return (
