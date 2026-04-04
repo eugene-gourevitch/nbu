@@ -606,8 +606,8 @@ export const PRStatsTemplate = ({
           {introText && <p className="text-[19px] text-slide-muted leading-relaxed mb-4">{introText}</p>}
           {stats.map((stat) => (
             <div key={stat.number} className="border-b border-slide-foreground/10 pb-6">
-              <div className="text-[48px] font-extrabold">{stat.number}</div>
-              <p className="text-[22px] text-slide-muted">{stat.label}</p>
+              <div className="text-[44px] font-extrabold">{stat.number}</div>
+              <p className="text-[19px] text-slide-muted">{stat.label}</p>
             </div>
           ))}
         </div>
