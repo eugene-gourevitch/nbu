@@ -23,7 +23,7 @@ interface TitleSlideProps extends SlideBaseProps {
 }
 
 export const TitleSlideTemplate = ({
-  slideNumber, totalSlides, headline, subtitle, meta, heroImage, heroAlt = "Visual",
+  slideNumber, totalSlides, headline, subtitle, subtitleTyped, meta, heroImage, heroAlt = "Visual",
 }: TitleSlideProps) => (
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides} showConfidentiality={false}>
     <div className="flex h-full">
