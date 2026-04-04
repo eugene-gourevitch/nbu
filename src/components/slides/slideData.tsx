@@ -401,7 +401,7 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                   <div>
-                    <div className="flex justify-between text-[18px] font-semibold mb-1">
+                    <div className="flex justify-between text-[17px] font-semibold mb-1">
                       <span>Ministry of Economy & Finance</span>
                       <span className="text-slide-primary">40.75%</span>
                     </div>
