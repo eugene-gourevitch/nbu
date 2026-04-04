@@ -692,7 +692,103 @@ export const slides: SlideData[] = [
       />
     ),
   },
-  // 8. Selective Prosecution
+  // 8. Excessive Measure: Why Arrest Is Disproportionate
+  {
+    id: "solfy-excessive-arrest",
+    title: "Excessive Measure",
+    component: (props) => (
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-6">
+            <SlidePill label="LEGAL ANALYSIS" />
+            <OmniStratLogo />
+          </div>
+
+          <h2
+            className="text-[42px] font-extrabold leading-[1.1] tracking-tight mb-3"
+            style={{ animation: "fade-in 0.5s ease-out 0.2s both" }}
+          >
+            Why arrest is an excessive and disproportionate measure
+          </h2>
+          <p
+            className="text-[21px] text-slide-muted leading-relaxed mb-10 max-w-[1200px]"
+            style={{ animation: "fade-in 0.5s ease-out 0.3s both" }}
+          >
+            Under Uzbek criminal procedure (Articles 236-243 CPC) and international standards, pre-trial detention is a measure of last resort. In this case, none of the legal prerequisites are satisfied.
+          </p>
+
+          <div className="grid grid-cols-2 gap-8 flex-1">
+            {/* Left column */}
+            <div className="flex flex-col gap-6" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
+              <div className="bg-slide-surface rounded-2xl p-7">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[20px] font-bold text-slide-primary">01</div>
+                  <h3 className="text-[24px] font-bold">No Flight Risk</h3>
+                </div>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
+                  Hasanov is an Uzbek citizen with permanent residence, family ties, and no foreign passport. He has no means or incentive to flee the jurisdiction. Travel restrictions or bail would achieve the same purpose without detention.
+                </p>
+              </div>
+
+              <div className="bg-slide-surface rounded-2xl p-7">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[20px] font-bold text-slide-primary">02</div>
+                  <h3 className="text-[24px] font-bold">No Risk of Evidence Tampering</h3>
+                </div>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
+                  All evidence is documentary: bank records, contracts (No. 289/37), transfer statements, and certificates of acceptance. These are held by NBU and state institutions, entirely beyond Hasanov's ability to alter or destroy.
+                </p>
+              </div>
+
+              <div className="bg-slide-surface rounded-2xl p-7">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[20px] font-bold text-slide-primary">03</div>
+                  <h3 className="text-[24px] font-bold">No Personal Enrichment Alleged</h3>
+                </div>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
+                  The resolution charges "purposeless squandering" of company funds but identifies no personal enrichment, no offshore transfers, no asset concealment. All funds flowed through documented corporate channels to 2,134 contractual counterparties.
+                </p>
+              </div>
+            </div>
+
+            {/* Right column */}
+            <div className="flex flex-col gap-6" style={{ animation: "fade-in 0.5s ease-out 0.55s both" }}>
+              <div className="bg-slide-surface rounded-2xl p-7">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[20px] font-bold text-slide-primary">04</div>
+                  <h3 className="text-[24px] font-bold">Contractual Dispute, Not Criminal Conduct</h3>
+                </div>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
+                  The underlying matter is a commercial disagreement over reward payments under Contract 289/37, already adjudicated in Uzbek civil courts (Dec 2024, May 2025). Criminalizing a contractual dispute violates the principle of ultima ratio in criminal law.
+                </p>
+              </div>
+
+              <div className="bg-slide-surface rounded-2xl p-7">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[20px] font-bold text-slide-primary">05</div>
+                  <h3 className="text-[24px] font-bold">Arrest During Settlement Negotiations</h3>
+                </div>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
+                  Charges were filed on March 27, exactly one day after NBU rejected the withdrawal of its criminal complaint. The timing reveals the arrest as a pressure tactic during active commercial negotiations, not a genuine law enforcement action.
+                </p>
+              </div>
+
+              <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-7">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-[20px] font-bold text-red-600">!</div>
+                  <h3 className="text-[24px] font-bold text-red-700">International Law Violation</h3>
+                </div>
+                <p className="text-[19px] text-red-800/80 leading-relaxed">
+                  Arbitrary pre-trial detention in a commercial dispute violates ICCPR Article 9 (liberty and security), ICCPR Article 14 (fair trial), and ECHR Article 5 standards. The UN Working Group on Arbitrary Detention has consistently held that detention used as commercial leverage constitutes arbitrary deprivation of liberty.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
+    ),
+  },
+  // 9. Selective Prosecution
   {
     id: "solfy-selective",
     title: "Selective Prosecution",
