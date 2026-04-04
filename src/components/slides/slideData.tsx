@@ -811,37 +811,6 @@ export const slides: SlideData[] = [
       </SlideLayout>
     ),
   },
-  // 12. Media Coverage
-  {
-    id: "solfy-media",
-    title: "Media Coverage",
-    component: (props) => (
-      <ServicesGridTemplate
-        {...props}
-        pillLabel="MEDIA & INTERNATIONAL COVERAGE"
-        headline="Growing international attention on the Solfy/NBU dispute"
-        columns={2}
-        cards={[
-          {
-            title: "IBTimes (March 2026)",
-            desc: "Analysis identifies Solfy case as indicative of institutional gaps undermining Uzbekistan's reform credibility. References threats linked to NBU Chairman Mirsoatov.",
-          },
-          {
-            title: "UzDaily.uz (February 2026)",
-            desc: "Reports Poletaev and Solfy have entered legal dispute with NBU. Notes engagement of Amsterdam & Partners LLP.",
-          },
-          {
-            title: "Investing.com / PR Newswire (April 2026)",
-            desc: "Amsterdam & Partners press release urging Uzbekistan to cease irregular detentions and uphold international legal standards.",
-          },
-          {
-            title: "UA.NEWS (2025-2026)",
-            desc: "Names NBU Chairman Alisher Mirsoatov personally as source of threats to international investors. Additional placements in Russian-language Telegram channels and international outlets are ongoing.",
-          },
-        ]}
-      />
-    ),
-  },
   // 13. Legal Remedies in Progress
   {
     id: "solfy-legal-remedies",
