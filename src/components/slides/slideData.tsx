@@ -749,46 +749,66 @@ export const slides: SlideData[] = [
     id: "solfy-context",
     title: "Broader Context",
     component: (props) => (
-      <MultiColumnTableTemplate
-        {...props}
-        pillLabel="BROADER CONTEXT"
-        headline="Uzbekistan's investment climate: The Solfy case is not an isolated incident"
-        columns={[
-          {
-            title: "Shadmanov (2025)",
-            items: [
-              "Forcibly extradited from Dubai",
-              "ICIJ documented use of lobbyist to trigger sanctions inquiries",
-              "Lawyers describe prosecution as politically motivated",
-            ],
-          },
-          {
-            title: "Humans Mobile v. Uzbekistan",
-            items: [
-              "ICSID ARB/25/24",
-              "Singapore-based company initiated ICSID arbitration",
-              "Citing BIT violations by Uzbek state authorities",
-            ],
-          },
-          {
-            title: "Former Min. Voitov (2025)",
-            items: [
-              "Convicted under Article 167(3)(a), same provision as Hasanov",
-              "No prison time after compensating damages",
-              "Illustrates transactional nature of embezzlement prosecutions",
-            ],
-          },
-          {
-            title: "FDI Gap",
-            items: [
-              "Kazakhstan: $151B accumulated FDI stock",
-              "Uzbekistan: $17B accumulated FDI stock",
-              "IBTimes identifies Solfy case as test of institutional reform credibility",
-            ],
-          },
-        ]}
-        footer="NBU Chairman Mirsoatov publicly identified as source of threats to international investors (UA.NEWS, IBTimes)"
-      />
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between">
+            <SlidePill label="BROADER CONTEXT" />
+            <OmniStratLogo />
+          </div>
+
+          <h2 className="text-[36px] font-bold mt-6 leading-tight max-w-[1400px]">
+            The Solfy case is not an isolated incident
+          </h2>
+          <p className="text-[20px] text-slide-muted mt-3 max-w-[1200px]">
+            A pattern of investor-hostile actions undermines Uzbekistan's reform credibility
+          </p>
+
+          <div className="grid grid-cols-2 gap-8 mt-10 flex-1">
+            {[
+              {
+                tag: "EXTRADITION",
+                title: "Shadmanov (2025)",
+                text: "Forcibly extradited from Dubai. ICIJ documented use of lobbyist to trigger sanctions inquiries. Lawyers describe prosecution as politically motivated.",
+                accent: "bg-red-500/10 text-red-600",
+              },
+              {
+                tag: "ICSID ARBITRATION",
+                title: "Humans Mobile v. Uzbekistan",
+                text: "ICSID ARB/25/24 — Singapore-based company initiated arbitration citing bilateral investment treaty violations by Uzbek state authorities.",
+                accent: "bg-amber-500/10 text-amber-600",
+              },
+              {
+                tag: "SELECTIVE JUSTICE",
+                title: "Former Minister Voitov (2025)",
+                text: "Convicted under Article 167(3)(a) — the same provision as Hasanov. Received no prison time after compensating damages. Illustrates the transactional nature of embezzlement prosecutions.",
+                accent: "bg-purple-500/10 text-purple-600",
+              },
+              {
+                tag: "CAPITAL FLIGHT",
+                title: "Foreign Direct Investment Gap",
+                text: "Kazakhstan: $151B accumulated FDI stock. Uzbekistan: $17B. IBTimes identifies the Solfy case as a test of institutional reform credibility.",
+                accent: "bg-slide-primary/10 text-slide-primary",
+              },
+            ].map((item, i) => (
+              <div
+                key={item.title}
+                className="bg-slide-surface rounded-2xl p-8 flex flex-col"
+                style={{ animation: `fade-in 0.5s ease-out ${0.3 + i * 0.15}s both` }}
+              >
+                <span className={`text-[13px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`}>
+                  {item.tag}
+                </span>
+                <h3 className="text-[26px] font-bold mb-3">{item.title}</h3>
+                <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[17px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
+            <span className="font-bold text-slide-foreground">Source:</span> NBU Chairman Mirsoatov publicly identified as source of threats to international investors (UA.NEWS, IBTimes)
+          </p>
+        </div>
+      </SlideLayout>
     ),
   },
   // 12. Media Coverage
