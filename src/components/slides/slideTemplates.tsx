@@ -194,8 +194,8 @@ export const QuoteSlideTemplate = ({
         <blockquote className="text-[44px] font-semibold leading-[1.3] max-w-[1200px] -mt-12">
           {quote}
         </blockquote>
-        <p className="mt-6 text-[20px] text-slide-muted">{attribution}</p>
-        {attributionSub && <p className="text-[20px] text-slide-muted">{attributionSub}</p>}
+        <p className="mt-6 text-[19px] text-slide-muted">{attribution}</p>
+        {attributionSub && <p className="text-[19px] text-slide-muted">{attributionSub}</p>}
         {bottomContent}
       </div>
     </div>
