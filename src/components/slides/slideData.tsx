@@ -389,7 +389,7 @@ export const slides: SlideData[] = [
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6 mb-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
+                <h4 className="text-[19px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
                 <div className="space-y-3">
                   <div>
                     <div className="flex justify-between text-[18px] font-semibold mb-1">
