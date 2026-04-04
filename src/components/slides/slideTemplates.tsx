@@ -290,14 +290,14 @@ export const BigNumbersTemplate = ({
   <SlideLayout variant="blue" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
-      {subtitle && <p className="mt-6 text-[24px] text-white/80 max-w-[1000px]">{subtitle}</p>}
+      {subtitle && <p className="mt-6 text-[26px] text-white/80 max-w-[1000px]">{subtitle}</p>}
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${stats.length} gap-12 w-full`}>
           {stats.map((stat) => (
             <div key={stat.num} className="text-center">
-              <div className="text-[80px] font-extrabold leading-none">{stat.num}</div>
-              <p className="text-[20px] font-semibold mt-4">{stat.label}</p>
-              <p className="text-[16px] text-white/60 mt-2">{stat.sub}</p>
+              <div className="text-[84px] font-extrabold leading-none">{stat.num}</div>
+              <p className="text-[22px] font-semibold mt-4">{stat.label}</p>
+              <p className="text-[18px] text-white/60 mt-2">{stat.sub}</p>
             </div>
           ))}
         </div>
