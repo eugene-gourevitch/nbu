@@ -30,7 +30,7 @@ export const TitleSlideTemplate = ({
       <div className="flex-1 flex flex-col justify-between p-[80px]">
         <OmniStratLogo />
         <div>
-          <h1 className="text-[100px] font-bold leading-[1.05] tracking-tight text-slide-primary">
+          <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary">
             {headline}
           </h1>
           <p className="mt-8 text-[28px] font-semibold text-slide-foreground max-w-[640px] leading-snug">
