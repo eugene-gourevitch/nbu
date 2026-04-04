@@ -1136,8 +1136,8 @@ export const slides: SlideData[] = [
                     <p className="text-[19px] text-white font-semibold">eugene@omnistratgroup.com</p>
                   </div>
                   <div>
-                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Web</p>
-                    <a href="https://www.omnistratgroup.com" target="_blank" rel="noopener noreferrer" className="text-[20px] text-slide-primary font-semibold hover:underline">
+                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Web</p>
+                    <a href="https://www.omnistratgroup.com" target="_blank" rel="noopener noreferrer" className="text-[19px] text-slide-primary font-semibold hover:underline">
                       www.omnistratgroup.com
                     </a>
                   </div>
