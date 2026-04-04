@@ -532,9 +532,9 @@ export const slides: SlideData[] = [
               </ul>
             </div>
             {/* Mirsoatov */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col">
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col anim-scale-in stagger-4">
               <div className="flex items-center gap-5 mb-6">
-                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-foreground/10">
+                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-foreground/10" style={{ animation: "scale-in 0.4s ease-out 0.9s both" }}>
                   <img src={mirsoatovPhoto} alt="Alisher Mirsoatov" className="w-full h-full object-cover" />
                 </div>
                 <div>
