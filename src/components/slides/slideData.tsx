@@ -249,13 +249,13 @@ export const slides: SlideData[] = [
             <SlidePill label="BACKGROUND" />
             <OmniStratLogo />
           </div>
-          <p className="text-[22px] text-slide-muted max-w-[1400px] leading-relaxed mb-8">
+          <p className="text-[22px] text-slide-muted max-w-[1400px] leading-relaxed mb-8 anim-fade-in stagger-1">
             A fintech joint venture that became the center of an investor-state dispute with international implications.
           </p>
 
           <div className="flex-1 grid grid-cols-2 gap-10 min-h-0">
             {/* The Venture */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden">
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden anim-slide-left stagger-2">
               <h3 className="text-[24px] font-bold text-slide-primary mb-5 shrink-0">The Venture</h3>
               <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
