@@ -421,7 +421,7 @@ export const ImageTextTemplate = ({
       <SlidePill label={pillLabel} variant="light" />
       <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight">{headline}</h2>
       {paragraphs.map((p, i) => (
-        <p key={i} className="mt-4 text-[22px] text-slide-muted leading-relaxed">{p}</p>
+        <p key={i} className="mt-4 text-[19px] text-slide-muted leading-relaxed">{p}</p>
       ))}
       {stats && (
         <div className="mt-10 flex gap-6">
