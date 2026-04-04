@@ -51,7 +51,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <OmniStratLogo />
           <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
-            <SlidePill>CONFIDENTIALITY NOTICE</SlidePill>
+            <SlidePill label="CONFIDENTIALITY NOTICE" />
             <h2 className="text-[48px] font-bold text-slide-foreground mt-6 leading-tight">
               Confidentiality Statement & Disclaimer
             </h2>
