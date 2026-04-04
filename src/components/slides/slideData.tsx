@@ -1167,7 +1167,7 @@ export const slides: SlideData[] = [
             </div>
           </div>
 
-          <p className="text-[14px] text-white/30 text-center mt-8">
+          <p className="text-[11px] text-white/30 text-center mt-8">
             This briefing contains privileged and confidential information. Distribution at recipient's discretion.
           </p>
         </div>
