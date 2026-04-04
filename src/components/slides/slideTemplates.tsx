@@ -16,6 +16,7 @@ interface SlideBaseProps {
 interface TitleSlideProps extends SlideBaseProps {
   headline: ReactNode;
   subtitle: string;
+  subtitleTyped?: string;
   meta?: string;
   heroImage?: string;
   heroAlt?: string;
