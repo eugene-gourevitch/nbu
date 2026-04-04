@@ -188,7 +188,7 @@ export const slides: SlideData[] = [
                 </p>
               </div>
             </div>
-            <div className="bg-slide-surface rounded-2xl p-8">
+            <div className="bg-slide-surface rounded-2xl p-8 anim-fade-up stagger-4">
               <h3 className="text-[24px] font-bold mb-6">Key Questions</h3>
               <div className="space-y-5">
                 {[
