@@ -1124,7 +1124,7 @@ export const slides: SlideData[] = [
 
             <div className="grid grid-cols-2 gap-10 w-full max-w-[1200px]">
               {/* OmniStrat */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
                 <h3 className="text-[24px] font-extrabold text-white mb-1">OmniStrat Group LLC</h3>
                 <p className="text-[14px] text-slide-primary font-semibold tracking-wider uppercase mb-8">Strategic Advisory</p>
                 <div className="space-y-5">
