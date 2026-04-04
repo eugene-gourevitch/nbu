@@ -824,7 +824,7 @@ export const slides: SlideData[] = [
           </div>
         }
         rightContent={
-          <div>
+          <div className="anim-slide-right stagger-3">
             <h3 className="text-[24px] font-bold mb-6">Not Charged</h3>
             <ul className="space-y-5">
               {[
