@@ -940,11 +940,11 @@ export const slides: SlideData[] = [
               <h3 className="text-[24px] font-bold mb-3">Eurobond / Rating Agencies</h3>
               <ul className="space-y-3 flex-1">
                 {[
-                  "ICSID arbitration claim ($42-52M Bluestone valuation) constitutes material contingent liability under IAS 37",
-                  "Fitch Bank Rating Criteria, Section: Operating Environment — institutional framework assessment",
-                  "Moody's Bank Scorecard Factor 1: Macro Profile incorporates institutional framework",
-                  "Must be disclosed in NBU's financial statements as contingent liability",
-                  "Bondholders have fiduciary obligations to assess counterparty governance risk",
+                  "ICSID claim ($42-52M valuation): material contingent liability under IAS 37",
+                  "Fitch Bank Rating Criteria: Operating Environment assessment",
+                  "Moody's Scorecard Factor 1: Macro Profile institutional framework",
+                  "Disclosure required in NBU financial statements",
+                  "Bondholder fiduciary duty: counterparty governance risk",
                 ].map((item) => (
                   <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
