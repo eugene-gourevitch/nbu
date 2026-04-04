@@ -259,7 +259,7 @@ export const TwoColumnFreeformTemplate = ({
         <OmniStratLogo />
       </div>
       {subtitle && (
-        <p className="text-[24px] text-slide-muted max-w-[1400px] leading-relaxed mb-12">{subtitle}</p>
+        <p className="text-[22px] text-slide-muted max-w-[1400px] leading-relaxed mb-12">{subtitle}</p>
       )}
       <div className="flex-1 grid grid-cols-2 gap-16">
         <div>{leftContent}</div>
