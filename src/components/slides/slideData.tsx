@@ -96,7 +96,7 @@ const disclaimerSlide: SlideData = {
               <p>This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC and Amsterdam & Partners LLP. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
             </div>
             <div>
-              <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
+              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
               <p>This presentation has been prepared for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation. While every effort has been made to ensure accuracy, OmniStrat Group LLC makes no representations or warranties regarding the completeness of the content.</p>
             </div>
             <div>
