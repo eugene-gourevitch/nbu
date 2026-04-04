@@ -170,7 +170,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between">
             <SlidePill label="WRONGFUL DETENTION" variant="light" />
-            <OmniStratLogo />
+            <OmniStratLogo variant="light" />
           </div>
 
           <div className="flex flex-1 items-center gap-16 mt-8">
