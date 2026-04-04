@@ -113,7 +113,7 @@ export const slides: SlideData[] = [
               </div>
 
               <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
+                <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
                 <p>
                   OmniStrat Group LLC, its affiliates, directors, officers, and employees shall not be held liable for any loss, damage, or expense arising directly or indirectly from the use of or reliance on any information contained in this presentation. All rights reserved.
                 </p>
