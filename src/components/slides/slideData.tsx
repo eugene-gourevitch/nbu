@@ -705,7 +705,7 @@ export const slides: SlideData[] = [
                     { platform: "TikTok", handle: "@hasanov.defense.i", url: "https://www.tiktok.com/@hasanov.defense.i", icon: <Music size={20} /> },
                   ].map((link) => (
                     <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg px-4 py-3 transition-colors">
+                      className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg px-4 py-3 transition-colors" style={{ animation: `fade-in 0.3s ease-out ${0.6 + i * 0.08}s both` }}>
                       <span className="text-slide-primary w-8 flex justify-center">{link.icon}</span>
                       <div>
                         <span className="text-[14px] font-bold text-white block">{link.platform}</span>
