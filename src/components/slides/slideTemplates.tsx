@@ -829,7 +829,7 @@ export const TrackRecordTemplate = ({
         <SlidePill label={pillLabel} variant="light" />
         <OmniStratLogo />
       </div>
-      <h2 className="text-[52px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
+      <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${cards.length} gap-8`}>
         {cards.map((card) => (
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
