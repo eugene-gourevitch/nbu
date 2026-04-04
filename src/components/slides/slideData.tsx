@@ -214,7 +214,7 @@ export const slides: SlideData[] = [
                   <p className="text-[14px] tracking-[0.15em] uppercase opacity-70 mb-3">Schedule Now</p>
                   <h4 className="text-[24px] font-bold mb-3">Book a Confidential Briefing</h4>
                   <p className="text-[17px] opacity-80 leading-relaxed">30-minute Zoom call with the OmniStrat team.</p>
-                  <div className="flex items-center gap-2 mt-5 text-[18px] font-semibold opacity-90">
+                  <div className="flex items-center gap-2 mt-5 text-[17px] font-semibold opacity-90">
                     <span>Open Calendly</span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </div>
