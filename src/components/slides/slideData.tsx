@@ -476,67 +476,85 @@ export const slides: SlideData[] = [
 
           <div className="grid grid-cols-3 gap-8 flex-1">
             {/* Poletaev */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: "fade-in 0.5s ease-out 0.3s both" }}>
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow duration-300" style={{ animation: "fade-in 0.6s ease-out 0.3s both" }}>
               <div className="flex items-center gap-5 mb-6">
-                <div className="w-[80px] h-[80px] rounded-full overflow-hidden shrink-0 border-2 border-slide-primary/20">
+                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-primary/20" style={{ animation: "scale-in 0.5s ease-out 0.5s both" }}>
                   <img src={poletaevPhoto} alt="Maxim Poletaev" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-[22px] font-bold leading-tight">Maxim V. Poletaev</h3>
-                  <p className="text-[15px] text-slide-primary font-semibold">Foreign Investor</p>
+                  <h3 className="text-[26px] font-bold leading-tight">Maxim V. Poletaev</h3>
+                  <p className="text-[17px] text-slide-primary font-semibold">Foreign Investor</p>
                 </div>
               </div>
-              <ul className="space-y-3 text-[17px] text-slide-muted leading-relaxed">
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Russian investor, 50% beneficial owner via Solvy Cyprus Limited</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Former First Deputy Chairman of Sberbank</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Board member of Nornickel, MegaFon, Metalloinvest</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Chairman of Fortenova Group, co-founder of Gauss Ventures</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Represented by Amsterdam & Partners LLP</li>
+              <ul className="space-y-3.5">
+                {[
+                  "Russian investor, 50% beneficial owner via Solvy Cyprus Limited",
+                  "Former First Deputy Chairman of Sberbank",
+                  "Board member of Nornickel, MegaFon, Metalloinvest",
+                  "Chairman of Fortenova Group, co-founder of Gauss Ventures",
+                  "Represented by Amsterdam & Partners LLP",
+                ].map((item, i) => (
+                  <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed" style={{ animation: `fade-in 0.4s ease-out ${0.6 + i * 0.1}s both` }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Hasanov */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col border-2 border-red-500/20" style={{ animation: "fade-in 0.5s ease-out 0.45s both" }}>
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col border-2 border-red-500/20 hover:shadow-lg hover:shadow-red-500/5 transition-shadow duration-300" style={{ animation: "fade-in 0.6s ease-out 0.5s both" }}>
               <div className="flex items-center gap-5 mb-6">
                 <div className="relative">
-                  <div className="w-[80px] h-[80px] rounded-full overflow-hidden shrink-0 border-2 border-red-500/30">
+                  <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-red-500/30" style={{ animation: "scale-in 0.5s ease-out 0.7s both" }}>
                     <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
                   </div>
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase" style={{ animation: "scale-in 0.3s ease-out 1s both" }}>
                     Detained
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-[22px] font-bold leading-tight">Hasanov Uktam N.</h3>
-                  <p className="text-[15px] text-red-600 font-semibold">Detained Director</p>
+                  <h3 className="text-[26px] font-bold leading-tight">Hasanov Uktam N.</h3>
+                  <p className="text-[17px] text-red-600 font-semibold">Detained Director</p>
                 </div>
               </div>
-              <ul className="space-y-3 text-[17px] text-slide-muted leading-relaxed">
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Director of Solfy CA LLC, the only individual charged</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Currently held in custody in Tashkent</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Charged under Article 167(3)(a), embezzlement in large amounts</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />No personal enrichment alleged</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />Lowest-ranking individual in the corporate chain</li>
+              <ul className="space-y-3.5">
+                {[
+                  "Director of Solfy CA LLC, the only individual charged",
+                  "Currently held in custody in Tashkent",
+                  "Charged under Article 167(3)(a), embezzlement in large amounts",
+                  "No personal enrichment alleged",
+                  "Lowest-ranking individual in the corporate chain",
+                ].map((item, i) => (
+                  <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed" style={{ animation: `fade-in 0.4s ease-out ${0.8 + i * 0.1}s both` }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />{item}
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Mirsoatov */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: "fade-in 0.5s ease-out 0.6s both" }}>
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow duration-300" style={{ animation: "fade-in 0.6s ease-out 0.7s both" }}>
               <div className="flex items-center gap-5 mb-6">
-                <div className="w-[80px] h-[80px] rounded-full overflow-hidden shrink-0 border-2 border-slide-foreground/10">
+                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-foreground/10" style={{ animation: "scale-in 0.5s ease-out 0.9s both" }}>
                   <img src={mirsoatovPhoto} alt="Alisher Mirsoatov" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-[22px] font-bold leading-tight">Alisher K. Mirsoatov</h3>
-                  <p className="text-[15px] text-slide-primary font-semibold">NBU Chairman</p>
+                  <h3 className="text-[26px] font-bold leading-tight">Alisher K. Mirsoatov</h3>
+                  <p className="text-[17px] text-slide-primary font-semibold">NBU Chairman</p>
                 </div>
               </div>
-              <ul className="space-y-3 text-[17px] text-slide-muted leading-relaxed">
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Chairman of NBU since November 2017</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Born 1974, Tashkent. Career NBU insider since 1996</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Former Chairman of Uzpromstroybank (2016-2017)</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Publicly identified as source of threats to the investor</li>
-                <li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />Chairman of Uzbekistan Winter Sports Association</li>
+              <ul className="space-y-3.5">
+                {[
+                  "Chairman of NBU since November 2017",
+                  "Born 1974, Tashkent. Career NBU insider since 1996",
+                  "Former Chairman of Uzpromstroybank (2016-2017)",
+                  "Publicly identified as source of threats to the investor",
+                  "Chairman of Uzbekistan Winter Sports Association",
+                ].map((item, i) => (
+                  <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed" style={{ animation: `fade-in 0.4s ease-out ${1.0 + i * 0.1}s both` }}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
