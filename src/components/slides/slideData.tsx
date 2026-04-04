@@ -286,7 +286,7 @@ export const slides: SlideData[] = [
             ],
           },
           {
-            title: "Hasanov Uktam N. -- Detained",
+            title: "Hasanov Uktam N., Detained",
             items: [
               "Director of Solfy CA LLC, the only individual charged",
               "Currently held in custody in Tashkent",
