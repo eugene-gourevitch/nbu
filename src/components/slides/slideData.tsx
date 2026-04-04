@@ -988,7 +988,7 @@ export const slides: SlideData[] = [
               </div>
             ))}
           </div>
-          <p className="text-[18px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
+          <p className="text-[14px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
             <span className="font-bold text-slide-foreground">Source:</span> NBU Chairman Mirsoatov publicly identified as source of threats to international investors (UA.NEWS, IBTimes)
           </p>
         </div>
