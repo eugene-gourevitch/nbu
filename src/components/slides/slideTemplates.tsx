@@ -747,7 +747,7 @@ export const ContactSlideTemplate = ({
             ))}
           </div>
         )}
-        <button className="bg-slide-foreground text-white px-10 py-5 rounded-full text-[22px] font-semibold">
+        <button className="bg-slide-foreground text-white px-10 py-5 rounded-full text-[19px] font-semibold">
           {ctaLabel}
         </button>
       </div>
