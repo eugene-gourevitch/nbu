@@ -146,6 +146,8 @@
   z-index: 9999;
   background: black;
   cursor: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .presentation-fullscreen.cursor-visible {
