@@ -1159,8 +1159,8 @@ export const slides: SlideData[] = [
                     <p className="text-[17px] text-white/70">125 Old Broad Street, EC2N 1AR</p>
                   </div>
                   <div>
-                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Washington, DC</p>
-                    <p className="text-[18px] text-white/70">1054 31st St NW, Ste 110, 20007</p>
+                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Washington, DC</p>
+                    <p className="text-[17px] text-white/70">1054 31st St NW, Ste 110, 20007</p>
                   </div>
                 </div>
               </div>
