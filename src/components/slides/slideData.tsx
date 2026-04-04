@@ -1023,7 +1023,7 @@ export const slides: SlideData[] = [
               <div key={item.source} className={`${item.bg} border-l-4 ${item.color} rounded-r-2xl p-7 flex flex-col justify-between`}>
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[22px] font-extrabold tracking-tight">{item.source}</span>
+                    <span className="text-[24px] font-extrabold tracking-tight">{item.source}</span>
                     <span className="text-[14px] font-semibold text-slide-muted tracking-wider uppercase">{item.date}</span>
                   </div>
                   <p className="text-[20px] font-bold leading-snug mb-4 italic">
