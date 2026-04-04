@@ -690,10 +690,10 @@ export const slides: SlideData[] = [
         subtitle="This pattern is consistent with the use of criminal prosecution as commercial leverage, not genuine law enforcement."
         leftContent={
           <div>
-            <h3 className="text-[28px] font-bold text-slide-primary mb-6">Charged</h3>
+            <h3 className="text-[34px] font-bold text-slide-primary mb-6">Charged</h3>
             <div className="bg-slide-surface rounded-2xl p-8">
-              <h4 className="text-[22px] font-bold mb-3">Hasanov Uktam Nasulloyevich</h4>
-              <p className="text-[18px] text-slide-muted leading-relaxed">
+              <h4 className="text-[26px] font-bold mb-3">Hasanov Uktam Nasulloyevich</h4>
+              <p className="text-[21px] text-slide-muted leading-relaxed">
                 Locally appointed director. The most vulnerable individual in the corporate chain. No personal enrichment alleged.
               </p>
             </div>
@@ -701,8 +701,8 @@ export const slides: SlideData[] = [
         }
         rightContent={
           <div>
-            <h3 className="text-[28px] font-bold mb-6">Not Charged</h3>
-            <ul className="space-y-4">
+            <h3 className="text-[34px] font-bold mb-6">Not Charged</h3>
+            <ul className="space-y-5">
               {[
                 "Foreign co-founders who directed corporate strategy",
                 "NBU's investment committee members who authorized three capital tranches totaling 17+ billion soums",
@@ -710,7 +710,7 @@ export const slides: SlideData[] = [
                 "NBU's retail division leadership who publicly endorsed the product",
                 "20% shareholder Full Stack Solution and its principals (Izrailbekov)",
               ].map((item) => (
-                <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
+                <li key={item} className="text-[21px] text-slide-muted leading-relaxed flex items-start gap-3">
                   <span className="text-slide-primary mt-1">&#8226;</span>
                   {item}
                 </li>
