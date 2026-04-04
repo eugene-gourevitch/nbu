@@ -341,7 +341,7 @@ export const ServicesGridTemplate = ({
             {card.items && (
               <ul className="space-y-3">
                 {card.items.map((item) => (
-                  <li key={item} className="text-[20px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1">&#8226;</span>
                     {item}
                   </li>
