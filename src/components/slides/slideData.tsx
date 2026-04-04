@@ -472,7 +472,7 @@ export const slides: SlideData[] = [
             <SlidePill label="THE PARTIES" />
             <OmniStratLogo />
           </div>
-          <h2 className="text-[40px] font-extrabold leading-tight tracking-tight mb-10">
+          <h2 className="text-[44px] font-extrabold leading-tight tracking-tight mb-10">
             Key stakeholders in the Solfy CA dispute
           </h2>
           <div className="grid grid-cols-3 gap-8 flex-1">
