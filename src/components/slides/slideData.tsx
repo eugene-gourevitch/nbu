@@ -440,9 +440,9 @@ export const slides: SlideData[] = [
                     <div key={person.name} className="flex items-start gap-3 pb-2 border-b border-slide-foreground/5 last:border-0 last:pb-0">
                       <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />
                       <div>
-                        <span className="text-[18px] font-bold">{person.name}</span>
-                        <span className="text-[16px] text-slide-primary ml-2">{person.role}</span>
-                        <p className="text-[15px] text-slide-muted">{person.note}</p>
+                        <span className="text-[17px] font-bold">{person.name}</span>
+                        <span className="text-[14px] text-slide-primary ml-2">{person.role}</span>
+                        <p className="text-[14px] text-slide-muted">{person.note}</p>
                       </div>
                     </div>
                   ))}
