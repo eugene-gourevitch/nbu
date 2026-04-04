@@ -74,17 +74,8 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
   }, []);
 
   const openPrintView = useCallback(() => {
-    const printWin = window.open("", "_blank");
-    if (!printWin) return;
-    printWin.document.write(`<!DOCTYPE html><html><head><title>${title} - Print</title>
-      <style>
-        @media print { @page { size: landscape; margin: 0; } .slide-page { page-break-after: always; } .slide-page:last-child { page-break-after: avoid; } }
-        body { margin: 0; background: white; }
-        .slide-page { width: 1920px; height: 1080px; overflow: hidden; position: relative; }
-      </style>
-    </head><body><p style="padding:40px;font-family:sans-serif;font-size:24px;">Loading slides for print... Please use Ctrl+P / Cmd+P to print this page as PDF.</p></body></html>`);
-    printWin.document.close();
-  }, [title]);
+    window.open("/print", "_blank");
+  }, []);
 
   useEffect(() => {
     const handler = () => setIsFullscreen(!!document.fullscreenElement);
