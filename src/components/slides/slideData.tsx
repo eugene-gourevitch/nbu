@@ -36,7 +36,7 @@ export const slides: SlideData[] = [
         headline={<>INVESTOR<br />ALERT</>}
         subtitle="Selective Criminal Prosecution Used as Commercial Leverage by the National Bank of Uzbekistan."
         subtitleTyped="A Confidential Briefing for International Financial Institutions, Correspondent Banks, and the Investor Community."
-        meta="Confidential -- April 2026 -- Prepared by Amsterdam & Partners LLP and OmniStrat Group LLC"
+        meta={`Confidential\n${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}\nPrepared by OmniStrat Group LLC`}
         heroImage={hero3d}
         heroAlt="Strategic visual"
       />
