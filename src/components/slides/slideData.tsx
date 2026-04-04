@@ -1104,7 +1104,7 @@ export const slides: SlideData[] = [
             <h2 className="text-[44px] font-extrabold text-white leading-[1.05] tracking-tight mb-4">
               Request a Confidential Briefing
             </h2>
-            <p className="text-[20px] text-white/60 max-w-[800px] leading-relaxed mb-10">
+            <p className="text-[19px] text-white/60 max-w-[800px] leading-relaxed mb-10">
               We invite your compliance, legal, or investment team to a 30-minute confidential Zoom briefing to discuss the documented facts.
             </p>
 
