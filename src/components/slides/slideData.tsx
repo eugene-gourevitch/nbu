@@ -203,7 +203,7 @@ export const slides: SlideData[] = [
                 ))}
               </div>
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 anim-fade-up stagger-5">
               <a
                 href="https://calendly.com/eugene-gourevitch-omnistratgroup/30min"
                 target="_blank"
