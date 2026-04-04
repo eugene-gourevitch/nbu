@@ -189,7 +189,7 @@ export const slides: SlideData[] = [
               </div>
             </div>
             <div className="bg-slide-surface rounded-2xl p-8">
-              <h3 className="text-[26px] font-bold mb-6">Key Questions</h3>
+              <h3 className="text-[24px] font-bold mb-6">Key Questions</h3>
               <div className="space-y-5">
                 {[
                   "Was criminal prosecution used as commercial leverage during settlement talks?",
