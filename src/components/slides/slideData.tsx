@@ -874,7 +874,7 @@ export const slides: SlideData[] = [
                 Charges allege 14.9 billion soums in unpaid contractual rewards owed to NBU. These correspond to obligations under Agreement No. 289/37, already adjudicated in civil court rulings (December 2024, May 2025). The criminal complaint repackages a commercial dispute.
               </p>
             </div>
-            <div>
+            <div style={{ animation: "slide-up 0.5s ease-out 0.5s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
               <h3 className="text-[24px] font-bold mb-3">NBU Approved Every Tranche</h3>
               <p className="text-[19px] text-slide-muted leading-relaxed">
