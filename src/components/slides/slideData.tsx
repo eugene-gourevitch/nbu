@@ -42,7 +42,48 @@ export const slides: SlideData[] = [
       />
     ),
   },
-  // 2. Background: The Solfy Story
+  // 2. Confidentiality & Disclaimer
+  {
+    id: "solfy-disclaimer",
+    title: "Confidentiality & Disclaimer",
+    component: (props) => (
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
+        <div className="flex flex-col h-full p-[80px]">
+          <OmniStratLogo />
+          <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
+            <SlidePill label="CONFIDENTIALITY NOTICE" />
+            <h2 className="text-[48px] font-bold text-slide-foreground mt-6 leading-tight">
+              Confidentiality Statement & Disclaimer
+            </h2>
+
+            <div className="mt-10 space-y-8 text-[20px] leading-[1.7] text-slide-muted">
+              <div>
+                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
+                <p>
+                  This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without the prior written consent of OmniStrat Group LLC. Unauthorised disclosure, copying, or distribution of this material is strictly prohibited and may result in legal action.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
+                <p>
+                  This presentation has been prepared by OmniStrat Group LLC for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation to take any action. While every effort has been made to ensure the accuracy and completeness of the information presented, OmniStrat Group LLC makes no representations or warranties, express or implied, regarding the accuracy, reliability, or completeness of the content. Recipients should seek independent professional advice before making any decisions based on the information contained in this document.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
+                <p>
+                  OmniStrat Group LLC, its affiliates, directors, officers, and employees shall not be held liable for any loss, damage, or expense arising directly or indirectly from the use of or reliance on any information contained in this presentation. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
+    ),
+  },
+  // 3. Background: The Solfy Story
   {
     id: "solfy-background",
     title: "Background",
