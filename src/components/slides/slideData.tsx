@@ -660,10 +660,10 @@ export const slides: SlideData[] = [
             {/* Left: Photo + Identity */}
             <div className="flex flex-col items-center w-[380px] shrink-0">
               <div className="relative">
-                <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-slide-primary/40 shadow-[0_0_60px_rgba(59,85,255,0.3)]">
+                <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-slide-primary/40" style={{ animation: "scale-in 0.6s ease-out 0.2s both", boxShadow: "0 0 40px rgba(59,85,255,0.25)" }}>
                   <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-red-600 text-white text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase">
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-red-600 text-white text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase animate-[glow-pulse_2s_ease-in-out_infinite]">
                   <span className="w-2 h-2 bg-red-300 rounded-full animate-pulse" />
                   Detained
                 </div>
