@@ -682,8 +682,8 @@ export const CTASlideTemplate = ({
   <SlideLayout variant="blue" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col items-center justify-center h-full text-center p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
-      <h2 className="mt-10 text-[80px] font-extrabold leading-[1.1] max-w-[1300px]">{headline}</h2>
-      <p className="mt-8 text-[26px] text-white/80 max-w-[900px] leading-relaxed">{subtitle}</p>
+      <h2 className="mt-10 text-[44px] font-extrabold leading-[1.1] max-w-[1300px]">{headline}</h2>
+      <p className="mt-8 text-[22px] text-white/80 max-w-[900px] leading-relaxed">{subtitle}</p>
     </div>
   </SlideLayout>
 );
