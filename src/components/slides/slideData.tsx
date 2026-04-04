@@ -324,7 +324,7 @@ export const slides: SlideData[] = [
 
             {/* Column 2: Capital Markets */}
             <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden">
-              <h3 className="text-[22px] font-bold text-slide-primary mb-4 shrink-0">Capital Markets Presence</h3>
+              <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Capital Markets Presence</h3>
               <div className="space-y-4 overflow-hidden">
                 <div className="bg-white rounded-xl p-5">
                   <p className="text-[13px] text-slide-muted tracking-[0.15em] uppercase mb-1">LSE Eurobond</p>
