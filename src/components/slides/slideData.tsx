@@ -147,7 +147,7 @@ export const slides: SlideData[] = [
             ].map((line, i) => (
               <div key={i} className="flex items-start gap-5">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3B55FF] mt-3 shrink-0" />
-                <p className="text-[28px] text-white/80 font-medium leading-snug">{line}</p>
+                <p className="text-[22px] text-white/80 font-medium leading-snug">{line}</p>
               </div>
             ))}
           </div>
