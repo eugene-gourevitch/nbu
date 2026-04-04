@@ -1146,8 +1146,8 @@ export const slides: SlideData[] = [
 
               {/* Amsterdam & Partners */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left">
-                <h3 className="text-[26px] font-extrabold text-white mb-1">Amsterdam & Partners LLP</h3>
-                <p className="text-[15px] text-white/50 font-semibold tracking-wider uppercase mb-8">Legal Counsel</p>
+                <h3 className="text-[24px] font-extrabold text-white mb-1">Amsterdam & Partners LLP</h3>
+                <p className="text-[14px] text-white/50 font-semibold tracking-wider uppercase mb-8">Legal Counsel</p>
                 <div className="space-y-5">
                   <div>
                     <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
