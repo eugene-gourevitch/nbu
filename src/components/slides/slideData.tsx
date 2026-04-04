@@ -271,7 +271,7 @@ export const slides: SlideData[] = [
             </div>
 
             {/* The Collapse */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden">
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden anim-slide-right stagger-2">
               <h3 className="text-[24px] font-bold text-red-600 mb-5 shrink-0">The Collapse</h3>
               <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
