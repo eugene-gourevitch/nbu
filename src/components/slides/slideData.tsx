@@ -967,30 +967,89 @@ export const slides: SlideData[] = [
     id: "solfy-media",
     title: "Media Coverage",
     component: (props) => (
-      <ServicesGridTemplate
-        {...props}
-        pillLabel="MEDIA & INTERNATIONAL COVERAGE"
-        headline="Growing international attention on the Solfy/NBU dispute"
-        columns={2}
-        cards={[
-          {
-            title: "IBTimes (March 2026)",
-            desc: "Analysis identifies Solfy case as indicative of institutional gaps undermining Uzbekistan's reform credibility. References threats linked to NBU Chairman Mirsoatov.",
-          },
-          {
-            title: "UzDaily.uz (February 2026)",
-            desc: "Reports Poletaev and Solfy have entered legal dispute with NBU. Notes engagement of Amsterdam & Partners LLP.",
-          },
-          {
-            title: "Investing.com / PR Newswire (April 2026)",
-            desc: "Amsterdam & Partners press release urging Uzbekistan to cease irregular detentions and uphold international legal standards.",
-          },
-          {
-            title: "UA.NEWS (2025-2026)",
-            desc: "Names NBU Chairman Alisher Mirsoatov personally as source of threats to international investors. Additional placements in Russian-language Telegram channels and international outlets are ongoing.",
-          },
-        ]}
-      />
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-4">
+            <SlidePill label="MEDIA & INTERNATIONAL COVERAGE" />
+            <OmniStratLogo />
+          </div>
+
+          <h2
+            className="text-[46px] font-extrabold leading-[1.05] tracking-tight mb-2"
+            style={{ animation: "fade-in 0.5s ease-out 0.2s both" }}
+          >
+            The world is watching
+          </h2>
+          <p
+            className="text-[20px] text-slide-muted mb-10"
+            style={{ animation: "fade-in 0.4s ease-out 0.35s both" }}
+          >
+            International media spotlight on NBU's conduct and Uzbekistan's investment climate
+          </p>
+
+          <div className="grid grid-cols-2 gap-6 flex-1">
+            {[
+              {
+                source: "IBTimes",
+                date: "March 2026",
+                quote: "Institutional gaps undermining Uzbekistan's reform credibility",
+                detail: "Names NBU Chairman Mirsoatov as source of threats. Identifies the Solfy case as a litmus test for foreign investor protection.",
+                color: "border-l-slide-primary",
+                bg: "bg-slide-primary/5",
+              },
+              {
+                source: "PR Newswire / Investing.com",
+                date: "April 2026",
+                quote: "Cease irregular detentions and uphold international legal standards",
+                detail: "Amsterdam & Partners formal press release distributed globally via PR Newswire. Picked up by Investing.com, Yahoo Finance, and financial wire services.",
+                color: "border-l-slide-primary",
+                bg: "bg-slide-primary/5",
+              },
+              {
+                source: "UA.NEWS",
+                date: "2025-2026",
+                quote: "NBU Chairman Mirsoatov personally identified as source of threats",
+                detail: "Ongoing coverage naming specific individuals. Additional placements across Russian-language Telegram channels and international outlets.",
+                color: "border-l-red-500",
+                bg: "bg-red-50",
+              },
+              {
+                source: "UzDaily.uz",
+                date: "February 2026",
+                quote: "Poletaev and Solfy enter legal dispute with NBU",
+                detail: "Domestic Uzbek media reporting on investor engagement of Amsterdam & Partners LLP, signaling the dispute has entered the international arena.",
+                color: "border-l-amber-500",
+                bg: "bg-amber-50",
+              },
+            ].map((item, i) => (
+              <div
+                key={item.source}
+                className={`${item.bg} border-l-4 ${item.color} rounded-r-2xl p-7 flex flex-col justify-between group hover:shadow-lg transition-shadow duration-300`}
+                style={{ animation: `fade-in 0.5s ease-out ${0.4 + i * 0.15}s both` }}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[22px] font-extrabold tracking-tight">{item.source}</span>
+                    <span className="text-[14px] font-semibold text-slide-muted tracking-wider uppercase">{item.date}</span>
+                  </div>
+                  <blockquote className="text-[21px] font-bold leading-snug mb-4 italic">
+                    "{item.quote}"
+                  </blockquote>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">{item.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div
+            className="mt-6 bg-slide-foreground text-white rounded-2xl px-8 py-5 flex items-center justify-between"
+            style={{ animation: "fade-in 0.5s ease-out 1s both" }}
+          >
+            <p className="text-[18px] font-semibold">Coverage is accelerating. Additional media placements are scheduled across tier-1 international outlets.</p>
+            <span className="text-[28px] font-bold text-slide-primary ml-6 shrink-0">→</span>
+          </div>
+        </div>
+      </SlideLayout>
     ),
   },
   // 13. Legal Remedies in Progress
