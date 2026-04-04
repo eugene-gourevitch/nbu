@@ -632,7 +632,7 @@ export const slides: SlideData[] = [
     component: (props) => (
       <MissionDarkTemplate
         {...props}
-        headline="He sits in a Tashkent detention facility while the parties who made every material decision walk free."
+        headline="A foreign national held as human collateral — detained not for justice, but as leverage. This is not prosecution. It is state-sponsored coercion."
         backgroundImage={detentionCell}
       />
     ),
