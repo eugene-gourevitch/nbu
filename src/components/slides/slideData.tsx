@@ -834,7 +834,7 @@ export const slides: SlideData[] = [
                 "NBU's retail division leadership who publicly endorsed the product",
                 "20% shareholder Full Stack Solution and its principals (Izrailbekov)",
               ].map((item) => (
-                <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
+                <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3" style={{ animation: `fade-in 0.3s ease-out ${0.5 + i * 0.1}s both` }}>
                   <span className="text-slide-primary mt-1">&#8226;</span>{item}
                 </li>
               ))}
