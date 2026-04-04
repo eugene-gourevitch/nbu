@@ -968,7 +968,7 @@ export const slides: SlideData[] = [
             <SlidePill label="BROADER CONTEXT" />
             <OmniStratLogo />
           </div>
-          <h2 className="text-[42px] font-extrabold mt-6 leading-tight max-w-[1400px]">
+          <h2 className="text-[44px] font-extrabold mt-6 leading-tight max-w-[1400px]">
             The Solfy case is not an isolated incident
           </h2>
           <p className="text-[20px] text-slide-muted mt-3 max-w-[1200px]">
