@@ -349,8 +349,8 @@ export const slides: SlideData[] = [
                   { org: "MIGA", role: "Political risk guarantees covering NBU exposure." },
                 ].map((item) => (
                   <div key={item.org} className="flex gap-3">
-                    <span className="text-[16px] font-bold text-slide-foreground w-[52px] shrink-0">{item.org}</span>
-                    <p className="text-[15px] text-slide-muted leading-relaxed">{item.role}</p>
+                    <span className="text-[14px] font-bold text-slide-foreground w-[52px] shrink-0">{item.org}</span>
+                    <p className="text-[14px] text-slide-muted leading-relaxed">{item.role}</p>
                   </div>
                 ))}
               </div>
