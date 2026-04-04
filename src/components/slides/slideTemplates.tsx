@@ -427,7 +427,7 @@ export const ImageTextTemplate = ({
         <div className="mt-10 flex gap-6">
           {stats.map((s) => (
             <div key={s.label} className="bg-slide-surface rounded-xl px-6 py-4 text-center">
-              <div className="text-[32px] font-extrabold text-slide-primary">{s.num}</div>
+              <div className="text-[24px] font-extrabold text-slide-primary">{s.num}</div>
               <div className="text-[14px] text-slide-muted">{s.label}</div>
             </div>
           ))}
