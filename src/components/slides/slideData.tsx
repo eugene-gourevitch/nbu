@@ -414,8 +414,8 @@ export const slides: SlideData[] = [
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
-                <div className="space-y-2 text-[18px]">
+                <h4 className="text-[19px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
+                <div className="space-y-2 text-[17px]">
                   <div className="flex justify-between"><span className="text-slide-muted">S&P</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Fitch</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Moody's</span><span className="font-bold">Ba3 (stable)</span></div>
