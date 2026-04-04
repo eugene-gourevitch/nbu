@@ -77,6 +77,39 @@ export interface SlideData {
   component: (props: { slideNumber: number; totalSlides: number }) => ReactNode;
 }
 
+// Disclaimer slide object - placed near end of deck
+const disclaimerSlide: SlideData = {
+  id: "solfy-disclaimer",
+  title: "Disclaimer",
+  component: (props) => (
+    <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
+      <div className="flex flex-col h-full p-[80px]">
+        <OmniStratLogo />
+        <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
+          <SlidePill label="CONFIDENTIALITY NOTICE" />
+          <h2 className="text-[44px] font-bold text-slide-foreground mt-6 leading-tight">
+            Confidentiality Statement & Disclaimer
+          </h2>
+          <div className="mt-10 space-y-6 text-[20px] leading-[1.7] text-slide-muted">
+            <div>
+              <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
+              <p>This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC and Amsterdam & Partners LLP. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
+            </div>
+            <div>
+              <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
+              <p>This presentation has been prepared for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation. While every effort has been made to ensure accuracy, OmniStrat Group LLC makes no representations or warranties regarding the completeness of the content.</p>
+            </div>
+            <div>
+              <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
+              <p>OmniStrat Group LLC, Amsterdam & Partners LLP, their affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </SlideLayout>
+  ),
+};
+
 export const slides: SlideData[] = [
   // ═══ 1. TITLE ═══
   {
@@ -100,7 +133,8 @@ export const slides: SlideData[] = [
               <div className="mt-6 text-[16px] text-slide-muted/60 tracking-widest uppercase leading-relaxed">
                 <div>Confidential</div>
                 <div>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
-                <div>Prepared by OmniStrat Group LLC</div>
+                <div>Prepared jointly by Amsterdam & Partners LLP</div>
+                <div>and OmniStrat Group LLC</div>
               </div>
             </div>
           </div>
@@ -124,40 +158,7 @@ export const slides: SlideData[] = [
     ),
   },
 
-  // ═══ 2. DISCLAIMER (compact) ═══
-  {
-    id: "solfy-disclaimer",
-    title: "Disclaimer",
-    component: (props) => (
-      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
-        <div className="flex flex-col h-full p-[80px]">
-          <OmniStratLogo />
-          <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
-            <SlidePill label="CONFIDENTIALITY NOTICE" />
-            <h2 className="text-[44px] font-bold text-slide-foreground mt-6 leading-tight">
-              Confidentiality Statement & Disclaimer
-            </h2>
-            <div className="mt-10 space-y-6 text-[20px] leading-[1.7] text-slide-muted">
-              <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
-                <p>This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
-              </div>
-              <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
-                <p>This presentation has been prepared for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation. While every effort has been made to ensure accuracy, OmniStrat Group LLC makes no representations or warranties regarding the completeness of the content.</p>
-              </div>
-              <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
-                <p>OmniStrat Group LLC, its affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </SlideLayout>
-    ),
-  },
-
-  // ═══ 3. PURPOSE ═══
+  // ═══ 2. PURPOSE ═══
   {
     id: "solfy-purpose",
     title: "Purpose of This Briefing",
