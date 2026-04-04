@@ -167,14 +167,14 @@ export const slides: SlideData[] = [
             <SlidePill label="PURPOSE OF THIS BRIEFING" />
             <OmniStratLogo />
           </div>
-          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-4">
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-4 anim-fade-up stagger-1">
             Why this briefing exists
           </h2>
-          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1100px] mb-12">
+          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1100px] mb-12 anim-fade-up stagger-2">
             A fintech executive detained in Uzbekistan under circumstances that raise material concerns about rule of law and the investment climate.
           </p>
           <div className="grid grid-cols-3 gap-8 flex-1">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 anim-fade-up stagger-3">
               <div className="bg-slide-surface rounded-2xl p-8 flex-1">
                 <h3 className="text-[24px] font-bold mb-4">The Situation</h3>
                 <p className="text-[19px] text-slide-muted leading-relaxed">
