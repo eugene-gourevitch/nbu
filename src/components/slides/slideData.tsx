@@ -813,7 +813,7 @@ export const slides: SlideData[] = [
         pillLabel="SELECTIVE PROSECUTION"
         subtitle="This pattern is consistent with the use of criminal prosecution as commercial leverage, not genuine law enforcement."
         leftContent={
-          <div>
+          <div className="anim-slide-left stagger-2">
             <h3 className="text-[24px] font-bold text-slide-primary mb-6">Charged</h3>
             <div className="bg-slide-surface rounded-2xl p-8">
               <h4 className="text-[24px] font-bold mb-3">Hasanov Uktam Nasulloyevich</h4>
