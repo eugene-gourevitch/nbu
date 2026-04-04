@@ -1067,7 +1067,7 @@ export const slides: SlideData[] = [
                 Investment treaty claim under the Russia-Uzbekistan bilateral investment treaty is imminent. Will invoke ICSID jurisdiction for violations of fair and equitable treatment, protection against expropriation, and full protection and security. Bluestone independent valuation: <span className="font-bold text-slide-foreground">$42-52 million</span>. This is not a nuisance claim.
               </p>
             </div>
-            <div>
+            <div style={{ animation: "slide-up 0.5s ease-out 0.35s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">02</div>
               <h3 className="text-[24px] font-bold mb-3">Criminal Defense</h3>
               <p className="text-[19px] text-slide-muted leading-relaxed">
