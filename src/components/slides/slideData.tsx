@@ -1026,7 +1026,7 @@ export const slides: SlideData[] = [
                     <span className="text-[24px] font-extrabold tracking-tight">{item.source}</span>
                     <span className="text-[14px] font-semibold text-slide-muted tracking-wider uppercase">{item.date}</span>
                   </div>
-                  <p className="text-[20px] font-bold leading-snug mb-4 italic">
+                  <p className="text-[19px] font-bold leading-snug mb-4 italic">
                     {item.quote}
                   </p>
                   <p className="text-[17px] text-slide-muted leading-relaxed">{item.detail}</p>
