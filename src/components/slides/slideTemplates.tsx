@@ -640,8 +640,8 @@ export const CaseStudyDarkTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
       <div className="flex-1 flex flex-col justify-center max-w-[1200px]">
-        <h2 className="text-[52px] font-extrabold leading-[1.1]">{headline}</h2>
-        {description && <p className="mt-8 text-[26px] text-white/70 leading-relaxed">{description}</p>}
+        <h2 className="text-[44px] font-extrabold leading-[1.1]">{headline}</h2>
+        {description && <p className="mt-8 text-[22px] text-white/70 leading-relaxed">{description}</p>}
         {stats && (
           <div className={`mt-12 grid grid-cols-${stats.length} gap-8`}>
             {stats.map((stat) => (
