@@ -787,7 +787,7 @@ export const slides: SlideData[] = [
                   <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
                 </div>
               ))}
-              <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-7">
+              <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-7" style={{ animation: "slide-up 0.5s ease-out 0.75s both" }}>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-[17px] font-bold text-red-600">!</div>
                   <h3 className="text-[22px] font-bold text-red-700">International Law Violation</h3>
