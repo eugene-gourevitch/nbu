@@ -100,7 +100,7 @@ const disclaimerSlide: SlideData = {
               <p>This presentation has been prepared for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation. While every effort has been made to ensure accuracy, OmniStrat Group LLC makes no representations or warranties regarding the completeness of the content.</p>
             </div>
             <div>
-              <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
+              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
               <p>OmniStrat Group LLC, Amsterdam & Partners LLP, their affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
             </div>
           </div>
