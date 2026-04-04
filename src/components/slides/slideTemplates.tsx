@@ -297,7 +297,7 @@ export const BigNumbersTemplate = ({
             <div key={stat.num} className="text-center">
               <div className="text-[84px] font-extrabold leading-none">{stat.num}</div>
               <p className="text-[22px] font-semibold mt-4">{stat.label}</p>
-              <p className="text-[18px] text-white/60 mt-2">{stat.sub}</p>
+              <p className="text-[17px] text-white/60 mt-2">{stat.sub}</p>
             </div>
           ))}
         </div>
