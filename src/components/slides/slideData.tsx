@@ -1092,37 +1092,95 @@ export const slides: SlideData[] = [
     id: "solfy-contact",
     title: "Request a Briefing",
     component: (props) => (
-      <TwoColumnFreeformTemplate
-        {...props}
-        pillLabel="REQUEST A CONFIDENTIAL BRIEFING"
-        subtitle="We invite your compliance, legal, or investment team to a 30-minute confidential Zoom briefing to discuss the documented facts and answer questions."
-        leftContent={
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-[28px] font-bold mb-3">OmniStrat Group LLC</h3>
-              <p className="text-[20px] text-slide-muted">Eugene Gourevitch, Managing Principal</p>
-              <p className="text-[20px] text-slide-muted">eugene@omnistratgroup.com</p>
-              <p className="text-[20px] text-slide-muted">omnistratgroup.com</p>
-              <p className="text-[20px] text-slide-muted">Dubai | Miami</p>
-            </div>
-            <div className="bg-slide-primary text-white rounded-2xl px-8 py-5 inline-block">
-              <p className="text-[18px] font-semibold">calendly.com/eugene-gourevitch-omnistratgroup/30min</p>
-            </div>
+      <SlideLayout variant="dark" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-8">
+            <SlidePill label="REQUEST A CONFIDENTIAL BRIEFING" variant="light" />
+            <OmniStratLogo variant="light" />
           </div>
-        }
-        rightContent={
-          <div>
-            <h3 className="text-[28px] font-bold mb-3">Amsterdam & Partners LLP</h3>
-            <p className="text-[20px] text-slide-muted">Robert Amsterdam, Founding Partner</p>
-            <p className="text-[20px] text-slide-muted">125 Old Broad Street, London EC2N 1AR</p>
-            <p className="text-[20px] text-slide-muted">1054 31st St NW, Ste 110, Washington, DC 20007</p>
-            <p className="text-[20px] text-slide-muted">amsterdamandpartners.com</p>
-            <p className="text-[18px] text-slide-muted/60 mt-10">
-              This briefing contains privileged and confidential information. Distribution at recipient's discretion.
+
+          <div className="flex-1 flex flex-col justify-center items-center text-center">
+            <h2
+              className="text-[56px] font-extrabold text-white leading-[1.05] tracking-tight mb-4"
+              style={{ animation: "fade-in 0.6s ease-out 0.2s both" }}
+            >
+              Let's talk.
+            </h2>
+            <p
+              className="text-[22px] text-white/60 max-w-[800px] leading-relaxed mb-16"
+              style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}
+            >
+              We invite your compliance, legal, or investment team to a 30-minute confidential Zoom briefing to discuss the documented facts.
             </p>
+
+            <div className="grid grid-cols-2 gap-10 w-full max-w-[1200px]" style={{ animation: "fade-in 0.5s ease-out 0.6s both" }}>
+              {/* OmniStrat */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left">
+                <h3 className="text-[28px] font-extrabold text-white mb-1">OmniStrat Group LLC</h3>
+                <p className="text-[16px] text-slide-primary font-semibold tracking-wider uppercase mb-8">Strategic Advisory</p>
+
+                <div className="space-y-5">
+                  <div>
+                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
+                    <p className="text-[20px] text-white font-semibold">Eugene Gourevitch</p>
+                    <p className="text-[17px] text-white/60">Managing Principal</p>
+                  </div>
+                  <div>
+                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Email</p>
+                    <p className="text-[20px] text-white font-semibold">info@omnistratgroup.com</p>
+                  </div>
+                  <div>
+                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Web</p>
+                    <a href="https://www.omnistratgroup.com" target="_blank" rel="noopener noreferrer" className="text-[20px] text-slide-primary font-semibold hover:underline">
+                      www.omnistratgroup.com
+                    </a>
+                  </div>
+                </div>
+
+                <a
+                  href="https://calendly.com/eugene-gourevitch-omnistratgroup/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-3 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-xl px-7 py-4 transition-colors group"
+                >
+                  <span className="text-[18px] font-bold">Schedule a Briefing</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+
+              {/* Amsterdam & Partners */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left">
+                <h3 className="text-[28px] font-extrabold text-white mb-1">Amsterdam & Partners LLP</h3>
+                <p className="text-[16px] text-white/50 font-semibold tracking-wider uppercase mb-8">Legal Counsel</p>
+
+                <div className="space-y-5">
+                  <div>
+                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
+                    <p className="text-[20px] text-white font-semibold">Robert Amsterdam</p>
+                    <p className="text-[17px] text-white/60">Founding Partner</p>
+                  </div>
+                  <div>
+                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">London</p>
+                    <p className="text-[18px] text-white/70">125 Old Broad Street, EC2N 1AR</p>
+                  </div>
+                  <div>
+                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Washington, DC</p>
+                    <p className="text-[18px] text-white/70">1054 31st St NW, Ste 110, 20007</p>
+                  </div>
+                  <div>
+                    <p className="text-[13px] text-white/40 tracking-[0.15em] uppercase mb-1">Web</p>
+                    <p className="text-[20px] text-white font-semibold">amsterdamandpartners.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        }
-      />
+
+          <p className="text-[14px] text-white/30 text-center mt-8" style={{ animation: "fade-in 0.5s ease-out 1s both" }}>
+            This briefing contains privileged and confidential information. Distribution at recipient's discretion.
+          </p>
+        </div>
+      </SlideLayout>
     ),
   },
 ];
