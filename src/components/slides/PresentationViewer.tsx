@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Grid3X3, FileDown } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Grid3X3, FileDown, Monitor, Tablet, Smartphone } from "lucide-react";
 import ScaledSlide from "./ScaledSlide";
 import { slides as defaultSlides, SlideData } from "./slideData";
 import OmniStratLogo from "./OmniStratLogo";
@@ -9,6 +9,8 @@ interface PresentationViewerProps {
   slides?: SlideData[];
   title?: string;
 }
+
+type ViewMode = "desktop" | "tablet" | "phone";
 
 // Lazy grid thumbnail using IntersectionObserver
 const LazySlideThumb = ({ slide, index, totalSlides, onClick, isActive }: {
@@ -55,6 +57,24 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
   const [showGrid, setShowGrid] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
 
+  // Device viewing mode
+  const [viewMode, setViewMode] = useState<ViewMode>("desktop");
+  const [hasManuallyToggled, setHasManuallyToggled] = useState(false);
+
+  useEffect(() => {
+    if (hasManuallyToggled) return;
+    const w = window.innerWidth;
+    if (w < 640) setViewMode("phone");
+    else if (w < 1024) setViewMode("tablet");
+    else setViewMode("desktop");
+  }, [hasManuallyToggled]);
+
+  const switchView = (mode: ViewMode) => {
+    setHasManuallyToggled(true);
+    setViewMode(mode);
+    setShowGrid(false);
+  };
+
   const goNext = useCallback(() => {
     setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
   }, [slides.length]);
@@ -96,6 +116,29 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
     return () => window.removeEventListener("keydown", onKey);
   }, [goNext, goPrev, isFullscreen, toggleFullscreen]);
 
+  // Touch swipe navigation
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  }, []);
+
+  const onTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - touchStartY.current;
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(dy);
+    if (absDx > 50 && absDx > absDy * 1.5) {
+      if (dx < 0) goNext();
+      else goPrev();
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  }, [goNext, goPrev]);
+
   // Hide cursor in fullscreen
   useEffect(() => {
     if (!isFullscreen) { setCursorVisible(true); return; }
@@ -113,27 +156,6 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
     };
   }, [isFullscreen]);
 
-  // Mobile gate
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  if (isMobile) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-8 text-center bg-background">
-        <OmniStratLogo size={48} />
-        <h2 className="text-xl font-bold mt-8 mb-4">Desktop viewing recommended</h2>
-        <p className="text-muted-foreground text-sm max-w-sm">
-          This presentation is optimized for desktop viewing. Please open on a larger screen or rotate your device to landscape.
-        </p>
-      </div>
-    );
-  }
-
   if (showGrid) {
     return (
       <div className="min-h-screen bg-secondary p-8">
@@ -143,7 +165,13 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
             <Minimize2 size={16} /> Close Grid
           </button>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className={`grid gap-4 ${
+          viewMode === "phone"
+            ? "grid-cols-1"
+            : viewMode === "tablet"
+            ? "grid-cols-2"
+            : "grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        }`}>
           {slides.map((slide, i) => (
             <LazySlideThumb
               key={slide.id}
@@ -160,9 +188,13 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
   }
 
   return (
-    <div className={isFullscreen ? `presentation-fullscreen ${cursorVisible ? "cursor-visible" : ""}` : "flex h-screen bg-secondary"}>
-      {/* Sidebar thumbnails */}
-      {!isFullscreen && (
+    <div className={
+      isFullscreen
+        ? `presentation-fullscreen flex flex-col ${cursorVisible ? "cursor-visible" : ""}`
+        : `flex h-screen bg-secondary ${viewMode === "phone" ? "flex-col" : ""}`
+    }>
+      {/* Sidebar thumbnails -- desktop only */}
+      {!isFullscreen && viewMode === "desktop" && (
         <div className="w-[260px] bg-background border-r border-border overflow-y-auto p-4 space-y-3 shrink-0">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Slides</span>
@@ -190,55 +222,119 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
       <div className="flex-1 flex flex-col">
         {/* Toolbar */}
         {!isFullscreen && (
-          <div className="flex items-center justify-between px-6 py-3 bg-background border-b border-border">
+          <div className={`flex items-center justify-between bg-background border-b border-border ${
+            viewMode === "phone" ? "px-3 py-2" : "px-6 py-3"
+          }`}>
+            {/* Left: title + counter */}
             <div className="flex items-center gap-3">
-              <span className="text-sm font-semibold">{title}</span>
-              <span className="text-xs text-muted-foreground">
+              {viewMode === "desktop" && (
+                <span className="text-sm font-semibold">{title}</span>
+              )}
+              <span className="text-xs text-muted-foreground tabular-nums">
                 {currentSlide + 1} / {slides.length}
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              {/* Nav arrows in toolbar */}
+
+            {/* Right: controls */}
+            <div className="flex items-center gap-1">
+              {/* Device toggles */}
+              <div className="flex items-center bg-secondary rounded-lg p-0.5 mr-2">
+                {([
+                  { mode: "desktop" as ViewMode, icon: Monitor, label: "Desktop" },
+                  { mode: "tablet" as ViewMode, icon: Tablet, label: "Tablet" },
+                  { mode: "phone" as ViewMode, icon: Smartphone, label: "Phone" },
+                ]).map(({ mode, icon: Icon, label }) => (
+                  <button
+                    key={mode}
+                    onClick={() => switchView(mode)}
+                    className={`p-1.5 rounded-md transition-all ${
+                      viewMode === mode
+                        ? "bg-background shadow-sm text-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                    title={label}
+                  >
+                    <Icon size={viewMode === "phone" ? 14 : 16} />
+                  </button>
+                ))}
+              </div>
+
+              {/* Nav arrows */}
               <button
                 onClick={goPrev}
                 disabled={currentSlide === 0}
                 className="p-2 rounded-md hover:bg-secondary transition-colors disabled:opacity-30"
               >
-                <ChevronLeft size={18} />
+                <ChevronLeft size={viewMode === "phone" ? 16 : 18} />
               </button>
               <button
                 onClick={goNext}
                 disabled={currentSlide === slides.length - 1}
                 className="p-2 rounded-md hover:bg-secondary transition-colors disabled:opacity-30"
               >
-                <ChevronRight size={18} />
+                <ChevronRight size={viewMode === "phone" ? 16 : 18} />
               </button>
-              <div className="w-px h-5 bg-border mx-1" />
-              <button
-                onClick={() => setShowGrid(true)}
-                className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
-              >
-                Grid
-              </button>
-              <button
-                onClick={openPrintView}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
-              >
-                <FileDown size={14} /> PDF
-              </button>
-              <button
-                onClick={toggleFullscreen}
-                className="flex items-center gap-1.5 px-4 py-1.5 bg-primary text-primary-foreground rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
-              >
-                <Maximize2 size={14} /> Present
-              </button>
+
+              {/* Desktop-only buttons */}
+              {viewMode === "desktop" && (
+                <>
+                  <div className="w-px h-5 bg-border mx-1" />
+                  <button
+                    onClick={() => setShowGrid(true)}
+                    className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
+                  >
+                    Grid
+                  </button>
+                  <button
+                    onClick={openPrintView}
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
+                  >
+                    <FileDown size={14} /> PDF
+                  </button>
+                  <button
+                    onClick={toggleFullscreen}
+                    className="flex items-center gap-1.5 px-4 py-1.5 bg-primary text-primary-foreground rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    <Maximize2 size={14} /> Present
+                  </button>
+                </>
+              )}
+
+              {/* Tablet: show present button */}
+              {viewMode === "tablet" && (
+                <button
+                  onClick={toggleFullscreen}
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity ml-1"
+                >
+                  <Maximize2 size={14} /> Present
+                </button>
+              )}
             </div>
           </div>
         )}
 
         {/* Slide area */}
-        <div className="flex-1 relative flex items-center justify-center p-4 lg:p-8">
-          <div className="w-full h-full max-w-[1200px] max-h-[675px] xl:max-w-[1400px] xl:max-h-[788px] rounded-xl overflow-hidden shadow-2xl" style={isFullscreen ? { maxWidth: "100%", maxHeight: "100%", borderRadius: 0 } : undefined}>
+        <div
+          className={`flex-1 relative flex items-center justify-center ${
+            viewMode === "phone"
+              ? "p-0"
+              : viewMode === "tablet"
+              ? "p-2"
+              : "p-4 lg:p-8"
+          }`}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          <div
+            className={`overflow-hidden ${
+              viewMode === "phone"
+                ? "w-full h-full"
+                : viewMode === "tablet"
+                ? "w-full h-full max-w-[1024px] max-h-[576px] rounded-lg shadow-xl"
+                : "w-full h-full max-w-[1200px] max-h-[675px] xl:max-w-[1400px] xl:max-h-[788px] rounded-xl shadow-2xl"
+            }`}
+            style={isFullscreen ? { maxWidth: "100%", maxHeight: "100%", borderRadius: 0 } : undefined}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -253,14 +349,29 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
             </AnimatePresence>
           </div>
 
+          {/* Progress dots for phone/tablet */}
+          {!isFullscreen && viewMode !== "desktop" && (
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentSlide(i)}
+                  className={`rounded-full transition-all ${
+                    i === currentSlide
+                      ? "w-6 h-2 bg-primary"
+                      : "w-2 h-2 bg-foreground/20 hover:bg-foreground/40"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+
           {/* Fullscreen nav + counter pill */}
           {isFullscreen && (
             <>
-              {/* Top-right counter pill */}
               <div className={`absolute top-4 right-4 bg-white/10 text-white/60 text-[12px] px-3 py-1 rounded-full backdrop-blur-sm transition-opacity duration-300 ${cursorVisible ? "opacity-100" : "opacity-0"}`}>
                 {currentSlide + 1} / {slides.length}
               </div>
-              {/* Bottom nav bar */}
               <div className={`absolute inset-x-0 bottom-0 flex items-center justify-center gap-4 h-[48px] bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${cursorVisible ? "opacity-100" : "opacity-0"}`}>
                 <button
                   onClick={goPrev}
