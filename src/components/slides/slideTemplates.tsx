@@ -603,7 +603,7 @@ export const PRStatsTemplate = ({
           <img src={image} alt={imageAlt} className="w-full h-full object-cover" />
         </div>
         <div className="flex-1 flex flex-col justify-center gap-6">
-          {introText && <p className="text-[22px] text-slide-muted leading-relaxed mb-4">{introText}</p>}
+          {introText && <p className="text-[19px] text-slide-muted leading-relaxed mb-4">{introText}</p>}
           {stats.map((stat) => (
             <div key={stat.number} className="border-b border-slide-foreground/10 pb-6">
               <div className="text-[48px] font-extrabold">{stat.number}</div>
