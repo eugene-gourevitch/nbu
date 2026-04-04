@@ -778,8 +778,8 @@ export const slides: SlideData[] = [
               {[
                 { num: "04", title: "Contractual Dispute, Not Criminal Conduct", text: "The underlying matter is a commercial disagreement over reward payments under Contract 289/37, already adjudicated in Uzbek civil courts (Dec 2024, May 2025). Criminalizing a contractual dispute violates the principle of ultima ratio in criminal law." },
                 { num: "05", title: "Arrest During Settlement Negotiations", text: "Charges were filed on March 27, exactly one day after NBU rejected the withdrawal of its criminal complaint. The timing reveals the arrest as a pressure tactic during active commercial negotiations, not a genuine law enforcement action." },
-              ].map((item) => (
-                <div key={item.num} className="bg-slide-surface rounded-2xl p-7">
+              ].map((item, i) => (
+                <div key={item.num} className="bg-slide-surface rounded-2xl p-7" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[17px] font-bold text-slide-primary">{item.num}</div>
                     <h3 className="text-[22px] font-bold">{item.title}</h3>
