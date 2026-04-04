@@ -750,7 +750,7 @@ export const slides: SlideData[] = [
             <SlidePill label="LEGAL ANALYSIS" />
             <OmniStratLogo />
           </div>
-          <h2 className="text-[42px] font-extrabold leading-[1.1] tracking-tight mb-3">
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3">
             Why arrest is an excessive and disproportionate measure
           </h2>
           <p className="text-[20px] text-slide-muted leading-relaxed mb-10 max-w-[1200px]">
