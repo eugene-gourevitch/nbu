@@ -424,7 +424,7 @@ export const slides: SlideData[] = [
             </div>
 
             {/* Right column */}
-            <div className="flex-1 flex flex-col gap-6">
+            <div className="flex-1 flex flex-col gap-6 anim-slide-right stagger-3">
               <div className="bg-slide-surface rounded-2xl p-6">
                 <h4 className="text-[19px] font-bold text-slide-primary mb-4">Management Board</h4>
                 <div className="space-y-3">
