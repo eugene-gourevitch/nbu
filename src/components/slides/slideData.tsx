@@ -1066,7 +1066,7 @@ export const slides: SlideData[] = [
               </p>
             </div>
             <div>
-              <div className="text-[72px] font-extrabold text-slide-primary/15 leading-none mb-3">02</div>
+              <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">02</div>
               <h3 className="text-[28px] font-bold mb-3">Criminal Defense</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 Hasanov's independent defense counsel in Tashkent is fully funded and operational. Defense position: charges lack legal merit and repackage a commercial dispute as criminal prosecution.
