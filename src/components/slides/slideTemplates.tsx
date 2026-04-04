@@ -646,8 +646,8 @@ export const CaseStudyDarkTemplate = ({
           <div className={`mt-12 grid grid-cols-${stats.length} gap-8`}>
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-[56px] font-extrabold text-slide-primary">{stat.num}</div>
-                <p className="text-[20px] text-white/60">{stat.label}</p>
+                <div className="text-[44px] font-extrabold text-slide-primary">{stat.num}</div>
+                <p className="text-[19px] text-white/60">{stat.label}</p>
               </div>
             ))}
           </div>
