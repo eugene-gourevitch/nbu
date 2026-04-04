@@ -707,7 +707,7 @@ export const slides: SlideData[] = [
                       <span className="text-slide-primary w-8 flex justify-center">{link.icon}</span>
                       <div>
                         <span className="text-[14px] font-bold text-white block">{link.platform}</span>
-                        <span className="text-[12px] text-white/40">{link.handle}</span>
+                        <span className="text-[11px] text-white/40">{link.handle}</span>
                       </div>
                     </a>
                   ))}
