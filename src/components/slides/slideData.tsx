@@ -790,7 +790,7 @@ export const slides: SlideData[] = [
                   <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-[17px] font-bold text-red-600">!</div>
                   <h3 className="text-[22px] font-bold text-red-700">International Law Violation</h3>
                 </div>
-                <p className="text-[18px] text-red-800/80 leading-relaxed">
+                <p className="text-[19px] text-red-800/80 leading-relaxed">
                   Arbitrary pre-trial detention in a commercial dispute violates ICCPR Article 9 (liberty and security), ICCPR Article 14 (fair trial), and ECHR Article 5 standards.
                 </p>
               </div>
