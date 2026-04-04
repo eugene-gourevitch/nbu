@@ -46,73 +46,42 @@ export const slides: SlideData[] = [
   {
     id: "solfy-disclaimer",
     title: "Confidentiality & Disclaimer",
-    component: (props) => {
-      const cards = [
-        {
-          icon: (
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-              <rect width="56" height="56" rx="16" fill="hsl(232,100%,62%)" fillOpacity="0.08" />
-              <path d="M28 14a6 6 0 0 1 6 6v4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H20a2 2 0 0 1-2-2V26a2 2 0 0 1 2-2h2v-4a6 6 0 0 1 6-6zm0 3a3 3 0 0 0-3 3v4h6v-4a3 3 0 0 0-3-3zm0 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="hsl(232,100%,62%)" />
-            </svg>
-          ),
-          title: "Confidentiality",
-          text: "This document is strictly confidential and proprietary to OmniStrat Group LLC. It may not be reproduced, distributed, or disclosed to any third party without prior written consent. Unauthorised disclosure may result in legal action.",
-        },
-        {
-          icon: (
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-              <rect width="56" height="56" rx="16" fill="hsl(232,100%,62%)" fillOpacity="0.08" />
-              <path d="M20 16h16a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H20a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2zm1 6v2h14v-2H21zm0 5v2h14v-2H21zm0 5v2h10v-2H21z" fill="hsl(232,100%,62%)" />
-            </svg>
-          ),
-          title: "Disclaimer",
-          text: "Prepared for informational purposes only. Does not constitute legal advice, an offer, or recommendation. OmniStrat Group LLC makes no warranties regarding the accuracy or completeness of the content herein.",
-        },
-        {
-          icon: (
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-              <rect width="56" height="56" rx="16" fill="hsl(232,100%,62%)" fillOpacity="0.08" />
-              <path d="M28 14l14 8v4c0 9.1-5.97 17.6-14 20-8.03-2.4-14-10.9-14-20v-4l14-8zm0 3.5L18 22.3V26c0 7.6 4.9 14.6 10 16.8 5.1-2.2 10-9.2 10-16.8v-3.7L28 17.5zm-2 14.7l-4-4 1.4-1.4L26 29.4l6.6-6.6L34 24.2l-8 8z" fill="hsl(232,100%,62%)" />
-            </svg>
-          ),
-          title: "Limitation of Liability",
-          text: "OmniStrat Group LLC, its affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information in this presentation. All rights reserved.",
-        },
-      ];
+    component: (props) => (
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
+        <div className="flex flex-col h-full p-[80px]">
+          <OmniStratLogo />
+          <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
+            <SlidePill label="CONFIDENTIALITY NOTICE" />
+            <h2 className="text-[48px] font-bold text-slide-foreground mt-6 leading-tight">
+              Confidentiality Statement & Disclaimer
+            </h2>
 
-      return (
-        <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
-          <div className="flex flex-col h-full p-[80px]">
-            <OmniStratLogo />
-            <div className="flex-1 flex flex-col justify-center">
-              <SlidePill label="CONFIDENTIALITY NOTICE" />
-              <h2 className="text-[56px] font-bold text-slide-foreground mt-6 leading-tight">
-                Confidentiality & Disclaimer
-              </h2>
-              <p className="text-[24px] text-slide-muted mt-4 max-w-[900px]">
-                Please read the following terms before proceeding with this document.
-              </p>
+            <div className="mt-10 space-y-8 text-[20px] leading-[1.7] text-slide-muted">
+              <div>
+                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
+                <p>
+                  This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without the prior written consent of OmniStrat Group LLC. Unauthorised disclosure, copying, or distribution of this material is strictly prohibited and may result in legal action.
+                </p>
+              </div>
 
-              <div className="grid grid-cols-3 gap-10 mt-12">
-                {cards.map((card, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col gap-5 p-8 rounded-2xl border border-slide-foreground/10 bg-slide-surface/50"
-                    style={{
-                      animation: `fadeSlideUp 0.6s ease-out ${0.3 + i * 0.2}s both`,
-                    }}
-                  >
-                    {card.icon}
-                    <h3 className="text-[26px] font-bold text-slide-foreground">{card.title}</h3>
-                    <p className="text-[19px] leading-[1.65] text-slide-muted">{card.text}</p>
-                  </div>
-                ))}
+              <div>
+                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
+                <p>
+                  This presentation has been prepared by OmniStrat Group LLC for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation to take any action. While every effort has been made to ensure the accuracy and completeness of the information presented, OmniStrat Group LLC makes no representations or warranties, express or implied, regarding the accuracy, reliability, or completeness of the content. Recipients should seek independent professional advice before making any decisions based on the information contained in this document.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
+                <p>
+                  OmniStrat Group LLC, its affiliates, directors, officers, and employees shall not be held liable for any loss, damage, or expense arising directly or indirectly from the use of or reliance on any information contained in this presentation. All rights reserved.
+                </p>
               </div>
             </div>
           </div>
-        </SlideLayout>
-      );
-    },
+        </div>
+      </SlideLayout>
+    ),
   },
   // 3. Background: The Solfy Story
   {
