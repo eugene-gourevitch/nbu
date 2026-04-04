@@ -130,7 +130,7 @@ export const slides: SlideData[] = [
               <p className="mt-4 text-[22px] font-medium text-slide-primary max-w-[640px] leading-snug tracking-tight">
                 A Confidential Briefing for International Financial Institutions, Correspondent Banks, and the Investor Community.
               </p>
-              <div className="mt-6 text-[16px] text-slide-muted/60 tracking-widest uppercase leading-relaxed">
+              <div className="mt-6 text-[14px] text-slide-muted/60 tracking-widest uppercase leading-relaxed">
                 <div>Confidential</div>
                 <div>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
                 <div>Prepared jointly by Amsterdam & Partners LLP</div>
