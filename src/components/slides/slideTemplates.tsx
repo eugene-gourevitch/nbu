@@ -382,7 +382,7 @@ export const ProcessSlideTemplate = ({
             <div key={item.step} className={`bg-slide-primary/${5 + i * 5} rounded-2xl p-6 flex flex-col h-full`}>
               <span className="text-[48px] font-extrabold text-slide-primary">{item.step}</span>
               <h3 className="text-[24px] font-bold mt-3 mb-3">{item.title}</h3>
-              <p className="text-[18px] text-slide-muted leading-relaxed">{item.desc}</p>
+              <p className="text-[17px] text-slide-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
