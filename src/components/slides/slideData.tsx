@@ -633,7 +633,7 @@ export const slides: SlideData[] = [
       <MissionDarkTemplate
         {...props}
         headline="He sits in a Tashkent detention facility while the parties who made every material decision walk free."
-        backgroundImage={missionBg}
+        backgroundImage={detentionCell}
       />
     ),
   },
