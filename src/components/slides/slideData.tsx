@@ -94,29 +94,29 @@ export const slides: SlideData[] = [
         subtitle="A fintech joint venture that became the center of an investor-state dispute with international implications."
         leftContent={
           <>
-            <h3 className="text-[28px] font-bold mb-4">The Venture</h3>
-            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
+            <h3 className="text-[32px] font-bold mb-4">The Venture</h3>
+            <p className="text-[22px] text-slide-muted leading-relaxed mb-4">
               Solfy CA LLC was established in Tashkent in June 2020 as a fintech joint venture between Russian investor Maxim Poletaev (50% via Solvy Cyprus Limited), the National Bank for Foreign Economic Activity of Uzbekistan (NBU, 5%), and other shareholders including Full Stack Solution (20%).
             </p>
-            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
-              The company launched a Buy Now, Pay Later (BNPL) installment card product in partnership with NBU -- Uzbekistan's largest commercial bank by assets (73.8% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums. Its senior retail management publicly endorsed and promoted the product.
+            <p className="text-[22px] text-slide-muted leading-relaxed mb-4">
+              The company launched a Buy Now, Pay Later (BNPL) installment card product in partnership with NBU, Uzbekistan's largest commercial bank by assets (73.8% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums. Its senior retail management publicly endorsed and promoted the product.
             </p>
-            <p className="text-[18px] text-slide-muted leading-relaxed">
+            <p className="text-[22px] text-slide-muted leading-relaxed">
               An independent valuation by Bluestone assessed the company at USD 42-52 million.
             </p>
           </>
         }
         rightContent={
           <>
-            <h3 className="text-[28px] font-bold mb-4">The Collapse</h3>
-            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
+            <h3 className="text-[32px] font-bold mb-4">The Collapse</h3>
+            <p className="text-[22px] text-slide-muted leading-relaxed mb-4">
               The business relationship between Solfy and NBU deteriorated. NBU terminated the partnership, and Solfy was declared bankrupt. A contractual dispute ensued over unpaid obligations under Agreement No. 289/37, which was adjudicated in Uzbek civil courts in December 2024 and May 2025.
             </p>
-            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
+            <p className="text-[22px] text-slide-muted leading-relaxed mb-4">
               In February 2026, Amsterdam & Partners LLP announced representation of Solfy and Poletaev, reporting that the investor and associates had been subjected to serious threats by NBU representatives. UA.NEWS identified NBU Chairman Alisher Mirsoatov personally as the source of threats.
             </p>
-            <p className="text-[18px] text-slide-muted leading-relaxed">
-              Rather than resolving the matter commercially, NBU filed a criminal complaint against Solfy's locally appointed director -- converting a failed business venture into a criminal prosecution during active settlement negotiations.
+            <p className="text-[22px] text-slide-muted leading-relaxed">
+              Rather than resolving the matter commercially, NBU filed a criminal complaint against Solfy's locally appointed director, converting a failed business venture into a criminal prosecution during active settlement negotiations.
             </p>
           </>
         }
@@ -136,7 +136,7 @@ export const slides: SlideData[] = [
           <>
             <h3 className="text-[32px] font-bold mb-6">The Situation</h3>
             <p className="text-[20px] text-slide-muted leading-relaxed">
-              The National Bank for Foreign Economic Activity of Uzbekistan (NBU) simultaneously holds equity in a joint venture and filed the criminal complaint against that venture's director -- during active settlement negotiations with the foreign investor.
+              The National Bank for Foreign Economic Activity of Uzbekistan (NBU) simultaneously holds equity in a joint venture and filed the criminal complaint against that venture's director during active settlement negotiations with the foreign investor.
             </p>
             <h3 className="text-[32px] font-bold mt-10 mb-6">The Audience</h3>
             <p className="text-[20px] text-slide-muted leading-relaxed">
@@ -255,7 +255,7 @@ export const slides: SlideData[] = [
 
               <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5">
                 <p className="text-[15px] text-slide-foreground leading-relaxed">
-                  <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA -- while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture's director.
+                  <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture's director.
                 </p>
               </div>
             </div>
@@ -286,11 +286,11 @@ export const slides: SlideData[] = [
             ],
           },
           {
-            title: "Hasanov Uktam N. -- Detained",
+            title: "Hasanov Uktam N., Detained",
             items: [
               "Director of Solfy CA LLC, the only individual charged",
               "Currently held in custody in Tashkent",
-              "Charged under Article 167(3)(a) -- embezzlement in large amounts",
+              "Charged under Article 167(3)(a), embezzlement in large amounts",
               "No personal enrichment alleged",
               "Lowest-ranking individual in the corporate chain",
             ],
@@ -373,7 +373,7 @@ export const slides: SlideData[] = [
       <TwoColumnFreeformTemplate
         {...props}
         pillLabel="SELECTIVE PROSECUTION"
-        subtitle="This pattern is consistent with the use of criminal prosecution as commercial leverage -- not genuine law enforcement."
+        subtitle="This pattern is consistent with the use of criminal prosecution as commercial leverage, not genuine law enforcement."
         leftContent={
           <div>
             <h3 className="text-[28px] font-bold text-slide-primary mb-6">Charged</h3>
@@ -501,7 +501,7 @@ export const slides: SlideData[] = [
           {
             title: "Former Min. Voitov (2025)",
             items: [
-              "Convicted under Article 167(3)(a) -- same provision as Hasanov",
+              "Convicted under Article 167(3)(a), same provision as Hasanov",
               "No prison time after compensating damages",
               "Illustrates transactional nature of embezzlement prosecutions",
             ],
