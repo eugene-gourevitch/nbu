@@ -33,7 +33,7 @@ export const TitleSlideTemplate = ({
           <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary">
             {headline}
           </h1>
-          <p className="mt-8 text-[28px] font-semibold text-slide-foreground max-w-[640px] leading-snug">
+          <p className="mt-8 text-[22px] font-semibold text-slide-foreground max-w-[640px] leading-snug">
             {subtitle}
           </p>
           {subtitleTyped && (
