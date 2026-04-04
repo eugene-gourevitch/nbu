@@ -138,18 +138,16 @@ export const slides: SlideData[] = [
               </div>
             </div>
           </div>
-          {/* Stats panel */}
-          <div className="w-[45%] flex flex-col items-center justify-center gap-16" style={{ backgroundColor: "#0a0a0a" }}>
+          {/* Narrative hook */}
+          <div className="w-[45%] flex flex-col justify-center px-16 gap-12" style={{ backgroundColor: "#0a0a0a" }}>
             {[
-              { stat: "17B+", unit: "UZS", label: "CHARTER CAPITAL AT STAKE" },
-              { stat: "1", unit: "", label: "PERSON DETAINED" },
-              { stat: "$42-52M", unit: "", label: "INDEPENDENT VALUATION" },
-            ].map((item) => (
-              <div key={item.label} className="text-center">
-                <div className="text-[56px] font-bold text-white leading-none">
-                  {item.stat}{item.unit && <span className="text-[32px] ml-2 text-white/60">{item.unit}</span>}
-                </div>
-                <p className="text-[14px] text-white/40 tracking-[0.2em] uppercase mt-3">{item.label}</p>
+              "A foreign investor's fintech venture in Uzbekistan.",
+              "A state bank that files criminal charges during settlement talks.",
+              "A CEO detained as leverage.",
+            ].map((line, i) => (
+              <div key={i} className="flex items-start gap-5">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#3B55FF] mt-3 shrink-0" />
+                <p className="text-[28px] text-white/80 font-medium leading-snug">{line}</p>
               </div>
             ))}
           </div>
