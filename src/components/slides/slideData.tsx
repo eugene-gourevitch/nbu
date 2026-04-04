@@ -340,7 +340,7 @@ export const slides: SlideData[] = [
 
             {/* Column 3: Development Finance */}
             <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden">
-              <h3 className="text-[22px] font-bold text-slide-primary mb-4 shrink-0">Development Finance</h3>
+              <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Development Finance</h3>
               <div className="space-y-4 overflow-hidden">
                 {[
                   { org: "EBRD", role: "Active credit lines. Integrity Risk Policy applies." },
