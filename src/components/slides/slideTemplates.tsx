@@ -467,7 +467,7 @@ export const ComparisonTemplate = ({
         <div className="bg-slide-surface rounded-l-2xl p-10 flex flex-col gap-6">
           <h3 className="text-[24px] font-bold text-slide-muted mb-2">{leftTitle}</h3>
           {leftItems.map((item) => (
-            <div key={item} className="flex items-center gap-4 text-[22px] text-slide-muted">
+            <div key={item} className="flex items-center gap-4 text-[19px] text-slide-muted">
               <span className="w-6 h-6 rounded-full bg-slide-muted/20 flex items-center justify-center text-[14px]">&#10005;</span>
               {item}
             </div>
