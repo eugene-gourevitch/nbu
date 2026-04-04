@@ -124,7 +124,7 @@ export const slides: SlideData[] = [
               <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary">
                 INVESTOR<br />ALERT
               </h1>
-              <p className="mt-8 text-[28px] font-semibold text-slide-foreground max-w-[640px] leading-snug">
+              <p className="mt-8 text-[22px] font-semibold text-slide-foreground max-w-[640px] leading-snug">
                 Selective Criminal Prosecution Used as Commercial Leverage by the National Bank of Uzbekistan.
               </p>
               <p className="mt-4 text-[24px] font-medium text-slide-primary max-w-[640px] leading-snug tracking-tight">
