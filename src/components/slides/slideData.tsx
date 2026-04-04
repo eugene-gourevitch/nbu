@@ -314,7 +314,7 @@ export const slides: SlideData[] = [
             {/* Column 1: Identity */}
             <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden">
               <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Institutional Identity</h3>
-              <div className="space-y-3 text-[16px] text-slide-muted leading-[1.6] overflow-hidden">
+              <div className="space-y-3 text-[17px] text-slide-muted leading-[1.6] overflow-hidden">
                 <p><span className="font-bold text-slide-foreground">Founded 1991</span> as Uzbekistan's primary foreign trade bank. Largest commercial bank by total assets.</p>
                 <p><span className="font-bold text-slide-foreground">100% state-owned.</span> Fund for Reconstruction & Development (59.25%) and Ministry of Economy & Finance (40.75%).</p>
                 <p><span className="font-bold text-slide-foreground">Authorized capital:</span> UZS 16.7 trillion.</p>
