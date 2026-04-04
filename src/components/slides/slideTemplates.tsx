@@ -226,7 +226,7 @@ export const TwoColumnNumberedTemplate = ({
         <SlidePill label={pillLabel} variant="light" />
         <OmniStratLogo />
       </div>
-      <h2 className="text-[52px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
+      <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns} gap-16`}>
         {items.map((item) => (
           <div key={item.num}>
