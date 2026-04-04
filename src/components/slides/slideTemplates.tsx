@@ -79,8 +79,8 @@ export const AgendaSlideTemplate = ({ slideNumber, totalSlides, items }: AgendaS
         <div className="w-full grid grid-cols-2 gap-x-20 gap-y-2">
           {items.map((item) => (
             <div key={item.num} className="flex items-center gap-8 py-6 border-b border-slide-foreground/8">
-              <span className="text-[48px] font-extrabold text-slide-primary/20 w-[100px]">{item.num}</span>
-              <span className="text-[32px] font-semibold">{item.label}</span>
+              <span className="text-[44px] font-extrabold text-slide-primary/20 w-[100px]">{item.num}</span>
+              <span className="text-[24px] font-semibold">{item.label}</span>
             </div>
           ))}
         </div>
