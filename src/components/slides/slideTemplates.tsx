@@ -863,7 +863,7 @@ export const NextStepsTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides} showConfidentiality={false}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
-      <h2 className="mt-8 text-[52px] font-extrabold leading-[1.1] tracking-tight mb-6">{headline}</h2>
+      <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-6">{headline}</h2>
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${steps.length} gap-8 w-full`}>
           {steps.map((item) => (
