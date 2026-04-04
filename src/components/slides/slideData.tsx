@@ -874,8 +874,8 @@ export const slides: SlideData[] = [
             </div>
             <div>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
-              <h3 className="text-[26px] font-bold mb-3">NBU Approved Every Tranche</h3>
-              <p className="text-[20px] text-slide-muted leading-relaxed">
+              <h3 className="text-[24px] font-bold mb-3">NBU Approved Every Tranche</h3>
+              <p className="text-[19px] text-slide-muted leading-relaxed">
                 NBU's own investment committee authorized every capital allocation it now characterizes as embezzlement. You cannot approve the funding at board level and then criminalize the expenditure. This is the fundamental contradiction that undermines the entire prosecution.
               </p>
             </div>
