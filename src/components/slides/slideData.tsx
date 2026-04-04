@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import {
   TitleSlideTemplate,
   TwoColumnFreeformTemplate,
@@ -18,6 +18,44 @@ import OmniStratLogo from "./OmniStratLogo";
 import hero3d from "@/assets/hero-3d.jpg";
 import missionBg from "@/assets/mission-bg.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
+import uktamPhoto from "@/assets/uktam-photo.png";
+
+const DETENTION_DATE = new Date("2026-03-27T00:00:00+05:00"); // Tashkent time
+
+const DetentionCounter = () => {
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const diff = now.getTime() - DETENTION_DATE.getTime();
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  const units = [
+    { value: days, label: "DAYS" },
+    { value: hours, label: "HOURS" },
+    { value: minutes, label: "MINUTES" },
+    { value: seconds, label: "SECONDS" },
+  ];
+
+  return (
+    <div className="flex gap-6">
+      {units.map((u) => (
+        <div key={u.label} className="flex flex-col items-center">
+          <span className="text-[72px] font-bold leading-none tabular-nums text-white" style={{ fontVariantNumeric: "tabular-nums" }}>
+            {String(u.value).padStart(2, "0")}
+          </span>
+          <span className="text-[14px] tracking-[0.2em] text-white/50 mt-2">{u.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export interface SlideData {
   id: string;
@@ -123,7 +161,99 @@ export const slides: SlideData[] = [
       />
     ),
   },
-  // 3. Purpose of This Briefing
+  // 3.5 FREE UKTAM - Emotional slide
+  {
+    id: "solfy-free-uktam",
+    title: "Free Uktam Hasanov",
+    component: (props) => (
+      <SlideLayout variant="dark" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between">
+            <SlidePill label="WRONGFUL DETENTION" variant="light" />
+            <OmniStratLogo />
+          </div>
+
+          <div className="flex flex-1 items-center gap-16 mt-8">
+            {/* Left: Photo + Identity */}
+            <div className="flex flex-col items-center w-[380px] shrink-0">
+              <div className="relative">
+                <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-slide-primary/40 shadow-[0_0_60px_rgba(59,85,255,0.3)]">
+                  <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[13px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase">
+                  Detained
+                </div>
+              </div>
+              <h3 className="text-[32px] font-bold text-white mt-8 text-center leading-tight">
+                Uktam Hasanov
+              </h3>
+              <p className="text-[18px] text-white/60 mt-2 text-center">
+                Director of Solfy CA LLC
+              </p>
+              <p className="text-[16px] text-white/40 mt-1 text-center">
+                Father. Professional. Wrongfully detained.
+              </p>
+            </div>
+
+            {/* Right: Counter + Links */}
+            <div className="flex-1 flex flex-col">
+              {/* Detention Counter */}
+              <div className="mb-10">
+                <p className="text-[16px] text-white/50 tracking-[0.15em] uppercase mb-4">
+                  Wrongfully detained for
+                </p>
+                <DetentionCounter />
+                <p className="text-[15px] text-white/40 mt-4">
+                  Since March 27, 2026. Arrested during active settlement negotiations.
+                </p>
+              </div>
+
+              {/* Website CTA */}
+              <a
+                href="https://free-uktam.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-xl px-8 py-4 mb-8 w-fit transition-colors"
+              >
+                <span className="text-[22px] font-bold">free-uktam.com</span>
+                <span className="text-[16px] opacity-70">Hasanov Defense Initiative</span>
+              </a>
+
+              {/* Social Links */}
+              <div>
+                <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-4">Follow the campaign</p>
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { platform: "YouTube", handle: "Interview", url: "https://youtu.be/50KysRLkQtE", icon: "▶" },
+                    { platform: "Instagram", handle: "@free_uktam_hasanov", url: "https://www.instagram.com/free_uktam_hasanov/", icon: "◻" },
+                    { platform: "X (Twitter)", handle: "@free_uktam", url: "https://x.com/free_uktam", icon: "✕" },
+                    { platform: "Telegram", handle: "@free_uktam_hasanov", url: "https://t.me/free_uktam_hasanov", icon: "➤" },
+                    { platform: "Threads", handle: "@free_uktam_hasanov", url: "https://www.threads.com/@free_uktam_hasanov", icon: "@" },
+                    { platform: "TikTok", handle: "@hasanov.defense.i", url: "https://www.tiktok.com/@hasanov.defense.i", icon: "♪" },
+                  ].map((link) => (
+                    <a
+                      key={link.platform}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg px-4 py-3 transition-colors group"
+                    >
+                      <span className="text-[20px] text-slide-primary w-8 text-center">{link.icon}</span>
+                      <div>
+                        <span className="text-[14px] font-bold text-white block">{link.platform}</span>
+                        <span className="text-[12px] text-white/40">{link.handle}</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
+    ),
+  },
+  // 4. Purpose of This Briefing
   {
     id: "solfy-purpose",
     title: "Purpose of This Briefing",
