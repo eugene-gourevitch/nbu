@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import {
   TitleSlideTemplate,
   TwoColumnFreeformTemplate,
@@ -18,6 +18,44 @@ import OmniStratLogo from "./OmniStratLogo";
 import hero3d from "@/assets/hero-3d.jpg";
 import missionBg from "@/assets/mission-bg.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
+import uktamPhoto from "@/assets/uktam-photo.png";
+
+const DETENTION_DATE = new Date("2026-03-27T00:00:00+05:00"); // Tashkent time
+
+const DetentionCounter = () => {
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const diff = now.getTime() - DETENTION_DATE.getTime();
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  const units = [
+    { value: days, label: "DAYS" },
+    { value: hours, label: "HOURS" },
+    { value: minutes, label: "MINUTES" },
+    { value: seconds, label: "SECONDS" },
+  ];
+
+  return (
+    <div className="flex gap-6">
+      {units.map((u) => (
+        <div key={u.label} className="flex flex-col items-center">
+          <span className="text-[72px] font-bold leading-none tabular-nums text-white" style={{ fontVariantNumeric: "tabular-nums" }}>
+            {String(u.value).padStart(2, "0")}
+          </span>
+          <span className="text-[14px] tracking-[0.2em] text-white/50 mt-2">{u.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export interface SlideData {
   id: string;
