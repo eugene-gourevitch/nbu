@@ -906,11 +906,11 @@ export const slides: SlideData[] = [
               <h3 className="text-[24px] font-bold mb-3">IFIs (EBRD, IFC, ADB)</h3>
               <ul className="space-y-3 flex-1">
                 {[
-                  "EBRD Article 1: multiparty democracy, rule of law as founding principles",
-                  "EBRD Integrity Risk Policy Section 4.2: ongoing monitoring of financial intermediary clients",
-                  "IFC Sustainability Framework Para. 12: governance as investment criterion",
-                  "EBRD 2024 Integrity Report: documented cases of withheld financing over integrity concerns",
-                  "ADB Safeguard Policy requires institutional capacity assessment",
+                  "EBRD Article 1: rule of law as founding principle",
+                  "EBRD Integrity Risk Policy S.4.2: ongoing EDD on FI clients",
+                  "IFC Sustainability Framework Para. 12: governance criterion",
+                  "EBRD 2024 Integrity Report: withheld financing precedent",
+                  "ADB Safeguard Policy: institutional capacity assessment",
                   "MIGA political risk guarantees may be triggered",
                 ].map((item) => (
                   <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
