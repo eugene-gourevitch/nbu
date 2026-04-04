@@ -42,7 +42,7 @@ export const TitleSlideTemplate = ({
             </p>
           )}
           {meta && (
-            <div className="mt-6 text-[16px] text-slide-muted/60 tracking-widest uppercase leading-relaxed">
+            <div className="mt-6 text-[14px] text-slide-muted/60 tracking-widest uppercase leading-relaxed">
               {meta.split('\n').map((line, i) => (
                 <div key={i}>{line}</div>
               ))}
