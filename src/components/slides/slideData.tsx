@@ -306,7 +306,7 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3">
             The sovereign's international face
           </h2>
-          <p className="text-[18px] text-slide-muted leading-relaxed max-w-[1200px] mb-8">
+          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1200px] mb-8">
             NBU is not a peripheral institution. It is Uzbekistan's primary channel for international capital markets and development finance.
           </p>
 
