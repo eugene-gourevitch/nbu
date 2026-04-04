@@ -593,7 +593,7 @@ export const PRStatsTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full">
       <div className="p-[80px] pb-0">
-        <h2 className="text-[72px] font-extrabold leading-[1.05] tracking-tight max-w-[1100px]">{headline}</h2>
+        <h2 className="text-[44px] font-extrabold leading-[1.05] tracking-tight max-w-[1100px]">{headline}</h2>
         <div className="absolute top-[80px] right-[80px]">
           <SlidePill label={pillLabel} variant="light" />
         </div>
