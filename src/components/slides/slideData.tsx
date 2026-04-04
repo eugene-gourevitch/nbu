@@ -243,39 +243,51 @@ export const slides: SlideData[] = [
     id: "solfy-background",
     title: "Background",
     component: (props) => (
-      <TwoColumnFreeformTemplate
-        {...props}
-        pillLabel="BACKGROUND"
-        subtitle="A fintech joint venture that became the center of an investor-state dispute with international implications."
-        leftContent={
-          <>
-            <h3 className="text-[30px] font-bold mb-4">The Venture</h3>
-            <p className="text-[20px] text-slide-muted leading-relaxed mb-4">
-              Solfy CA LLC was established in Tashkent in June 2020 as a fintech joint venture between Russian investor Maxim Poletaev (50% via Solvy Cyprus Limited), the National Bank for Foreign Economic Activity of Uzbekistan (NBU, 5%), and other shareholders including Full Stack Solution (20%).
-            </p>
-            <p className="text-[20px] text-slide-muted leading-relaxed mb-4">
-              The company launched a Buy Now, Pay Later (BNPL) installment card product in partnership with NBU, Uzbekistan's largest commercial bank by assets (100% state-owned via the Fund for Reconstruction & Development and the Ministry of Economy & Finance). NBU's investment committee authorized three capital infusions totaling over 17 billion soums.
-            </p>
-            <p className="text-[20px] text-slide-muted leading-relaxed">
-              An independent valuation by Bluestone assessed the company at USD 42-52 million.
-            </p>
-          </>
-        }
-        rightContent={
-          <>
-            <h3 className="text-[30px] font-bold mb-4">The Collapse</h3>
-            <p className="text-[20px] text-slide-muted leading-relaxed mb-4">
-              The business relationship between Solfy and NBU deteriorated. NBU terminated the partnership, and Solfy was declared bankrupt. A contractual dispute ensued over unpaid obligations under Agreement No. 289/37, adjudicated in Uzbek civil courts in December 2024 and May 2025.
-            </p>
-            <p className="text-[20px] text-slide-muted leading-relaxed mb-4">
-              In February 2026, Amsterdam & Partners LLP announced representation of Solfy and Poletaev, reporting that the investor and associates had been subjected to serious threats by NBU representatives. UA.NEWS identified NBU Chairman Alisher Mirsoatov personally as the source of threats.
-            </p>
-            <p className="text-[20px] text-slide-muted leading-relaxed">
-              Rather than resolving the matter commercially, NBU filed a criminal complaint against Solfy's locally appointed director, converting a failed business venture into a criminal prosecution during active settlement negotiations.
-            </p>
-          </>
-        }
-      />
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px] pb-[60px]">
+          <div className="flex items-center justify-between mb-6">
+            <SlidePill label="BACKGROUND" />
+            <OmniStratLogo />
+          </div>
+          <p className="text-[21px] text-slide-muted max-w-[1400px] leading-relaxed mb-8">
+            A fintech joint venture that became the center of an investor-state dispute with international implications.
+          </p>
+
+          <div className="flex-1 grid grid-cols-2 gap-10 min-h-0">
+            {/* The Venture */}
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden">
+              <h3 className="text-[26px] font-bold text-slide-primary mb-5 shrink-0">The Venture</h3>
+              <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
+                <p>
+                  <span className="font-bold text-slide-foreground">Solfy CA LLC</span> was established in Tashkent in June 2020 as a fintech joint venture. Maxim Poletaev held 50% beneficial interest via Solvy Cyprus Limited. NBU held 5%. Full Stack Solution held 20%.
+                </p>
+                <p>
+                  The company launched a <span className="font-bold text-slide-foreground">Buy Now, Pay Later</span> installment card product in partnership with NBU, Uzbekistan's largest commercial bank (100% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums. Senior retail management publicly endorsed the product.
+                </p>
+                <p>
+                  Independent valuation by Bluestone: <span className="font-bold text-slide-foreground">USD 42-52 million</span>.
+                </p>
+              </div>
+            </div>
+
+            {/* The Collapse */}
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden">
+              <h3 className="text-[26px] font-bold text-red-600 mb-5 shrink-0">The Collapse</h3>
+              <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
+                <p>
+                  <span className="font-bold text-slide-foreground">Partnership terminated.</span> NBU ended the relationship. Solfy was declared bankrupt. A contractual dispute over obligations under Agreement No. 289/37 was adjudicated in Uzbek civil courts (December 2024, May 2025).
+                </p>
+                <p>
+                  <span className="font-bold text-slide-foreground">Threats documented.</span> In February 2026, Amsterdam & Partners LLP announced representation, reporting that the investor had been subjected to serious threats by NBU representatives. UA.NEWS identified Chairman Mirsoatov personally as the source.
+                </p>
+                <p>
+                  <span className="font-bold text-slide-foreground">Criminal escalation.</span> Rather than resolving the matter commercially, NBU filed a criminal complaint against Solfy's locally appointed director during active settlement negotiations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
     ),
   },
 
