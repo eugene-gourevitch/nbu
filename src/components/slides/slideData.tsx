@@ -256,7 +256,7 @@ export const slides: SlideData[] = [
           <div className="flex-1 grid grid-cols-2 gap-10 min-h-0">
             {/* The Venture */}
             <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden">
-              <h3 className="text-[26px] font-bold text-slide-primary mb-5 shrink-0">The Venture</h3>
+              <h3 className="text-[24px] font-bold text-slide-primary mb-5 shrink-0">The Venture</h3>
               <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
                   <span className="font-bold text-slide-foreground">Solfy CA LLC</span> was established in Tashkent in June 2020 as a fintech joint venture. Maxim Poletaev held 50% beneficial interest via Solvy Cyprus Limited. NBU held 5%. Full Stack Solution held 20%.
