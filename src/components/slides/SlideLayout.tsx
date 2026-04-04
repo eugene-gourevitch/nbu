@@ -34,14 +34,25 @@ const SlideLayout = ({
   return (
     <div
       className={`relative w-full h-full overflow-hidden ${baseStyles[variant]} ${className}`}
-      style={backgroundImage ? {
+      style={backgroundImage && variant !== "dark" ? {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       } : undefined}
     >
       {backgroundImage && variant === "dark" && (
-        <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" />
+        <>
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              animation: "slow-zoom 12s ease-out forwards",
+            }}
+          />
+          <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" />
+        </>
       )}
       <div className="relative z-10 w-full h-full">
         {children}
