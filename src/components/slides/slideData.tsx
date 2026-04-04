@@ -1074,7 +1074,7 @@ export const slides: SlideData[] = [
                 Hasanov's independent defense counsel in Tashkent is fully funded and operational. Defense position: charges lack legal merit and repackage a commercial dispute as criminal prosecution.
               </p>
             </div>
-            <div>
+            <div style={{ animation: "slide-up 0.5s ease-out 0.5s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
               <h3 className="text-[24px] font-bold mb-3">International Advocacy</h3>
               <p className="text-[19px] text-slide-muted leading-relaxed">
