@@ -867,7 +867,7 @@ export const slides: SlideData[] = [
                 Charges allege misappropriation of ~17 billion soums in charter capital. Yet the prosecution's own evidence describes operational expenditures: staff salaries, technology development, merchant acquisition. Normal costs of running a fintech startup.
               </p>
             </div>
-            <div>
+            <div style={{ animation: "slide-up 0.5s ease-out 0.35s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">02</div>
               <h3 className="text-[24px] font-bold mb-3">Allegation: Unpaid Bank Rewards</h3>
               <p className="text-[19px] text-slide-muted leading-relaxed">
