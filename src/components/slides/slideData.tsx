@@ -634,7 +634,7 @@ export const slides: SlideData[] = [
                       </h3>
 
                       {/* Description */}
-                      <p className="mt-3 text-[16px] text-slide-muted leading-relaxed max-w-[360px]">
+                      <p className="mt-3 text-[18px] text-slide-muted leading-relaxed max-w-[360px]">
                         {step.desc}
                       </p>
                     </div>
