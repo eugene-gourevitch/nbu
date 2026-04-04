@@ -34,7 +34,8 @@ export const slides: SlideData[] = [
       <TitleSlideTemplate
         {...props}
         headline={<>INVESTOR<br />ALERT</>}
-        subtitle="Selective Criminal Prosecution Used as Commercial Leverage by the National Bank of Uzbekistan. A Confidential Briefing for International Financial Institutions, Correspondent Banks, and the Investor Community."
+        subtitle="Selective Criminal Prosecution Used as Commercial Leverage by the National Bank of Uzbekistan."
+        subtitleTyped="A Confidential Briefing for International Financial Institutions, Correspondent Banks, and the Investor Community."
         meta="Confidential -- April 2026 -- Prepared by Amsterdam & Partners LLP and OmniStrat Group LLC"
         heroImage={hero3d}
         heroAlt="Strategic visual"
