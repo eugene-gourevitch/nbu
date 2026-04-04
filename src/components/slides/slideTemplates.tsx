@@ -336,9 +336,9 @@ export const ServicesGridTemplate = ({
       </div>
       <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns} gap-8`}>
-        {cards.map((card) => (
-          <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
-            <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
+        {cards.map((card, i) => (
+          <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+            <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" style={{ animation: `draw-line 0.4s ease-out ${0.5 + i * 0.15}s both` }} />
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
             {card.desc && <p className="text-[19px] text-slide-muted leading-relaxed">{card.desc}</p>}
             {card.items && (
