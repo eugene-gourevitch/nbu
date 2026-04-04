@@ -11,7 +11,7 @@ const SlidePill = ({ label, variant = "light" }: SlidePillProps) => {
   };
 
   return (
-    <span className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-[18px] font-medium tracking-wider uppercase ${styles[variant]}`}>
+    <span className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[14px] font-bold tracking-[0.15em] uppercase ${styles[variant]}`}>
       <span className="w-1.5 h-1.5 rounded-full bg-current" />
       {label}
     </span>

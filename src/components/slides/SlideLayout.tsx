@@ -49,11 +49,11 @@ const SlideLayout = ({
       {/* Footer with slide number and confidentiality */}
       {(slideNumber || showConfidentiality) && (
         <div className={`absolute bottom-0 left-0 right-0 z-20 flex items-center justify-between px-[80px] py-[30px] ${footerTextColor[variant]}`}>
-          <span className="text-[14px] tracking-wide">
+          <span className="text-[11px] tracking-[0.2em] uppercase">
             {showConfidentiality && "CONFIDENTIAL"}
           </span>
           {slideNumber && totalSlides && (
-            <span className="text-[16px] font-semibold tabular-nums">
+            <span className="text-[14px] font-semibold tabular-nums">
               {String(slideNumber).padStart(2, "0")} / {String(totalSlides).padStart(2, "0")}
             </span>
           )}
