@@ -144,7 +144,7 @@ export const MissionWhiteTemplate = ({
         {cards.map((item) => (
           <div key={item.title} className="bg-slide-surface rounded-2xl p-8">
             <h3 className="text-[24px] font-bold mb-2">{item.title}</h3>
-            <p className="text-[19px] text-slide-muted">{item.desc}</p>
+            <p className="text-[22px] text-slide-muted">{item.desc}</p>
           </div>
         ))}
       </div>
@@ -197,8 +197,8 @@ export const QuoteSlideTemplate = ({
         <blockquote className="text-[44px] font-semibold leading-[1.3] max-w-[1200px] -mt-12">
           {quote}
         </blockquote>
-        <p className="mt-6 text-[19px] text-slide-muted">{attribution}</p>
-        {attributionSub && <p className="text-[19px] text-slide-muted">{attributionSub}</p>}
+        <p className="mt-6 text-[22px] text-slide-muted">{attribution}</p>
+        {attributionSub && <p className="text-[22px] text-slide-muted">{attributionSub}</p>}
         {bottomContent}
       </div>
     </div>
@@ -235,7 +235,7 @@ export const TwoColumnNumberedTemplate = ({
           <div key={item.num}>
             <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">{item.num}</div>
             <h3 className="text-[24px] font-bold mb-3">{item.title}</h3>
-            <p className="text-[19px] text-slide-muted leading-relaxed">{item.desc}</p>
+            <p className="text-[22px] text-slide-muted leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
@@ -300,7 +300,7 @@ export const BigNumbersTemplate = ({
             <div key={stat.num} className="text-center">
               <div className="text-[72px] font-extrabold leading-none">{stat.num}</div>
               <p className="text-[22px] font-semibold mt-4">{stat.label}</p>
-              <p className="text-[17px] text-white/60 mt-2">{stat.sub}</p>
+              <p className="text-[19px] text-white/60 mt-2">{stat.sub}</p>
             </div>
           ))}
         </div>
@@ -340,11 +340,11 @@ export const ServicesGridTemplate = ({
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
             <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" style={{ animation: `draw-line 0.4s ease-out ${0.5 + i * 0.15}s both` }} />
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-            {card.desc && <p className="text-[19px] text-slide-muted leading-relaxed">{card.desc}</p>}
+            {card.desc && <p className="text-[22px] text-slide-muted leading-relaxed">{card.desc}</p>}
             {card.items && (
               <ul className="space-y-3">
                 {card.items.map((item) => (
-                  <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[22px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1">&#8226;</span>
                     {item}
                   </li>
@@ -385,7 +385,7 @@ export const ProcessSlideTemplate = ({
             <div key={item.step} className={`bg-slide-primary/${5 + i * 5} rounded-2xl p-6 flex flex-col h-full`}>
               <span className="text-[44px] font-extrabold text-slide-primary">{item.step}</span>
               <h3 className="text-[24px] font-bold mt-3 mb-3">{item.title}</h3>
-              <p className="text-[17px] text-slide-muted leading-relaxed">{item.desc}</p>
+              <p className="text-[19px] text-slide-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -424,7 +424,7 @@ export const ImageTextTemplate = ({
       <SlidePill label={pillLabel} variant="light" />
       <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight">{headline}</h2>
       {paragraphs.map((p, i) => (
-        <p key={i} className="mt-4 text-[19px] text-slide-muted leading-relaxed">{p}</p>
+        <p key={i} className="mt-4 text-[22px] text-slide-muted leading-relaxed">{p}</p>
       ))}
       {stats && (
         <div className="mt-10 flex gap-6">
@@ -470,7 +470,7 @@ export const ComparisonTemplate = ({
         <div className="bg-slide-surface rounded-l-2xl p-10 flex flex-col gap-6 anim-slide-left stagger-2">
           <h3 className="text-[24px] font-bold text-slide-muted mb-2">{leftTitle}</h3>
           {leftItems.map((item, i) => (
-            <div key={item} className="flex items-center gap-4 text-[19px] text-slide-muted" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
+            <div key={item} className="flex items-center gap-4 text-[22px] text-slide-muted" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
               <span className="w-6 h-6 rounded-full bg-slide-muted/20 flex items-center justify-center text-[14px]">&#10005;</span>
               {item}
             </div>
@@ -479,7 +479,7 @@ export const ComparisonTemplate = ({
         <div className="bg-slide-primary rounded-r-2xl p-10 flex flex-col gap-6 text-white anim-slide-right stagger-2">
           <h3 className="text-[24px] font-bold mb-2">{rightTitle}</h3>
           {rightItems.map((item, i) => (
-            <div key={item} className="flex items-center gap-4 text-[19px]" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
+            <div key={item} className="flex items-center gap-4 text-[22px]" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
               <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-[14px]">&#10003;</span>
               {item}
             </div>
@@ -517,13 +517,13 @@ export const MultiColumnTableTemplate = ({
             <h3 className="text-[24px] font-bold mb-4 text-slide-primary">{col.title}</h3>
             <ul className="space-y-2">
               {col.items.map((item) => (
-                <li key={item} className="text-[17px] text-slide-muted leading-relaxed">&#8226; {item}</li>
+                <li key={item} className="text-[19px] text-slide-muted leading-relaxed">&#8226; {item}</li>
               ))}
             </ul>
           </div>
         ))}
       </div>
-      {footer && <p className="mt-6 text-[19px] font-semibold text-slide-primary">{footer}</p>}
+      {footer && <p className="mt-6 text-[22px] font-semibold text-slide-primary">{footer}</p>}
     </div>
   </SlideLayout>
 );
@@ -564,9 +564,9 @@ export const TeamSlideTemplate = ({
               )}
             </div>
             <h3 className="text-[24px] font-bold">{person.name}</h3>
-            <p className="text-[19px] text-slide-primary font-semibold">{person.role}</p>
-            {person.bio && <p className="text-[17px] text-slide-muted mt-2 leading-relaxed">{person.bio}</p>}
-            {person.specialty && <p className="text-[17px] text-slide-muted mt-1">{person.specialty}</p>}
+            <p className="text-[22px] text-slide-primary font-semibold">{person.role}</p>
+            {person.bio && <p className="text-[19px] text-slide-muted mt-2 leading-relaxed">{person.bio}</p>}
+            {person.specialty && <p className="text-[19px] text-slide-muted mt-1">{person.specialty}</p>}
           </div>
         ))}
       </div>
@@ -606,11 +606,11 @@ export const PRStatsTemplate = ({
           <img src={image} alt={imageAlt} className="w-full h-full object-cover" />
         </div>
         <div className="flex-1 flex flex-col justify-center gap-6">
-          {introText && <p className="text-[19px] text-slide-muted leading-relaxed mb-4">{introText}</p>}
+          {introText && <p className="text-[22px] text-slide-muted leading-relaxed mb-4">{introText}</p>}
           {stats.map((stat) => (
             <div key={stat.number} className="border-b border-slide-foreground/10 pb-6">
               <div className="text-[44px] font-extrabold">{stat.number}</div>
-              <p className="text-[19px] text-slide-muted">{stat.label}</p>
+              <p className="text-[22px] text-slide-muted">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -650,7 +650,7 @@ export const CaseStudyDarkTemplate = ({
             {stats.map((stat) => (
               <div key={stat.label}>
                 <div className="text-[44px] font-extrabold text-slide-primary">{stat.num}</div>
-                <p className="text-[19px] text-white/60">{stat.label}</p>
+                <p className="text-[22px] text-white/60">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -660,7 +660,7 @@ export const CaseStudyDarkTemplate = ({
             {cards.map((card) => (
               <div key={card.title} className="bg-white/10 backdrop-blur rounded-2xl p-8">
                 <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-                <p className="text-[19px] text-white/70 leading-relaxed">{card.desc}</p>
+                <p className="text-[22px] text-white/70 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -706,7 +706,7 @@ export const ThankYouTemplate = ({
       <OmniStratLogo className="mb-16" />
       <h2 className="text-[96px] font-extrabold leading-none tracking-tight text-slide-primary">THANK YOU</h2>
       <p className="mt-8 text-[22px] text-slide-muted max-w-[700px]">{message}</p>
-      <div className="mt-16 flex gap-16 text-[19px] text-slide-muted">
+      <div className="mt-16 flex gap-16 text-[22px] text-slide-muted">
         {contactItems.map((item) => (
           <span key={item}>{item}</span>
         ))}
@@ -732,7 +732,7 @@ export const ContactSlideTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex justify-between items-start">
         <span className="text-[24px] font-semibold">Contact us</span>
-        <span className="text-[19px] text-slide-muted">We're always here and ready to assist.</span>
+        <span className="text-[22px] text-slide-muted">We're always here and ready to assist.</span>
       </div>
       <div className="flex-1 flex flex-col justify-center">
         <h2 className="text-[96px] font-extrabold tracking-tight leading-none">GET IN TOUCH</h2>
@@ -744,13 +744,13 @@ export const ContactSlideTemplate = ({
       </div>
       <div className="flex items-end justify-between">
         {socialLinks && (
-          <div className="flex gap-8 text-[19px] text-slide-muted">
+          <div className="flex gap-8 text-[22px] text-slide-muted">
             {socialLinks.map((s) => (
               <span key={s}>{s}</span>
             ))}
           </div>
         )}
-        <button className="bg-slide-foreground text-white px-10 py-5 rounded-full text-[19px] font-semibold">
+        <button className="bg-slide-foreground text-white px-10 py-5 rounded-full text-[22px] font-semibold">
           {ctaLabel}
         </button>
       </div>
@@ -786,7 +786,7 @@ export const CompetitiveTableTemplate = ({
       <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-10">{headline}</h2>
       <div className="flex-1 overflow-hidden">
         <div className="w-full">
-          <div className="grid grid-cols-[180px_1fr_1fr_120px_1fr] gap-0 text-[17px]">
+          <div className="grid grid-cols-[180px_1fr_1fr_120px_1fr] gap-0 text-[19px]">
             <div className="bg-slide-primary text-white p-4 rounded-tl-xl font-bold">Firm</div>
             <div className="bg-slide-primary text-white p-4 font-bold">Strength</div>
             <div className="bg-slide-primary text-white p-4 font-bold">Weakness</div>
@@ -839,7 +839,7 @@ export const TrackRecordTemplate = ({
             <div className="w-8 h-1 bg-slide-primary rounded-full mb-3" />
             <p className="text-[14px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-            <p className="text-[19px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>
+            <p className="text-[22px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>
             <p className="text-[14px] text-slide-muted/70 mt-4 pt-4 border-t border-slide-foreground/8">{card.tag}</p>
           </div>
         ))}
@@ -873,7 +873,7 @@ export const NextStepsTemplate = ({
             <div key={item.step} className="bg-slide-primary/10 rounded-2xl p-8">
               <span className="text-[44px] font-extrabold text-slide-primary">{item.step}</span>
               <h3 className="text-[24px] font-bold mt-4 mb-3">{item.title}</h3>
-              <p className="text-[19px] text-slide-muted leading-relaxed">{item.desc}</p>
+              <p className="text-[22px] text-slide-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -881,8 +881,8 @@ export const NextStepsTemplate = ({
       <div className="mt-8 flex items-end justify-between">
         <div>
           <p className="text-[24px] font-bold">{contactName}</p>
-          <p className="text-[17px] text-slide-primary font-semibold">{contactRole}</p>
-          <p className="text-[17px] text-slide-muted mt-2">{contactDetails}</p>
+          <p className="text-[19px] text-slide-primary font-semibold">{contactRole}</p>
+          <p className="text-[19px] text-slide-muted mt-2">{contactDetails}</p>
           {contactAddress && <p className="text-[14px] text-slide-muted">{contactAddress}</p>}
         </div>
         <OmniStratLogo size={50} />
