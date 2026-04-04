@@ -303,7 +303,7 @@ export const slides: SlideData[] = [
             <OmniStratLogo />
           </div>
 
-          <h2 className="text-[40px] font-extrabold leading-[1.1] tracking-tight mb-3">
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3">
             The sovereign's international face
           </h2>
           <p className="text-[18px] text-slide-muted leading-relaxed max-w-[1200px] mb-8">
