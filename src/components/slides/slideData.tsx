@@ -666,7 +666,7 @@ export const slides: SlideData[] = [
                   Detained
                 </div>
               </div>
-              <h3 className="text-[32px] font-bold text-white mt-8 text-center leading-tight">
+              <h3 className="text-[44px] font-bold text-white mt-8 text-center leading-tight">
                 Uktam Hasanov
               </h3>
               <p className="text-[18px] text-white/60 mt-2 text-center">Director of Solfy CA LLC</p>
