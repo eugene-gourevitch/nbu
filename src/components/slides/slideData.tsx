@@ -669,7 +669,7 @@ export const slides: SlideData[] = [
               <h3 className="text-[44px] font-bold text-white mt-8 text-center leading-tight">
                 Uktam Hasanov
               </h3>
-              <p className="text-[18px] text-white/60 mt-2 text-center">Director of Solfy CA LLC</p>
+              <p className="text-[17px] text-white/60 mt-2 text-center">Director of Solfy CA LLC</p>
               <p className="text-[16px] text-white/40 mt-3 text-center leading-relaxed max-w-[340px]">
                 Arrested without prior summons during active settlement talks. Bail denied despite zero flight risk. Cooperated fully with investigators. Held as leverage in a commercial negotiation.
               </p>
