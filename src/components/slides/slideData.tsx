@@ -90,7 +90,7 @@ const disclaimerSlide: SlideData = {
           <h2 className="text-[44px] font-bold text-slide-foreground mt-6 leading-tight">
             Confidentiality Statement & Disclaimer
           </h2>
-          <div className="mt-10 space-y-6 text-[19px] leading-[1.7] text-slide-muted">
+          <div className="mt-10 space-y-6 text-[22px] leading-[1.7] text-slide-muted">
             <div>
               <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
               <p>This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC and Amsterdam & Partners LLP. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
@@ -177,13 +177,13 @@ export const slides: SlideData[] = [
             <div className="flex flex-col gap-6 anim-fade-up stagger-3">
               <div className="bg-slide-surface rounded-2xl p-8 flex-1">
                 <h3 className="text-[24px] font-bold mb-4">The Situation</h3>
-                <p className="text-[19px] text-slide-muted leading-relaxed">
+                <p className="text-[22px] text-slide-muted leading-relaxed">
                   NBU simultaneously holds equity in a joint venture and filed the criminal complaint against its director during active settlement negotiations.
                 </p>
               </div>
               <div className="bg-slide-surface rounded-2xl p-8 flex-1">
                 <h3 className="text-[24px] font-bold mb-4">The Audience</h3>
-                <p className="text-[19px] text-slide-muted leading-relaxed">
+                <p className="text-[22px] text-slide-muted leading-relaxed">
                   IFI compliance officers, correspondent bank risk teams, eurobond investors, and rating agency analysts with NBU exposure.
                 </p>
               </div>
@@ -198,7 +198,7 @@ export const slides: SlideData[] = [
                 ].map((q, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-[24px] font-extrabold text-slide-primary leading-none mt-0.5">{String(i + 1).padStart(2, "0")}</span>
-                    <p className="text-[19px] text-slide-muted leading-relaxed">{q}</p>
+                    <p className="text-[22px] text-slide-muted leading-relaxed">{q}</p>
                   </div>
                 ))}
               </div>
@@ -213,18 +213,18 @@ export const slides: SlideData[] = [
                 <div className="relative">
                   <p className="text-[14px] tracking-[0.15em] uppercase opacity-70 mb-3">Schedule Now</p>
                   <h4 className="text-[24px] font-bold mb-3">Book a Confidential Briefing</h4>
-                  <p className="text-[17px] opacity-80 leading-relaxed">30-minute Zoom call with the OmniStrat team.</p>
-                  <div className="flex items-center gap-2 mt-5 text-[17px] font-semibold opacity-90">
+                  <p className="text-[19px] opacity-80 leading-relaxed">30-minute Zoom call with the OmniStrat team.</p>
+                  <div className="flex items-center gap-2 mt-5 text-[19px] font-semibold opacity-90">
                     <span>Open Calendly</span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </div>
                 </div>
               </a>
               <div className="bg-slide-foreground/5 rounded-2xl p-6 border border-slide-foreground/10 space-y-3">
-                <p className="text-[17px] text-slide-muted leading-relaxed">
+                <p className="text-[19px] text-slide-muted leading-relaxed">
                   <span className="font-bold text-slide-foreground">Eugene Gourevitch</span><br />eugene.gourevitch@omnistratgroup.com
                 </p>
-                <p className="text-[17px] text-slide-muted leading-relaxed">
+                <p className="text-[19px] text-slide-muted leading-relaxed">
                   <span className="font-bold text-slide-foreground">Robert Amsterdam</span><br />robert.amsterdam@amsterdamandpartners.com
                 </p>
               </div>
@@ -257,7 +257,7 @@ export const slides: SlideData[] = [
             {/* The Venture */}
             <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden anim-slide-left stagger-2">
               <h3 className="text-[24px] font-bold text-slide-primary mb-5 shrink-0">The Venture</h3>
-              <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
+              <div className="space-y-4 text-[19px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
                   <span className="font-bold text-slide-foreground">Solfy CA LLC</span> was established in Tashkent in June 2020 as a fintech joint venture. Maxim Poletaev held 50% beneficial interest via Solvy Cyprus Limited. NBU held 5%. Full Stack Solution held 20%.
                 </p>
@@ -273,7 +273,7 @@ export const slides: SlideData[] = [
             {/* The Collapse */}
             <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden anim-slide-right stagger-2">
               <h3 className="text-[24px] font-bold text-red-600 mb-5 shrink-0">The Collapse</h3>
-              <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
+              <div className="space-y-4 text-[19px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
                   <span className="font-bold text-slide-foreground">Partnership terminated.</span> NBU ended the relationship. Solfy was declared bankrupt. A contractual dispute over obligations under Agreement No. 289/37 was adjudicated in Uzbek civil courts (December 2024, May 2025).
                 </p>
@@ -314,7 +314,7 @@ export const slides: SlideData[] = [
             {/* Column 1: Identity */}
             <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden anim-fade-up stagger-2">
               <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Institutional Identity</h3>
-              <div className="space-y-3 text-[17px] text-slide-muted leading-[1.6] overflow-hidden">
+              <div className="space-y-3 text-[19px] text-slide-muted leading-[1.6] overflow-hidden">
                 <p><span className="font-bold text-slide-foreground">Founded 1991</span> as Uzbekistan's primary foreign trade bank. Largest commercial bank by total assets.</p>
                 <p><span className="font-bold text-slide-foreground">100% state-owned.</span> Fund for Reconstruction & Development (59.25%) and Ministry of Economy & Finance (40.75%).</p>
                 <p><span className="font-bold text-slide-foreground">Authorized capital:</span> UZS 16.7 trillion.</p>
@@ -328,12 +328,12 @@ export const slides: SlideData[] = [
               <div className="space-y-4 overflow-hidden">
                 <div className="bg-white rounded-xl p-5">
                   <p className="text-[14px] text-slide-muted tracking-[0.15em] uppercase mb-1">LSE Eurobond</p>
-                  <p className="text-[17px] font-bold">2020 issuance, Reg S / 144A</p>
+                  <p className="text-[19px] font-bold">2020 issuance, Reg S / 144A</p>
                   <p className="text-[14px] text-slide-muted mt-1">Outstanding obligations to international bondholders</p>
                 </div>
                 <div>
                   <p className="text-[14px] text-slide-primary font-bold tracking-[0.15em] uppercase mb-2">Correspondent Banks</p>
-                  <p className="text-[17px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
+                  <p className="text-[19px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
                 </div>
               </div>
             </div>
@@ -384,15 +384,15 @@ export const slides: SlideData[] = [
               <div className="bg-slide-surface rounded-2xl p-8 flex flex-col items-center mb-6">
                 <img src={nbuLogo} alt="NBU Logo" className="w-[120px] h-[120px] object-contain mb-4" />
                 <h3 className="text-[24px] font-bold text-center leading-tight">National Bank for Foreign Economic Activity</h3>
-                <p className="text-[17px] text-slide-muted text-center mt-2">Republic of Uzbekistan</p>
+                <p className="text-[19px] text-slide-muted text-center mt-2">Republic of Uzbekistan</p>
                 <p className="text-[14px] text-slide-muted text-center mt-1">Est. 1991 | Tashkent</p>
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6 mb-6">
-                <h4 className="text-[19px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
+                <h4 className="text-[22px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
                 <div className="space-y-3">
                   <div>
-                    <div className="flex justify-between text-[17px] font-semibold mb-1">
+                    <div className="flex justify-between text-[19px] font-semibold mb-1">
                       <span>Fund for Reconstruction & Development</span>
                       <span className="text-slide-primary">59.25%</span>
                     </div>
@@ -401,7 +401,7 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                   <div>
-                    <div className="flex justify-between text-[17px] font-semibold mb-1">
+                    <div className="flex justify-between text-[19px] font-semibold mb-1">
                       <span>Ministry of Economy & Finance</span>
                       <span className="text-slide-primary">40.75%</span>
                     </div>
@@ -410,12 +410,12 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                 </div>
-                <p className="text-[17px] text-slide-muted mt-3">100% of shares held by state entities. Total authorized capital: UZS 16.7 trillion.</p>
+                <p className="text-[19px] text-slide-muted mt-3">100% of shares held by state entities. Total authorized capital: UZS 16.7 trillion.</p>
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[19px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
-                <div className="space-y-2 text-[17px]">
+                <h4 className="text-[22px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
+                <div className="space-y-2 text-[19px]">
                   <div className="flex justify-between"><span className="text-slide-muted">S&P</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Fitch</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Moody's</span><span className="font-bold">Ba3 (stable)</span></div>
@@ -426,7 +426,7 @@ export const slides: SlideData[] = [
             {/* Right column */}
             <div className="flex-1 flex flex-col gap-6 anim-slide-right stagger-3">
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[19px] font-bold text-slide-primary mb-4">Management Board</h4>
+                <h4 className="text-[22px] font-bold text-slide-primary mb-4">Management Board</h4>
                 <div className="space-y-3">
                   {[
                     { name: "Alisher Mirsoatov", role: "Chairman (since Nov 2017)", note: "Publicly identified as source of threats to investor" },
@@ -440,7 +440,7 @@ export const slides: SlideData[] = [
                     <div key={person.name} className="flex items-start gap-3 pb-2 border-b border-slide-foreground/5 last:border-0 last:pb-0">
                       <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />
                       <div>
-                        <span className="text-[17px] font-bold">{person.name}</span>
+                        <span className="text-[19px] font-bold">{person.name}</span>
                         <span className="text-[14px] text-slide-primary ml-2">{person.role}</span>
                         <p className="text-[14px] text-slide-muted">{person.note}</p>
                       </div>
@@ -450,7 +450,7 @@ export const slides: SlideData[] = [
               </div>
 
               <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5 anim-fade-up stagger-5">
-                <p className="text-[19px] text-slide-foreground leading-relaxed">
+                <p className="text-[22px] text-slide-foreground leading-relaxed">
                   <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture's director.
                 </p>
               </div>
@@ -484,7 +484,7 @@ export const slides: SlideData[] = [
                 </div>
                 <div>
                   <h3 className="text-[24px] font-bold leading-tight">Maxim V. Poletaev</h3>
-                  <p className="text-[17px] text-slide-primary font-semibold">Foreign Investor</p>
+                  <p className="text-[19px] text-slide-primary font-semibold">Foreign Investor</p>
                 </div>
               </div>
               <ul className="space-y-3">
@@ -495,7 +495,7 @@ export const slides: SlideData[] = [
                   "Chairman of Fortenova Group, co-founder of Gauss Ventures",
                   "Represented by Amsterdam & Partners LLP",
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[17px] text-slide-muted leading-relaxed">
+                  <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
@@ -514,7 +514,7 @@ export const slides: SlideData[] = [
                 </div>
                 <div>
                   <h3 className="text-[24px] font-bold leading-tight">Hasanov Uktam N.</h3>
-                  <p className="text-[17px] text-red-600 font-semibold">Detained Director</p>
+                  <p className="text-[19px] text-red-600 font-semibold">Detained Director</p>
                 </div>
               </div>
               <ul className="space-y-3">
@@ -525,7 +525,7 @@ export const slides: SlideData[] = [
                   "No personal enrichment alleged",
                   "Lowest-ranking individual in the corporate chain",
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[17px] text-slide-muted leading-relaxed">
+                  <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
@@ -539,7 +539,7 @@ export const slides: SlideData[] = [
                 </div>
                 <div>
                   <h3 className="text-[24px] font-bold leading-tight">Alisher K. Mirsoatov</h3>
-                  <p className="text-[17px] text-slide-primary font-semibold">NBU Chairman</p>
+                  <p className="text-[19px] text-slide-primary font-semibold">NBU Chairman</p>
                 </div>
               </div>
               <ul className="space-y-3">
@@ -550,7 +550,7 @@ export const slides: SlideData[] = [
                   "Publicly identified as source of threats to the investor",
                   "Chairman of Uzbekistan Winter Sports Association",
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[17px] text-slide-muted leading-relaxed">
+                  <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
@@ -591,7 +591,7 @@ export const slides: SlideData[] = [
                 <div className="grid grid-cols-4 gap-8 relative">
                   {steps.map((step, i) => (
                     <div key={step.date} className="flex flex-col items-center text-center">
-                      <div className={`w-[80px] h-[80px] rounded-full flex items-center justify-center text-[17px] font-extrabold tracking-wide relative z-10 ${
+                      <div className={`w-[80px] h-[80px] rounded-full flex items-center justify-center text-[19px] font-extrabold tracking-wide relative z-10 ${
                         step.accent ? "bg-slide-primary text-white shadow-[0_0_30px_hsl(var(--slide-primary)/0.4)]" : "bg-white border-[3px] border-slide-primary text-slide-primary"
                       }`} style={{ animation: `scale-in 0.4s ease-out ${0.3 + i * 0.35}s both` }}>
                         {String(i + 1).padStart(2, "0")}
@@ -605,7 +605,7 @@ export const slides: SlideData[] = [
                         <h3 className={`mt-4 text-[22px] font-bold leading-tight ${step.accent ? "text-slide-primary" : "text-slide-foreground"}`}>
                           {step.title}
                         </h3>
-                        <p className="mt-3 text-[17px] text-slide-muted leading-relaxed max-w-[360px]">{step.desc}</p>
+                        <p className="mt-3 text-[19px] text-slide-muted leading-relaxed max-w-[360px]">{step.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -671,7 +671,7 @@ export const slides: SlideData[] = [
               <h3 className="text-[44px] font-bold text-white mt-8 text-center leading-tight anim-fade-up stagger-3">
                 Uktam Hasanov
               </h3>
-              <p className="text-[17px] text-white/60 mt-2 text-center">Director of Solfy CA LLC</p>
+              <p className="text-[19px] text-white/60 mt-2 text-center">Director of Solfy CA LLC</p>
               <p className="text-[14px] text-white/40 mt-3 text-center leading-relaxed max-w-[340px]">
                 Arrested without prior summons during active settlement talks. Bail denied despite zero flight risk. Cooperated fully with investigators. Held as leverage in a commercial negotiation.
               </p>
@@ -689,7 +689,7 @@ export const slides: SlideData[] = [
 
               <a href="https://free-uktam.com" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-xl px-8 py-4 mb-8 w-fit transition-colors anim-fade-up stagger-4">
-                <span className="text-[19px] font-bold">free-uktam.com</span>
+                <span className="text-[22px] font-bold">free-uktam.com</span>
                 <span className="text-[14px] opacity-70">Hasanov Defense Initiative</span>
               </a>
 
@@ -767,10 +767,10 @@ export const slides: SlideData[] = [
               ].map((item, i) => (
                 <div key={item.num} className="bg-slide-surface rounded-2xl p-7" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[17px] font-bold text-slide-primary">{item.num}</div>
+                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[19px] font-bold text-slide-primary">{item.num}</div>
                     <h3 className="text-[22px] font-bold">{item.title}</h3>
                   </div>
-                  <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
+                  <p className="text-[22px] text-slide-muted leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -781,18 +781,18 @@ export const slides: SlideData[] = [
               ].map((item, i) => (
                 <div key={item.num} className="bg-slide-surface rounded-2xl p-7" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[17px] font-bold text-slide-primary">{item.num}</div>
+                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[19px] font-bold text-slide-primary">{item.num}</div>
                     <h3 className="text-[22px] font-bold">{item.title}</h3>
                   </div>
-                  <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
+                  <p className="text-[22px] text-slide-muted leading-relaxed">{item.text}</p>
                 </div>
               ))}
               <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-7" style={{ animation: "slide-up 0.5s ease-out 0.75s both" }}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-[17px] font-bold text-red-600">!</div>
+                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-[19px] font-bold text-red-600">!</div>
                   <h3 className="text-[22px] font-bold text-red-700">International Law Violation</h3>
                 </div>
-                <p className="text-[19px] text-red-800/80 leading-relaxed">
+                <p className="text-[22px] text-red-800/80 leading-relaxed">
                   Arbitrary pre-trial detention in a commercial dispute violates ICCPR Article 9 (liberty and security), ICCPR Article 14 (fair trial), and ECHR Article 5 standards.
                 </p>
               </div>
@@ -817,7 +817,7 @@ export const slides: SlideData[] = [
             <h3 className="text-[24px] font-bold text-slide-primary mb-6">Charged</h3>
             <div className="bg-slide-surface rounded-2xl p-8">
               <h4 className="text-[24px] font-bold mb-3">Hasanov Uktam Nasulloyevich</h4>
-              <p className="text-[19px] text-slide-muted leading-relaxed">
+              <p className="text-[22px] text-slide-muted leading-relaxed">
                 Locally appointed director. The most vulnerable individual in the corporate chain. No personal enrichment alleged.
               </p>
             </div>
@@ -834,7 +834,7 @@ export const slides: SlideData[] = [
                 "NBU's retail division leadership who publicly endorsed the product",
                 "20% shareholder Full Stack Solution and its principals (Izrailbekov)",
               ].map((item, i) => (
-                <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3" style={{ animation: `fade-in 0.3s ease-out ${0.5 + i * 0.1}s both` }}>
+                <li key={item} className="text-[22px] text-slide-muted leading-relaxed flex items-start gap-3" style={{ animation: `fade-in 0.3s ease-out ${0.5 + i * 0.1}s both` }}>
                   <span className="text-slide-primary mt-1">&#8226;</span>{item}
                 </li>
               ))}
@@ -863,21 +863,21 @@ export const slides: SlideData[] = [
             <div style={{ animation: "slide-up 0.5s ease-out 0.2s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">01</div>
               <h3 className="text-[24px] font-bold mb-3">Allegation: Purposeless Squandering</h3>
-              <p className="text-[19px] text-slide-muted leading-relaxed">
+              <p className="text-[22px] text-slide-muted leading-relaxed">
                 Charges allege misappropriation of ~17 billion soums in charter capital. Yet the prosecution's own evidence describes operational expenditures: staff salaries, technology development, merchant acquisition. Normal costs of running a fintech startup.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.35s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">02</div>
               <h3 className="text-[24px] font-bold mb-3">Allegation: Unpaid Bank Rewards</h3>
-              <p className="text-[19px] text-slide-muted leading-relaxed">
+              <p className="text-[22px] text-slide-muted leading-relaxed">
                 Charges allege 14.9 billion soums in unpaid contractual rewards owed to NBU. These correspond to obligations under Agreement No. 289/37, already adjudicated in civil court rulings (December 2024, May 2025). The criminal complaint repackages a commercial dispute.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.5s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
               <h3 className="text-[24px] font-bold mb-3">NBU Approved Every Tranche</h3>
-              <p className="text-[19px] text-slide-muted leading-relaxed">
+              <p className="text-[22px] text-slide-muted leading-relaxed">
                 NBU's own investment committee authorized every capital allocation it now characterizes as embezzlement. You cannot approve the funding at board level and then criminalize the expenditure. This is the fundamental contradiction that undermines the entire prosecution.
               </p>
             </div>
@@ -914,7 +914,7 @@ export const slides: SlideData[] = [
                   "ADB Safeguard Policy requires institutional capacity assessment",
                   "MIGA political risk guarantees may be triggered",
                 ].map((item) => (
-                  <li key={item} className="text-[17px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
@@ -930,7 +930,7 @@ export const slides: SlideData[] = [
                   "BSA/AML obligations under FinCEN (31 CFR 1010.610)",
                   "EU 6AMLD Article 6(1)(c): aiding and abetting liability extends to correspondent channels",
                 ].map((item) => (
-                  <li key={item} className="text-[17px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
@@ -947,7 +947,7 @@ export const slides: SlideData[] = [
                   "Must be disclosed in NBU's financial statements as contingent liability",
                   "Bondholders have fiduciary obligations to assess counterparty governance risk",
                 ].map((item) => (
-                  <li key={item} className="text-[17px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
@@ -973,7 +973,7 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold mt-6 leading-tight max-w-[1400px]">
             The Solfy case is not an isolated incident
           </h2>
-          <p className="text-[19px] text-slide-muted mt-3 max-w-[1200px]">
+          <p className="text-[22px] text-slide-muted mt-3 max-w-[1200px]">
             A pattern of investor-hostile actions undermines Uzbekistan's reform credibility
           </p>
           <div className="grid grid-cols-2 gap-8 mt-10 flex-1">
@@ -986,7 +986,7 @@ export const slides: SlideData[] = [
               <div key={item.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: `fade-scale 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                 <span className={`text-[14px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`} style={{ animation: `scale-in 0.3s ease-out ${0.6 + i * 0.15}s both` }}>{item.tag}</span>
                 <h3 className="text-[24px] font-bold mb-3">{item.title}</h3>
-                <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
+                <p className="text-[22px] text-slide-muted leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
@@ -1012,7 +1012,7 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold leading-[1.05] tracking-tight mb-2">
             The world is watching
           </h2>
-          <p className="text-[17px] text-slide-muted mb-10">
+          <p className="text-[19px] text-slide-muted mb-10">
             International media spotlight on NBU's conduct and Uzbekistan's investment climate. Coverage ongoing.
           </p>
           <div className="grid grid-cols-2 gap-6 flex-1">
@@ -1028,16 +1028,16 @@ export const slides: SlideData[] = [
                     <span className="text-[24px] font-extrabold tracking-tight">{item.source}</span>
                     <span className="text-[14px] font-semibold text-slide-muted tracking-wider uppercase">{item.date}</span>
                   </div>
-                  <p className="text-[19px] font-bold leading-snug mb-4 italic">
+                  <p className="text-[22px] font-bold leading-snug mb-4 italic">
                     {item.quote}
                   </p>
-                  <p className="text-[17px] text-slide-muted leading-relaxed">{item.detail}</p>
+                  <p className="text-[19px] text-slide-muted leading-relaxed">{item.detail}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-6 bg-slide-foreground text-white rounded-2xl px-8 py-5 flex items-center justify-between" style={{ animation: "fade-in 0.5s ease-out 1s both" }}>
-            <p className="text-[17px] font-semibold">Coverage is accelerating. Additional media placements are scheduled across tier-1 international outlets.</p>
+            <p className="text-[19px] font-semibold">Coverage is accelerating. Additional media placements are scheduled across tier-1 international outlets.</p>
             <span className="text-[24px] font-bold text-slide-primary ml-6 shrink-0">→</span>
           </div>
         </div>
@@ -1063,21 +1063,21 @@ export const slides: SlideData[] = [
             <div style={{ animation: "slide-up 0.5s ease-out 0.2s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">01</div>
               <h3 className="text-[24px] font-bold mb-3">ICSID BIT Arbitration</h3>
-              <p className="text-[19px] text-slide-muted leading-relaxed">
+              <p className="text-[22px] text-slide-muted leading-relaxed">
                 Investment treaty claim under the Russia-Uzbekistan bilateral investment treaty is imminent. Will invoke ICSID jurisdiction for violations of fair and equitable treatment, protection against expropriation, and full protection and security. Bluestone independent valuation: <span className="font-bold text-slide-foreground">$42-52 million</span>. This is not a nuisance claim.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.35s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">02</div>
               <h3 className="text-[24px] font-bold mb-3">Criminal Defense</h3>
-              <p className="text-[19px] text-slide-muted leading-relaxed">
+              <p className="text-[22px] text-slide-muted leading-relaxed">
                 Hasanov's independent defense counsel in Tashkent is fully funded and operational. Defense position: charges lack legal merit and repackage a commercial dispute as criminal prosecution.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.5s both" }}>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
               <h3 className="text-[24px] font-bold mb-3">International Advocacy</h3>
-              <p className="text-[19px] text-slide-muted leading-relaxed">
+              <p className="text-[22px] text-slide-muted leading-relaxed">
                 Coordinated engagement with IFIs, rating agencies, correspondent banks, eurobond stakeholders, and international media to ensure transparency and accountability.
               </p>
             </div>
@@ -1106,7 +1106,7 @@ export const slides: SlideData[] = [
             <h2 className="text-[44px] font-extrabold text-white leading-[1.05] tracking-tight mb-4" style={{ animation: "slide-up 0.6s ease-out 0.2s both" }}>
               Request a Confidential Briefing
             </h2>
-            <p className="text-[19px] text-white/60 max-w-[800px] leading-relaxed mb-10" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
+            <p className="text-[22px] text-white/60 max-w-[800px] leading-relaxed mb-10" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
               We invite your compliance, legal, or investment team to a 30-minute confidential Zoom briefing to discuss the documented facts.
             </p>
 
@@ -1118,7 +1118,7 @@ export const slides: SlideData[] = [
               className="w-full max-w-[1200px] flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-              <span className="text-[19px] font-bold">Schedule a Briefing</span>
+              <span className="text-[22px] font-bold">Schedule a Briefing</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
 
@@ -1130,16 +1130,16 @@ export const slides: SlideData[] = [
                 <div className="space-y-5">
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
-                    <p className="text-[19px] text-white font-semibold">Eugene Gourevitch</p>
+                    <p className="text-[22px] text-white font-semibold">Eugene Gourevitch</p>
                     <p className="text-[14px] text-white/60">Managing Principal</p>
                   </div>
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Email</p>
-                    <p className="text-[19px] text-white font-semibold">eugene@omnistratgroup.com</p>
+                    <p className="text-[22px] text-white font-semibold">eugene@omnistratgroup.com</p>
                   </div>
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Web</p>
-                    <a href="https://www.omnistratgroup.com" target="_blank" rel="noopener noreferrer" className="text-[19px] text-slide-primary font-semibold hover:underline">
+                    <a href="https://www.omnistratgroup.com" target="_blank" rel="noopener noreferrer" className="text-[22px] text-slide-primary font-semibold hover:underline">
                       www.omnistratgroup.com
                     </a>
                   </div>
@@ -1153,16 +1153,16 @@ export const slides: SlideData[] = [
                 <div className="space-y-5">
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
-                    <p className="text-[19px] text-white font-semibold">Robert Amsterdam</p>
+                    <p className="text-[22px] text-white font-semibold">Robert Amsterdam</p>
                     <p className="text-[14px] text-white/60">Founding Partner</p>
                   </div>
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">London</p>
-                    <p className="text-[17px] text-white/70">125 Old Broad Street, EC2N 1AR</p>
+                    <p className="text-[19px] text-white/70">125 Old Broad Street, EC2N 1AR</p>
                   </div>
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Washington, DC</p>
-                    <p className="text-[17px] text-white/70">1054 31st St NW, Ste 110, 20007</p>
+                    <p className="text-[19px] text-white/70">1054 31st St NW, Ste 110, 20007</p>
                   </div>
                 </div>
               </div>
