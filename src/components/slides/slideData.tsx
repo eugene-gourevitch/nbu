@@ -272,7 +272,7 @@ export const slides: SlideData[] = [
 
             {/* The Collapse */}
             <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden">
-              <h3 className="text-[26px] font-bold text-red-600 mb-5 shrink-0">The Collapse</h3>
+              <h3 className="text-[24px] font-bold text-red-600 mb-5 shrink-0">The Collapse</h3>
               <div className="space-y-4 text-[17px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
                   <span className="font-bold text-slide-foreground">Partnership terminated.</span> NBU ended the relationship. Solfy was declared bankrupt. A contractual dispute over obligations under Agreement No. 289/37 was adjudicated in Uzbek civil courts (December 2024, May 2025).
