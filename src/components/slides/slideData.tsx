@@ -550,7 +550,7 @@ export const slides: SlideData[] = [
                   "Publicly identified as source of threats to the investor",
                   "Chairman of Uzbekistan Winter Sports Association",
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[18px] text-slide-muted leading-relaxed">
+                  <li key={item} className="flex gap-3 text-[17px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
