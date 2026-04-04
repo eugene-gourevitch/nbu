@@ -297,83 +297,69 @@ export const slides: SlideData[] = [
     title: "NBU History",
     component: (props) => (
       <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
-        <div className="flex flex-col h-full p-[80px]">
-          <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col h-full p-[80px] pb-[60px]">
+          <div className="flex items-center justify-between mb-6">
             <SlidePill label="NBU: HISTORY & SYSTEMIC ROLE" />
             <OmniStratLogo />
           </div>
 
-          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-4">
-            Uzbekistan's international face
+          <h2 className="text-[40px] font-extrabold leading-[1.1] tracking-tight mb-3">
+            The sovereign's international face
           </h2>
-          <p className="text-[20px] text-slide-muted leading-relaxed max-w-[1200px] mb-10">
-            NBU is not a provincial institution. It is the sovereign's primary channel for international capital markets and IFI credit lines.
+          <p className="text-[18px] text-slide-muted leading-relaxed max-w-[1200px] mb-8">
+            NBU is not a peripheral institution. It is Uzbekistan's primary channel for international capital markets and development finance.
           </p>
 
-          <div className="grid grid-cols-2 gap-8 flex-1">
-            {/* Left: History */}
-            <div className="flex flex-col gap-6">
-              <div className="bg-slide-surface rounded-2xl p-8 flex-1">
-                <h3 className="text-[26px] font-bold mb-4">Institutional History</h3>
-                <ul className="space-y-3">
-                  {[
-                    "Founded 1991 as Uzbekistan's primary foreign trade bank",
-                    "100% state-owned: Fund for Reconstruction & Development (59.25%) + Ministry of Economy & Finance (40.75%)",
-                    "Largest commercial bank in Uzbekistan by total assets",
-                    "Serves as the government's primary channel for IFI credit lines (EBRD, IFC, ADB)",
-                    "Authorized capital: UZS 16.7 trillion",
-                  ].map((item) => (
-                    <li key={item} className="flex gap-3 text-[20px] text-slide-muted leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid grid-cols-3 gap-6 flex-1 min-h-0">
+            {/* Column 1: Identity */}
+            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden">
+              <h3 className="text-[22px] font-bold text-slide-primary mb-4 shrink-0">Institutional Identity</h3>
+              <div className="space-y-3 text-[16px] text-slide-muted leading-[1.6] overflow-hidden">
+                <p><span className="font-bold text-slide-foreground">Founded 1991</span> as Uzbekistan's primary foreign trade bank. Largest commercial bank by total assets.</p>
+                <p><span className="font-bold text-slide-foreground">100% state-owned.</span> Fund for Reconstruction & Development (59.25%) and Ministry of Economy & Finance (40.75%).</p>
+                <p><span className="font-bold text-slide-foreground">Authorized capital:</span> UZS 16.7 trillion.</p>
+                <p><span className="font-bold text-slide-foreground">Ratings:</span> S&P BB | Fitch BB | Moody's Ba3 (all stable).</p>
               </div>
             </div>
 
-            {/* Right: Capital markets */}
-            <div className="flex flex-col gap-6">
-              <div className="bg-slide-surface rounded-2xl p-8">
-                <h3 className="text-[26px] font-bold mb-4">LSE Eurobond Issuance</h3>
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  {[
-                    { label: "Year", value: "2020" },
-                    { label: "Exchange", value: "London Stock Exchange" },
-                    { label: "Format", value: "Reg S / 144A Eurobond" },
-                    { label: "Status", value: "Outstanding obligations" },
-                  ].map((item) => (
-                    <div key={item.label} className="bg-white rounded-xl p-4">
-                      <p className="text-[14px] text-slide-muted tracking-wider uppercase">{item.label}</p>
-                      <p className="text-[20px] font-bold mt-1">{item.value}</p>
-                    </div>
-                  ))}
+            {/* Column 2: Capital Markets */}
+            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden">
+              <h3 className="text-[22px] font-bold text-slide-primary mb-4 shrink-0">Capital Markets Presence</h3>
+              <div className="space-y-4 overflow-hidden">
+                <div className="bg-white rounded-xl p-5">
+                  <p className="text-[13px] text-slide-muted tracking-[0.15em] uppercase mb-1">LSE Eurobond</p>
+                  <p className="text-[18px] font-bold">2020 issuance, Reg S / 144A</p>
+                  <p className="text-[15px] text-slide-muted mt-1">Outstanding obligations to international bondholders</p>
                 </div>
-              </div>
-
-              <div className="bg-slide-surface rounded-2xl p-8 flex-1">
-                <h3 className="text-[26px] font-bold mb-4">International Relationships</h3>
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-[16px] text-slide-primary font-bold tracking-wider uppercase mb-1">Correspondent Banks</p>
-                    <p className="text-[20px] text-slide-muted">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
-                  </div>
-                  <div>
-                    <p className="text-[16px] text-slide-primary font-bold tracking-wider uppercase mb-1">IFI Credit Lines</p>
-                    <p className="text-[20px] text-slide-muted">EBRD, IFC (World Bank Group), ADB, MIGA guarantees</p>
-                  </div>
-                  <div>
-                    <p className="text-[16px] text-slide-primary font-bold tracking-wider uppercase mb-1">Credit Ratings</p>
-                    <p className="text-[20px] text-slide-muted">S&P BB (stable) | Fitch BB (stable) | Moody's Ba3 (stable)</p>
-                  </div>
+                <div>
+                  <p className="text-[13px] text-slide-primary font-bold tracking-[0.15em] uppercase mb-2">Correspondent Banks</p>
+                  <p className="text-[16px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5 mt-6">
-            <p className="text-[20px] text-slide-foreground leading-relaxed">
-              <span className="font-bold">Systemic significance:</span> The compliance teams at JPM and Citi need to understand that NBU is not a peripheral actor. It is the sovereign's international face, and its conduct in the Solfy matter reflects directly on Uzbekistan's institutional credibility.
-            </p>
+            {/* Column 3: Development Finance */}
+            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden">
+              <h3 className="text-[22px] font-bold text-slide-primary mb-4 shrink-0">Development Finance</h3>
+              <div className="space-y-4 overflow-hidden">
+                {[
+                  { org: "EBRD", role: "Active credit lines. Integrity Risk Policy applies." },
+                  { org: "IFC", role: "World Bank Group lending. Performance Standards apply." },
+                  { org: "ADB", role: "Development credit facilities." },
+                  { org: "MIGA", role: "Political risk guarantees covering NBU exposure." },
+                ].map((item) => (
+                  <div key={item.org} className="flex gap-3">
+                    <span className="text-[16px] font-bold text-slide-foreground w-[52px] shrink-0">{item.org}</span>
+                    <p className="text-[15px] text-slide-muted leading-relaxed">{item.role}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-auto pt-4 border-t border-slide-foreground/8">
+                <p className="text-[15px] text-slide-foreground">
+                  <span className="font-bold text-red-600">Key fact:</span> NBU holds a 5% equity stake in Solfy CA while acting as the criminal complainant against its director.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </SlideLayout>
