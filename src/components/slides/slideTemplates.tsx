@@ -375,14 +375,14 @@ export const ProcessSlideTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
-      <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
+      <h2 className="mt-8 text-[48px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${steps.length} gap-6 w-full`}>
           {steps.map((item, i) => (
             <div key={item.step} className={`bg-slide-primary/${5 + i * 5} rounded-2xl p-6 flex flex-col h-full`}>
               <span className="text-[48px] font-extrabold text-slide-primary">{item.step}</span>
-              <h3 className="text-[22px] font-bold mt-3 mb-3">{item.title}</h3>
-              <p className="text-[15px] text-slide-muted leading-relaxed">{item.desc}</p>
+              <h3 className="text-[24px] font-bold mt-3 mb-3">{item.title}</h3>
+              <p className="text-[18px] text-slide-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
