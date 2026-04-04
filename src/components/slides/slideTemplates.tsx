@@ -729,7 +729,7 @@ export const ContactSlideTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex justify-between items-start">
         <span className="text-[24px] font-semibold">Contact us</span>
-        <span className="text-[20px] text-slide-muted">We're always here and ready to assist.</span>
+        <span className="text-[19px] text-slide-muted">We're always here and ready to assist.</span>
       </div>
       <div className="flex-1 flex flex-col justify-center">
         <h2 className="text-[100px] font-extrabold tracking-tight leading-none">GET IN TOUCH</h2>
