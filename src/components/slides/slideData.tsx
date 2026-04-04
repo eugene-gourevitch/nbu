@@ -688,7 +688,7 @@ export const slides: SlideData[] = [
               </div>
 
               <a href="https://free-uktam.com" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-xl px-8 py-4 mb-8 w-fit transition-colors">
+                className="inline-flex items-center gap-3 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-xl px-8 py-4 mb-8 w-fit transition-colors anim-fade-up stagger-4">
                 <span className="text-[19px] font-bold">free-uktam.com</span>
                 <span className="text-[14px] opacity-70">Hasanov Defense Initiative</span>
               </a>
