@@ -591,7 +591,7 @@ export const slides: SlideData[] = [
                 <div className="grid grid-cols-4 gap-8 relative">
                   {steps.map((step, i) => (
                     <div key={step.date} className="flex flex-col items-center text-center">
-                      <div className={`w-[80px] h-[80px] rounded-full flex items-center justify-center text-[18px] font-extrabold tracking-wide relative z-10 ${
+                      <div className={`w-[80px] h-[80px] rounded-full flex items-center justify-center text-[17px] font-extrabold tracking-wide relative z-10 ${
                         step.accent ? "bg-slide-primary text-white shadow-[0_0_30px_hsl(var(--slide-primary)/0.4)]" : "bg-white border-[3px] border-slide-primary text-slide-primary"
                       }`}>
                         {String(i + 1).padStart(2, "0")}
