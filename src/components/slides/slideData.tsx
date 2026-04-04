@@ -429,20 +429,19 @@ export const slides: SlideData[] = [
                 <h4 className="text-[22px] font-bold text-slide-primary mb-4">Management Board</h4>
                 <div className="space-y-3">
                   {[
-                    { name: "Alisher Mirsoatov", role: "Chairman (since Nov 2017)", note: "Publicly identified as source of threats to investor" },
-                    { name: "Sardorbek Usmanbekov", role: "First Deputy Chairman", note: "Compliance, risk, HR, project finance" },
-                    { name: "Bakhodir Jalilov", role: "Deputy Chairman", note: "State programs, IT, communications" },
-                    { name: "Azamat Kurambaev", role: "Deputy Chairman", note: "Problem assets, legal affairs" },
-                    { name: "Azizbek Khodjaev", role: "Deputy Chairman", note: "Investment subsidiaries, state program financing" },
-                    { name: "Bakhtiyor Mirdovidov", role: "Deputy Chairman", note: "Sales & customer service" },
-                    { name: "Bohodir Rikhsiev", role: "Chief Accountant", note: "Accounting, analytics, transformation" },
+                    { name: "Alisher Mirsoatov", role: "Chairman (since Nov 2017)" },
+                    { name: "Sardorbek Usmanbekov", role: "First Deputy Chairman" },
+                    { name: "Bakhodir Jalilov", role: "Deputy Chairman" },
+                    { name: "Azamat Kurambaev", role: "Deputy Chairman" },
+                    { name: "Azizbek Khodjaev", role: "Deputy Chairman" },
+                    { name: "Bakhtiyor Mirdovidov", role: "Deputy Chairman" },
+                    { name: "Bohodir Rikhsiev", role: "Chief Accountant" },
                   ].map((person) => (
                     <div key={person.name} className="flex items-start gap-3 pb-2 border-b border-slide-foreground/5 last:border-0 last:pb-0">
                       <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />
                       <div>
                         <span className="text-[19px] font-bold">{person.name}</span>
                         <span className="text-[14px] text-slide-primary ml-2">{person.role}</span>
-                        <p className="text-[14px] text-slide-muted">{person.note}</p>
                       </div>
                     </div>
                   ))}
