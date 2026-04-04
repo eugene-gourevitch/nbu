@@ -349,20 +349,26 @@ const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Present
             </AnimatePresence>
           </div>
 
-          {/* Progress dots for phone/tablet */}
+          {/* Progress indicator for phone/tablet */}
           {!isFullscreen && viewMode !== "desktop" && (
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentSlide(i)}
-                  className={`rounded-full transition-all ${
-                    i === currentSlide
-                      ? "w-6 h-2 bg-primary"
-                      : "w-2 h-2 bg-foreground/20 hover:bg-foreground/40"
-                  }`}
-                />
-              ))}
+              {viewMode === "phone" ? (
+                <span className="text-xs font-medium text-muted-foreground bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
+                  {currentSlide + 1} / {slides.length}
+                </span>
+              ) : (
+                slides.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentSlide(i)}
+                    className={`rounded-full transition-all ${
+                      i === currentSlide
+                        ? "w-6 h-2 bg-primary"
+                        : "w-2 h-2 bg-foreground/20 hover:bg-foreground/40"
+                    }`}
+                  />
+                ))
+              )}
             </div>
           )}
 

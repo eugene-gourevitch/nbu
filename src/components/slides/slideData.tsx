@@ -15,8 +15,6 @@ import {
 import SlideLayout from "./SlideLayout";
 import SlidePill from "./SlidePill";
 import OmniStratLogo from "./OmniStratLogo";
-import hero3d from "@/assets/hero-3d.jpg";
-import missionBg from "@/assets/mission-bg.jpg";
 import detentionCell from "@/assets/uzbek-detention-cell.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
 import uktamPhoto from "@/assets/uktam-photo.jpg";
@@ -226,6 +224,9 @@ export const slides: SlideData[] = [
                 </p>
                 <p className="text-[19px] text-slide-muted leading-relaxed">
                   <span className="font-bold text-slide-foreground">Robert Amsterdam</span><br />robert.amsterdam@amsterdamandpartners.com
+                </p>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
+                  <a href="https://www.amsterdamandpartners.com" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">amsterdamandpartners.com</a>
                 </p>
               </div>
             </div>
