@@ -477,9 +477,9 @@ export const slides: SlideData[] = [
           </h2>
           <div className="grid grid-cols-3 gap-8 flex-1">
             {/* Poletaev */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col">
+            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col anim-scale-in stagger-2">
               <div className="flex items-center gap-5 mb-6">
-                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-primary/20">
+                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-primary/20" style={{ animation: "scale-in 0.4s ease-out 0.5s both" }}>
                   <img src={poletaevPhoto} alt="Maxim Poletaev" className="w-full h-full object-cover" />
                 </div>
                 <div>
