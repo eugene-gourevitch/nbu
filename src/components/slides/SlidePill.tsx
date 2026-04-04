@@ -1,0 +1,21 @@
+interface SlidePillProps {
+  label: string;
+  variant?: "light" | "dark" | "glass";
+}
+
+const SlidePill = ({ label, variant = "light" }: SlidePillProps) => {
+  const styles: Record<string, string> = {
+    light: "border border-slide-foreground/20 text-slide-foreground bg-white",
+    dark: "border border-white/30 text-white bg-white/10",
+    glass: "border border-white/30 text-white bg-white/10 backdrop-blur-sm",
+  };
+
+  return (
+    <span className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-[18px] font-medium tracking-wider uppercase ${styles[variant]}`}>
+      <span className="w-1.5 h-1.5 rounded-full bg-current" />
+      {label}
+    </span>
+  );
+};
+
+export default SlidePill;

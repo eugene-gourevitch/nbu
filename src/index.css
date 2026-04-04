@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 232 100% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 232 100% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 232 100% 62%;
+
+    --radius: 0.75rem;
+
+    /* Slide-specific tokens */
+    --slide-primary: 232 100% 62%;
+    --slide-foreground: 0 0% 9%;
+    --slide-muted: 220 9% 46%;
+    --slide-surface: 220 14% 96%;
+    --slide-bg: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 231 89% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 231 89% 60%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 231 89% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 14% 14%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 220 14% 14%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 231 89% 60%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 231 89% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 14%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 231 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+/* Slide scaling */
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide-wrapper {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  margin-left: -960px;
+  margin-top: -540px;
+  transform-origin: center center;
+}
+
+/* Slide content font scaling */
+.slide-content {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Blue pattern background for CTA slides */
+.omnistrat-pattern {
+  background-color: hsl(232, 100%, 62%);
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      hsla(232, 100%, 55%, 0.3) 20px,
+      hsla(232, 100%, 55%, 0.3) 22px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 20px,
+      hsla(232, 100%, 68%, 0.2) 20px,
+      hsla(232, 100%, 68%, 0.2) 22px
+    );
+}
+
+/* Presentation fullscreen */
+.presentation-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: black;
+  cursor: none;
+}
+
+.presentation-fullscreen.cursor-visible {
+  cursor: default;
+}
