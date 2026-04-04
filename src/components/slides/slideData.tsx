@@ -983,8 +983,8 @@ export const slides: SlideData[] = [
             ].map((item) => (
               <div key={item.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
                 <span className={`text-[14px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`}>{item.tag}</span>
-                <h3 className="text-[26px] font-bold mb-3">{item.title}</h3>
-                <p className="text-[20px] text-slide-muted leading-relaxed">{item.text}</p>
+                <h3 className="text-[24px] font-bold mb-3">{item.title}</h3>
+                <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
