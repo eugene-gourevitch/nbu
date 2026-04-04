@@ -945,7 +945,7 @@ export const slides: SlideData[] = [
                   "Must be disclosed in NBU's financial statements as contingent liability",
                   "Bondholders have fiduciary obligations to assess counterparty governance risk",
                 ].map((item) => (
-                  <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[17px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
