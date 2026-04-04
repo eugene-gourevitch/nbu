@@ -332,8 +332,8 @@ export const slides: SlideData[] = [
                   <p className="text-[14px] text-slide-muted mt-1">Outstanding obligations to international bondholders</p>
                 </div>
                 <div>
-                  <p className="text-[13px] text-slide-primary font-bold tracking-[0.15em] uppercase mb-2">Correspondent Banks</p>
-                  <p className="text-[16px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
+                  <p className="text-[14px] text-slide-primary font-bold tracking-[0.15em] uppercase mb-2">Correspondent Banks</p>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
                 </div>
               </div>
             </div>
