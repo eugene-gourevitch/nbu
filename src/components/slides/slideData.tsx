@@ -119,18 +119,18 @@ export const slides: SlideData[] = [
       <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
         <div className="flex h-full">
           <div className="flex-1 flex flex-col justify-between p-[80px]">
-            <OmniStratLogo />
+            <OmniStratLogo className="anim-fade-in stagger-1" />
             <div>
-              <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary">
+              <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary anim-fade-up stagger-2">
                 INVESTOR<br />ALERT
               </h1>
-              <p className="mt-8 text-[22px] font-semibold text-slide-foreground max-w-[640px] leading-snug">
+              <p className="mt-8 text-[22px] font-semibold text-slide-foreground max-w-[640px] leading-snug anim-fade-up stagger-3">
                 Selective Criminal Prosecution Used as Commercial Leverage by the National Bank of Uzbekistan.
               </p>
-              <p className="mt-4 text-[22px] font-medium text-slide-primary max-w-[640px] leading-snug tracking-tight">
+              <p className="mt-4 text-[22px] font-medium text-slide-primary max-w-[640px] leading-snug tracking-tight anim-fade-up stagger-4">
                 A Confidential Briefing for International Financial Institutions, Correspondent Banks, and the Investor Community.
               </p>
-              <div className="mt-6 text-[14px] text-slide-muted/60 tracking-widest uppercase leading-relaxed">
+              <div className="mt-6 text-[14px] text-slide-muted/60 tracking-widest uppercase leading-relaxed anim-fade-in stagger-5">
                 <div>Confidential</div>
                 <div>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
                 <div>Prepared jointly by Amsterdam & Partners LLP</div>
@@ -145,7 +145,7 @@ export const slides: SlideData[] = [
               "A state bank that files criminal charges during settlement talks.",
               "A CEO detained as leverage.",
             ].map((line, i) => (
-              <div key={i} className="flex items-start gap-5">
+              <div key={i} className="flex items-start gap-5" style={{ animation: `slide-up 0.5s ease-out ${0.4 + i * 0.15}s both` }}>
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3B55FF] mt-3 shrink-0" />
                 <p className="text-[22px] text-white/80 font-medium leading-snug">{line}</p>
               </div>
