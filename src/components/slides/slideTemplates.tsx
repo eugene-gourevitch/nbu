@@ -419,7 +419,7 @@ export const ImageTextTemplate = ({
   const textEl = (
     <div className="flex-1 flex flex-col justify-center p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
-      <h2 className="mt-8 text-[48px] font-extrabold leading-[1.1] tracking-tight">{headline}</h2>
+      <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight">{headline}</h2>
       {paragraphs.map((p, i) => (
         <p key={i} className="mt-4 text-[22px] text-slide-muted leading-relaxed">{p}</p>
       ))}
