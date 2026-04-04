@@ -392,7 +392,7 @@ export const slides: SlideData[] = [
                 <h4 className="text-[19px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
                 <div className="space-y-3">
                   <div>
-                    <div className="flex justify-between text-[18px] font-semibold mb-1">
+                    <div className="flex justify-between text-[17px] font-semibold mb-1">
                       <span>Fund for Reconstruction & Development</span>
                       <span className="text-slide-primary">59.25%</span>
                     </div>
