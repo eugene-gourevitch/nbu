@@ -406,7 +406,6 @@ export const slides: SlideData[] = [
       );
     },
   },
-  },
   // 6. NBU's Irreconcilable Dual Role
   {
     id: "solfy-dual-role",
