@@ -182,8 +182,8 @@ export const slides: SlideData[] = [
                 </p>
               </div>
               <div className="bg-slide-surface rounded-2xl p-8 flex-1">
-                <h3 className="text-[26px] font-bold mb-4">The Audience</h3>
-                <p className="text-[20px] text-slide-muted leading-relaxed">
+                <h3 className="text-[24px] font-bold mb-4">The Audience</h3>
+                <p className="text-[19px] text-slide-muted leading-relaxed">
                   IFI compliance officers, correspondent bank risk teams, eurobond investors, and rating agency analysts with NBU exposure.
                 </p>
               </div>
