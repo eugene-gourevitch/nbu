@@ -41,7 +41,7 @@ const SlideLayout = ({
       } : undefined}
     >
       {backgroundImage && variant === "dark" && (
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" />
       )}
       <div className="relative z-10 w-full h-full">
         {children}

@@ -4,6 +4,17 @@ export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
+  safelist: [
+    'grid-cols-2',
+    'grid-cols-3',
+    'grid-cols-4',
+    'grid-cols-5',
+    'bg-slide-primary/5',
+    'bg-slide-primary/10',
+    'bg-slide-primary/15',
+    'bg-slide-primary/20',
+    'bg-slide-primary/25',
+  ],
   theme: {
     container: {
       center: true,
