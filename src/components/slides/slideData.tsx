@@ -867,8 +867,8 @@ export const slides: SlideData[] = [
             </div>
             <div>
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">02</div>
-              <h3 className="text-[26px] font-bold mb-3">Allegation: Unpaid Bank Rewards</h3>
-              <p className="text-[20px] text-slide-muted leading-relaxed">
+              <h3 className="text-[24px] font-bold mb-3">Allegation: Unpaid Bank Rewards</h3>
+              <p className="text-[19px] text-slide-muted leading-relaxed">
                 Charges allege 14.9 billion soums in unpaid contractual rewards owed to NBU. These correspond to obligations under Agreement No. 289/37, already adjudicated in civil court rulings (December 2024, May 2025). The criminal complaint repackages a commercial dispute.
               </p>
             </div>
