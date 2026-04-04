@@ -869,8 +869,8 @@ export const NextStepsTemplate = ({
           {steps.map((item) => (
             <div key={item.step} className="bg-slide-primary/10 rounded-2xl p-8">
               <span className="text-[56px] font-extrabold text-slide-primary">{item.step}</span>
-              <h3 className="text-[28px] font-bold mt-4 mb-3">{item.title}</h3>
-              <p className="text-[18px] text-slide-muted leading-relaxed">{item.desc}</p>
+              <h3 className="text-[30px] font-bold mt-4 mb-3">{item.title}</h3>
+              <p className="text-[20px] text-slide-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
