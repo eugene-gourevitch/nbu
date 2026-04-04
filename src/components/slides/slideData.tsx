@@ -753,7 +753,7 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3">
             Why arrest is an excessive and disproportionate measure
           </h2>
-          <p className="text-[20px] text-slide-muted leading-relaxed mb-10 max-w-[1200px]">
+          <p className="text-[22px] text-slide-muted leading-relaxed mb-10 max-w-[1200px]">
             Under Uzbek criminal procedure (Articles 236-243 CPC) and international standards, pre-trial detention is a measure of last resort. In this case, none of the legal prerequisites are satisfied.
           </p>
           <div className="grid grid-cols-2 gap-8 flex-1">
