@@ -912,7 +912,7 @@ export const slides: SlideData[] = [
                   "ADB Safeguard Policy requires institutional capacity assessment",
                   "MIGA political risk guarantees may be triggered",
                 ].map((item) => (
-                  <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[17px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
