@@ -661,7 +661,7 @@ export const slides: SlideData[] = [
                 <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-slide-primary/40 shadow-[0_0_60px_rgba(59,85,255,0.3)]">
                   <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-red-600 text-white text-[13px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase">
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-red-600 text-white text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase">
                   <span className="w-2 h-2 bg-red-300 rounded-full animate-pulse" />
                   Detained
                 </div>
