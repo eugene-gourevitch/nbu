@@ -373,7 +373,7 @@ export const slides: SlideData[] = [
       <TwoColumnFreeformTemplate
         {...props}
         pillLabel="SELECTIVE PROSECUTION"
-        subtitle="This pattern is consistent with the use of criminal prosecution as commercial leverage -- not genuine law enforcement."
+        subtitle="This pattern is consistent with the use of criminal prosecution as commercial leverage, not genuine law enforcement."
         leftContent={
           <div>
             <h3 className="text-[28px] font-bold text-slide-primary mb-6">Charged</h3>
