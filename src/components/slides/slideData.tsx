@@ -508,7 +508,7 @@ export const slides: SlideData[] = [
                   <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-red-500/30" style={{ animation: "scale-in 0.4s ease-out 0.7s both" }}>
                     <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
                   </div>
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase animate-[glow-pulse_2s_ease-in-out_infinite]">
                     Detained
                   </div>
                 </div>
