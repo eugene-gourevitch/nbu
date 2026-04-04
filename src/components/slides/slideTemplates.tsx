@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import SlideLayout from "./SlideLayout";
 import SlidePill from "./SlidePill";
 import OmniStratLogo from "./OmniStratLogo";
+import TypewriterText from "./TypewriterText";
 
 // ─── Shared types ───
 
