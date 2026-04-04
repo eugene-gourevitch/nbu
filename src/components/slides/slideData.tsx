@@ -982,9 +982,9 @@ export const slides: SlideData[] = [
               { tag: "ICSID ARBITRATION", title: "Humans Mobile v. Uzbekistan", text: "ICSID ARB/25/24 — Singapore-based company initiated arbitration citing bilateral investment treaty violations by Uzbek state authorities.", accent: "bg-amber-500/10 text-amber-600" },
               { tag: "SELECTIVE JUSTICE", title: "Former Minister Voitov (2025)", text: "Convicted under Article 167(3)(a) — the same provision as Hasanov. Received no prison time after compensating damages. Illustrates the transactional nature of embezzlement prosecutions.", accent: "bg-purple-500/10 text-purple-600" },
               { tag: "CAPITAL FLIGHT", title: "Foreign Direct Investment Gap", text: "Kazakhstan: $151B accumulated FDI stock. Uzbekistan: $17B. IBTimes identifies the Solfy case as a test of institutional reform credibility.", accent: "bg-slide-primary/10 text-slide-primary" },
-            ].map((item) => (
-              <div key={item.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
-                <span className={`text-[14px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`}>{item.tag}</span>
+            ].map((item, i) => (
+              <div key={item.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: `fade-scale 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+                <span className={`text-[14px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`} style={{ animation: `scale-in 0.3s ease-out ${0.6 + i * 0.15}s both` }}>{item.tag}</span>
                 <h3 className="text-[24px] font-bold mb-3">{item.title}</h3>
                 <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
               </div>
