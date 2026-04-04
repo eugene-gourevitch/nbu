@@ -97,23 +97,23 @@ export const slides: SlideData[] = [
               Confidentiality Statement & Disclaimer
             </h2>
 
-            <div className="mt-10 space-y-8 text-[20px] leading-[1.7] text-slide-muted">
+            <div className="mt-10 space-y-8 text-[22px] leading-[1.7] text-slide-muted">
               <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
+                <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
                 <p>
                   This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without the prior written consent of OmniStrat Group LLC. Unauthorised disclosure, copying, or distribution of this material is strictly prohibited and may result in legal action.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
+                <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
                 <p>
                   This presentation has been prepared by OmniStrat Group LLC for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation to take any action. While every effort has been made to ensure the accuracy and completeness of the information presented, OmniStrat Group LLC makes no representations or warranties, express or implied, regarding the accuracy, reliability, or completeness of the content. Recipients should seek independent professional advice before making any decisions based on the information contained in this document.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-[22px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
+                <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
                 <p>
                   OmniStrat Group LLC, its affiliates, directors, officers, and employees shall not be held liable for any loss, damage, or expense arising directly or indirectly from the use of or reliance on any information contained in this presentation. All rights reserved.
                 </p>
@@ -368,10 +368,10 @@ export const slides: SlideData[] = [
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6 mb-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
+                <h4 className="text-[22px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
                 <div className="space-y-3">
                   <div>
-                    <div className="flex justify-between text-[17px] font-semibold mb-1">
+                    <div className="flex justify-between text-[19px] font-semibold mb-1">
                       <span>Fund for Reconstruction & Development</span>
                       <span className="text-slide-primary">59.25%</span>
                     </div>
@@ -380,7 +380,7 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                   <div>
-                    <div className="flex justify-between text-[17px] font-semibold mb-1">
+                    <div className="flex justify-between text-[19px] font-semibold mb-1">
                       <span>Ministry of Economy & Finance</span>
                       <span className="text-slide-primary">40.75%</span>
                     </div>
@@ -389,12 +389,12 @@ export const slides: SlideData[] = [
                     </div>
                   </div>
                 </div>
-                <p className="text-[15px] text-slide-muted mt-3">100% state-owned. Total authorized capital: UZS 16.7 trillion.</p>
+                <p className="text-[17px] text-slide-muted mt-3">100% state-owned. Total authorized capital: UZS 16.7 trillion.</p>
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
-                <div className="space-y-2 text-[17px]">
+                <h4 className="text-[22px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
+                <div className="space-y-2 text-[19px]">
                   <div className="flex justify-between"><span className="text-slide-muted">S&P</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Fitch</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Moody's</span><span className="font-bold">Ba3 (stable)</span></div>
@@ -405,7 +405,7 @@ export const slides: SlideData[] = [
             {/* Right column: Management + Exposure */}
             <div className="flex-1 flex flex-col gap-6">
               <div className="bg-slide-surface rounded-2xl p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-4">Management Board</h4>
+                <h4 className="text-[22px] font-bold text-slide-primary mb-4">Management Board</h4>
                 <div className="space-y-3">
                   {[
                     { name: "Alisher Mirsoatov", role: "Chairman (since Nov 2017)", note: "Publicly identified as source of threats to investor" },
@@ -419,9 +419,9 @@ export const slides: SlideData[] = [
                     <div key={person.name} className="flex items-start gap-3 pb-2 border-b border-slide-foreground/5 last:border-0 last:pb-0">
                       <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />
                       <div>
-                        <span className="text-[17px] font-bold">{person.name}</span>
-                        <span className="text-[16px] text-slide-primary ml-2">{person.role}</span>
-                        <p className="text-[15px] text-slide-muted">{person.note}</p>
+                        <span className="text-[19px] font-bold">{person.name}</span>
+                        <span className="text-[17px] text-slide-primary ml-2">{person.role}</span>
+                        <p className="text-[16px] text-slide-muted">{person.note}</p>
                       </div>
                     </div>
                   ))}
@@ -430,21 +430,21 @@ export const slides: SlideData[] = [
 
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-slide-surface rounded-2xl p-5">
-                  <h4 className="text-[16px] font-bold text-slide-primary mb-2">Correspondent Banks</h4>
-                  <p className="text-[15px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
+                  <h4 className="text-[18px] font-bold text-slide-primary mb-2">Correspondent Banks</h4>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
                 </div>
                 <div className="bg-slide-surface rounded-2xl p-5">
-                  <h4 className="text-[16px] font-bold text-slide-primary mb-2">IFI Credit Lines</h4>
-                  <p className="text-[15px] text-slide-muted leading-relaxed">EBRD, IFC (World Bank Group), ADB, MIGA guarantees</p>
+                  <h4 className="text-[18px] font-bold text-slide-primary mb-2">IFI Credit Lines</h4>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">EBRD, IFC (World Bank Group), ADB, MIGA guarantees</p>
                 </div>
                 <div className="bg-slide-surface rounded-2xl p-5">
-                  <h4 className="text-[16px] font-bold text-slide-primary mb-2">LSE Eurobonds</h4>
-                  <p className="text-[15px] text-slide-muted leading-relaxed">2020 issuance on London Stock Exchange. Outstanding obligations to international bondholders.</p>
+                  <h4 className="text-[18px] font-bold text-slide-primary mb-2">LSE Eurobonds</h4>
+                  <p className="text-[17px] text-slide-muted leading-relaxed">2020 issuance on London Stock Exchange. Outstanding obligations to international bondholders.</p>
                 </div>
               </div>
 
               <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5">
-                <p className="text-[17px] text-slide-foreground leading-relaxed">
+                <p className="text-[19px] text-slide-foreground leading-relaxed">
                   <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture's director.
                 </p>
               </div>
@@ -634,7 +634,7 @@ export const slides: SlideData[] = [
                       </h3>
 
                       {/* Description */}
-                      <p className="mt-3 text-[16px] text-slide-muted leading-relaxed max-w-[360px]">
+                      <p className="mt-3 text-[18px] text-slide-muted leading-relaxed max-w-[360px]">
                         {step.desc}
                       </p>
                     </div>
@@ -907,10 +907,10 @@ export const slides: SlideData[] = [
             <OmniStratLogo />
           </div>
 
-          <h2 className="text-[36px] font-bold mt-6 leading-tight max-w-[1400px]">
+          <h2 className="text-[42px] font-extrabold mt-6 leading-tight max-w-[1400px]">
             The Solfy case is not an isolated incident
           </h2>
-          <p className="text-[20px] text-slide-muted mt-3 max-w-[1200px]">
+          <p className="text-[22px] text-slide-muted mt-3 max-w-[1200px]">
             A pattern of investor-hostile actions undermines Uzbekistan's reform credibility
           </p>
 
@@ -946,16 +946,16 @@ export const slides: SlideData[] = [
                 className="bg-slide-surface rounded-2xl p-8 flex flex-col"
                 style={{ animation: `fade-in 0.5s ease-out ${0.3 + i * 0.15}s both` }}
               >
-                <span className={`text-[13px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`}>
+                <span className={`text-[15px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`}>
                   {item.tag}
                 </span>
-                <h3 className="text-[26px] font-bold mb-3">{item.title}</h3>
-                <p className="text-[19px] text-slide-muted leading-relaxed">{item.text}</p>
+                <h3 className="text-[28px] font-bold mb-3">{item.title}</h3>
+                <p className="text-[21px] text-slide-muted leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
 
-          <p className="text-[17px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
+          <p className="text-[19px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
             <span className="font-bold text-slide-foreground">Source:</span> NBU Chairman Mirsoatov publicly identified as source of threats to international investors (UA.NEWS, IBTimes)
           </p>
         </div>
@@ -1077,11 +1077,6 @@ export const slides: SlideData[] = [
             num: "03",
             title: "International Advocacy",
             desc: "Coordinated engagement with IFIs, rating agencies, correspondent banks, eurobond stakeholders, and international media to ensure transparency and accountability.",
-          },
-          {
-            num: "04",
-            title: "Valuation",
-            desc: "Independent valuation (Bluestone): USD 42-52 million fair value of Poletaev's 50% stake in Solfy CA.",
           },
         ]}
       />

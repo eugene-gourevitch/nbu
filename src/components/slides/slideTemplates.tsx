@@ -231,8 +231,8 @@ export const TwoColumnNumberedTemplate = ({
         {items.map((item) => (
           <div key={item.num}>
             <div className="text-[72px] font-extrabold text-slide-primary/15 leading-none mb-3">{item.num}</div>
-            <h3 className="text-[28px] font-bold mb-3">{item.title}</h3>
-            <p className="text-[20px] text-slide-muted leading-relaxed">{item.desc}</p>
+            <h3 className="text-[30px] font-bold mb-3">{item.title}</h3>
+            <p className="text-[22px] text-slide-muted leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
@@ -290,14 +290,14 @@ export const BigNumbersTemplate = ({
   <SlideLayout variant="blue" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
-      {subtitle && <p className="mt-6 text-[24px] text-white/80 max-w-[1000px]">{subtitle}</p>}
+      {subtitle && <p className="mt-6 text-[26px] text-white/80 max-w-[1000px]">{subtitle}</p>}
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${stats.length} gap-12 w-full`}>
           {stats.map((stat) => (
             <div key={stat.num} className="text-center">
-              <div className="text-[80px] font-extrabold leading-none">{stat.num}</div>
-              <p className="text-[20px] font-semibold mt-4">{stat.label}</p>
-              <p className="text-[16px] text-white/60 mt-2">{stat.sub}</p>
+              <div className="text-[84px] font-extrabold leading-none">{stat.num}</div>
+              <p className="text-[22px] font-semibold mt-4">{stat.label}</p>
+              <p className="text-[18px] text-white/60 mt-2">{stat.sub}</p>
             </div>
           ))}
         </div>
@@ -336,12 +336,12 @@ export const ServicesGridTemplate = ({
         {cards.map((card) => (
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
             <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
-            <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-            {card.desc && <p className="text-[18px] text-slide-muted leading-relaxed">{card.desc}</p>}
+            <h3 className="text-[26px] font-bold mb-3">{card.title}</h3>
+            {card.desc && <p className="text-[20px] text-slide-muted leading-relaxed">{card.desc}</p>}
             {card.items && (
               <ul className="space-y-3">
                 {card.items.map((item) => (
-                  <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[20px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1">&#8226;</span>
                     {item}
                   </li>
@@ -375,14 +375,14 @@ export const ProcessSlideTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
-      <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
+      <h2 className="mt-8 text-[48px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${steps.length} gap-6 w-full`}>
           {steps.map((item, i) => (
             <div key={item.step} className={`bg-slide-primary/${5 + i * 5} rounded-2xl p-6 flex flex-col h-full`}>
               <span className="text-[48px] font-extrabold text-slide-primary">{item.step}</span>
-              <h3 className="text-[22px] font-bold mt-3 mb-3">{item.title}</h3>
-              <p className="text-[15px] text-slide-muted leading-relaxed">{item.desc}</p>
+              <h3 className="text-[24px] font-bold mt-3 mb-3">{item.title}</h3>
+              <p className="text-[18px] text-slide-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -419,9 +419,9 @@ export const ImageTextTemplate = ({
   const textEl = (
     <div className="flex-1 flex flex-col justify-center p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
-      <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight">{headline}</h2>
+      <h2 className="mt-8 text-[48px] font-extrabold leading-[1.1] tracking-tight">{headline}</h2>
       {paragraphs.map((p, i) => (
-        <p key={i} className="mt-4 text-[20px] text-slide-muted leading-relaxed">{p}</p>
+        <p key={i} className="mt-4 text-[22px] text-slide-muted leading-relaxed">{p}</p>
       ))}
       {stats && (
         <div className="mt-10 flex gap-6">
@@ -465,18 +465,18 @@ export const ComparisonTemplate = ({
       <h2 className="mt-8 text-[48px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
       <div className="flex-1 grid grid-cols-2 gap-0">
         <div className="bg-slide-surface rounded-l-2xl p-10 flex flex-col gap-6">
-          <h3 className="text-[28px] font-bold text-slide-muted mb-2">{leftTitle}</h3>
+          <h3 className="text-[30px] font-bold text-slide-muted mb-2">{leftTitle}</h3>
           {leftItems.map((item) => (
-            <div key={item} className="flex items-center gap-4 text-[20px] text-slide-muted">
+            <div key={item} className="flex items-center gap-4 text-[22px] text-slide-muted">
               <span className="w-6 h-6 rounded-full bg-slide-muted/20 flex items-center justify-center text-[14px]">&#10005;</span>
               {item}
             </div>
           ))}
         </div>
         <div className="bg-slide-primary rounded-r-2xl p-10 flex flex-col gap-6 text-white">
-          <h3 className="text-[28px] font-bold mb-2">{rightTitle}</h3>
+          <h3 className="text-[30px] font-bold mb-2">{rightTitle}</h3>
           {rightItems.map((item) => (
-            <div key={item} className="flex items-center gap-4 text-[20px]">
+            <div key={item} className="flex items-center gap-4 text-[22px]">
               <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-[14px]">&#10003;</span>
               {item}
             </div>
@@ -507,20 +507,20 @@ export const MultiColumnTableTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
-      <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
+      <h2 className="mt-8 text-[48px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns.length} gap-4`}>
         {columns.map((col) => (
           <div key={col.title} className="bg-slide-surface rounded-2xl p-6">
-            <h3 className="text-[20px] font-bold mb-4 text-slide-primary">{col.title}</h3>
+            <h3 className="text-[22px] font-bold mb-4 text-slide-primary">{col.title}</h3>
             <ul className="space-y-2">
               {col.items.map((item) => (
-                <li key={item} className="text-[14px] text-slide-muted leading-relaxed">&#8226; {item}</li>
+                <li key={item} className="text-[17px] text-slide-muted leading-relaxed">&#8226; {item}</li>
               ))}
             </ul>
           </div>
         ))}
       </div>
-      {footer && <p className="mt-6 text-[18px] font-semibold text-slide-primary">{footer}</p>}
+      {footer && <p className="mt-6 text-[20px] font-semibold text-slide-primary">{footer}</p>}
     </div>
   </SlideLayout>
 );
@@ -560,10 +560,10 @@ export const TeamSlideTemplate = ({
                 <img src={person.photo} alt={person.name} className="w-full h-full object-cover" />
               )}
             </div>
-            <h3 className="text-[24px] font-bold">{person.name}</h3>
-            <p className="text-[18px] text-slide-primary font-semibold">{person.role}</p>
-            {person.bio && <p className="text-[15px] text-slide-muted mt-2 leading-relaxed">{person.bio}</p>}
-            {person.specialty && <p className="text-[16px] text-slide-muted mt-1">{person.specialty}</p>}
+            <h3 className="text-[26px] font-bold">{person.name}</h3>
+            <p className="text-[20px] text-slide-primary font-semibold">{person.role}</p>
+            {person.bio && <p className="text-[17px] text-slide-muted mt-2 leading-relaxed">{person.bio}</p>}
+            {person.specialty && <p className="text-[18px] text-slide-muted mt-1">{person.specialty}</p>}
           </div>
         ))}
       </div>
@@ -603,11 +603,11 @@ export const PRStatsTemplate = ({
           <img src={image} alt={imageAlt} className="w-full h-full object-cover" />
         </div>
         <div className="flex-1 flex flex-col justify-center gap-6">
-          {introText && <p className="text-[20px] text-slide-muted leading-relaxed mb-4">{introText}</p>}
+          {introText && <p className="text-[22px] text-slide-muted leading-relaxed mb-4">{introText}</p>}
           {stats.map((stat) => (
             <div key={stat.number} className="border-b border-slide-foreground/10 pb-6">
-              <div className="text-[44px] font-extrabold">{stat.number}</div>
-              <p className="text-[20px] text-slide-muted">{stat.label}</p>
+              <div className="text-[48px] font-extrabold">{stat.number}</div>
+              <p className="text-[22px] text-slide-muted">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -640,14 +640,14 @@ export const CaseStudyDarkTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
       <div className="flex-1 flex flex-col justify-center max-w-[1200px]">
-        <h2 className="text-[48px] font-extrabold leading-[1.1]">{headline}</h2>
-        {description && <p className="mt-8 text-[24px] text-white/70 leading-relaxed">{description}</p>}
+        <h2 className="text-[52px] font-extrabold leading-[1.1]">{headline}</h2>
+        {description && <p className="mt-8 text-[26px] text-white/70 leading-relaxed">{description}</p>}
         {stats && (
           <div className={`mt-12 grid grid-cols-${stats.length} gap-8`}>
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-[52px] font-extrabold text-slide-primary">{stat.num}</div>
-                <p className="text-[18px] text-white/60">{stat.label}</p>
+                <div className="text-[56px] font-extrabold text-slide-primary">{stat.num}</div>
+                <p className="text-[20px] text-white/60">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -656,8 +656,8 @@ export const CaseStudyDarkTemplate = ({
           <div className={`mt-10 grid grid-cols-${cards.length > 3 ? 2 : cards.length} gap-8`}>
             {cards.map((card) => (
               <div key={card.title} className="bg-white/10 backdrop-blur rounded-2xl p-8">
-                <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-                <p className="text-[17px] text-white/70 leading-relaxed">{card.desc}</p>
+                <h3 className="text-[26px] font-bold mb-3">{card.title}</h3>
+                <p className="text-[19px] text-white/70 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -783,7 +783,7 @@ export const CompetitiveTableTemplate = ({
       <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-10">{headline}</h2>
       <div className="flex-1 overflow-hidden">
         <div className="w-full">
-          <div className="grid grid-cols-[180px_1fr_1fr_120px_1fr] gap-0 text-[15px]">
+          <div className="grid grid-cols-[180px_1fr_1fr_120px_1fr] gap-0 text-[17px]">
             <div className="bg-slide-primary text-white p-4 rounded-tl-xl font-bold">Firm</div>
             <div className="bg-slide-primary text-white p-4 font-bold">Strength</div>
             <div className="bg-slide-primary text-white p-4 font-bold">Weakness</div>
@@ -834,10 +834,10 @@ export const TrackRecordTemplate = ({
         {cards.map((card) => (
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
             <div className="w-8 h-1 bg-slide-primary rounded-full mb-3" />
-            <p className="text-[14px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
-            <h3 className="text-[22px] font-bold mb-3">{card.title}</h3>
-            <p className="text-[17px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>
-            <p className="text-[14px] text-slide-muted/70 mt-4 pt-4 border-t border-slide-foreground/8">{card.tag}</p>
+            <p className="text-[16px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
+            <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
+            <p className="text-[19px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>
+            <p className="text-[15px] text-slide-muted/70 mt-4 pt-4 border-t border-slide-foreground/8">{card.tag}</p>
           </div>
         ))}
       </div>
@@ -869,8 +869,8 @@ export const NextStepsTemplate = ({
           {steps.map((item) => (
             <div key={item.step} className="bg-slide-primary/10 rounded-2xl p-8">
               <span className="text-[56px] font-extrabold text-slide-primary">{item.step}</span>
-              <h3 className="text-[28px] font-bold mt-4 mb-3">{item.title}</h3>
-              <p className="text-[18px] text-slide-muted leading-relaxed">{item.desc}</p>
+              <h3 className="text-[30px] font-bold mt-4 mb-3">{item.title}</h3>
+              <p className="text-[20px] text-slide-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
