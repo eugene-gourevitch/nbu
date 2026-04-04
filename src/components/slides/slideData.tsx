@@ -37,7 +37,47 @@ export const slides: SlideData[] = [
       />
     ),
   },
-  // 2. Purpose of This Briefing
+  // 2. Background: The Solfy Story
+  {
+    id: "solfy-background",
+    title: "Background",
+    component: (props) => (
+      <TwoColumnFreeformTemplate
+        {...props}
+        pillLabel="BACKGROUND"
+        subtitle="A fintech joint venture that became the center of an investor-state dispute with international implications."
+        leftContent={
+          <>
+            <h3 className="text-[28px] font-bold mb-4">The Venture</h3>
+            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
+              Solfy CA LLC was established in Tashkent in June 2020 as a fintech joint venture between Russian investor Maxim Poletaev (50% via Solvy Cyprus Limited), the National Bank for Foreign Economic Activity of Uzbekistan (NBU, 5%), and other shareholders including Full Stack Solution (20%).
+            </p>
+            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
+              The company launched a Buy Now, Pay Later (BNPL) installment card product in partnership with NBU -- Uzbekistan's largest commercial bank by assets (73.8% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums. Its senior retail management publicly endorsed and promoted the product.
+            </p>
+            <p className="text-[18px] text-slide-muted leading-relaxed">
+              An independent valuation by Bluestone assessed the company at USD 42-52 million.
+            </p>
+          </>
+        }
+        rightContent={
+          <>
+            <h3 className="text-[28px] font-bold mb-4">The Collapse</h3>
+            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
+              The business relationship between Solfy and NBU deteriorated. NBU terminated the partnership, and Solfy was declared bankrupt. A contractual dispute ensued over unpaid obligations under Agreement No. 289/37, which was adjudicated in Uzbek civil courts in December 2024 and May 2025.
+            </p>
+            <p className="text-[18px] text-slide-muted leading-relaxed mb-4">
+              In February 2026, Amsterdam & Partners LLP announced representation of Solfy and Poletaev, reporting that the investor and associates had been subjected to serious threats by NBU representatives. UA.NEWS identified NBU Chairman Alisher Mirsoatov personally as the source of threats.
+            </p>
+            <p className="text-[18px] text-slide-muted leading-relaxed">
+              Rather than resolving the matter commercially, NBU filed a criminal complaint against Solfy's locally appointed director -- converting a failed business venture into a criminal prosecution during active settlement negotiations.
+            </p>
+          </>
+        }
+      />
+    ),
+  },
+  // 3. Purpose of This Briefing
   {
     id: "solfy-purpose",
     title: "Purpose of This Briefing",
