@@ -741,7 +741,7 @@ export const ContactSlideTemplate = ({
       </div>
       <div className="flex items-end justify-between">
         {socialLinks && (
-          <div className="flex gap-8 text-[20px] text-slide-muted">
+          <div className="flex gap-8 text-[19px] text-slide-muted">
             {socialLinks.map((s) => (
               <span key={s}>{s}</span>
             ))}
