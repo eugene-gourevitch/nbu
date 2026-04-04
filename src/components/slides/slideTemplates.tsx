@@ -105,8 +105,8 @@ export const SectionDividerTemplate = ({
     <div className="flex h-full">
       <div className="flex-1 flex flex-col justify-center p-[80px]">
         <SlidePill label={sectionLabel} variant="light" />
-        <h2 className="mt-10 text-[80px] font-extrabold leading-[1.05] tracking-tight">{title}</h2>
-        <p className="mt-8 text-[24px] text-slide-muted max-w-[700px] leading-relaxed">{subtitle}</p>
+        <h2 className="mt-10 text-[44px] font-extrabold leading-[1.05] tracking-tight">{title}</h2>
+        <p className="mt-8 text-[22px] text-slide-muted max-w-[700px] leading-relaxed">{subtitle}</p>
       </div>
       <div className="w-[35%] bg-slide-surface" />
     </div>
