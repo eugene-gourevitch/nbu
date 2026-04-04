@@ -384,8 +384,8 @@ export const slides: SlideData[] = [
               <div className="bg-slide-surface rounded-2xl p-8 flex flex-col items-center mb-6">
                 <img src={nbuLogo} alt="NBU Logo" className="w-[120px] h-[120px] object-contain mb-4" />
                 <h3 className="text-[24px] font-bold text-center leading-tight">National Bank for Foreign Economic Activity</h3>
-                <p className="text-[18px] text-slide-muted text-center mt-2">Republic of Uzbekistan</p>
-                <p className="text-[16px] text-slide-muted text-center mt-1">Est. 1991 | Tashkent</p>
+                <p className="text-[17px] text-slide-muted text-center mt-2">Republic of Uzbekistan</p>
+                <p className="text-[14px] text-slide-muted text-center mt-1">Est. 1991 | Tashkent</p>
               </div>
 
               <div className="bg-slide-surface rounded-2xl p-6 mb-6">
