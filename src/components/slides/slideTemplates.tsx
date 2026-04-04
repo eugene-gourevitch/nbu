@@ -462,7 +462,7 @@ export const ComparisonTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="light" />
-      <h2 className="mt-8 text-[48px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
+      <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
       <div className="flex-1 grid grid-cols-2 gap-0">
         <div className="bg-slide-surface rounded-l-2xl p-10 flex flex-col gap-6">
           <h3 className="text-[30px] font-bold text-slide-muted mb-2">{leftTitle}</h3>
