@@ -193,7 +193,7 @@ export const QuoteSlideTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       {pillLabel && <SlidePill label={pillLabel} variant="light" />}
       <div className="flex-1 flex flex-col justify-center">
-        <div className="text-[140px] leading-none text-slide-primary/20 font-serif">"</div>
+        <div className="text-[140px] leading-none text-slide-primary/20 font-sans">"</div>
         <blockquote className="text-[44px] font-semibold leading-[1.3] max-w-[1200px] -mt-12">
           {quote}
         </blockquote>
