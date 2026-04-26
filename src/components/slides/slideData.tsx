@@ -137,14 +137,14 @@ export const slides: SlideData[] = [
             </div>
           </div>
           {/* Narrative hook */}
-          <div className="w-[45%] flex flex-col justify-center px-16 gap-12" style={{ backgroundColor: "#0a0a0a" }}>
+          <div className="w-[45%] flex flex-col justify-center px-16 gap-12 bg-slide-foreground">
             {[
               "A foreign investor's fintech venture in Uzbekistan.",
               "A state bank that files criminal charges during settlement talks.",
               "A CEO detained as leverage.",
             ].map((line, i) => (
               <div key={i} className="flex items-start gap-5" style={{ animation: `slide-up 0.5s ease-out ${0.4 + i * 0.15}s both` }}>
-                <div className="w-1.5 h-1.5 rounded-full bg-[#3B55FF] mt-3 shrink-0" />
+                <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-3 shrink-0" />
                 <p className="text-[22px] text-white/80 font-medium leading-snug">{line}</p>
               </div>
             ))}
@@ -203,7 +203,7 @@ export const slides: SlideData[] = [
             </div>
             <div className="flex flex-col gap-6 anim-fade-up stagger-5">
               <a
-                href="https://calendly.com/eugene-gourevitch-omnistratgroup/30min"
+                href="https://www.caji.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl p-8 transition-all duration-300 block flex-1"
@@ -1112,7 +1112,7 @@ export const slides: SlideData[] = [
 
             {/* CTA Button - full width above cards */}
             <a
-              href="https://calendly.com/eugene-gourevitch-omnistratgroup/30min"
+              href="https://www.caji.org"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full max-w-[1200px] flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
@@ -1126,7 +1126,7 @@ export const slides: SlideData[] = [
               {/* CAJI */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
                 <h3 className="text-[24px] font-extrabold text-white mb-1">Central Asia Justice Initiative</h3>
-                <p className="text-[14px] text-slide-primary font-semibold tracking-wider uppercase mb-8">Strategic Advisory</p>
+                <p className="text-[14px] text-slide-primary font-semibold tracking-wider uppercase mb-8">Human Rights & Rule of Law Advocacy</p>
                 <div className="space-y-5">
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
