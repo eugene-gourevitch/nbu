@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import SlideLayout from "./SlideLayout";
 import SlidePill from "./SlidePill";
-import OmniStratLogo from "./OmniStratLogo";
+import CAJILogo from "./CAJILogo";
 import TypewriterText from "./TypewriterText";
 
 // ─── Shared types ───
@@ -28,7 +28,7 @@ export const TitleSlideTemplate = ({
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides} showConfidentiality={false}>
     <div className="flex h-full">
       <div className="flex-1 flex flex-col justify-between p-[80px]">
-        <OmniStratLogo />
+        <CAJILogo />
         <div>
           <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary">
             {headline}
@@ -72,7 +72,7 @@ export const AgendaSlideTemplate = ({ slideNumber, totalSlides, items }: AgendaS
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex items-center justify-between">
-        <OmniStratLogo />
+        <CAJILogo />
         <SlidePill label="AGENDA" variant="light" />
       </div>
       <div className="flex-1 flex items-center">
@@ -227,7 +227,7 @@ export const TwoColumnNumberedTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex items-center justify-between mb-12">
         <SlidePill label={pillLabel} variant="light" />
-        <OmniStratLogo />
+        <CAJILogo />
       </div>
       <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns} gap-16`}>
@@ -259,7 +259,7 @@ export const TwoColumnFreeformTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex items-center justify-between mb-12">
         <SlidePill label={pillLabel} variant="light" />
-        <OmniStratLogo />
+        <CAJILogo />
       </div>
       {subtitle && (
         <p className="text-[22px] text-slide-muted max-w-[1400px] leading-relaxed mb-12">{subtitle}</p>
@@ -332,7 +332,7 @@ export const ServicesGridTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex items-center justify-between mb-12">
         <SlidePill label={pillLabel} variant="light" />
-        <OmniStratLogo />
+        <CAJILogo />
       </div>
       <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns} gap-8`}>
@@ -552,7 +552,7 @@ export const TeamSlideTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex items-center justify-between mb-8">
         <SlidePill label={pillLabel} variant="light" />
-        <OmniStratLogo />
+        <CAJILogo />
       </div>
       <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-10">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns} gap-10`}>
@@ -703,7 +703,7 @@ export const ThankYouTemplate = ({
 }: ThankYouProps) => (
   <SlideLayout variant="white" slideNumber={slideNumber} totalSlides={totalSlides} showConfidentiality={false}>
     <div className="flex flex-col items-center justify-center h-full text-center p-[80px]">
-      <OmniStratLogo className="mb-16" />
+      <CAJILogo className="mb-16" />
       <h2 className="text-[96px] font-extrabold leading-none tracking-tight text-slide-primary">THANK YOU</h2>
       <p className="mt-8 text-[22px] text-slide-muted max-w-[700px]">{message}</p>
       <div className="mt-16 flex gap-16 text-[22px] text-slide-muted">
@@ -755,7 +755,7 @@ export const ContactSlideTemplate = ({
         </button>
       </div>
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden opacity-5 pointer-events-none">
-        <span className="text-[200px] font-extrabold tracking-tighter text-slide-foreground">OmniStrat</span>
+        <span className="text-[200px] font-extrabold tracking-tighter text-slide-foreground">CAJI</span>
       </div>
     </div>
   </SlideLayout>
@@ -830,7 +830,7 @@ export const TrackRecordTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       <div className="flex items-center justify-between mb-12">
         <SlidePill label={pillLabel} variant="light" />
-        <OmniStratLogo />
+        <CAJILogo />
       </div>
       <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${cards.length} gap-8`}>
@@ -885,7 +885,7 @@ export const NextStepsTemplate = ({
           <p className="text-[19px] text-slide-muted mt-2">{contactDetails}</p>
           {contactAddress && <p className="text-[14px] text-slide-muted">{contactAddress}</p>}
         </div>
-        <OmniStratLogo size={50} />
+        <CAJILogo size={50} />
       </div>
     </div>
   </SlideLayout>

@@ -14,7 +14,7 @@ import {
 } from "./slideTemplates";
 import SlideLayout from "./SlideLayout";
 import SlidePill from "./SlidePill";
-import OmniStratLogo from "./OmniStratLogo";
+import CAJILogo from "./CAJILogo";
 import detentionCell from "@/assets/uzbek-detention-cell.jpg";
 import nbuLogo from "@/assets/nbu-logo.png";
 import uktamPhoto from "@/assets/uktam-photo.jpg";
@@ -82,7 +82,7 @@ const disclaimerSlide: SlideData = {
   component: (props) => (
     <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
       <div className="flex flex-col h-full p-[80px]">
-        <OmniStratLogo />
+        <CAJILogo />
         <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
           <SlidePill label="CONFIDENTIALITY NOTICE" />
           <h2 className="text-[44px] font-bold text-slide-foreground mt-6 leading-tight">
@@ -91,15 +91,15 @@ const disclaimerSlide: SlideData = {
           <div className="mt-10 space-y-6 text-[22px] leading-[1.7] text-slide-muted">
             <div>
               <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
-              <p>This document and all information contained herein is strictly confidential and proprietary to OmniStrat Group LLC and Amsterdam & Partners LLP. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
+              <p>This document and all information contained herein is strictly confidential and proprietary to Central Asia Justice Initiative and Amsterdam & Partners LLP. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
             </div>
             <div>
               <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
-              <p>This presentation has been prepared for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation. While every effort has been made to ensure accuracy, OmniStrat Group LLC makes no representations or warranties regarding the completeness of the content.</p>
+              <p>This presentation has been prepared for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation. While every effort has been made to ensure accuracy, Central Asia Justice Initiative makes no representations or warranties regarding the completeness of the content.</p>
             </div>
             <div>
               <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
-              <p>OmniStrat Group LLC, Amsterdam & Partners LLP, their affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
+              <p>Central Asia Justice Initiative, Amsterdam & Partners LLP, their affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ export const slides: SlideData[] = [
       <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
         <div className="flex h-full">
           <div className="flex-1 flex flex-col justify-between p-[80px]">
-            <OmniStratLogo className="anim-fade-in stagger-1" />
+            <CAJILogo className="anim-fade-in stagger-1" />
             <div>
               <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary anim-fade-up stagger-2">
                 INVESTOR<br />ALERT
@@ -132,7 +132,7 @@ export const slides: SlideData[] = [
                 <div>Confidential</div>
                 <div>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
                 <div>Prepared jointly by Amsterdam & Partners LLP</div>
-                <div>and OmniStrat Group LLC</div>
+                <div>and Central Asia Justice Initiative</div>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-8">
             <SlidePill label="PURPOSE OF THIS BRIEFING" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-4 anim-fade-up stagger-1">
             Why this briefing exists
@@ -211,7 +211,7 @@ export const slides: SlideData[] = [
                 <div className="relative">
                   <p className="text-[14px] tracking-[0.15em] uppercase opacity-70 mb-3">Schedule Now</p>
                   <h4 className="text-[24px] font-bold mb-3">Book a Confidential Briefing</h4>
-                  <p className="text-[19px] opacity-80 leading-relaxed">30-minute Zoom call with the OmniStrat team.</p>
+                  <p className="text-[19px] opacity-80 leading-relaxed">30-minute Zoom call with the CAJI team.</p>
                   <div className="flex items-center gap-2 mt-5 text-[19px] font-semibold opacity-90">
                     <span>Open Calendly</span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -220,7 +220,7 @@ export const slides: SlideData[] = [
               </a>
               <div className="bg-slide-foreground/5 rounded-2xl p-6 border border-slide-foreground/10 space-y-3">
                 <p className="text-[19px] text-slide-muted leading-relaxed">
-                  <span className="font-bold text-slide-foreground">Eugene Gourevitch</span><br />eugene.gourevitch@omnistratgroup.com
+                  <span className="font-bold text-slide-foreground">Eugene Gourevitch</span><br />eugene.gourevitch@caji.org
                 </p>
                 <p className="text-[19px] text-slide-muted leading-relaxed">
                   <span className="font-bold text-slide-foreground">Robert Amsterdam</span><br />robert.amsterdam@amsterdamandpartners.com
@@ -232,7 +232,7 @@ export const slides: SlideData[] = [
             </div>
           </div>
           <p className="text-[14px] text-slide-muted/60 mt-6 text-center">
-            Prepared jointly by Amsterdam & Partners LLP (London / Washington, DC) and OmniStrat Group LLC (Dubai / Miami)
+            Prepared jointly by Amsterdam & Partners LLP (London / Washington, DC) and Central Asia Justice Initiative (Dubai / Miami)
           </p>
         </div>
       </SlideLayout>
@@ -248,7 +248,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px] pb-[60px]">
           <div className="flex items-center justify-between mb-6">
             <SlidePill label="BACKGROUND" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <p className="text-[22px] text-slide-muted max-w-[1400px] leading-relaxed mb-8 anim-fade-in stagger-1">
             A fintech joint venture that became the center of an investor-state dispute with international implications.
@@ -301,7 +301,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px] pb-[60px]">
           <div className="flex items-center justify-between mb-6">
             <SlidePill label="NBU: HISTORY & SYSTEMIC ROLE" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
 
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3 anim-fade-up stagger-1">
@@ -376,7 +376,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-8">
             <SlidePill label="NBU: INSTITUTIONAL PROFILE" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
 
           <div className="flex gap-12 flex-1">
@@ -470,7 +470,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-6">
             <SlidePill label="THE PARTIES" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-tight tracking-tight mb-10">
             Key stakeholders in the Solfy CA dispute
@@ -578,7 +578,7 @@ export const slides: SlideData[] = [
           <div className="flex flex-col h-full p-[80px]">
             <div className="flex items-center justify-between mb-6">
               <SlidePill label="THE CRITICAL TEN-DAY WINDOW" />
-              <OmniStratLogo />
+              <CAJILogo />
             </div>
             <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">
               March 17-27, 2026: From settlement counter-proposal to criminal charges
@@ -654,7 +654,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between">
             <SlidePill label="WRONGFUL DETENTION" variant="light" />
-            <OmniStratLogo variant="light" />
+            <CAJILogo variant="light" />
           </div>
           <div className="flex flex-1 items-center gap-16 mt-8">
             {/* Left: Photo + Identity */}
@@ -750,7 +750,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-6">
             <SlidePill label="LEGAL ANALYSIS" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3">
             Why arrest is an excessive and disproportionate measure
@@ -854,7 +854,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-12">
             <SlidePill label="CONTRADICTIONS IN THE CHARGES" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">
             A contractual dispute repackaged as criminal prosecution
@@ -896,7 +896,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-12">
             <SlidePill label="YOUR REGULATORY OBLIGATIONS" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-12">
             Why this is your problem
@@ -968,7 +968,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between">
             <SlidePill label="BROADER CONTEXT" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold mt-6 leading-tight max-w-[1400px]">
             The Solfy case is not an isolated incident
@@ -1007,7 +1007,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-4">
             <SlidePill label="MEDIA & INTERNATIONAL COVERAGE" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-[1.05] tracking-tight mb-2">
             The world is watching
@@ -1054,7 +1054,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-12">
             <SlidePill label="LEGAL REMEDIES IN PROGRESS" />
-            <OmniStratLogo />
+            <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">
             Three-track legal and advocacy strategy
@@ -1099,7 +1099,7 @@ export const slides: SlideData[] = [
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-8">
             <SlidePill label="NEXT STEPS" variant="light" />
-            <OmniStratLogo variant="light" />
+            <CAJILogo variant="light" />
           </div>
 
           <div className="flex-1 flex flex-col justify-center items-center text-center">
@@ -1123,9 +1123,9 @@ export const slides: SlideData[] = [
             </a>
 
             <div className="grid grid-cols-2 gap-10 w-full max-w-[1200px]">
-              {/* OmniStrat */}
+              {/* CAJI */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
-                <h3 className="text-[24px] font-extrabold text-white mb-1">OmniStrat Group LLC</h3>
+                <h3 className="text-[24px] font-extrabold text-white mb-1">Central Asia Justice Initiative</h3>
                 <p className="text-[14px] text-slide-primary font-semibold tracking-wider uppercase mb-8">Strategic Advisory</p>
                 <div className="space-y-5">
                   <div>
@@ -1135,12 +1135,12 @@ export const slides: SlideData[] = [
                   </div>
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Email</p>
-                    <p className="text-[22px] text-white font-semibold">eugene@omnistratgroup.com</p>
+                    <p className="text-[22px] text-white font-semibold">eugene@caji.org</p>
                   </div>
                   <div>
                     <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Web</p>
-                    <a href="https://www.omnistratgroup.com" target="_blank" rel="noopener noreferrer" className="text-[22px] text-slide-primary font-semibold hover:underline">
-                      www.omnistratgroup.com
+                    <a href="https://www.caji.org" target="_blank" rel="noopener noreferrer" className="text-[22px] text-slide-primary font-semibold hover:underline">
+                      www.caji.org
                     </a>
                   </div>
                 </div>
