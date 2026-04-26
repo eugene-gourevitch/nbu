@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Grid3X3, FileDown, Monitor, Tablet, Smartphone } from "lucide-react";
 import ScaledSlide from "./ScaledSlide";
 import { slides as defaultSlides, SlideData } from "./slideData";
-import CAJILogo from "./CAJILogo";
 
 interface PresentationViewerProps {
   slides?: SlideData[];
