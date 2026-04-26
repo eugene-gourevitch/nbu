@@ -25,7 +25,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["'Montserrat'", "sans-serif"],
+        sans: ["'Inter'", "sans-serif"],
+        display: ["'Cormorant Garamond'", "serif"],
       },
       colors: {
         "slide-primary": "hsl(var(--slide-primary))",
