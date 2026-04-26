@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
 
-    --primary: 232 100% 62%;
+    --primary: 352 84% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 14% 96%;
@@ -24,7 +24,7 @@
     --muted: 220 14% 96%;
     --muted-foreground: 220 9% 46%;
 
-    --accent: 232 100% 62%;
+    --accent: 352 84% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -32,12 +32,12 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 232 100% 62%;
+    --ring: 352 84% 45%;
 
     --radius: 0.75rem;
 
     /* Slide-specific tokens */
-    --slide-primary: 232 100% 62%;
+    --slide-primary: 352 84% 45%;
     --slide-foreground: 0 0% 9%;
     --slide-muted: 220 9% 46%;
     --slide-surface: 220 14% 96%;
@@ -45,12 +45,12 @@
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 231 89% 60%;
+    --sidebar-primary: 352 84% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 14% 96%;
     --sidebar-accent-foreground: 0 0% 8%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 231 89% 60%;
+    --sidebar-ring: 352 84% 45%;
   }
 
   .dark {
@@ -60,7 +60,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
-    --primary: 231 89% 60%;
+    --primary: 352 84% 45%;
     --primary-foreground: 0 0% 100%;
     --secondary: 220 14% 14%;
     --secondary-foreground: 0 0% 95%;
@@ -72,15 +72,15 @@
     --destructive-foreground: 0 0% 95%;
     --border: 220 14% 18%;
     --input: 220 14% 18%;
-    --ring: 231 89% 60%;
+    --ring: 352 84% 45%;
     --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 231 89% 60%;
+    --sidebar-primary: 352 84% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 14% 14%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 220 14% 18%;
-    --sidebar-ring: 231 89% 60%;
+    --sidebar-ring: 352 84% 45%;
   }
 }
 
@@ -120,22 +120,22 @@
 }
 
 /* Blue pattern background for CTA slides */
-.omnistrat-pattern {
-  background-color: hsl(232, 100%, 62%);
+.caji-pattern {
+  background-color: hsl(var(--slide-primary));
   background-image: 
     repeating-linear-gradient(
       45deg,
       transparent,
       transparent 20px,
-      hsla(232, 100%, 55%, 0.3) 20px,
-      hsla(232, 100%, 55%, 0.3) 22px
+      hsl(var(--slide-foreground) / 0.18) 20px,
+      hsl(var(--slide-foreground) / 0.18) 22px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 20px,
-      hsla(232, 100%, 68%, 0.2) 20px,
-      hsla(232, 100%, 68%, 0.2) 22px
+      hsl(var(--slide-bg) / 0.18) 20px,
+      hsl(var(--slide-bg) / 0.18) 22px
     );
 }
 

@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Grid3X3, FileDown, Monitor, Tablet, Smartphone } from "lucide-react";
 import ScaledSlide from "./ScaledSlide";
 import { slides as defaultSlides, SlideData } from "./slideData";
-import OmniStratLogo from "./OmniStratLogo";
 
 interface PresentationViewerProps {
   slides?: SlideData[];
@@ -51,7 +50,7 @@ const LazySlideThumb = ({ slide, index, totalSlides, onClick, isActive }: {
   );
 };
 
-const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Presentation" }: PresentationViewerProps) => {
+const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation" }: PresentationViewerProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showGrid, setShowGrid] = useState(false);

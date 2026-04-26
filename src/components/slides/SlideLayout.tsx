@@ -22,7 +22,7 @@ const SlideLayout = ({
   const baseStyles: Record<string, string> = {
     white: "bg-white text-slide-foreground",
     dark: "bg-slide-foreground text-white",
-    blue: "omnistrat-pattern text-white",
+    blue: "caji-pattern text-white",
   };
 
   const footerTextColor: Record<string, string> = {
