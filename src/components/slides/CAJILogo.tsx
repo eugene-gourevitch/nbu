@@ -9,8 +9,8 @@ interface CAJILogoProps {
 }
 
 const CAJILogo = ({ className = "", variant = "dark", size = 40, showText = true }: CAJILogoProps) => {
-  const logo = variant === "dark" ? cajiLogoBlack : cajiLogoWhite;
-  const width = Math.round(size * 4.4);
+  const logo = variant === "light" ? cajiLogoWhite : cajiLogoBlack;
+  const width = Math.round(size * 2.92);
 
   return (
     <div className={`flex items-center ${className}`}>
@@ -18,7 +18,7 @@ const CAJILogo = ({ className = "", variant = "dark", size = 40, showText = true
         src={logo}
         alt="Central Asia Justice Initiative"
         className="object-contain"
-        style={{ width, height: size * 1.25 }}
+        style={{ width, height: size }}
       />
       {!showText && <span className="sr-only">Central Asia Justice Initiative</span>}
     </div>
