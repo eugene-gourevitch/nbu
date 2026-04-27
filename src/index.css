@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,42 +6,42 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    --background: 36 33% 97%;
+    --foreground: 0 0% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card-foreground: 0 0% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 0 0% 4%;
 
-    --primary: 352 84% 45%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 352 76% 37%;
+    --primary-foreground: 36 33% 97%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 37 29% 93%;
+    --secondary-foreground: 0 0% 4%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 37 29% 93%;
+    --muted-foreground: 0 0% 44%;
 
-    --accent: 352 84% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 352 76% 37%;
+    --accent-foreground: 36 33% 97%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 352 84% 45%;
+    --border: 40 10% 81%;
+    --input: 40 10% 81%;
+    --ring: 352 76% 37%;
 
-    --radius: 0.75rem;
+    --radius: 0.125rem;
 
     /* Slide-specific tokens */
-    --slide-primary: 352 84% 45%;
-    --slide-foreground: 0 0% 9%;
-    --slide-muted: 220 9% 46%;
-    --slide-surface: 220 14% 96%;
-    --slide-bg: 0 0% 100%;
+    --slide-primary: 352 76% 37%;
+    --slide-foreground: 0 0% 4%;
+    --slide-muted: 0 0% 44%;
+    --slide-surface: 37 29% 93%;
+    --slide-bg: 36 33% 97%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
