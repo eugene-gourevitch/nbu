@@ -1114,7 +1114,7 @@ export const slides: SlideData[] = [
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
 
-            <div className="grid grid-cols-2 gap-10 w-full max-w-[1200px]">
+            <div className="w-full max-w-[760px]">
               {/* CAJI */}
               <div className="bg-slide-bg/5 backdrop-blur-sm border border-primary-foreground/10 rounded-sm p-10 text-left" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
                 <h3 className="text-[24px] font-extrabold text-primary-foreground mb-1">Central Asia Justice Initiative</h3>
@@ -1138,22 +1138,6 @@ export const slides: SlideData[] = [
                 </div>
               </div>
 
-              <div className="bg-primary/15 border border-primary-foreground/10 rounded-sm p-10 text-left" style={{ animation: "slide-in-right 0.5s ease-out 0.7s both" }}>
-                <h3 className="text-[24px] font-extrabold text-primary-foreground mb-1">Central Asia Justice Initiative</h3>
-                <p className="text-[14px] text-primary-foreground/50 font-semibold tracking-wider uppercase mb-8">Confidential Engagement</p>
-                <div className="space-y-5">
-                  <div>
-                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Website</p>
-                    <a href="https://www.caji.org" target="_blank" rel="noopener noreferrer" className="text-[22px] text-slide-primary font-semibold hover:underline">
-                      www.caji.org
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Scope</p>
-                    <p className="text-[19px] text-primary-foreground/70">Human rights, rule of law, and anti-corruption advocacy across Central Asia.</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
