@@ -1,90 +1,72 @@
-# Plan: Build a polished 30-slide CAJI Hasanov evidence deck
 
-## Goal
-Replace the current thin 10-slide evidence-hub deck with a 30-slide, boardroom-quality CAJI presentation that integrates:
-- The old investor-alert substance: Solfy/NBU dispute, Hasanov detention, NBU dual role, 10-day window, regulatory/investor-risk framing, legal remedies.
-- The new research brief: balanced sourcing, NBU official position, six audience cohorts, Uzbekistan reform/investment context, source taxonomy, transliteration and update discipline.
-- The CAJI design system already applied: CAJI logos, crimson/paper/dark palette, Inter + Cormorant, source-labeled evidence style.
 
-## Editorial direction
-The new deck will be sharper and more persuasive, but not reckless. It will distinguish:
-- Established facts
-- Reported allegations
-- Campaign/counsel claims
-- Official bank position
-- Structural/institutional context
+# BlackRock & Carlyle Presentation — Within Existing Template Aesthetics
 
-Accusatory language such as “selective prosecution” will appear only as attributed campaign/counsel language, not as CAJI’s neutral narration.
+## Overview
+Create a 25-slide presentation using existing slide patterns and the established OmniStrat color scheme (blue `#3B55FF`, dark `#171717`, white). New slide formats may be introduced but will use the same design language (Montserrat, SlidePill, OmniStratLogo, same spacing/typography conventions). Team photos and bios will be sourced from the web.
 
-## Proposed 30-slide structure
+## Photo Sourcing Strategy
+Before building slides, we will search the web for real headshots of:
+- **Eugene Gourevitch** — President & Co-Founder, OmniStrat Group
+- **Michael Fox-Rabinovitz** — VP Corporate Finance, OmniStrat Group
+- **Alexandra Katrin** — CFO, OmniStrat Group
+- **Zachary Intrater** — Co-founder, Agnifilo Intrater LLP
+- **Dr. Elchin Khalilov** — Media/communications expert
+- **Keith Silverstein** — Board of Directors
 
-### 1. Opening and thesis
-1. **Title** — “The Hasanov Case: Why One Detention Now Matters Beyond One Executive”
-2. **Executive Thesis** — commercial dispute, detention, investor confidence, due process, reform credibility
-3. **How to Read This Deck** — source taxonomy and certainty levels
-4. **Transliteration + Search Note** — Uktam Hasanov / Xasanov Uktam Nasullotevich / Ukhtam Hassanov
+Photos will be saved to `src/assets/team/` and bios enriched from LinkedIn/public profiles.
 
-### 2. Core timeline and disputed record
-5. **Timeline at a Glance** — Feb 24 to Apr 4, 2026
-6. **Feb 24: Counsel Enters** — Solfy/Poletaev/NBU dispute becomes organized cross-border legal conflict
-7. **Feb 27: Local Business Press** — dispute public before detention
-8. **Mar 27: Detention in Tashkent** — contract dispute becomes due-process and investment-climate matter
-9. **Mar 30–31: Campaign Goes International** — campaign/counsel escalation and arbitration signal
-10. **Apr 4: Investigative Allegations Reported** — 17B soums / 15B soums as reported allegations
-11. **Apr 4: NBU Official Position** — bank’s counter-position, client service, ongoing legal procedures
-12. **What Is Known / Unknown / Contested** — credibility slide avoiding overclaiming
+## Slide Plan (25 Slides)
 
-### 3. Commercial conflict and NBU role
-13. **The Solfy/Sabzi Operating Context** — merchants, customers, platform continuity, Sabzi continuation
-14. **Why State-Owned Bank Context Matters** — state shareholder base and external investor perception
-15. **The Dual-Role Problem** — NBU as commercial counterparty/state-linked complainant, framed carefully
-16. **The 10-Day Window** — integrate old deck’s settlement-to-charges narrative as an attributed concern
-17. **The Excessive Measure Question** — old detention-proportionality content, improved layout and less density
+| # | Type | Content Summary |
+|---|------|----------------|
+| 1 | **Title** (white, split) | "THE 24-HOUR SWAT TEAM" + tagline for institutional investors + hero image |
+| 2 | **Two-Column** (white) | Executive Summary: "The Integrated Alternative" left, "The Ask" + "Proof of Concept" right |
+| 3 | **Section Divider** (white, /01) | "The Problem PE Firms Face" |
+| 4 | **Big Numbers** (blue, 4-col) | 96% deals fail, 10x bankruptcy, 20% geopolitical, 2x delayed cost |
+| 5 | **Quote** (white) | "Like juggling five separate consultants..." + fragmented model bullets below |
+| 6 | **Services Grid** (white, 3 cards) | Investor Pain Points: Financial/Operational, Geopolitical/Regulatory, Reputational/Legal |
+| 7 | **Mission Dark** (dark photo bg) | "A single zero can spoil a fund's returns" — dramatic statement slide |
+| 8 | **Section Divider** (white, /02) | "The OmniStrat Solution" |
+| 9 | **Two-Column** (white, 4 items) | SWAT Team Model: Senior-Only, Integrated Ops, 24h Deployment, C-Suite Access |
+| 10 | **Process** (white, 5 steps) | Five Integrated Capabilities: Sanctions, Crisis, GR, Comms, Intel |
+| 11 | **Mission Dark** (dark photo bg) | Philosophy quote + three pillars: Prevention, Response, Recovery |
+| 12 | **Section Divider** (white, /03) | "Proof of Capability" |
+| 13 | **Image+Text** (white) | UCG/Shadmanov Case Study overview with scale metrics |
+| 14 | **Comparison** (white, 5-col table) | Multi-Front Challenge: Political, Legal, Media, Regulatory, Human Rights |
+| 15 | **Case Study** (dark bg) | Integrated Response: Legal, Comms, Government, Human Rights tracks |
+| 16 | **Services Grid** (white, 3 cards) | Track Record: Mining/Africa, Political Risk/Europe, INTERPOL/International |
+| 17 | **Section Divider** (white, /04) | "Leadership & Advisory Board" |
+| 18 | **Team** (white, 3 cols) | Eugene Gourevitch, Michael Fox-Rabinovitz, Alexandra Katrin with real photos + enriched bios |
+| 19 | **Team** (white, 3 cols) | Advisory Board: Zachary Intrater, Dr. Elchin Khalilov, Keith Silverstein |
+| 20 | **Section Divider** (white, /05) | "Competitive Positioning" |
+| 21 | **Comparison** (white, table) | FTI, Teneo, Brunswick, Kroll, Control Risks vs OmniStrat |
+| 22 | **Comparison** (white, table) | SWAT Team vs Traditional Advisory — 6 dimensions |
+| 23 | **PR Stats** (white) | Portfolio Relevance: $8.5B Texas pullout, 13 AGs, 87 countries |
+| 24 | **Process** (white, 3 steps) | Next Steps: Initial Meeting, Pilot Engagement, Retainer Framework |
+| 25 | **Contact** (white) | Eugene Gourevitch contact info + OmniStrat Washington DC address |
 
-### 4. Six audience architecture
-18. **Six Audiences, Six Risks** — overview matrix
-19. **Investors and Lenders** — downside-case treatment, capital-markets confidence, ratings/IPOs/TIIF
-20. **Uzbek Reformers and State-Asset Stewards** — reform credibility, governance, investor protection
-21. **Merchants, Customers, Employees** — continuity, reputation, operating risk
-22. **Lawyers, Arbitrators, Insurers, Compliance Teams** — commercial dispute becoming criminal exposure
-23. **Journalists and Researchers** — source-sensitive reporting map
-24. **Rights and Business-Human-Rights Advocates** — due process, detention, rule-of-law signal
+## Technical Implementation
 
-### 5. Uzbekistan context and remedies
-25. **Why This Matters for Uzbekistan Now** — foreign investment, privatization, TIIF 2026, reform narrative
-26. **Institutional and Arbitration Context** — international commercial arbitration, treaty risk, TIAC/ICSID framing
-27. **Regulatory and Financial-Risk Implications** — IFIs, correspondent banks, rating agencies, compliance teams
-28. **Remedies and Pressure Points** — arbitration, criminal defense, advocacy, diplomatic/investor engagement
+### Files to Create
+1. **`src/components/slides/blackrockCarlyleData.tsx`** — All 25 slide components using `SlideLayout`, `SlidePill`, `OmniStratLogo`, and existing patterns from `slideData.tsx`
+2. **`src/pages/BlackrockCarlyle.tsx`** — Page rendering `PresentationViewer` with custom slides
+3. **`src/assets/team/*.jpg`** — Team headshots sourced from the web
 
-### 6. Evidence hub and close
-29. **Sources & Documents Library** — fixed badges: Campaign, Counsel, Official bank, Independent media, Institutional context
-30. **Call to Action / CAJI Contact** — evidence-first, update-driven, www.caji.org
+### Files to Modify
+1. **`src/components/slides/PresentationViewer.tsx`** — Accept optional `slides` prop (defaults to template)
+2. **`src/App.tsx`** — Add `/blackrock-carlyle` route
 
-## Design approach
-Use the current CAJI visual language, but make it feel like a serious institutional deck rather than a copied brief:
-- More varied layouts: split screens, timeline rails, source cards, matrices, legal-risk maps, large-number callouts, “known/unknown/contested” panels.
-- Strong hierarchy: fewer giant paragraphs; more concise deck language.
-- CAJI logos only; no third-party logos.
-- Crimson used sparingly for evidence markers, risk flags, and timeline accents.
-- Dark slides used as section pivots and high-impact thesis slides.
-- Body text kept readable at scaled preview sizes.
+### New Slide Formats (same aesthetics)
+- **5-column table** variant for the multi-front challenge slide (extends existing Comparison pattern)
+- **4-column Big Numbers** variant (extends existing 3-column Big Numbers to 4)
+- **3-column Team with photos + longer bios** (extends existing 4-column Team to 3 with more detail)
 
-## Technical implementation
-Files to update:
-- `src/components/slides/slideData.tsx`
-  - Replace current 10-slide array with a full 30-slide data/component set.
-  - Add reusable local helpers for source badges, certainty chips, timeline items, audience cards, risk matrices, and quote/callout blocks.
-  - Reuse existing assets where appropriate: `uktam-photo.jpg`, `poletaev-photo.jpg`, `mirsoatov-photo.jpg`, `uzbek-detention-cell.jpg`, CAJI logos.
-- `src/pages/Index.tsx`
-  - Update viewer title if needed to reflect the 30-slide deck.
-- Possibly `src/components/slides/slideTemplates.tsx`
-  - Only if existing/local slide helpers are insufficient; otherwise avoid broad template churn.
-- Possibly `src/index.css`
-  - Add only small utility animations or polish if needed; keep current design tokens.
+All new formats use the same colors (`slide-primary`, `slide-foreground`, `slide-muted`, `slide-surface`), same Montserrat font, same `SlidePill` and `OmniStratLogo` components, same spacing conventions (`p-[80px]`, `rounded-2xl`, etc.).
 
-## Quality checks after implementation
-After approval and implementation, I will:
-- Run a production build/type check.
-- Visually inspect the deck in the preview for overflow and readability, especially dense slides.
-- Check phone/tablet/desktop presentation modes for navigation and layout issues.
-- Fix any clipping, footer collisions, or text density problems before calling it done.
+### Web Search Plan
+Use web search to find:
+- LinkedIn profile photos / professional headshots for all 6 team members
+- Enriched bios from LinkedIn, company websites, law firm bios
+- Any publicly available professional photos
+

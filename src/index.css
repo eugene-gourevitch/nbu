@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,51 +6,51 @@
 
 @layer base {
   :root {
-    --background: 37 33% 97%;
-    --foreground: 0 0% 4%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
 
-    --primary: 351 76% 37%;
-    --primary-foreground: 37 33% 97%;
+    --primary: 352 84% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 38 30% 93%;
-    --secondary-foreground: 0 0% 4%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 38 30% 93%;
-    --muted-foreground: 0 0% 44%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 351 76% 37%;
-    --accent-foreground: 37 33% 97%;
+    --accent: 352 84% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 11% 81%;
-    --input: 35 11% 81%;
-    --ring: 351 76% 37%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 352 84% 45%;
 
-    --radius: 0.25rem;
+    --radius: 0.75rem;
 
     /* Slide-specific tokens */
-    --slide-primary: 351 76% 37%;
-    --slide-foreground: 0 0% 4%;
-    --slide-muted: 0 0% 44%;
-    --slide-surface: 38 30% 93%;
-    --slide-bg: 37 33% 97%;
+    --slide-primary: 352 84% 45%;
+    --slide-foreground: 0 0% 9%;
+    --slide-muted: 220 9% 46%;
+    --slide-surface: 220 14% 96%;
+    --slide-bg: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 351 76% 37%;
+    --sidebar-primary: 352 84% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 14% 96%;
     --sidebar-accent-foreground: 0 0% 8%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 351 76% 37%;
+    --sidebar-ring: 352 84% 45%;
   }
 
   .dark {
@@ -91,7 +91,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
@@ -116,7 +116,7 @@
 
 /* Slide content font scaling */
 .slide-content {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Blue pattern background for CTA slides */

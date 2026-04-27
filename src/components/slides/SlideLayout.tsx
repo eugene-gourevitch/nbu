@@ -20,7 +20,7 @@ const SlideLayout = ({
   showConfidentiality = true,
 }: SlideLayoutProps) => {
   const baseStyles: Record<string, string> = {
-    white: "bg-background text-slide-foreground",
+    white: "bg-white text-slide-foreground",
     dark: "bg-slide-foreground text-white",
     blue: "caji-pattern text-white",
   };

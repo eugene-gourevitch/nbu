@@ -26,7 +26,7 @@ const Print = () => {
             display: block;
             text-align: center;
             padding: 16px;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 14px;
             color: #fff;
             background: #333;
