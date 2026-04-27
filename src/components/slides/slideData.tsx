@@ -481,7 +481,7 @@ export const slides: SlideData[] = [
               </div>
               <ul className="space-y-3">
                 {[
-                  "Russian investor, 50% beneficial owner via Solvy Cyprus Limited",
+                  "Investor, 50% beneficial owner via Solvy Cyprus Limited",
                   "Former First Deputy Chairman of Sberbank",
                   "Board member of Nornickel, MegaFon, Metalloinvest",
                   "Chairman of Fortenova Group, co-founder of Gauss Ventures",
