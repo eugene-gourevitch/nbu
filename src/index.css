@@ -43,14 +43,14 @@
     --slide-surface: 37 29% 93%;
     --slide-bg: 36 33% 97%;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 36 33% 97%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 352 84% 45%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 96%;
-    --sidebar-accent-foreground: 0 0% 8%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 352 84% 45%;
+    --sidebar-primary: 352 76% 37%;
+    --sidebar-primary-foreground: 36 33% 97%;
+    --sidebar-accent: 37 29% 93%;
+    --sidebar-accent-foreground: 0 0% 4%;
+    --sidebar-border: 40 10% 81%;
+    --sidebar-ring: 352 76% 37%;
   }
 
   .dark {
@@ -72,10 +72,10 @@
     --destructive-foreground: 0 0% 95%;
     --border: 220 14% 18%;
     --input: 220 14% 18%;
-    --ring: 352 84% 45%;
+    --ring: 352 76% 37%;
     --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 352 84% 45%;
+    --sidebar-primary: 352 76% 37%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 14% 14%;
     --sidebar-accent-foreground: 0 0% 95%;
@@ -91,7 +91,12 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
   }
 }
 
@@ -116,7 +121,7 @@
 
 /* Slide content font scaling */
 .slide-content {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Blue pattern background for CTA slides */
