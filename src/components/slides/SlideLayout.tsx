@@ -20,9 +20,9 @@ const SlideLayout = ({
   showConfidentiality = true,
 }: SlideLayoutProps) => {
   const baseStyles: Record<string, string> = {
-    white: "bg-white text-slide-foreground",
-    dark: "bg-slide-foreground text-white",
-    blue: "caji-pattern text-white",
+    white: "bg-slide-bg text-slide-foreground",
+    dark: "bg-slide-foreground text-primary-foreground",
+    blue: "caji-pattern text-primary-foreground",
   };
 
   const footerTextColor: Record<string, string> = {
@@ -51,7 +51,7 @@ const SlideLayout = ({
               animation: "slow-zoom 12s ease-out forwards",
             }}
           />
-          <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-slide-foreground/75" />
         </>
       )}
       <div className="relative z-10 w-full h-full">
