@@ -27,8 +27,8 @@ const SlideLayout = ({
 
   const footerTextColor: Record<string, string> = {
     white: "text-slide-muted/50",
-    dark: "text-white/40",
-    blue: "text-white/40",
+    dark: "text-primary-foreground/40",
+    blue: "text-primary-foreground/40",
   };
 
   return (
