@@ -50,12 +50,12 @@ const DetentionCounter = () => {
       {units.map((u) => (
         <div key={u.label} className="flex flex-col items-center" style={{ minWidth: 80 }}>
           <span
-            className="text-[72px] font-bold leading-none text-white"
-            style={{ fontFamily: "'Montserrat', sans-serif", fontVariantNumeric: "tabular-nums" }}
+            className="text-[72px] font-bold leading-none text-primary-foreground"
+            style={{ fontVariantNumeric: "tabular-nums" }}
           >
             {String(u.value).padStart(2, "0")}
           </span>
-          <span className="text-[14px] tracking-[0.2em] text-white/50 mt-2">{u.label}</span>
+          <span className="text-[14px] tracking-[0.2em] text-primary-foreground/50 mt-2">{u.label}</span>
         </div>
       ))}
     </div>
@@ -143,8 +143,8 @@ export const slides: SlideData[] = [
               "A CEO detained as leverage.",
             ].map((line, i) => (
               <div key={i} className="flex items-start gap-5" style={{ animation: `slide-up 0.5s ease-out ${0.4 + i * 0.15}s both` }}>
-                <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-3 shrink-0" />
-                <p className="text-[22px] text-white/80 font-medium leading-snug">{line}</p>
+                <div className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-3 shrink-0" />
+                <p className="text-[22px] text-primary-foreground/80 font-medium leading-snug">{line}</p>
               </div>
             ))}
           </div>
@@ -172,20 +172,20 @@ export const slides: SlideData[] = [
           </p>
           <div className="grid grid-cols-3 gap-8 flex-1">
             <div className="flex flex-col gap-6 anim-fade-up stagger-3">
-              <div className="bg-slide-surface rounded-2xl p-8 flex-1">
+              <div className="bg-slide-surface rounded-sm p-8 flex-1">
                 <h3 className="text-[24px] font-bold mb-4">The Situation</h3>
                 <p className="text-[22px] text-slide-muted leading-relaxed">
                   NBU simultaneously holds equity in a joint venture and filed the criminal complaint against its director during active settlement negotiations.
                 </p>
               </div>
-              <div className="bg-slide-surface rounded-2xl p-8 flex-1">
+              <div className="bg-slide-surface rounded-sm p-8 flex-1">
                 <h3 className="text-[24px] font-bold mb-4">The Audience</h3>
                 <p className="text-[22px] text-slide-muted leading-relaxed">
                   IFI compliance officers, correspondent bank risk teams, eurobond investors, and rating agency analysts with NBU exposure.
                 </p>
               </div>
             </div>
-            <div className="bg-slide-surface rounded-2xl p-8 anim-fade-up stagger-4">
+            <div className="bg-slide-surface rounded-sm p-8 anim-fade-up stagger-4">
               <h3 className="text-[24px] font-bold mb-6">Key Questions</h3>
               <div className="space-y-5">
                 {[
@@ -205,7 +205,7 @@ export const slides: SlideData[] = [
                 href="https://www.caji.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl p-8 transition-all duration-300 block flex-1"
+                className="group relative overflow-hidden bg-slide-primary hover:bg-slide-primary/90 text-primary-foreground rounded-sm p-8 transition-all duration-300 block flex-1"
               >
                 <div className="relative">
                   <p className="text-[14px] tracking-[0.15em] uppercase opacity-70 mb-3">Schedule Now</p>
@@ -217,7 +217,7 @@ export const slides: SlideData[] = [
                   </div>
                 </div>
               </a>
-              <div className="bg-slide-foreground/5 rounded-2xl p-6 border border-slide-foreground/10 space-y-3">
+              <div className="bg-slide-foreground/5 rounded-sm p-6 border border-slide-foreground/10 space-y-3">
                 <p className="text-[19px] text-slide-muted leading-relaxed">
                   <span className="font-bold text-slide-foreground">Eugene Gourevitch</span><br />eugene.gourevitch@caji.org
                 </p>
@@ -249,7 +249,7 @@ export const slides: SlideData[] = [
 
           <div className="flex-1 grid grid-cols-2 gap-10 min-h-0">
             {/* The Venture */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden anim-slide-left stagger-2">
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col overflow-hidden anim-slide-left stagger-2">
               <h3 className="text-[24px] font-bold text-slide-primary mb-5 shrink-0">The Venture</h3>
               <div className="space-y-4 text-[19px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
@@ -265,8 +265,8 @@ export const slides: SlideData[] = [
             </div>
 
             {/* The Collapse */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col overflow-hidden anim-slide-right stagger-2">
-              <h3 className="text-[24px] font-bold text-red-600 mb-5 shrink-0">The Collapse</h3>
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col overflow-hidden anim-slide-right stagger-2">
+              <h3 className="text-[24px] font-bold text-slide-primary mb-5 shrink-0">The Collapse</h3>
               <div className="space-y-4 text-[19px] text-slide-muted leading-[1.65] overflow-hidden">
                 <p>
                   <span className="font-bold text-slide-foreground">Partnership terminated.</span> NBU ended the relationship. Solfy was declared bankrupt. A contractual dispute over obligations under Agreement No. 289/37 was adjudicated in Uzbek civil courts (December 2024, May 2025).
@@ -306,7 +306,7 @@ export const slides: SlideData[] = [
 
           <div className="grid grid-cols-3 gap-6 flex-1 min-h-0">
             {/* Column 1: Identity */}
-            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden anim-fade-up stagger-2">
+            <div className="bg-slide-surface rounded-sm p-7 flex flex-col overflow-hidden anim-fade-up stagger-2">
               <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Institutional Identity</h3>
               <div className="space-y-3 text-[19px] text-slide-muted leading-[1.6] overflow-hidden">
                 <p><span className="font-bold text-slide-foreground">Founded 1991</span> as Uzbekistan's primary foreign trade bank. Largest commercial bank by total assets.</p>
@@ -317,10 +317,10 @@ export const slides: SlideData[] = [
             </div>
 
             {/* Column 2: Capital Markets */}
-            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden anim-fade-up stagger-3">
+            <div className="bg-slide-surface rounded-sm p-7 flex flex-col overflow-hidden anim-fade-up stagger-3">
               <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Capital Markets Presence</h3>
               <div className="space-y-4 overflow-hidden">
-                <div className="bg-white rounded-xl p-5">
+                <div className="bg-slide-bg rounded-sm p-5">
                   <p className="text-[14px] text-slide-muted tracking-[0.15em] uppercase mb-1">LSE Eurobond</p>
                   <p className="text-[19px] font-bold">2020 issuance, Reg S / 144A</p>
                   <p className="text-[14px] text-slide-muted mt-1">Outstanding obligations to international bondholders</p>
@@ -333,7 +333,7 @@ export const slides: SlideData[] = [
             </div>
 
             {/* Column 3: Development Finance */}
-            <div className="bg-slide-surface rounded-2xl p-7 flex flex-col overflow-hidden anim-fade-up stagger-4">
+            <div className="bg-slide-surface rounded-sm p-7 flex flex-col overflow-hidden anim-fade-up stagger-4">
               <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Development Finance</h3>
               <div className="space-y-4 overflow-hidden">
                 {[
@@ -350,7 +350,7 @@ export const slides: SlideData[] = [
               </div>
               <div className="mt-auto pt-4 border-t border-slide-foreground/8">
                 <p className="text-[14px] text-slide-foreground">
-                  <span className="font-bold text-red-600">Key fact:</span> NBU holds a 5% equity stake in Solfy CA while acting as the criminal complainant against its director.
+                  <span className="font-bold text-slide-primary">Key fact:</span> NBU holds a 5% equity stake in Solfy CA while acting as the criminal complainant against its director.
                 </p>
               </div>
             </div>
@@ -375,14 +375,14 @@ export const slides: SlideData[] = [
           <div className="flex gap-12 flex-1">
             {/* Left column */}
             <div className="w-[35%] flex flex-col anim-slide-left stagger-2">
-              <div className="bg-slide-surface rounded-2xl p-8 flex flex-col items-center mb-6">
+              <div className="bg-slide-surface rounded-sm p-8 flex flex-col items-center mb-6">
                 <img src={nbuLogo} alt="NBU Logo" className="w-[120px] h-[120px] object-contain mb-4" />
                 <h3 className="text-[24px] font-bold text-center leading-tight">National Bank for Foreign Economic Activity</h3>
                 <p className="text-[19px] text-slide-muted text-center mt-2">Republic of Uzbekistan</p>
                 <p className="text-[14px] text-slide-muted text-center mt-1">Est. 1991 | Tashkent</p>
               </div>
 
-              <div className="bg-slide-surface rounded-2xl p-6 mb-6">
+              <div className="bg-slide-surface rounded-sm p-6 mb-6">
                 <h4 className="text-[22px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
                 <div className="space-y-3">
                   <div>
@@ -390,8 +390,8 @@ export const slides: SlideData[] = [
                       <span>Fund for Reconstruction & Development</span>
                       <span className="text-slide-primary">59.25%</span>
                     </div>
-                    <div className="w-full h-2 bg-slide-primary/10 rounded-full overflow-hidden">
-                      <div className="h-full bg-slide-primary rounded-full" style={{ width: "59.25%" }} />
+                    <div className="w-full h-2 bg-slide-primary/10 rounded-sm overflow-hidden">
+                      <div className="h-full bg-slide-primary rounded-sm" style={{ width: "59.25%" }} />
                     </div>
                   </div>
                   <div>
@@ -399,15 +399,15 @@ export const slides: SlideData[] = [
                       <span>Ministry of Economy & Finance</span>
                       <span className="text-slide-primary">40.75%</span>
                     </div>
-                    <div className="w-full h-2 bg-slide-primary/10 rounded-full overflow-hidden">
-                      <div className="h-full bg-slide-primary rounded-full" style={{ width: "40.75%" }} />
+                    <div className="w-full h-2 bg-slide-primary/10 rounded-sm overflow-hidden">
+                      <div className="h-full bg-slide-primary rounded-sm" style={{ width: "40.75%" }} />
                     </div>
                   </div>
                 </div>
                 <p className="text-[19px] text-slide-muted mt-3">100% of shares held by state entities. Total authorized capital: UZS 16.7 trillion.</p>
               </div>
 
-              <div className="bg-slide-surface rounded-2xl p-6">
+              <div className="bg-slide-surface rounded-sm p-6">
                 <h4 className="text-[22px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
                 <div className="space-y-2 text-[19px]">
                   <div className="flex justify-between"><span className="text-slide-muted">S&P</span><span className="font-bold">BB (stable)</span></div>
@@ -419,7 +419,7 @@ export const slides: SlideData[] = [
 
             {/* Right column */}
             <div className="flex-1 flex flex-col gap-6 anim-slide-right stagger-3">
-              <div className="bg-slide-surface rounded-2xl p-6">
+              <div className="bg-slide-surface rounded-sm p-6">
                 <h4 className="text-[22px] font-bold text-slide-primary mb-4">Management Board</h4>
                 <div className="space-y-3">
                   {[
@@ -432,7 +432,7 @@ export const slides: SlideData[] = [
                     { name: "Bohodir Rikhsiev", role: "Chief Accountant" },
                   ].map((person) => (
                     <div key={person.name} className="flex items-start gap-3 pb-2 border-b border-slide-foreground/5 last:border-0 last:pb-0">
-                      <div className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />
                       <div>
                         <span className="text-[19px] font-bold">{person.name}</span>
                         <span className="text-[14px] text-slide-primary ml-2">{person.role}</span>
@@ -442,7 +442,7 @@ export const slides: SlideData[] = [
                 </div>
               </div>
 
-              <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-2xl p-5 anim-fade-up stagger-5">
+              <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-sm p-5 anim-fade-up stagger-5">
                 <p className="text-[22px] text-slide-foreground leading-relaxed">
                   <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture's director.
                 </p>
@@ -470,9 +470,9 @@ export const slides: SlideData[] = [
           </h2>
           <div className="grid grid-cols-3 gap-8 flex-1">
             {/* Poletaev */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col anim-scale-in stagger-2">
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col anim-scale-in stagger-2">
               <div className="flex items-center gap-5 mb-6">
-                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-primary/20" style={{ animation: "scale-in 0.4s ease-out 0.5s both" }}>
+                <div className="w-[90px] h-[90px] rounded-sm overflow-hidden shrink-0 border-2 border-slide-primary/20" style={{ animation: "scale-in 0.4s ease-out 0.5s both" }}>
                   <img src={poletaevPhoto} alt="Maxim Poletaev" className="w-full h-full object-cover" />
                 </div>
                 <div>
@@ -488,25 +488,25 @@ export const slides: SlideData[] = [
                   "Chairman of Fortenova Group, co-founder of Gauss Ventures",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
+                    <span className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
               </ul>
             </div>
             {/* Hasanov */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col border-2 border-red-500/20 anim-scale-in stagger-3">
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col border-2 border-slide-primary/20 anim-scale-in stagger-3">
               <div className="flex items-center gap-5 mb-6">
                 <div className="relative">
-                  <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-red-500/30" style={{ animation: "scale-in 0.4s ease-out 0.7s both" }}>
+                  <div className="w-[90px] h-[90px] rounded-sm overflow-hidden shrink-0 border-2 border-slide-primary/30" style={{ animation: "scale-in 0.4s ease-out 0.7s both" }}>
                     <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
                   </div>
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase animate-[glow-pulse_2s_ease-in-out_infinite]">
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-slide-primary text-primary-foreground text-[11px] font-bold px-2.5 py-0.5 rounded-sm tracking-wider uppercase animate-[glow-pulse_2s_ease-in-out_infinite]">
                     Detained
                   </div>
                 </div>
                 <div>
                   <h3 className="text-[24px] font-bold leading-tight">Hasanov Uktam N.</h3>
-                  <p className="text-[19px] text-red-600 font-semibold">Detained Director</p>
+                  <p className="text-[19px] text-slide-primary font-semibold">Detained Director</p>
                 </div>
               </div>
               <ul className="space-y-3">
@@ -518,15 +518,15 @@ export const slides: SlideData[] = [
                   "Lowest-ranking individual in the corporate chain",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2.5 shrink-0" />{item}
+                    <span className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
               </ul>
             </div>
             {/* Mirsoatov */}
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col anim-scale-in stagger-4">
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col anim-scale-in stagger-4">
               <div className="flex items-center gap-5 mb-6">
-                <div className="w-[90px] h-[90px] rounded-full overflow-hidden shrink-0 border-2 border-slide-foreground/10" style={{ animation: "scale-in 0.4s ease-out 0.9s both" }}>
+                <div className="w-[90px] h-[90px] rounded-sm overflow-hidden shrink-0 border-2 border-slide-foreground/10" style={{ animation: "scale-in 0.4s ease-out 0.9s both" }}>
                   <img src={mirsoatovPhoto} alt="Alisher Mirsoatov" className="w-full h-full object-cover" />
                 </div>
                 <div>
@@ -543,7 +543,7 @@ export const slides: SlideData[] = [
                   "Chairman of Uzbekistan Winter Sports Association",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
+                    <span className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
               </ul>
@@ -578,18 +578,18 @@ export const slides: SlideData[] = [
             <div className="flex-1 flex items-center">
               <div className="w-full relative">
                 <div className="absolute left-0 right-0 top-[40px] h-[3px] bg-slide-foreground/10">
-                  <div className="h-full bg-slide-primary rounded-full" style={{ animation: "timeline-fill 1.8s ease-out 0.3s forwards", width: "0%" }} />
+                  <div className="h-full bg-slide-primary rounded-sm" style={{ animation: "timeline-fill 1.8s ease-out 0.3s forwards", width: "0%" }} />
                 </div>
                 <div className="grid grid-cols-4 gap-8 relative">
                   {steps.map((step, i) => (
                     <div key={step.date} className="flex flex-col items-center text-center">
-                      <div className={`w-[80px] h-[80px] rounded-full flex items-center justify-center text-[19px] font-extrabold tracking-wide relative z-10 ${
-                        step.accent ? "bg-slide-primary text-white shadow-[0_0_30px_hsl(var(--slide-primary)/0.4)]" : "bg-white border-[3px] border-slide-primary text-slide-primary"
+                      <div className={`w-[80px] h-[80px] rounded-sm flex items-center justify-center text-[19px] font-extrabold tracking-wide relative z-10 ${
+                        step.accent ? "bg-slide-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--slide-primary)/0.4)]" : "bg-slide-bg border-[3px] border-slide-primary text-slide-primary"
                       }`} style={{ animation: `scale-in 0.4s ease-out ${0.3 + i * 0.35}s both` }}>
                         {String(i + 1).padStart(2, "0")}
                       </div>
-                      <div className={`mt-5 px-5 py-2 rounded-full text-[14px] font-bold tracking-wider ${
-                        step.accent ? "bg-slide-primary text-white" : "bg-slide-primary/10 text-slide-primary"
+                      <div className={`mt-5 px-5 py-2 rounded-sm text-[14px] font-bold tracking-wider ${
+                        step.accent ? "bg-slide-primary text-primary-foreground" : "bg-slide-primary/10 text-slide-primary"
                       }`} style={{ animation: `fade-in 0.3s ease-out ${0.5 + i * 0.35}s both` }}>
                         {step.date}
                       </div>
@@ -652,19 +652,19 @@ export const slides: SlideData[] = [
             {/* Left: Photo + Identity */}
             <div className="flex flex-col items-center w-[380px] shrink-0">
               <div className="relative">
-                <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-slide-primary/40" style={{ animation: "scale-in 0.6s ease-out 0.2s both", boxShadow: "0 0 40px rgba(59,85,255,0.25)" }}>
+                <div className="w-[300px] h-[300px] rounded-sm overflow-hidden border-4 border-slide-primary/40" style={{ animation: "scale-in 0.6s ease-out 0.2s both", boxShadow: "0 0 40px rgba(59,85,255,0.25)" }}>
                   <img src={uktamPhoto} alt="Uktam Hasanov" className="w-full h-full object-cover object-top" />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-red-600 text-white text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider uppercase animate-[glow-pulse_2s_ease-in-out_infinite]">
-                  <span className="w-2 h-2 bg-red-300 rounded-full animate-pulse" />
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-slide-primary text-primary-foreground text-[11px] font-bold px-4 py-1.5 rounded-sm tracking-wider uppercase animate-[glow-pulse_2s_ease-in-out_infinite]">
+                  <span className="w-2 h-2 bg-slide-primary/40 rounded-sm animate-pulse" />
                   Detained
                 </div>
               </div>
-              <h3 className="text-[44px] font-bold text-white mt-8 text-center leading-tight anim-fade-up stagger-3">
+              <h3 className="text-[44px] font-bold text-primary-foreground mt-8 text-center leading-tight anim-fade-up stagger-3">
                 Uktam Hasanov
               </h3>
-              <p className="text-[19px] text-white/60 mt-2 text-center">Director of Solfy CA LLC</p>
-              <p className="text-[14px] text-white/40 mt-3 text-center leading-relaxed max-w-[340px]">
+              <p className="text-[19px] text-primary-foreground/60 mt-2 text-center">Director of Solfy CA LLC</p>
+              <p className="text-[14px] text-primary-foreground/40 mt-3 text-center leading-relaxed max-w-[340px]">
                 Arrested without prior summons during active settlement talks. Bail denied despite zero flight risk. Cooperated fully with investigators. Held as leverage in a commercial negotiation.
               </p>
             </div>
@@ -672,21 +672,21 @@ export const slides: SlideData[] = [
             {/* Right: Counter + Links */}
             <div className="flex-1 flex flex-col">
               <div className="mb-8 anim-fade-up stagger-3">
-                <p className="text-[14px] text-white/50 tracking-[0.15em] uppercase mb-4">Wrongfully detained for</p>
+                <p className="text-[14px] text-primary-foreground/50 tracking-[0.15em] uppercase mb-4">Wrongfully detained for</p>
                 <DetentionCounter />
-                <p className="text-[14px] text-white/40 mt-4 leading-relaxed max-w-[600px]">
+                <p className="text-[14px] text-primary-foreground/40 mt-4 leading-relaxed max-w-[600px]">
                   Since March 27, 2026. A man held in a Tashkent detention facility as leverage in a commercial negotiation. Every day he remains detained erodes Uzbekistan's claim to be a rule-of-law jurisdiction.
                 </p>
               </div>
 
               <a href="https://free-uktam.com" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-xl px-8 py-4 mb-8 w-fit transition-colors anim-fade-up stagger-4">
+                className="inline-flex items-center gap-3 bg-slide-primary hover:bg-slide-primary/90 text-primary-foreground rounded-sm px-8 py-4 mb-8 w-fit transition-colors anim-fade-up stagger-4">
                 <span className="text-[22px] font-bold">free-uktam.com</span>
                 <span className="text-[14px] opacity-70">Hasanov Defense Initiative</span>
               </a>
 
               <div>
-                <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-4">Follow the campaign</p>
+                <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-4">Follow the campaign</p>
                 <div className="grid grid-cols-3 gap-3">
                   {[
                     { platform: "YouTube", handle: "Interview", url: "https://youtu.be/50KysRLkQtE", icon: <Youtube size={20} /> },
@@ -697,11 +697,11 @@ export const slides: SlideData[] = [
                     { platform: "TikTok", handle: "@hasanov.defense.i", url: "https://www.tiktok.com/@hasanov.defense.i", icon: <Music size={20} /> },
                   ].map((link, i) => (
                     <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-lg px-4 py-3 transition-colors" style={{ animation: `fade-in 0.3s ease-out ${0.6 + i * 0.08}s both` }}>
+                      className="flex items-center gap-3 bg-slide-bg/5 hover:bg-slide-bg/10 rounded-sm px-4 py-3 transition-colors" style={{ animation: `fade-in 0.3s ease-out ${0.6 + i * 0.08}s both` }}>
                       <span className="text-slide-primary w-8 flex justify-center">{link.icon}</span>
                       <div>
-                        <span className="text-[14px] font-bold text-white block">{link.platform}</span>
-                        <span className="text-[11px] text-white/40">{link.handle}</span>
+                        <span className="text-[14px] font-bold text-primary-foreground block">{link.platform}</span>
+                        <span className="text-[11px] text-primary-foreground/40">{link.handle}</span>
                       </div>
                     </a>
                   ))}
@@ -722,10 +722,10 @@ export const slides: SlideData[] = [
       <SlideLayout variant="dark" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
         <div className="absolute inset-0" style={{ animation: "slow-zoom 12s ease-out forwards" }}>
           <img src={detentionCell} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-slide-foreground/70 backdrop-blur-sm" />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-[80px]">
-          <h2 className="text-[64px] font-semibold leading-[1.2] max-w-[1400px] text-white" style={{ animation: "slide-up 1.2s ease-out 0.3s both" }}>
+          <h2 className="text-[64px] font-semibold leading-[1.2] max-w-[1400px] text-primary-foreground" style={{ animation: "slide-up 1.2s ease-out 0.3s both" }}>
             An Uzbek citizen held as human collateral — detained not for justice, but as leverage. This is not prosecution. It is state-sponsored coercion.
           </h2>
         </div>
@@ -757,9 +757,9 @@ export const slides: SlideData[] = [
                 { num: "02", title: "No Evidence Tampering Risk", text: "All evidence is documentary — bank records, contracts, transfer statements — held by state institutions beyond Hasanov's reach." },
                 { num: "03", title: "No Personal Enrichment", text: "No personal enrichment, offshore transfers, or asset concealment alleged. All funds flowed through documented corporate channels." },
               ].map((item, i) => (
-                <div key={item.num} className="bg-slide-surface rounded-2xl p-6" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+                <div key={item.num} className="bg-slide-surface rounded-sm p-6" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[18px] font-bold text-slide-primary">{item.num}</div>
+                    <div className="w-10 h-10 rounded-sm bg-slide-primary/10 flex items-center justify-center text-[18px] font-bold text-slide-primary">{item.num}</div>
                     <h3 className="text-[20px] font-bold">{item.title}</h3>
                   </div>
                   <p className="text-[18px] text-slide-muted leading-relaxed">{item.text}</p>
@@ -771,20 +771,20 @@ export const slides: SlideData[] = [
                 { num: "04", title: "Contractual Dispute, Not Crime", text: "Commercial disagreement over Contract 289/37, already adjudicated in civil courts. Criminalizing this violates ultima ratio." },
                 { num: "05", title: "Arrest During Negotiations", text: "Charges filed one day after NBU rejected withdrawal of its complaint. Timing reveals a pressure tactic, not law enforcement." },
               ].map((item, i) => (
-                <div key={item.num} className="bg-slide-surface rounded-2xl p-6" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+                <div key={item.num} className="bg-slide-surface rounded-sm p-6" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-slide-primary/10 flex items-center justify-center text-[18px] font-bold text-slide-primary">{item.num}</div>
+                    <div className="w-10 h-10 rounded-sm bg-slide-primary/10 flex items-center justify-center text-[18px] font-bold text-slide-primary">{item.num}</div>
                     <h3 className="text-[20px] font-bold">{item.title}</h3>
                   </div>
                   <p className="text-[18px] text-slide-muted leading-relaxed">{item.text}</p>
                 </div>
               ))}
-              <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6" style={{ animation: "slide-up 0.5s ease-out 0.75s both" }}>
+              <div className="bg-slide-primary/5 border-2 border-slide-primary/20 rounded-sm p-6" style={{ animation: "slide-up 0.5s ease-out 0.75s both" }}>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-[18px] font-bold text-red-600">!</div>
-                  <h3 className="text-[20px] font-bold text-red-700">International Law Violation</h3>
+                  <div className="w-10 h-10 rounded-sm bg-slide-primary/10 flex items-center justify-center text-[18px] font-bold text-slide-primary">!</div>
+                  <h3 className="text-[20px] font-bold text-slide-primary">International Law Violation</h3>
                 </div>
-                <p className="text-[18px] text-red-800/80 leading-relaxed">
+                <p className="text-[18px] text-slide-foreground/80 leading-relaxed">
                   Arbitrary detention in a commercial dispute violates ICCPR Article 9, ICCPR Article 14, and ECHR Article 5.
                 </p>
               </div>
@@ -807,7 +807,7 @@ export const slides: SlideData[] = [
         leftContent={
           <div className="anim-slide-left stagger-2">
             <h3 className="text-[24px] font-bold text-slide-primary mb-6">Charged</h3>
-            <div className="bg-slide-surface rounded-2xl p-8">
+            <div className="bg-slide-surface rounded-sm p-8">
               <h4 className="text-[24px] font-bold mb-3">Hasanov Uktam Nasulloyevich</h4>
               <p className="text-[22px] text-slide-muted leading-relaxed">
                 Locally appointed director. The most vulnerable individual in the corporate chain. No personal enrichment alleged.
@@ -894,8 +894,8 @@ export const slides: SlideData[] = [
             Why this is your problem
           </h2>
           <div className="flex-1 grid grid-cols-3 gap-8">
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col flex-1">
-              <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col flex-1">
+              <div className="w-10 h-1 bg-slide-primary rounded-sm mb-4" />
               <h3 className="text-[24px] font-bold mb-3">IFIs (EBRD, IFC, ADB)</h3>
               <ul className="space-y-3 flex-1">
                 {[
@@ -912,8 +912,8 @@ export const slides: SlideData[] = [
                 ))}
               </ul>
             </div>
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col flex-1">
-              <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col flex-1">
+              <div className="w-10 h-1 bg-slide-primary rounded-sm mb-4" />
               <h3 className="text-[24px] font-bold mb-3">Correspondent Banks</h3>
               <ul className="space-y-3 flex-1">
                 {[
@@ -928,8 +928,8 @@ export const slides: SlideData[] = [
                 ))}
               </ul>
             </div>
-            <div className="bg-slide-surface rounded-2xl p-8 flex flex-col flex-1">
-              <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col flex-1">
+              <div className="w-10 h-1 bg-slide-primary rounded-sm mb-4" />
               <h3 className="text-[24px] font-bold mb-3">Eurobond / Rating Agencies</h3>
               <ul className="space-y-3 flex-1">
                 {[
@@ -970,13 +970,13 @@ export const slides: SlideData[] = [
           </p>
           <div className="grid grid-cols-2 gap-8 mt-10 flex-1">
             {[
-              { tag: "EXTRADITION", title: "Shadmanov (2025)", text: "Forcibly extradited from Dubai. ICIJ documented use of lobbyist to trigger sanctions inquiries. Lawyers describe prosecution as politically motivated.", accent: "bg-red-500/10 text-red-600" },
-              { tag: "ICSID ARBITRATION", title: "Humans Mobile v. Uzbekistan", text: "ICSID ARB/25/24 — Singapore-based company initiated arbitration citing bilateral investment treaty violations by Uzbek state authorities.", accent: "bg-amber-500/10 text-amber-600" },
-              { tag: "SELECTIVE JUSTICE", title: "Former Minister Voitov (2025)", text: "Convicted under Article 167(3)(a) — the same provision as Hasanov. Received no prison time after compensating damages. Illustrates the transactional nature of embezzlement prosecutions.", accent: "bg-purple-500/10 text-purple-600" },
+              { tag: "EXTRADITION", title: "Shadmanov (2025)", text: "Forcibly extradited from Dubai. ICIJ documented use of lobbyist to trigger sanctions inquiries. Lawyers describe prosecution as politically motivated.", accent: "bg-slide-primary/10 text-slide-primary" },
+              { tag: "ICSID ARBITRATION", title: "Humans Mobile v. Uzbekistan", text: "ICSID ARB/25/24 — Singapore-based company initiated arbitration citing bilateral investment treaty violations by Uzbek state authorities.", accent: "bg-slide-primary/50/10 text-slide-primary" },
+              { tag: "SELECTIVE JUSTICE", title: "Former Minister Voitov (2025)", text: "Convicted under Article 167(3)(a) — the same provision as Hasanov. Received no prison time after compensating damages. Illustrates the transactional nature of embezzlement prosecutions.", accent: "bg-slide-primary/10 text-slide-primary" },
               { tag: "CAPITAL FLIGHT", title: "Foreign Direct Investment Gap", text: "Kazakhstan: $151B accumulated FDI stock. Uzbekistan: $17B. IBTimes identifies the Solfy case as a test of institutional reform credibility.", accent: "bg-slide-primary/10 text-slide-primary" },
             ].map((item, i) => (
-              <div key={item.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: `fade-scale 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
-                <span className={`text-[14px] font-bold tracking-[0.15em] px-3 py-1 rounded-full w-fit mb-4 ${item.accent}`} style={{ animation: `scale-in 0.3s ease-out ${0.6 + i * 0.15}s both` }}>{item.tag}</span>
+              <div key={item.title} className="bg-slide-surface rounded-sm p-8 flex flex-col" style={{ animation: `fade-scale 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+                <span className={`text-[14px] font-bold tracking-[0.15em] px-3 py-1 rounded-sm w-fit mb-4 ${item.accent}`} style={{ animation: `scale-in 0.3s ease-out ${0.6 + i * 0.15}s both` }}>{item.tag}</span>
                 <h3 className="text-[24px] font-bold mb-3">{item.title}</h3>
                 <p className="text-[22px] text-slide-muted leading-relaxed">{item.text}</p>
               </div>
@@ -1011,8 +1011,8 @@ export const slides: SlideData[] = [
             {[
               { source: "IBTimes", date: "March 2026", quote: "Reports highlight institutional gaps undermining Uzbekistan's reform credibility", detail: "Names NBU Chairman Mirsoatov in connection with reported threats. Identifies the Solfy case as a litmus test for foreign investor protection.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
               { source: "PR Newswire / Investing.com", date: "April 2026", quote: "Coverage calls for cessation of irregular detentions and adherence to international legal standards", detail: "Formal press release distributed globally via PR Newswire. Covered by Investing.com, Yahoo Finance, and financial wire services.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
-              { source: "UA.NEWS", date: "2025-2026", quote: "Ongoing reporting on NBU leadership's role in the dispute", detail: "Coverage naming specific individuals. Additional reporting across Russian-language Telegram channels and international outlets. (Source attribution maintained.)", color: "border-l-red-500", bg: "bg-red-50" },
-              { source: "UzDaily.uz", date: "February 2026", quote: "Reports on Poletaev-Solfy legal engagement with NBU", detail: "Domestic Uzbek media reporting on the investor's international legal engagement, signaling the dispute has entered the international arena.", color: "border-l-amber-500", bg: "bg-amber-50" },
+              { source: "UA.NEWS", date: "2025-2026", quote: "Ongoing reporting on NBU leadership's role in the dispute", detail: "Coverage naming specific individuals. Additional reporting across Russian-language Telegram channels and international outlets. (Source attribution maintained.)", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
+              { source: "UzDaily.uz", date: "February 2026", quote: "Reports on Poletaev-Solfy legal engagement with NBU", detail: "Domestic Uzbek media reporting on the investor's international legal engagement, signaling the dispute has entered the international arena.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
             ].map((item, i) => (
               <div key={item.source} className={`${item.bg} border-l-4 ${item.color} rounded-r-2xl p-7 flex flex-col justify-between`} style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                 <div>
@@ -1028,7 +1028,7 @@ export const slides: SlideData[] = [
               </div>
             ))}
           </div>
-          <div className="mt-6 bg-slide-foreground text-white rounded-2xl px-8 py-5 flex items-center justify-between" style={{ animation: "fade-in 0.5s ease-out 1s both" }}>
+          <div className="mt-6 bg-slide-foreground text-primary-foreground rounded-sm px-8 py-5 flex items-center justify-between" style={{ animation: "fade-in 0.5s ease-out 1s both" }}>
             <p className="text-[19px] font-semibold">Coverage is accelerating. Additional media placements are scheduled across tier-1 international outlets.</p>
             <span className="text-[24px] font-bold text-slide-primary ml-6 shrink-0">→</span>
           </div>
@@ -1095,10 +1095,10 @@ export const slides: SlideData[] = [
           </div>
 
           <div className="flex-1 flex flex-col justify-center items-center text-center">
-            <h2 className="text-[44px] font-extrabold text-white leading-[1.05] tracking-tight mb-4" style={{ animation: "slide-up 0.6s ease-out 0.2s both" }}>
+            <h2 className="text-[44px] font-extrabold text-primary-foreground leading-[1.05] tracking-tight mb-4" style={{ animation: "slide-up 0.6s ease-out 0.2s both" }}>
               Request a Confidential Briefing
             </h2>
-            <p className="text-[22px] text-white/60 max-w-[800px] leading-relaxed mb-10" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
+            <p className="text-[22px] text-primary-foreground/60 max-w-[800px] leading-relaxed mb-10" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
               We invite your compliance, legal, or investment team to a 30-minute confidential Zoom briefing to discuss the documented facts.
             </p>
 
@@ -1107,7 +1107,7 @@ export const slides: SlideData[] = [
               href="https://www.caji.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full max-w-[1200px] flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-white rounded-2xl px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
+              className="w-full max-w-[1200px] flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-primary-foreground rounded-sm px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
               <span className="text-[22px] font-bold">Schedule a Briefing</span>
@@ -1116,21 +1116,21 @@ export const slides: SlideData[] = [
 
             <div className="grid grid-cols-2 gap-10 w-full max-w-[1200px]">
               {/* CAJI */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
-                <h3 className="text-[24px] font-extrabold text-white mb-1">Central Asia Justice Initiative</h3>
+              <div className="bg-slide-bg/5 backdrop-blur-sm border border-primary-foreground/10 rounded-sm p-10 text-left" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
+                <h3 className="text-[24px] font-extrabold text-primary-foreground mb-1">Central Asia Justice Initiative</h3>
                 <p className="text-[14px] text-slide-primary font-semibold tracking-wider uppercase mb-8">Human Rights & Rule of Law Advocacy</p>
                 <div className="space-y-5">
                   <div>
-                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
-                    <p className="text-[22px] text-white font-semibold">Eugene Gourevitch</p>
-                    <p className="text-[14px] text-white/60">Managing Principal</p>
+                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Contact</p>
+                    <p className="text-[22px] text-primary-foreground font-semibold">Eugene Gourevitch</p>
+                    <p className="text-[14px] text-primary-foreground/60">Managing Principal</p>
                   </div>
                   <div>
-                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Email</p>
-                    <p className="text-[22px] text-white font-semibold">eugene@caji.org</p>
+                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Email</p>
+                    <p className="text-[22px] text-primary-foreground font-semibold">eugene@caji.org</p>
                   </div>
                   <div>
-                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Web</p>
+                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Web</p>
                     <a href="https://www.caji.org" target="_blank" rel="noopener noreferrer" className="text-[22px] text-slide-primary font-semibold hover:underline">
                       www.caji.org
                     </a>
@@ -1157,7 +1157,7 @@ export const slides: SlideData[] = [
             </div>
           </div>
 
-          <p className="text-[11px] text-white/30 text-center mt-8" style={{ animation: "fade-in 0.5s ease-out 1.2s both" }}>
+          <p className="text-[11px] text-primary-foreground/30 text-center mt-8" style={{ animation: "fade-in 0.5s ease-out 1.2s both" }}>
             This briefing contains privileged and confidential information. Distribution at recipient's discretion.
           </p>
         </div>
