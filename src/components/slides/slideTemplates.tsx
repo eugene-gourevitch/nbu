@@ -142,7 +142,7 @@ export const MissionWhiteTemplate = ({
       </div>
       <div className={`grid grid-cols-${cards.length} gap-6`}>
         {cards.map((item) => (
-          <div key={item.title} className="bg-slide-surface rounded-2xl p-8">
+          <div key={item.title} className="bg-slide-surface rounded-sm p-8">
             <h3 className="text-[24px] font-bold mb-2">{item.title}</h3>
             <p className="text-[22px] text-slide-muted">{item.desc}</p>
           </div>
@@ -193,7 +193,7 @@ export const QuoteSlideTemplate = ({
     <div className="flex flex-col h-full p-[80px]">
       {pillLabel && <SlidePill label={pillLabel} variant="light" />}
       <div className="flex-1 flex flex-col justify-center">
-        <div className="text-[140px] leading-none text-slide-primary/20 font-sans">"</div>
+        <div className="text-[140px] leading-none text-slide-primary/20 font-display">"</div>
         <blockquote className="text-[44px] font-semibold leading-[1.3] max-w-[1200px] -mt-12">
           {quote}
         </blockquote>
@@ -293,19 +293,19 @@ export const BigNumbersTemplate = ({
   <SlideLayout variant="blue" slideNumber={slideNumber} totalSlides={totalSlides}>
     <div className="flex flex-col h-full p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
-      {subtitle && <p className="mt-6 text-[22px] text-white/80 max-w-[1000px]">{subtitle}</p>}
+      {subtitle && <p className="mt-6 text-[22px] text-primary-foreground/80 max-w-[1000px]">{subtitle}</p>}
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${stats.length} gap-12 w-full`}>
           {stats.map((stat) => (
             <div key={stat.num} className="text-center">
               <div className="text-[72px] font-extrabold leading-none">{stat.num}</div>
               <p className="text-[22px] font-semibold mt-4">{stat.label}</p>
-              <p className="text-[19px] text-white/60 mt-2">{stat.sub}</p>
+              <p className="text-[19px] text-primary-foreground/60 mt-2">{stat.sub}</p>
             </div>
           ))}
         </div>
       </div>
-      {source && <p className="text-[14px] text-white/40">{source}</p>}
+      {source && <p className="text-[14px] text-primary-foreground/40">{source}</p>}
     </div>
   </SlideLayout>
 );
@@ -337,8 +337,8 @@ export const ServicesGridTemplate = ({
       <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns} gap-8`}>
         {cards.map((card, i) => (
-          <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
-            <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" style={{ animation: `draw-line 0.4s ease-out ${0.5 + i * 0.15}s both` }} />
+          <div key={card.title} className="bg-slide-surface rounded-sm p-8 flex flex-col" style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
+            <div className="w-10 h-1 bg-slide-primary rounded-sm mb-4" style={{ animation: `draw-line 0.4s ease-out ${0.5 + i * 0.15}s both` }} />
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
             {card.desc && <p className="text-[22px] text-slide-muted leading-relaxed">{card.desc}</p>}
             {card.items && (
@@ -382,7 +382,7 @@ export const ProcessSlideTemplate = ({
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${steps.length} gap-6 w-full`}>
           {steps.map((item, i) => (
-            <div key={item.step} className={`bg-slide-primary/${5 + i * 5} rounded-2xl p-6 flex flex-col h-full`}>
+            <div key={item.step} className={`bg-slide-primary/${5 + i * 5} rounded-sm p-6 flex flex-col h-full`}>
               <span className="text-[44px] font-extrabold text-slide-primary">{item.step}</span>
               <h3 className="text-[24px] font-bold mt-3 mb-3">{item.title}</h3>
               <p className="text-[19px] text-slide-muted leading-relaxed">{item.desc}</p>
@@ -429,7 +429,7 @@ export const ImageTextTemplate = ({
       {stats && (
         <div className="mt-10 flex gap-6">
           {stats.map((s) => (
-            <div key={s.label} className="bg-slide-surface rounded-xl px-6 py-4 text-center">
+            <div key={s.label} className="bg-slide-surface rounded-sm px-6 py-4 text-center">
               <div className="text-[24px] font-extrabold text-slide-primary">{s.num}</div>
               <div className="text-[14px] text-slide-muted">{s.label}</div>
             </div>
@@ -471,16 +471,16 @@ export const ComparisonTemplate = ({
           <h3 className="text-[24px] font-bold text-slide-muted mb-2">{leftTitle}</h3>
           {leftItems.map((item, i) => (
             <div key={item} className="flex items-center gap-4 text-[22px] text-slide-muted" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
-              <span className="w-6 h-6 rounded-full bg-slide-muted/20 flex items-center justify-center text-[14px]">&#10005;</span>
+              <span className="w-6 h-6 rounded-sm bg-slide-muted/20 flex items-center justify-center text-[14px]">&#10005;</span>
               {item}
             </div>
           ))}
         </div>
-        <div className="bg-slide-primary rounded-r-2xl p-10 flex flex-col gap-6 text-white anim-slide-right stagger-2">
+        <div className="bg-slide-primary rounded-r-2xl p-10 flex flex-col gap-6 text-primary-foreground anim-slide-right stagger-2">
           <h3 className="text-[24px] font-bold mb-2">{rightTitle}</h3>
           {rightItems.map((item, i) => (
             <div key={item} className="flex items-center gap-4 text-[22px]" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
-              <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-[14px]">&#10003;</span>
+              <span className="w-6 h-6 rounded-sm bg-slide-bg/20 flex items-center justify-center text-[14px]">&#10003;</span>
               {item}
             </div>
           ))}
@@ -513,7 +513,7 @@ export const MultiColumnTableTemplate = ({
       <h2 className="mt-8 text-[44px] font-extrabold leading-[1.1] tracking-tight mb-12">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${columns.length} gap-4`}>
         {columns.map((col) => (
-          <div key={col.title} className="bg-slide-surface rounded-2xl p-6">
+          <div key={col.title} className="bg-slide-surface rounded-sm p-6">
             <h3 className="text-[24px] font-bold mb-4 text-slide-primary">{col.title}</h3>
             <ul className="space-y-2">
               {col.items.map((item) => (
@@ -558,7 +558,7 @@ export const TeamSlideTemplate = ({
       <div className={`flex-1 grid grid-cols-${columns} gap-10`}>
         {members.map((person) => (
           <div key={person.name} className="flex flex-col">
-            <div className={`aspect-[${columns === 3 ? "4/3" : "3/4"}] bg-slide-surface rounded-2xl mb-5 overflow-hidden`}>
+            <div className={`aspect-[${columns === 3 ? "4/3" : "3/4"}] bg-slide-surface rounded-sm mb-5 overflow-hidden`}>
               {person.photo && (
                 <img src={person.photo} alt={person.name} className="w-full h-full object-cover" />
               )}
@@ -602,7 +602,7 @@ export const PRStatsTemplate = ({
         </div>
       </div>
       <div className="flex flex-1 mt-10 px-[80px] gap-12">
-        <div className="w-[45%] rounded-2xl overflow-hidden">
+        <div className="w-[45%] rounded-sm overflow-hidden">
           <img src={image} alt={imageAlt} className="w-full h-full object-cover" />
         </div>
         <div className="flex-1 flex flex-col justify-center gap-6">
@@ -644,13 +644,13 @@ export const CaseStudyDarkTemplate = ({
       <SlidePill label={pillLabel} variant="glass" />
       <div className="flex-1 flex flex-col justify-center max-w-[1200px]">
         <h2 className="text-[44px] font-extrabold leading-[1.1]">{headline}</h2>
-        {description && <p className="mt-8 text-[22px] text-white/70 leading-relaxed">{description}</p>}
+        {description && <p className="mt-8 text-[22px] text-primary-foreground/70 leading-relaxed">{description}</p>}
         {stats && (
           <div className={`mt-12 grid grid-cols-${stats.length} gap-8`}>
             {stats.map((stat) => (
               <div key={stat.label}>
                 <div className="text-[44px] font-extrabold text-slide-primary">{stat.num}</div>
-                <p className="text-[22px] text-white/60">{stat.label}</p>
+                <p className="text-[22px] text-primary-foreground/60">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -658,9 +658,9 @@ export const CaseStudyDarkTemplate = ({
         {cards && (
           <div className={`mt-10 grid grid-cols-${cards.length > 3 ? 2 : cards.length} gap-8`}>
             {cards.map((card) => (
-              <div key={card.title} className="bg-white/10 backdrop-blur rounded-2xl p-8">
+              <div key={card.title} className="bg-slide-bg/10 backdrop-blur rounded-sm p-8">
                 <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
-                <p className="text-[22px] text-white/70 leading-relaxed">{card.desc}</p>
+                <p className="text-[22px] text-primary-foreground/70 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -686,7 +686,7 @@ export const CTASlideTemplate = ({
     <div className="flex flex-col items-center justify-center h-full text-center p-[80px]">
       <SlidePill label={pillLabel} variant="glass" />
       <h2 className="mt-10 text-[44px] font-extrabold leading-[1.1] max-w-[1300px]">{headline}</h2>
-      <p className="mt-8 text-[22px] text-white/80 max-w-[900px] leading-relaxed">{subtitle}</p>
+      <p className="mt-8 text-[22px] text-primary-foreground/80 max-w-[900px] leading-relaxed">{subtitle}</p>
     </div>
   </SlideLayout>
 );
@@ -750,7 +750,7 @@ export const ContactSlideTemplate = ({
             ))}
           </div>
         )}
-        <button className="bg-slide-foreground text-white px-10 py-5 rounded-full text-[22px] font-semibold">
+        <button className="bg-slide-foreground text-primary-foreground px-10 py-5 rounded-sm text-[22px] font-semibold">
           {ctaLabel}
         </button>
       </div>
@@ -787,11 +787,11 @@ export const CompetitiveTableTemplate = ({
       <div className="flex-1 overflow-hidden">
         <div className="w-full">
           <div className="grid grid-cols-[180px_1fr_1fr_120px_1fr] gap-0 text-[19px]">
-            <div className="bg-slide-primary text-white p-4 rounded-tl-xl font-bold">Firm</div>
-            <div className="bg-slide-primary text-white p-4 font-bold">Strength</div>
-            <div className="bg-slide-primary text-white p-4 font-bold">Weakness</div>
-            <div className="bg-slide-primary text-white p-4 font-bold">Scale</div>
-            <div className="bg-slide-primary text-white p-4 rounded-tr-xl font-bold">Advantage</div>
+            <div className="bg-slide-primary text-primary-foreground p-4 rounded-tl-xl font-bold">Firm</div>
+            <div className="bg-slide-primary text-primary-foreground p-4 font-bold">Strength</div>
+            <div className="bg-slide-primary text-primary-foreground p-4 font-bold">Weakness</div>
+            <div className="bg-slide-primary text-primary-foreground p-4 font-bold">Scale</div>
+            <div className="bg-slide-primary text-primary-foreground p-4 rounded-tr-xl font-bold">Advantage</div>
             {rows.map((row, i) => (
               <div key={row.firm} className="contents">
                 <div className={`p-4 font-bold border-b border-slide-foreground/8 ${i % 2 === 0 ? "bg-slide-surface" : ""}`}>{row.firm}</div>
@@ -835,8 +835,8 @@ export const TrackRecordTemplate = ({
       <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-16">{headline}</h2>
       <div className={`flex-1 grid grid-cols-${cards.length} gap-8`}>
         {cards.map((card) => (
-          <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
-            <div className="w-8 h-1 bg-slide-primary rounded-full mb-3" />
+          <div key={card.title} className="bg-slide-surface rounded-sm p-8 flex flex-col">
+            <div className="w-8 h-1 bg-slide-primary rounded-sm mb-3" />
             <p className="text-[14px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
             <h3 className="text-[24px] font-bold mb-3">{card.title}</h3>
             <p className="text-[22px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>
@@ -870,7 +870,7 @@ export const NextStepsTemplate = ({
       <div className="flex-1 flex items-center">
         <div className={`grid grid-cols-${steps.length} gap-8 w-full`}>
           {steps.map((item) => (
-            <div key={item.step} className="bg-slide-primary/10 rounded-2xl p-8">
+            <div key={item.step} className="bg-slide-primary/10 rounded-sm p-8">
               <span className="text-[44px] font-extrabold text-slide-primary">{item.step}</span>
               <h3 className="text-[24px] font-bold mt-4 mb-3">{item.title}</h3>
               <p className="text-[22px] text-slide-muted leading-relaxed">{item.desc}</p>

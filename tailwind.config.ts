@@ -25,13 +25,15 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["'Montserrat'", "sans-serif"],
+        sans: ["'Inter'", "sans-serif"],
+        display: ["'Cormorant Garamond'", "serif"],
       },
       colors: {
         "slide-primary": "hsl(var(--slide-primary))",
         "slide-foreground": "hsl(var(--slide-foreground))",
         "slide-muted": "hsl(var(--slide-muted))",
         "slide-surface": "hsl(var(--slide-surface))",
+        "slide-bg": "hsl(var(--slide-bg))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

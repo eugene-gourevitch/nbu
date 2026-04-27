@@ -15,7 +15,7 @@ const Print = () => {
       <style>{`
         @media screen {
           .print-view {
-            background: #888;
+            background: hsl(var(--muted-foreground));
             padding: 20px;
           }
           .print-slide {
@@ -26,10 +26,10 @@ const Print = () => {
             display: block;
             text-align: center;
             padding: 16px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 14px;
-            color: #fff;
-            background: #333;
+            color: hsl(var(--primary-foreground));
+            background: hsl(var(--foreground));
             position: sticky;
             top: 0;
             z-index: 100;
@@ -42,7 +42,7 @@ const Print = () => {
             margin: 0;
           }
           body { margin: 0; padding: 0; }
-          .print-view { padding: 0; background: white; }
+          .print-view { padding: 0; background: hsl(var(--slide-bg)); }
           .print-slide {
             page-break-after: always;
             margin: 0;
