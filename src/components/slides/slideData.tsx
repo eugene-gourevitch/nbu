@@ -84,22 +84,18 @@ const disclaimerSlide: SlideData = {
       <div className="flex flex-col h-full p-[80px]">
         <CAJILogo />
         <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
-          <SlidePill label="CONFIDENTIALITY NOTICE" />
+          <SlidePill label="BRIEFING NOTICE" />
           <h2 className="text-[44px] font-bold text-slide-foreground mt-6 leading-tight">
-            Confidentiality Statement & Disclaimer
+            About this briefing
           </h2>
           <div className="mt-10 space-y-6 text-[22px] leading-[1.7] text-slide-muted">
             <div>
-              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
-              <p>This document and all information contained herein is strictly confidential and proprietary to Central Asia Justice Initiative. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
+              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">About this briefing</h3>
+              <p>This document presents CAJI's analysis of publicly available information and materials provided by parties aligned with the investor side of the Solfy CA dispute. CAJI has not had access to materials, evidence, or legal positions held by the National Bank of Uzbekistan or the Government of Uzbekistan, and the characterizations contained herein reflect one interpretation of contested facts. Readers conducting their own due diligence should seek information directly from all parties to the dispute.</p>
             </div>
             <div>
-              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
-              <p>This presentation has been prepared for informational purposes only and does not constitute legal advice, an offer, solicitation, or recommendation. While every effort has been made to ensure accuracy, Central Asia Justice Initiative makes no representations or warranties regarding the completeness of the content.</p>
-            </div>
-            <div>
-              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
-              <p>Central Asia Justice Initiative, its affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
+              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">About distribution</h3>
+              <p>This briefing has been prepared by Central Asia Justice Initiative for distribution to international financial institutions, correspondent banks, regulators, rating agencies, and members of the press. CAJI welcomes redistribution and citation with attribution.</p>
             </div>
           </div>
         </div>
@@ -259,7 +255,7 @@ export const slides: SlideData[] = [
                   The company launched a <span className="font-bold text-slide-foreground">Buy Now, Pay Later</span> installment card product in partnership with NBU, Uzbekistan's largest commercial bank (100% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums. Senior retail management publicly endorsed the product.
                 </p>
                 <p>
-                  Independent valuation by Bluestone: <span className="font-bold text-slide-foreground">USD 42-52 million</span>.
+                  Independent valuation by Bluestone: <span className="font-bold text-slide-foreground">USD 42-52 million</span> (valuation prepared by Bluestone in connection with the investor's anticipated ICSID claim; CAJI has not independently verified the methodology or assumptions).
                 </p>
               </div>
             </div>
@@ -272,7 +268,7 @@ export const slides: SlideData[] = [
                   <span className="font-bold text-slide-foreground">Partnership terminated.</span> NBU ended the relationship. Solfy was declared bankrupt. A contractual dispute over obligations under Agreement No. 289/37 was adjudicated in Uzbek civil courts (December 2024, May 2025).
                 </p>
                 <p>
-                  <span className="font-bold text-slide-foreground">Threats documented.</span> In February 2026, public reporting stated that the investor had been subjected to serious threats by NBU representatives. UA.NEWS identified Chairman Mirsoatov personally as the source.
+                  <span className="font-bold text-slide-foreground">Threat allegations reported.</span> Public reporting has linked senior NBU leadership to communications the investor side characterizes as threatening. CAJI has not independently verified the identity of the individuals involved.
                 </p>
                 <p>
                   <span className="font-bold text-slide-foreground">Criminal escalation.</span> Rather than resolving the matter commercially, NBU filed a criminal complaint against Solfy's locally appointed director during active settlement negotiations.
@@ -539,7 +535,7 @@ export const slides: SlideData[] = [
                   "Chairman of NBU since November 2017",
                   "Born 1974, Tashkent. Career NBU insider since 1996",
                   "Former Chairman of Uzpromstroybank (2016-2017)",
-                  "Publicly identified as source of threats to the investor",
+                  "Public reporting has linked senior NBU leadership to communications the investor side characterizes as threatening; CAJI has not independently verified the identity of the individuals involved",
                   "Chairman of Uzbekistan Winter Sports Association",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
@@ -870,7 +866,7 @@ export const slides: SlideData[] = [
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
               <h3 className="text-[24px] font-bold mb-3">NBU Approved Every Tranche</h3>
               <p className="text-[22px] text-slide-muted leading-relaxed">
-                NBU's own investment committee authorized every capital allocation it now characterizes as embezzlement. You cannot approve the funding at board level and then criminalize the expenditure. This is the fundamental contradiction that undermines the entire prosecution.
+                NBU's own investment committee authorized every capital allocation it now characterizes as embezzlement. This sequence may indicate a material inconsistency between prior governance approvals and subsequent criminal characterization of the same expenditures.
               </p>
             </div>
           </div>
@@ -879,20 +875,23 @@ export const slides: SlideData[] = [
     ),
   },
 
-  // ═══ 15. REGULATORY OBLIGATIONS ═══
+  // ═══ 15. REGULATORY CONSIDERATIONS ═══
   {
     id: "solfy-regulatory",
-    title: "Regulatory Obligations",
+    title: "Regulatory Considerations",
     component: (props) => (
       <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
         <div className="flex flex-col h-full p-[80px]">
           <div className="flex items-center justify-between mb-12">
-            <SlidePill label="YOUR REGULATORY OBLIGATIONS" />
+            <SlidePill label="REGULATORY LANDSCAPE" />
             <CAJILogo />
           </div>
           <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-12">
-            Why this is your problem
+            Regulatory Considerations for Counterparties
           </h2>
+          <p className="text-[22px] text-slide-muted leading-relaxed max-w-[1200px] mb-10">
+            The following frameworks may be relevant to counterparties evaluating their exposure.
+          </p>
           <div className="flex-1 grid grid-cols-3 gap-8">
             <div className="bg-slide-surface rounded-sm p-8 flex flex-col flex-1">
               <div className="w-10 h-1 bg-slide-primary rounded-sm mb-4" />
@@ -900,7 +899,7 @@ export const slides: SlideData[] = [
               <ul className="space-y-3 flex-1">
                 {[
                   "EBRD Article 1: rule of law as founding principle",
-                  "EBRD Integrity Risk Policy S.4.2: ongoing EDD on FI clients",
+                  "EBRD Integrity Risk Policy S.4.2 addresses ongoing EDD for FI clients",
                   "IFC Sustainability Framework Para. 12: governance criterion",
                   "EBRD 2024 Integrity Report: withheld financing precedent",
                   "ADB Safeguard Policy: institutional capacity assessment",
@@ -917,10 +916,10 @@ export const slides: SlideData[] = [
               <h3 className="text-[24px] font-bold mb-3">Correspondent Banks</h3>
               <ul className="space-y-3 flex-1">
                 {[
-                  "Wolfsberg CBDDQ: adverse information screening requires EDD",
+                  "Wolfsberg CBDDQ includes adverse-information screening and potential EDD escalation",
                   "OCC Bulletin 2016-32: correspondent banking risk management",
-                  "BSA/AML obligations under FinCEN (31 CFR 1010.610)",
-                  "EU 6AMLD Art. 6(1)(c): aiding liability via correspondent channels",
+                  "BSA/AML framework under FinCEN (31 CFR 1010.610)",
+                  "EU 6AMLD Art. 6(1)(c): aiding liability considerations in correspondent channels",
                 ].map((item) => (
                   <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
@@ -933,11 +932,11 @@ export const slides: SlideData[] = [
               <h3 className="text-[24px] font-bold mb-3">Eurobond / Rating Agencies</h3>
               <ul className="space-y-3 flex-1">
                 {[
-                  "ICSID claim ($42-52M valuation): material contingent liability under IAS 37",
+                  "ICSID claim ($42-52M valuation): potential contingent-liability implications under IAS 37 (valuation prepared by Bluestone in connection with the investor's anticipated ICSID claim; CAJI has not independently verified the methodology or assumptions)",
                   "Fitch Bank Rating Criteria: Operating Environment assessment",
                   "Moody's Scorecard Factor 1: Macro Profile institutional framework",
-                  "Disclosure required in NBU financial statements",
-                  "Bondholder fiduciary duty: counterparty governance risk",
+                  "Potential disclosure implications for NBU financial statements",
+                  "Bondholder fiduciary analyses often consider counterparty governance risk",
                 ].map((item) => (
                   <li key={item} className="text-[19px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
@@ -966,7 +965,7 @@ export const slides: SlideData[] = [
             The Solfy case is not an isolated incident
           </h2>
           <p className="text-[22px] text-slide-muted mt-3 max-w-[1200px]">
-            A pattern of investor-hostile actions undermines Uzbekistan's reform credibility
+            A pattern of investor-hostile actions has been cited in reporting as a challenge to Uzbekistan's reform credibility
           </p>
           <div className="grid grid-cols-2 gap-8 mt-10 flex-1">
             {[
@@ -983,7 +982,7 @@ export const slides: SlideData[] = [
             ))}
           </div>
           <p className="text-[14px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
-            <span className="font-bold text-slide-foreground">Source:</span> NBU Chairman Mirsoatov publicly identified as source of threats to international investors (UA.NEWS, IBTimes)
+            <span className="font-bold text-slide-foreground">Source:</span> Public reporting has linked senior NBU leadership to communications the investor side characterizes as threatening; CAJI has not independently verified the identity of the individuals involved (UA.NEWS, IBTimes).
           </p>
         </div>
       </SlideLayout>
@@ -1009,7 +1008,7 @@ export const slides: SlideData[] = [
           </p>
           <div className="grid grid-cols-2 gap-6 flex-1">
             {[
-              { source: "IBTimes", date: "March 2026", quote: "Reports highlight institutional gaps undermining Uzbekistan's reform credibility", detail: "Names NBU Chairman Mirsoatov in connection with reported threats. Identifies the Solfy case as a litmus test for foreign investor protection.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
+              { source: "IBTimes", date: "March 2026", quote: "Reports highlight institutional gaps undermining Uzbekistan's reform credibility", detail: "Links senior NBU leadership to communications the investor side characterizes as threatening. CAJI reports this attribution as it appears in published sources and takes no independent position on its accuracy. Identifies the Solfy case as a litmus test for foreign investor protection.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
               { source: "PR Newswire / Investing.com", date: "April 2026", quote: "Coverage calls for cessation of irregular detentions and adherence to international legal standards", detail: "Formal press release distributed globally via PR Newswire. Covered by Investing.com, Yahoo Finance, and financial wire services.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
               { source: "UA.NEWS", date: "2025-2026", quote: "Ongoing reporting on NBU leadership's role in the dispute", detail: "Coverage naming specific individuals. Additional reporting across Russian-language Telegram channels and international outlets. (Source attribution maintained.)", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
               { source: "UzDaily.uz", date: "February 2026", quote: "Reports on Poletaev-Solfy legal engagement with NBU", detail: "Domestic Uzbek media reporting on the investor's international legal engagement, signaling the dispute has entered the international arena.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
@@ -1056,7 +1055,7 @@ export const slides: SlideData[] = [
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">01</div>
               <h3 className="text-[24px] font-bold mb-3">ICSID BIT Arbitration</h3>
               <p className="text-[22px] text-slide-muted leading-relaxed">
-                Investment treaty claim under the Russia-Uzbekistan bilateral investment treaty is imminent. Will invoke ICSID jurisdiction for violations of fair and equitable treatment, protection against expropriation, and full protection and security. Bluestone independent valuation: <span className="font-bold text-slide-foreground">$42-52 million</span>. This is not a nuisance claim.
+                According to investor-side materials, an investment treaty claim under the Russia-Uzbekistan bilateral investment treaty is imminent. The investor side indicates it intends to invoke ICSID jurisdiction for alleged violations of fair and equitable treatment, protection against expropriation, and full protection and security. Bluestone independent valuation: <span className="font-bold text-slide-foreground">$42-52 million</span> (valuation prepared by Bluestone in connection with the investor's anticipated ICSID claim; CAJI has not independently verified the methodology or assumptions). This valuation is presented by the investor side as supporting claim materiality.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.35s both" }}>
@@ -1070,7 +1069,7 @@ export const slides: SlideData[] = [
               <div className="text-[64px] font-extrabold text-slide-primary/15 leading-none mb-3">03</div>
               <h3 className="text-[24px] font-bold mb-3">International Advocacy</h3>
               <p className="text-[22px] text-slide-muted leading-relaxed">
-                Coordinated engagement with IFIs, rating agencies, correspondent banks, eurobond stakeholders, and international media to ensure transparency and accountability.
+                Coordinated engagement with IFIs, rating agencies, correspondent banks, eurobond stakeholders, and international media to present the investor side's account and supporting materials.
               </p>
             </div>
           </div>
