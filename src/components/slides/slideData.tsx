@@ -3,8 +3,6 @@ import SlideLayout from "./SlideLayout";
 import SlidePill from "./SlidePill";
 import CAJILogo from "./CAJILogo";
 import uktamPhoto from "@/assets/uktam-photo.jpg";
-import poletaevPhoto from "@/assets/poletaev-photo.jpg";
-import mirsoatovPhoto from "@/assets/mirsoatov-photo.jpg";
 import detentionCell from "@/assets/uzbek-detention-cell.jpg";
 
 export interface SlideData {
@@ -463,8 +461,8 @@ export const slides: SlideData[] = [
       </SlideLayout>
     ),
   },
-  ...timeline.slice(4, 7).map((item) => ({
-    id: `hasanov-${item.date.toLowerCase().replace(/[– ]/g, "-").replace(/[^a-z0-9-]/g, "")}`,
+  ...timeline.slice(4, 7).map((item, i) => ({
+    id: `hasanov-${item.date.toLowerCase().replace(/[– ]/g, "-").replace(/[^a-z0-9-]/g, "")}-${i}`,
     title: item.title,
     component: (props: { slideNumber: number; totalSlides: number }) => (
       <SplitSlide
