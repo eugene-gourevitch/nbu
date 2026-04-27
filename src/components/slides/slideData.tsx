@@ -91,7 +91,7 @@ const disclaimerSlide: SlideData = {
           <div className="mt-10 space-y-6 text-[22px] leading-[1.7] text-slide-muted">
             <div>
               <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Confidentiality</h3>
-              <p>This document and all information contained herein is strictly confidential and proprietary to Central Asia Justice Initiative and Amsterdam & Partners LLP. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
+              <p>This document and all information contained herein is strictly confidential and proprietary to Central Asia Justice Initiative. It is provided solely for the use of the intended recipient(s) and may not be reproduced, distributed, transmitted, or disclosed to any third party without prior written consent.</p>
             </div>
             <div>
               <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Disclaimer</h3>
@@ -99,7 +99,7 @@ const disclaimerSlide: SlideData = {
             </div>
             <div>
               <h3 className="text-[24px] font-bold text-slide-foreground mb-2">Limitation of Liability</h3>
-              <p>Central Asia Justice Initiative, Amsterdam & Partners LLP, their affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
+              <p>Central Asia Justice Initiative, its affiliates, directors, officers, and employees shall not be held liable for any loss or damage arising from the use of or reliance on any information contained in this presentation. All rights reserved.</p>
             </div>
           </div>
         </div>
@@ -131,8 +131,7 @@ export const slides: SlideData[] = [
               <div className="mt-6 text-[14px] text-slide-muted/60 tracking-widest uppercase leading-relaxed anim-fade-in stagger-5">
                 <div>Confidential</div>
                 <div>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
-                <div>Prepared jointly by Amsterdam & Partners LLP</div>
-                <div>and Central Asia Justice Initiative</div>
+                <div>Prepared by Central Asia Justice Initiative</div>
               </div>
             </div>
           </div>
@@ -222,17 +221,11 @@ export const slides: SlideData[] = [
                 <p className="text-[19px] text-slide-muted leading-relaxed">
                   <span className="font-bold text-slide-foreground">Eugene Gourevitch</span><br />eugene.gourevitch@caji.org
                 </p>
-                <p className="text-[19px] text-slide-muted leading-relaxed">
-                  <span className="font-bold text-slide-foreground">Robert Amsterdam</span><br />robert.amsterdam@amsterdamandpartners.com
-                </p>
-                <p className="text-[19px] text-slide-muted leading-relaxed">
-                  <a href="https://www.amsterdamandpartners.com" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">amsterdamandpartners.com</a>
-                </p>
               </div>
             </div>
           </div>
           <p className="text-[14px] text-slide-muted/60 mt-6 text-center">
-            Prepared jointly by Amsterdam & Partners LLP (London / Washington, DC) and Central Asia Justice Initiative (Dubai / Miami)
+            Prepared by Central Asia Justice Initiative
           </p>
         </div>
       </SlideLayout>
@@ -279,7 +272,7 @@ export const slides: SlideData[] = [
                   <span className="font-bold text-slide-foreground">Partnership terminated.</span> NBU ended the relationship. Solfy was declared bankrupt. A contractual dispute over obligations under Agreement No. 289/37 was adjudicated in Uzbek civil courts (December 2024, May 2025).
                 </p>
                 <p>
-                  <span className="font-bold text-slide-foreground">Threats documented.</span> In February 2026, Amsterdam & Partners LLP announced representation, reporting that the investor had been subjected to serious threats by NBU representatives. UA.NEWS identified Chairman Mirsoatov personally as the source.
+                  <span className="font-bold text-slide-foreground">Threats documented.</span> In February 2026, public reporting stated that the investor had been subjected to serious threats by NBU representatives. UA.NEWS identified Chairman Mirsoatov personally as the source.
                 </p>
                 <p>
                   <span className="font-bold text-slide-foreground">Criminal escalation.</span> Rather than resolving the matter commercially, NBU filed a criminal complaint against Solfy's locally appointed director during active settlement negotiations.
@@ -493,7 +486,6 @@ export const slides: SlideData[] = [
                   "Former First Deputy Chairman of Sberbank",
                   "Board member of Nornickel, MegaFon, Metalloinvest",
                   "Chairman of Fortenova Group, co-founder of Gauss Ventures",
-                  "Represented by Amsterdam & Partners LLP",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-full bg-slide-primary mt-2.5 shrink-0" />{item}
@@ -568,8 +560,8 @@ export const slides: SlideData[] = [
     title: "Critical Timeline",
     component: (props) => {
       const steps = [
-        { date: "MAR 17", title: "Settlement Proposal", desc: "Investor side submits detailed settlement counter-proposal via Amsterdam & Partners. Demands criminal complaint withdrawal as condition precedent.", accent: false },
-        { date: "MAR 25", title: "Deadline Letter", desc: "After 8 days of silence, Amsterdam & Partners sends formal deadline letter. States firm will pursue all available remedies if no response by 5 PM GMT.", accent: false },
+        { date: "MAR 17", title: "Settlement Proposal", desc: "Investor side submits detailed settlement counter-proposal. Demands criminal complaint withdrawal as condition precedent.", accent: false },
+        { date: "MAR 25", title: "Deadline Letter", desc: "After 8 days of silence, investor side sends formal deadline letter. States firm will pursue all available remedies if no response by 5 PM GMT.", accent: false },
         { date: "MAR 26", title: "Rejection", desc: "NBU rejects criminal complaint withdrawal. References its own procedural powers within the criminal proceedings in the context of settlement negotiations.", accent: false },
         { date: "MAR 27", title: "Charges Filed", desc: "Major B.G. Giyasov formally charges Hasanov. Four counts under Article 167(3)(a). Hasanov taken into custody in Tashkent.", accent: true },
       ];
@@ -1018,9 +1010,9 @@ export const slides: SlideData[] = [
           <div className="grid grid-cols-2 gap-6 flex-1">
             {[
               { source: "IBTimes", date: "March 2026", quote: "Reports highlight institutional gaps undermining Uzbekistan's reform credibility", detail: "Names NBU Chairman Mirsoatov in connection with reported threats. Identifies the Solfy case as a litmus test for foreign investor protection.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
-              { source: "PR Newswire / Investing.com", date: "April 2026", quote: "Coverage calls for cessation of irregular detentions and adherence to international legal standards", detail: "Amsterdam & Partners formal press release distributed globally via PR Newswire. Covered by Investing.com, Yahoo Finance, and financial wire services.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
+              { source: "PR Newswire / Investing.com", date: "April 2026", quote: "Coverage calls for cessation of irregular detentions and adherence to international legal standards", detail: "Formal press release distributed globally via PR Newswire. Covered by Investing.com, Yahoo Finance, and financial wire services.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
               { source: "UA.NEWS", date: "2025-2026", quote: "Ongoing reporting on NBU leadership's role in the dispute", detail: "Coverage naming specific individuals. Additional reporting across Russian-language Telegram channels and international outlets. (Source attribution maintained.)", color: "border-l-red-500", bg: "bg-red-50" },
-              { source: "UzDaily.uz", date: "February 2026", quote: "Reports on Poletaev-Solfy legal engagement with NBU", detail: "Domestic Uzbek media reporting on investor engagement of Amsterdam & Partners LLP, signaling the dispute has entered the international arena.", color: "border-l-amber-500", bg: "bg-amber-50" },
+              { source: "UzDaily.uz", date: "February 2026", quote: "Reports on Poletaev-Solfy legal engagement with NBU", detail: "Domestic Uzbek media reporting on the investor's international legal engagement, signaling the dispute has entered the international arena.", color: "border-l-amber-500", bg: "bg-amber-50" },
             ].map((item, i) => (
               <div key={item.source} className={`${item.bg} border-l-4 ${item.color} rounded-r-2xl p-7 flex flex-col justify-between`} style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
                 <div>
@@ -1146,23 +1138,19 @@ export const slides: SlideData[] = [
                 </div>
               </div>
 
-              {/* Amsterdam & Partners */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 text-left" style={{ animation: "slide-in-right 0.5s ease-out 0.7s both" }}>
-                <h3 className="text-[24px] font-extrabold text-white mb-1">Amsterdam & Partners LLP</h3>
-                <p className="text-[14px] text-white/50 font-semibold tracking-wider uppercase mb-8">Legal Counsel</p>
+              <div className="bg-primary/15 border border-primary-foreground/10 rounded-sm p-10 text-left" style={{ animation: "slide-in-right 0.5s ease-out 0.7s both" }}>
+                <h3 className="text-[24px] font-extrabold text-primary-foreground mb-1">Central Asia Justice Initiative</h3>
+                <p className="text-[14px] text-primary-foreground/50 font-semibold tracking-wider uppercase mb-8">Confidential Engagement</p>
                 <div className="space-y-5">
                   <div>
-                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Contact</p>
-                    <p className="text-[22px] text-white font-semibold">Robert Amsterdam</p>
-                    <p className="text-[14px] text-white/60">Founding Partner</p>
+                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Website</p>
+                    <a href="https://www.caji.org" target="_blank" rel="noopener noreferrer" className="text-[22px] text-slide-primary font-semibold hover:underline">
+                      www.caji.org
+                    </a>
                   </div>
                   <div>
-                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">London</p>
-                    <p className="text-[19px] text-white/70">125 Old Broad Street, EC2N 1AR</p>
-                  </div>
-                  <div>
-                    <p className="text-[14px] text-white/40 tracking-[0.15em] uppercase mb-1">Washington, DC</p>
-                    <p className="text-[19px] text-white/70">1054 31st St NW, Ste 110, 20007</p>
+                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Scope</p>
+                    <p className="text-[19px] text-primary-foreground/70">Human rights, rule of law, and anti-corruption advocacy across Central Asia.</p>
                   </div>
                 </div>
               </div>
