@@ -119,7 +119,7 @@ export const slides: SlideData[] = [
           <div className="flex-1 flex flex-col justify-between p-[80px]">
             <CAJILogo className="anim-fade-in stagger-1" />
             <div>
-              <h1 className="text-[96px] font-bold leading-[1.05] tracking-tight text-slide-primary anim-fade-up stagger-2">
+              <h1 className="text-[96px] font-display font-semibold leading-[1.05] tracking-normal text-slide-primary anim-fade-up stagger-2">
                 INVESTOR<br />ALERT
               </h1>
               <p className="mt-8 text-[22px] font-semibold text-slide-foreground max-w-[640px] leading-snug anim-fade-up stagger-3">
@@ -143,7 +143,7 @@ export const slides: SlideData[] = [
               "A CEO detained as leverage.",
             ].map((line, i) => (
               <div key={i} className="flex items-start gap-5" style={{ animation: `slide-up 0.5s ease-out ${0.4 + i * 0.15}s both` }}>
-                <div className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-3 shrink-0" />
+                <div className="w-10 h-px bg-slide-primary mt-3 shrink-0" />
                 <p className="text-[22px] text-primary-foreground/80 font-medium leading-snug">{line}</p>
               </div>
             ))}
