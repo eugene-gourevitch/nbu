@@ -7,7 +7,6 @@ Create a 25-slide presentation using existing slide patterns and the established
 
 ## Photo Sourcing Strategy
 Before building slides, we will search the web for real headshots of:
-- **Eugene Gourevitch** — President & Co-Founder, OmniStrat Group
 - **Michael Fox-Rabinovitz** — VP Corporate Finance, OmniStrat Group
 - **Alexandra Katrin** — CFO, OmniStrat Group
 - **Zachary Intrater** — Co-founder, Agnifilo Intrater LLP
@@ -37,14 +36,14 @@ Photos will be saved to `src/assets/team/` and bios enriched from LinkedIn/publi
 | 15 | **Case Study** (dark bg) | Integrated Response: Legal, Comms, Government, Human Rights tracks |
 | 16 | **Services Grid** (white, 3 cards) | Track Record: Mining/Africa, Political Risk/Europe, INTERPOL/International |
 | 17 | **Section Divider** (white, /04) | "Leadership & Advisory Board" |
-| 18 | **Team** (white, 3 cols) | Eugene Gourevitch, Michael Fox-Rabinovitz, Alexandra Katrin with real photos + enriched bios |
+| 18 | **Team** (white, 3 cols) | Michael Fox-Rabinovitz, Alexandra Katrin with real photos + enriched bios |
 | 19 | **Team** (white, 3 cols) | Advisory Board: Zachary Intrater, Dr. Elchin Khalilov, Keith Silverstein |
 | 20 | **Section Divider** (white, /05) | "Competitive Positioning" |
 | 21 | **Comparison** (white, table) | FTI, Teneo, Brunswick, Kroll, Control Risks vs OmniStrat |
 | 22 | **Comparison** (white, table) | SWAT Team vs Traditional Advisory — 6 dimensions |
 | 23 | **PR Stats** (white) | Portfolio Relevance: $8.5B Texas pullout, 13 AGs, 87 countries |
 | 24 | **Process** (white, 3 steps) | Next Steps: Initial Meeting, Pilot Engagement, Retainer Framework |
-| 25 | **Contact** (white) | Eugene Gourevitch contact info + OmniStrat Washington DC address |
+| 25 | **Contact** (white) | Principal contact info + OmniStrat Washington DC address |
 
 ## Technical Implementation
 

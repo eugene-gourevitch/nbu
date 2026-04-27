@@ -206,17 +206,17 @@ export const slides: SlideData[] = [
                 <div className="relative">
                   <p className="text-[14px] tracking-[0.15em] uppercase opacity-70 mb-3">Schedule Now</p>
                   <h4 className="text-[24px] font-bold mb-3">Book a Confidential Briefing</h4>
-                  <p className="text-[19px] opacity-80 leading-relaxed">30-minute Zoom call with the CAJI team.</p>
+                  <p className="text-[19px] opacity-80 leading-relaxed">30-minute Zoom call with CAJI's Board of Directors or Legal Counsel.</p>
                   <div className="flex items-center gap-2 mt-5 text-[19px] font-semibold opacity-90">
-                    <span>Open Calendly</span>
+                    <span>Request a Time</span>
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </div>
                 </div>
               </a>
-              <div className="bg-slide-foreground/5 rounded-sm p-6 border border-slide-foreground/10 space-y-3">
-                <p className="text-[19px] text-slide-muted leading-relaxed">
-                  <span className="font-bold text-slide-foreground">Eugene Gourevitch</span><br />eugene.gourevitch@caji.org
-                </p>
+              <div className="bg-slide-foreground/5 rounded-sm p-6 border border-slide-foreground/10 space-y-2">
+                <p className="text-[14px] tracking-[0.15em] uppercase text-slide-muted/70">Briefing Held With</p>
+                <p className="text-[19px] text-slide-foreground leading-relaxed font-semibold">CAJI Board of Directors</p>
+                <p className="text-[19px] text-slide-muted leading-relaxed">or Legal Counsel — Keith Silverstein, Esq.</p>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@ export const slides: SlideData[] = [
                   <span className="font-bold text-slide-foreground">Solfy CA LLC</span> was established in Tashkent in June 2020 as a fintech joint venture. Maxim Poletaev held 50% beneficial interest via Solvy Cyprus Limited. NBU held 5%. Full Stack Solution held 20%.
                 </p>
                 <p>
-                  The company launched a <span className="font-bold text-slide-foreground">Buy Now, Pay Later</span> installment card product in partnership with NBU, Uzbekistan's largest commercial bank (100% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums. Senior retail management publicly endorsed the product.
+                  The company launched a <span className="font-bold text-slide-foreground">Buy Now, Pay Later</span> installment card product in partnership with NBU, Uzbekistan's largest commercial bank (100% state-owned). NBU's investment committee authorized three capital infusions totaling over 17 billion soums. Senior retail management publicly endorsed the product. <a href="https://repost.uz/karta-solfy" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline font-semibold">[Repost.uz]</a>
                 </p>
                 <p>
                   Independent valuation by Bluestone: <span className="font-bold text-slide-foreground">USD 42-52 million</span> (valuation prepared by Bluestone in connection with the investor's anticipated ICSID claim; CAJI has not independently verified the methodology or assumptions).
@@ -410,6 +410,9 @@ export const slides: SlideData[] = [
                   <div className="flex justify-between"><span className="text-slide-muted">Fitch</span><span className="font-bold">BB (stable)</span></div>
                   <div className="flex justify-between"><span className="text-slide-muted">Moody's</span><span className="font-bold">Ba3 (stable)</span></div>
                 </div>
+                <a href="https://www.thestar.com.my/news/world/2026/03/15/fitch-affirms-national-bank-of-uzbekistan039s-default-ratings-at-039bb039-with-stable-outlook" target="_blank" rel="noopener noreferrer" className="block mt-3 pt-3 border-t border-slide-foreground/10 text-[14px] text-slide-primary font-semibold hover:underline">
+                  Fitch affirmation, 15 Mar 2026 →
+                </a>
               </div>
             </div>
 
@@ -535,7 +538,7 @@ export const slides: SlideData[] = [
                   "Chairman of NBU since November 2017",
                   "Born 1974, Tashkent. Career NBU insider since 1996",
                   "Former Chairman of Uzpromstroybank (2016-2017)",
-                  "Public reporting has linked senior NBU leadership to communications the investor side characterizes as threatening; CAJI has not independently verified the identity of the individuals involved",
+                  "Public reporting (UA.News, 26 Feb 2026) has linked senior NBU leadership to communications the investor side characterizes as threatening; CAJI has not independently verified the identity of the individuals involved",
                   "Chairman of Uzbekistan Winter Sports Association",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[19px] text-slide-muted leading-relaxed">
@@ -982,14 +985,90 @@ export const slides: SlideData[] = [
             ))}
           </div>
           <p className="text-[14px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
-            <span className="font-bold text-slide-foreground">Source:</span> Public reporting has linked senior NBU leadership to communications the investor side characterizes as threatening; CAJI has not independently verified the identity of the individuals involved (UA.NEWS, IBTimes).
+            <span className="font-bold text-slide-foreground">Sources:</span>{" "}
+            <a href="https://ua.news/en/finansi/turetskii-advokat-gotuie-pozovi-proti-uzbekistanu-za-tisk-na-fintekh-kompaniiu-solfy" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">UA.News (26 Feb 2026)</a> ·{" "}
+            <a href="https://www.ng.ru/news/836631.html" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">Nezavisimaya Gazeta (1 Apr 2026)</a> ·{" "}
+            <a href="https://kz24.news/news/world/gromkiy-arest-v-tashkente-kak-delo-finteh-kompanii-solfy-mozhet-udarit-po-investklimatu-tsentralnoy-azii.html" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">KZ24 (6 Apr 2026)</a>. CAJI reproduces these attributions as published and takes no independent position on accuracy.
           </p>
         </div>
       </SlideLayout>
     ),
   },
 
-  // ═══ 17. MEDIA COVERAGE ═══
+  // ═══ 17. PUBLIC STATEMENTS ═══
+  {
+    id: "solfy-statements",
+    title: "Public Statements",
+    component: (props) => (
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-6">
+            <SlidePill label="PUBLIC STATEMENTS ON THE RECORD" />
+            <CAJILogo />
+          </div>
+          <h2 className="text-[44px] font-extrabold leading-[1.1] tracking-tight mb-3 anim-fade-up stagger-1">
+            NBU and Counsel for Solfy issue opposing public statements
+          </h2>
+          <p className="text-[19px] text-slide-muted leading-relaxed max-w-[1200px] mb-8 anim-fade-up stagger-2">
+            One week after the detention, the parties' positions diverge sharply on the public record.
+          </p>
+
+          <div className="flex-1 grid grid-cols-2 gap-8 min-h-0">
+            {/* NBU's statement */}
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col overflow-hidden anim-slide-left stagger-3">
+              <div className="flex items-center justify-between mb-4 shrink-0">
+                <span className="text-[14px] font-bold tracking-[0.15em] uppercase text-slide-muted">NBU Official Statement</span>
+                <span className="text-[14px] font-semibold text-slide-muted tabular-nums">04 APR 2026</span>
+              </div>
+              <h3 className="text-[24px] font-bold mb-4 shrink-0">National Bank of Uzbekistan</h3>
+              <div className="space-y-4 text-[19px] text-slide-muted leading-[1.6] overflow-hidden">
+                <p>
+                  On 4 April 2026, NBU published a public statement on its official website addressing the dispute and the criminal proceedings against Solfy CA's director.
+                </p>
+                <p>
+                  Counsel for Solfy publicly characterizes the statement as <span className="font-bold text-slide-foreground">"demonstrably false"</span> and contends it amounts to disinformation by a central banking authority during active settlement negotiations.
+                </p>
+                <p className="text-[14px] text-slide-muted/80 italic">
+                  CAJI reproduces this attribution as it appears in published sources and takes no independent position on the accuracy of either statement.
+                </p>
+              </div>
+              <a href="https://nbu.uz" target="_blank" rel="noopener noreferrer" className="mt-auto pt-4 text-[14px] text-slide-primary font-semibold tracking-wider uppercase hover:underline shrink-0">
+                Source: nbu.uz →
+              </a>
+            </div>
+
+            {/* Counsel response */}
+            <div className="bg-slide-primary/5 border-l-4 border-slide-primary rounded-sm p-8 flex flex-col overflow-hidden anim-slide-right stagger-3">
+              <div className="flex items-center justify-between mb-4 shrink-0">
+                <span className="text-[14px] font-bold tracking-[0.15em] uppercase text-slide-primary">Counsel for Solfy — Response</span>
+                <span className="text-[14px] font-semibold text-slide-muted tabular-nums">APR 2026</span>
+              </div>
+              <h3 className="text-[24px] font-bold mb-4 shrink-0">Amsterdam &amp; Partners LLP</h3>
+              <div className="space-y-3 text-[19px] text-slide-muted leading-[1.55] overflow-hidden">
+                <p className="text-slide-foreground italic font-semibold">
+                  "The Bank employed coercive measures reminiscent of a bygone era, leveraging state administrative resources to exert pressure on a private commercial dispute."
+                </p>
+                <p>
+                  Counsel states the Bank facilitated the arrest and unlawful detention of Mr. Hasanov in an apparent attempt to force a resolution on terms favourable to itself, and that the charges <span className="font-semibold text-slide-foreground">"lack any factual or legal foundation."</span>
+                </p>
+                <p>
+                  Counsel has formally written to the President of Uzbekistan and to relevant international bodies, calling for immediate release and resumption of good-faith negotiations.
+                </p>
+                <p className="text-slide-foreground font-semibold">
+                  A global press conference is being convened out of London.
+                </p>
+              </div>
+              <a href="https://amsterdamandpartners.com/press-release-amsterdam-partners-llp-to-represent-fintech-platform-solfy-in-dispute-with-national-bank-of-uzbekistan" target="_blank" rel="noopener noreferrer" className="mt-auto pt-4 text-[14px] text-slide-primary font-semibold tracking-wider uppercase hover:underline shrink-0">
+                Source: amsterdamandpartners.com →
+              </a>
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
+    ),
+  },
+
+  // ═══ 18. MEDIA COVERAGE ═══
   {
     id: "solfy-media",
     title: "Media Coverage",
@@ -1003,33 +1082,82 @@ export const slides: SlideData[] = [
           <h2 className="text-[44px] font-extrabold leading-[1.05] tracking-tight mb-2">
             The world is watching
           </h2>
-          <p className="text-[19px] text-slide-muted mb-10">
-            International media spotlight on NBU's conduct and Uzbekistan's investment climate. Coverage ongoing.
+          <p className="text-[19px] text-slide-muted mb-8">
+            Selected coverage of the NBU–Solfy dispute across Russian and English-language press. Story is developing.
           </p>
-          <div className="grid grid-cols-2 gap-6 flex-1">
+          <div className="grid grid-cols-3 gap-5 flex-1 min-h-0">
             {[
-              { source: "IBTimes", date: "March 2026", quote: "Reports highlight institutional gaps undermining Uzbekistan's reform credibility", detail: "Links senior NBU leadership to communications the investor side characterizes as threatening. CAJI reports this attribution as it appears in published sources and takes no independent position on its accuracy. Identifies the Solfy case as a litmus test for foreign investor protection.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
-              { source: "PR Newswire / Investing.com", date: "April 2026", quote: "Coverage calls for cessation of irregular detentions and adherence to international legal standards", detail: "Formal press release distributed globally via PR Newswire. Covered by Investing.com, Yahoo Finance, and financial wire services.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
-              { source: "UA.NEWS", date: "2025-2026", quote: "Ongoing reporting on NBU leadership's role in the dispute", detail: "Coverage naming specific individuals. Additional reporting across Russian-language Telegram channels and international outlets. (Source attribution maintained.)", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
-              { source: "UzDaily.uz", date: "February 2026", quote: "Reports on Poletaev-Solfy legal engagement with NBU", detail: "Domestic Uzbek media reporting on the investor's international legal engagement, signaling the dispute has entered the international arena.", color: "border-l-slide-primary", bg: "bg-slide-primary/5" },
+              {
+                source: "Vedomosti",
+                lang: "RU",
+                date: "04 APR 2026",
+                quote: "«Задержан гендиректор финтех-компании Solfy»",
+                detail: "Reports the 27 March arrest of Hasanov on suspicion of embezzlement; frames it as following the breakdown of autumn 2025 settlement talks between NBU and Solfy investors.",
+                url: "https://www.vedomosti.ru/politics/news/2026/04/04/1187949-zaderzhan-gendirektor-finteh-kompanii",
+              },
+              {
+                source: "Nezavisimaya Gazeta",
+                lang: "RU",
+                date: "01 APR 2026",
+                quote: "«В Узбекистане „взяли в заложники“ директора финтех-стартапа Solfy»",
+                detail: "Cites Solfy's international counsel describing the arrest as 'hostage-taking for commercial purposes,' timed immediately after NBU rejected investor settlement proposals.",
+                url: "https://www.ng.ru/news/836631.html",
+              },
+              {
+                source: "Vek (wek.ru)",
+                lang: "RU",
+                date: "10 APR 2026",
+                quote: "«„Это не дело, это заложник“ и ещё три удара по репутации»",
+                detail: "Argues the embezzlement charge is pretextual leverage in a commercial dispute and lists reputational consequences for Uzbekistan's investment image.",
+                url: "https://wek.ru/yeto-ne-delo-yeto-zalozhnik-i-eshhyo-tri-udara-po-reputacii",
+              },
+              {
+                source: "KZ24",
+                lang: "RU",
+                date: "06 APR 2026",
+                quote: "«Громкий арест в Ташкенте: как дело Solfy может ударить по инвестклимату»",
+                detail: "Regional Central-Asia angle: criminal prosecution as commercial leverage risks deterring foreign tech capital across the region.",
+                url: "https://kz24.news/news/world/gromkiy-arest-v-tashkente-kak-delo-finteh-kompanii-solfy-mozhet-udarit-po-investklimatu-tsentralnoy-azii.html",
+              },
+              {
+                source: "UA.News",
+                lang: "EN",
+                date: "26 FEB 2026",
+                quote: "Counsel preparing lawsuits against Uzbekistan over pressure on Solfy",
+                detail: "Reports that Solfy investors received threats publicly attributed to NBU chairman Mirsoatov and that lawsuits are being prepared against Uzbek state bodies.",
+                url: "https://ua.news/en/finansi/turetskii-advokat-gotuie-pozovi-proti-uzbekistanu-za-tisk-na-fintekh-kompaniiu-solfy",
+              },
+              {
+                source: "Investing.com",
+                lang: "EN",
+                date: "03 APR 2026",
+                quote: "Firm urges Uzbekistan to cease irregular detentions and uphold international legal standards",
+                detail: "Public escalation by Amsterdam & Partners framing Hasanov's detention during settlement talks as improper state pressure threatening investor confidence.",
+                url: "https://www.investing.com/news/press-releases/amsterdam--partners-llp-firm-urges-uzbekistan-government-to-cease-irregular-detentions-and-uphold-international-legal-standards-4596880",
+              },
             ].map((item, i) => (
-              <div key={item.source} className={`${item.bg} border-l-4 ${item.color} rounded-r-2xl p-7 flex flex-col justify-between`} style={{ animation: `slide-up 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[24px] font-extrabold tracking-tight">{item.source}</span>
-                    <span className="text-[14px] font-semibold text-slide-muted tracking-wider uppercase">{item.date}</span>
-                  </div>
-                  <p className="text-[22px] font-bold leading-snug mb-4 italic">
-                    {item.quote}
-                  </p>
-                  <p className="text-[19px] text-slide-muted leading-relaxed">{item.detail}</p>
+              <a key={item.source} href={item.url} target="_blank" rel="noopener noreferrer"
+                className="bg-slide-surface border-l-2 border-slide-primary rounded-sm p-6 flex flex-col hover:bg-slide-primary/5 transition-colors group"
+                style={{ animation: `slide-up 0.4s ease-out ${0.25 + i * 0.1}s both` }}
+              >
+                <div className="flex items-center justify-between mb-3 shrink-0">
+                  <span className="text-[19px] font-extrabold tracking-tight">{item.source}</span>
+                  <span className="text-[11px] font-bold text-slide-primary tracking-[0.15em]">{item.lang}</span>
                 </div>
-              </div>
+                <p className="text-[11px] font-semibold text-slide-muted tracking-[0.15em] mb-3">{item.date}</p>
+                <p className="text-[16px] font-semibold leading-snug mb-3 italic text-slide-foreground">
+                  {item.quote}
+                </p>
+                <p className="text-[14px] text-slide-muted leading-relaxed flex-1">{item.detail}</p>
+                <span className="text-[11px] text-slide-primary font-semibold tracking-wider uppercase mt-3 shrink-0 group-hover:underline">Read →</span>
+              </a>
             ))}
           </div>
-          <div className="mt-6 bg-slide-foreground text-primary-foreground rounded-sm px-8 py-5 flex items-center justify-between" style={{ animation: "fade-in 0.5s ease-out 1s both" }}>
-            <p className="text-[19px] font-semibold">Coverage is accelerating. Additional media placements are scheduled across tier-1 international outlets.</p>
-            <span className="text-[24px] font-bold text-slide-primary ml-6 shrink-0">→</span>
+          <div className="mt-5 flex items-center justify-between gap-6 border-t border-slide-foreground/10 pt-4">
+            <p className="text-[14px] text-slide-muted leading-relaxed">
+              <span className="font-bold text-slide-foreground">Additional coverage:</span> UzDaily (uzdaily.uz, 27 Feb 2026) · Repost.uz (Solfy partnership background, 20 Jun 2023) · Reuters/Xinhua wire (Fitch BB affirmation of NBU, 15 Mar 2026).
+            </p>
+            <span className="text-[19px] font-bold text-slide-primary shrink-0">→</span>
           </div>
         </div>
       </SlideLayout>
@@ -1093,50 +1221,76 @@ export const slides: SlideData[] = [
             <CAJILogo variant="light" />
           </div>
 
-          <div className="flex-1 flex flex-col justify-center items-center text-center">
-            <h2 className="text-[44px] font-extrabold text-primary-foreground leading-[1.05] tracking-tight mb-4" style={{ animation: "slide-up 0.6s ease-out 0.2s both" }}>
-              Request a Confidential Briefing
-            </h2>
-            <p className="text-[22px] text-primary-foreground/60 max-w-[800px] leading-relaxed mb-10" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
-              We invite your compliance, legal, or investment team to a 30-minute confidential Zoom briefing to discuss the documented facts.
-            </p>
+          <div className="flex-1 flex flex-col justify-center">
+            <div className="text-center mb-10">
+              <h2 className="text-[44px] font-extrabold text-primary-foreground leading-[1.05] tracking-tight mb-4" style={{ animation: "slide-up 0.6s ease-out 0.2s both" }}>
+                Request a Confidential Briefing
+              </h2>
+              <div className="w-16 h-px bg-slide-primary mx-auto mb-4" />
+              <p className="text-[22px] text-primary-foreground/60 max-w-[900px] mx-auto leading-relaxed" style={{ animation: "fade-in 0.5s ease-out 0.4s both" }}>
+                We invite compliance, legal, and investment teams to a 30-minute confidential Zoom briefing on the documented facts.
+              </p>
+            </div>
 
-            {/* CTA Button - full width above cards */}
+            {/* CTA Button */}
             <a
               href="https://www.caji.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full max-w-[1200px] flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-primary-foreground rounded-sm px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
+              className="w-full flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-primary-foreground rounded-sm px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
               <span className="text-[22px] font-bold">Schedule a Briefing</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
 
-            <div className="w-full max-w-[760px]">
-              {/* CAJI */}
-              <div className="bg-slide-bg/5 backdrop-blur-sm border border-primary-foreground/10 rounded-sm p-10 text-left" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
-                <h3 className="text-[24px] font-extrabold text-primary-foreground mb-1">Central Asia Justice Initiative</h3>
-                <p className="text-[14px] text-slide-primary font-semibold tracking-wider uppercase mb-8">Human Rights & Rule of Law Advocacy</p>
+            <div className="grid grid-cols-2 gap-6">
+              {/* Briefing Held With */}
+              <div className="border border-primary-foreground/15 rounded-sm p-8" style={{ animation: "slide-in-left 0.5s ease-out 0.7s both" }}>
+                <p className="text-[14px] text-slide-primary font-semibold tracking-[0.15em] uppercase mb-5">Briefing Held With</p>
                 <div className="space-y-5">
                   <div>
-                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Contact</p>
-                    <p className="text-[22px] text-primary-foreground font-semibold">Eugene Gourevitch</p>
-                    <p className="text-[14px] text-primary-foreground/60">Managing Principal</p>
+                    <p className="text-[22px] text-primary-foreground font-semibold leading-snug">CAJI Board of Directors</p>
+                    <p className="text-[14px] text-primary-foreground/50 mt-1">Central Asia Justice Initiative</p>
                   </div>
-                  <div>
-                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Email</p>
-                    <p className="text-[22px] text-primary-foreground font-semibold">eugene@caji.org</p>
-                  </div>
-                  <div>
-                    <p className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase mb-1">Web</p>
-                    <a href="https://www.caji.org" target="_blank" rel="noopener noreferrer" className="text-[22px] text-slide-primary font-semibold hover:underline">
-                      www.caji.org
-                    </a>
+                  <div className="pt-4 border-t border-primary-foreground/10">
+                    <p className="text-[22px] text-primary-foreground font-semibold leading-snug">Keith Silverstein, Esq.</p>
+                    <p className="text-[14px] text-primary-foreground/50 mt-1">Legal Counsel</p>
                   </div>
                 </div>
               </div>
 
+              {/* Contact */}
+              <div className="border border-primary-foreground/15 rounded-sm p-8" style={{ animation: "slide-in-right 0.5s ease-out 0.7s both" }}>
+                <p className="text-[14px] text-slide-primary font-semibold tracking-[0.15em] uppercase mb-5">Contact</p>
+                <div className="space-y-4">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase w-[80px] shrink-0">Web</span>
+                    <a href="https://www.caji.org" target="_blank" rel="noopener noreferrer" className="text-[19px] text-primary-foreground font-semibold hover:text-slide-primary transition-colors">
+                      www.caji.org
+                    </a>
+                  </div>
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase w-[80px] shrink-0">Address</span>
+                    <p className="text-[19px] text-primary-foreground/80 leading-snug">
+                      Central Asia Justice Initiative, Inc.<br />
+                      <span className="text-primary-foreground/55">Delaware · United States</span>
+                    </p>
+                  </div>
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase w-[80px] shrink-0">Email</span>
+                    <a href="mailto:info@caji.org" className="text-[19px] text-primary-foreground font-semibold hover:text-slide-primary transition-colors">
+                      info@caji.org
+                    </a>
+                  </div>
+                  <div className="flex items-baseline gap-4 pt-3 border-t border-primary-foreground/10">
+                    <span className="text-[14px] text-primary-foreground/40 tracking-[0.15em] uppercase w-[80px] shrink-0">Tip Line</span>
+                    <a href="https://nbu.caji.org" target="_blank" rel="noopener noreferrer" className="text-[19px] text-primary-foreground font-semibold hover:text-slide-primary transition-colors">
+                      nbu.caji.org
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
