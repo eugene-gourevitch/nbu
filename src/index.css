@@ -61,6 +61,13 @@
     --type-meta: 16px;
     --type-caption: 13px;
     --type-micro: 11px;
+
+    /* Motion easing primitives (premium, choreographed) */
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);      /* iOS decelerate, primary entrance */
+    --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);         /* attention grabs, gentle overshoot feel */
+    --ease-in-quart: cubic-bezier(0.7, 0, 0.84, 0);       /* exits / accelerate */
+    --ease-sigmoid: cubic-bezier(0.65, 0, 0.35, 1);       /* neutral, balanced */
   }
 
   .dark {
@@ -165,32 +172,32 @@
 }
 
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scale-in {
-  from { opacity: 0; transform: scale(0.85); }
+  from { opacity: 0; transform: scale(0.96); }
   to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slide-in-left {
-  from { opacity: 0; transform: translateX(-20px); }
+  from { opacity: 0; transform: translateX(-12px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slide-in-right {
-  from { opacity: 0; transform: translateX(20px); }
+  from { opacity: 0; transform: translateX(12px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fade-scale {
-  from { opacity: 0; transform: scale(0.96); }
+  from { opacity: 0; transform: scale(0.98); }
   to { opacity: 1; transform: scale(1); }
 }
 
@@ -201,43 +208,71 @@
 
 @keyframes slow-zoom {
   from { transform: scale(1); }
-  to { transform: scale(1.06); }
+  to { transform: scale(1.04); }
 }
 
-/* Stagger delay utilities */
-.stagger-1 { animation-delay: 0.05s; }
-.stagger-2 { animation-delay: 0.12s; }
-.stagger-3 { animation-delay: 0.20s; }
-.stagger-4 { animation-delay: 0.30s; }
-.stagger-5 { animation-delay: 0.42s; }
-.stagger-6 { animation-delay: 0.55s; }
-.stagger-7 { animation-delay: 0.65s; }
-.stagger-8 { animation-delay: 0.75s; }
+/* Optional polish keyframes (non-breaking additions) */
+@keyframes mask-reveal {
+  from { clip-path: inset(0 100% 0 0); opacity: 0; }
+  to { clip-path: inset(0 0 0 0); opacity: 1; }
+}
 
-/* Base animation application */
+@keyframes line-draw {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+
+/* Stagger delay utilities — logarithmic chain, capped < 0.65s for choreographed reveal */
+.stagger-1 { animation-delay: 0.04s; }
+.stagger-2 { animation-delay: 0.10s; }
+.stagger-3 { animation-delay: 0.16s; }
+.stagger-4 { animation-delay: 0.23s; }
+.stagger-5 { animation-delay: 0.31s; }
+.stagger-6 { animation-delay: 0.40s; }
+.stagger-7 { animation-delay: 0.50s; }
+.stagger-8 { animation-delay: 0.60s; }
+
+/* Base animation application — unified iOS decelerate easing for choreographed feel */
 .anim-fade-up {
   opacity: 0;
-  animation: slide-up 0.6s ease-out forwards;
+  animation: slide-up 0.5s var(--ease-out-expo) forwards;
 }
 
 .anim-fade-in {
   opacity: 0;
-  animation: fade-in 0.5s ease-out forwards;
+  animation: fade-in 0.45s var(--ease-out-expo) forwards;
 }
 
 .anim-scale-in {
   opacity: 0;
-  animation: fade-scale 0.5s ease-out forwards;
+  animation: fade-scale 0.5s var(--ease-out-expo) forwards;
 }
 
 .anim-slide-left {
   opacity: 0;
-  animation: slide-in-left 0.5s ease-out forwards;
+  animation: slide-in-left 0.5s var(--ease-out-expo) forwards;
 }
 
 .anim-slide-right {
   opacity: 0;
-  animation: slide-in-right 0.5s ease-out forwards;
+  animation: slide-in-right 0.5s var(--ease-out-expo) forwards;
+}
+
+/* Optional refined utility classes */
+.anim-elegant-up {
+  opacity: 0;
+  animation: slide-up 0.55s var(--ease-out-quart) forwards;
+}
+
+.anim-mask-reveal {
+  opacity: 0;
+  animation: mask-reveal 0.65s var(--ease-out-expo) forwards;
+}
+
+.anim-line-draw {
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: line-draw 0.6s var(--ease-out-quart) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

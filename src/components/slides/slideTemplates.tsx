@@ -483,27 +483,31 @@ export const ComparisonTemplate = ({
       <SlidePill label={pillLabel} variant="light" />
       <h2 className="mt-8 text-[40px] font-semibold leading-[1.1] mb-12 anim-fade-up stagger-1">{headline}</h2>
       <div className="flex-1 grid grid-cols-2 gap-0">
-        <div className="bg-slide-surface rounded-[6px] p-10 flex flex-col gap-6 anim-slide-left stagger-2">
-          <h3 className="text-[24px] font-semibold text-slide-muted mb-2">{leftTitle}</h3>
-          {leftItems.map((item, i) => (
-            <div key={item} className="flex items-center gap-4 text-[20px] text-slide-muted" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
-              <span className="w-6 h-6 rounded-sm bg-slide-muted/20 flex items-center justify-center text-slide-muted">
-                <XIcon size={14} aria-hidden="true" />
-              </span>
-              {item}
-            </div>
-          ))}
+        <div className="bg-slide-surface rounded-[6px] p-12 flex flex-col anim-slide-left stagger-2">
+          <h3 className="text-[24px] font-semibold text-slide-muted mb-6">{leftTitle}</h3>
+          <div className="flex-1 flex flex-col justify-around gap-6">
+            {leftItems.map((item, i) => (
+              <div key={item} className="flex items-start gap-4 text-[22px] text-slide-muted leading-snug" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
+                <span className="w-7 h-7 rounded-sm bg-slide-muted/20 flex items-center justify-center text-slide-muted shrink-0 mt-1">
+                  <XIcon size={16} aria-hidden="true" />
+                </span>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="bg-slide-primary rounded-[6px] p-10 flex flex-col gap-6 text-primary-foreground anim-slide-right stagger-2">
-          <h3 className="text-[24px] font-semibold mb-2">{rightTitle}</h3>
-          {rightItems.map((item, i) => (
-            <div key={item} className="flex items-center gap-4 text-[20px]" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
-              <span className="w-6 h-6 rounded-sm bg-slide-bg/20 flex items-center justify-center">
-                <Check size={14} aria-hidden="true" />
-              </span>
-              {item}
-            </div>
-          ))}
+        <div className="bg-slide-primary rounded-[6px] p-12 flex flex-col text-primary-foreground anim-slide-right stagger-2">
+          <h3 className="text-[24px] font-semibold mb-6">{rightTitle}</h3>
+          <div className="flex-1 flex flex-col justify-around gap-6">
+            {rightItems.map((item, i) => (
+              <div key={item} className="flex items-start gap-4 text-[22px] leading-snug" style={{ animation: `fade-in 0.4s ease-out ${0.4 + i * 0.12}s both` }}>
+                <span className="w-7 h-7 rounded-sm bg-slide-bg/20 flex items-center justify-center shrink-0 mt-1">
+                  <Check size={16} aria-hidden="true" />
+                </span>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

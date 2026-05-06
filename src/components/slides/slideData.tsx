@@ -20,6 +20,13 @@ import uktamPhoto from "@/assets/uktam-photo.jpg";
 import mirsoatovPhoto from "@/assets/mirsoatov-photo.jpg";
 import poletaevPhoto from "@/assets/poletaev-photo.jpg";
 import { Youtube, Instagram, Send, AtSign, Music } from "lucide-react";
+import CapTableBar from "./charts/CapTableBar";
+import ProportionalTimeline from "./charts/ProportionalTimeline";
+import DualRoleDiagram from "./charts/DualRoleDiagram";
+import DetentionScale from "./charts/DetentionScale";
+import HierarchyLadder from "./charts/HierarchyLadder";
+import FdiBars from "./charts/FdiBars";
+import ManagementRoster from "./charts/ManagementRoster";
 
 const DETENTION_DATE = new Date("2026-03-27T00:00:00+05:00"); // Tashkent time
 
@@ -80,18 +87,18 @@ const disclaimerSlide: SlideData = {
     <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides} showConfidentiality={false}>
       <div className="flex flex-col h-full p-[80px]">
         <CAJILogo />
-        <div className="flex-1 flex flex-col justify-center max-w-[1400px]">
+        <div className="flex-1 flex flex-col justify-center max-w-[1500px]">
           <SlidePill label="BRIEFING NOTICE" />
           <h2 className="text-[40px] font-bold text-slide-foreground mt-6 leading-tight">
             Notice on sources, scope, and distribution
           </h2>
-          <div className="mt-10 space-y-6 text-[20px] leading-[1.7] text-slide-muted">
+          <div className="mt-10 space-y-8 text-[22px] leading-[1.7] text-slide-muted">
             <div>
-              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">About this briefing</h3>
+              <h3 className="text-[26px] font-bold text-slide-foreground mb-3">About this briefing</h3>
               <p>This document presents CAJI’s analysis of publicly available information and materials provided by parties aligned with the investor side of the Solfy CA dispute. CAJI has not had access to materials, evidence, or legal positions held by the National Bank of Uzbekistan or the Government of Uzbekistan, and the characterizations contained herein reflect one interpretation of contested facts. Readers conducting their own due diligence should seek information directly from all parties to the dispute.</p>
             </div>
             <div>
-              <h3 className="text-[24px] font-bold text-slide-foreground mb-2">About distribution</h3>
+              <h3 className="text-[26px] font-bold text-slide-foreground mb-3">About distribution</h3>
               <p>This briefing has been prepared by Central Asia Justice Initiative for distribution to international financial institutions, correspondent banks, regulators, rating agencies, and members of the press. CAJI welcomes redistribution and citation with attribution.</p>
             </div>
           </div>
@@ -225,6 +232,57 @@ export const slides: SlideData[] = [
     ),
   },
 
+  // ═══ 3. INVESTORS ARE WATCHING (macro frame opener) ═══
+  {
+    id: "solfy-investors-watching",
+    title: "Investors Are Watching",
+    component: (props) => (
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-10">
+            <SlidePill label="MACRO FRAME" />
+            <CAJILogo />
+          </div>
+          <h2 className="text-[40px] font-semibold leading-[1.1] mb-12 anim-fade-up stagger-1">
+            Investors are watching
+          </h2>
+          <div className="flex-1 grid grid-cols-3 gap-12 items-center">
+            <div className="col-span-2 anim-fade-up stagger-2">
+              <div className="w-24 h-px bg-slide-primary mb-8" />
+              <blockquote
+                className="font-display text-[42px] leading-[1.25] text-slide-foreground italic"
+                style={{ fontFamily: "var(--font-serif, 'Cormorant Garamond', Cormorant, Georgia, serif)" }}
+              >
+                &ldquo;Investors doing due diligence on Uzbekistan are not only reading the Bloomberg coverage of new listings rules &mdash; they are also reading cases like this one, and the conclusions they draw from it affect allocation decisions.&rdquo;
+              </blockquote>
+              <p className="mt-8 text-[18px] text-slide-muted leading-relaxed">
+                &mdash; Matt Emma, <span className="italic">International Business Times</span>, 16 March 2026
+                <span className="block text-[14px] text-slide-muted/70 mt-1">11 days before the Hasanov arrest</span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-5 anim-fade-up stagger-3">
+              {[
+                { tag: "NAMED WESTERN BYLINE", body: "Bloomberg-adjacent commentary, attributed to a named editor in English-language press." },
+                { tag: "PRE-ARREST ANALYSIS", body: "Published before Hasanov&rsquo;s 27 March 2026 detention &mdash; not a reaction to it." },
+                { tag: "SOLFY NAMED EXPLICITLY", body: "The dispute is treated as the diagnostic case for institutional credibility." },
+              ].map((c) => (
+                <div key={c.tag} className="border-l-2 border-slide-primary/60 pl-5 py-1">
+                  <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-1">
+                    {c.tag}
+                  </p>
+                  <p
+                    className="text-[14px] text-slide-muted leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: c.body }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
+    ),
+  },
+
   // ═══ 4. BACKGROUND ═══
   {
     id: "solfy-background",
@@ -236,15 +294,30 @@ export const slides: SlideData[] = [
             <SlidePill label="BACKGROUND" />
             <CAJILogo />
           </div>
-          <p className="text-[20px] text-slide-muted max-w-[1400px] leading-relaxed mb-8 anim-fade-in stagger-1">
+          <p className="text-[20px] text-slide-muted max-w-[1400px] leading-relaxed mb-6 anim-fade-in stagger-1">
             A fintech joint venture that became the center of an investor-state dispute with international implications.
           </p>
 
+          <div className="mb-6 anim-fade-in stagger-2">
+            <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted mb-3">
+              Solfy CA cap table
+            </p>
+            <CapTableBar
+              segments={[
+                { label: "Poletaev (Solvy Cyprus)", pct: 50 },
+                { label: "Other", pct: 25 },
+                { label: "Full Stack Solution", pct: 20 },
+                { label: "NBU", pct: 5, highlight: true },
+              ]}
+              caption="NBU is a 5% equity holder and the criminal complainant — see Slide 9 (Dual Role)."
+            />
+          </div>
+
           <div className="flex-1 grid grid-cols-2 gap-10 min-h-0">
             {/* The Venture */}
-            <div className="bg-slide-surface rounded-sm p-8 flex flex-col overflow-hidden anim-slide-left stagger-2">
-              <h3 className="text-[24px] font-bold text-slide-primary mb-5 shrink-0">The Venture</h3>
-              <div className="space-y-4 text-[16px] text-slide-muted leading-[1.65] overflow-hidden">
+            <div className="bg-slide-surface rounded-sm p-12 flex flex-col justify-center overflow-hidden anim-slide-left stagger-2">
+              <h3 className="text-[28px] font-bold text-slide-primary mb-6 shrink-0">The Venture</h3>
+              <div className="space-y-6 text-[20px] text-slide-muted leading-[1.6] overflow-hidden">
                 <p>
                   <span className="font-bold text-slide-foreground">Solfy CA LLC</span> was established in Tashkent in June 2020 as a fintech joint venture. Maxim Poletaev held 50% beneficial interest via Solvy Cyprus Limited. NBU held 5%. Full Stack Solution held 20%.
                 </p>
@@ -258,9 +331,9 @@ export const slides: SlideData[] = [
             </div>
 
             {/* The Collapse */}
-            <div className="bg-slide-surface rounded-sm p-8 flex flex-col overflow-hidden anim-slide-right stagger-2">
-              <h3 className="text-[24px] font-bold text-slide-primary mb-5 shrink-0">The Collapse</h3>
-              <div className="space-y-4 text-[16px] text-slide-muted leading-[1.65] overflow-hidden">
+            <div className="bg-slide-surface rounded-sm p-12 flex flex-col justify-center overflow-hidden anim-slide-right stagger-2">
+              <h3 className="text-[28px] font-bold text-slide-primary mb-6 shrink-0">The Collapse</h3>
+              <div className="space-y-6 text-[20px] text-slide-muted leading-[1.6] overflow-hidden">
                 <p>
                   <span className="font-bold text-slide-foreground">Partnership terminated.</span> NBU ended the relationship. Solfy was declared bankrupt. A contractual dispute over obligations under Agreement No. 289/37 was adjudicated in Uzbek civil courts (December 2024, May 2025).
                 </p>
@@ -299,9 +372,9 @@ export const slides: SlideData[] = [
 
           <div className="grid grid-cols-3 gap-6 flex-1 min-h-0">
             {/* Column 1: Identity */}
-            <div className="bg-slide-surface rounded-sm p-7 flex flex-col overflow-hidden anim-fade-up stagger-2">
-              <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Institutional Identity</h3>
-              <div className="space-y-3 text-[16px] text-slide-muted leading-[1.6] overflow-hidden">
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col justify-center overflow-hidden anim-fade-up stagger-2">
+              <h3 className="text-[28px] font-bold text-slide-primary mb-6 shrink-0">Institutional Identity</h3>
+              <div className="space-y-5 text-[20px] text-slide-muted leading-[1.55] overflow-hidden">
                 <p><span className="font-bold text-slide-foreground">Founded 1991</span> as Uzbekistan’s primary foreign trade bank. Largest commercial bank by total assets.</p>
                 <p><span className="font-bold text-slide-foreground">100% state-owned.</span> Fund for Reconstruction & Development (59.25%) and Ministry of Economy & Finance (40.75%).</p>
                 <p><span className="font-bold text-slide-foreground">Authorized capital:</span> UZS 16.7 trillion.</p>
@@ -310,39 +383,39 @@ export const slides: SlideData[] = [
             </div>
 
             {/* Column 2: Capital Markets */}
-            <div className="bg-slide-surface rounded-sm p-7 flex flex-col overflow-hidden anim-fade-up stagger-3">
-              <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Capital Markets Presence</h3>
-              <div className="space-y-4 overflow-hidden">
-                <div className="bg-slide-bg rounded-sm p-5">
-                  <p className="text-[13px] text-slide-muted tracking-[0.15em] uppercase mb-1">LSE Eurobond</p>
-                  <p className="text-[16px] font-bold">2020 issuance, Reg S / 144A</p>
-                  <p className="text-[13px] text-slide-muted mt-1">Outstanding obligations to international bondholders</p>
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col justify-center overflow-hidden anim-fade-up stagger-3">
+              <h3 className="text-[28px] font-bold text-slide-primary mb-6 shrink-0">Capital Markets Presence</h3>
+              <div className="space-y-6 overflow-hidden">
+                <div className="bg-slide-bg rounded-sm p-6">
+                  <p className="text-[13px] text-slide-muted tracking-[0.15em] uppercase mb-2">LSE Eurobond</p>
+                  <p className="text-[20px] font-bold">2020 issuance, Reg S / 144A</p>
+                  <p className="text-[16px] text-slide-muted mt-2">Outstanding obligations to international bondholders</p>
                 </div>
                 <div>
-                  <p className="text-[13px] text-slide-primary font-bold tracking-[0.15em] uppercase mb-2">Correspondent Banks</p>
-                  <p className="text-[16px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
+                  <p className="text-[13px] text-slide-primary font-bold tracking-[0.15em] uppercase mb-3">Correspondent Banks</p>
+                  <p className="text-[20px] text-slide-muted leading-relaxed">JP Morgan Chase, Citibank, Standard Chartered, Deutsche Bank, Natixis, SMBC</p>
                 </div>
               </div>
             </div>
 
             {/* Column 3: Development Finance */}
-            <div className="bg-slide-surface rounded-sm p-7 flex flex-col overflow-hidden anim-fade-up stagger-4">
-              <h3 className="text-[24px] font-bold text-slide-primary mb-4 shrink-0">Development Finance</h3>
-              <div className="space-y-4 overflow-hidden">
+            <div className="bg-slide-surface rounded-sm p-8 flex flex-col overflow-hidden anim-fade-up stagger-4">
+              <h3 className="text-[28px] font-bold text-slide-primary mb-6 shrink-0">Development Finance</h3>
+              <div className="space-y-5 overflow-hidden flex-1">
                 {[
                   { org: "EBRD", role: "Active credit lines. Integrity Risk Policy applies." },
                   { org: "IFC", role: "World Bank Group lending. Performance Standards apply." },
                   { org: "ADB", role: "Development credit facilities." },
                   { org: "MIGA", role: "Political risk guarantees covering NBU exposure." },
                 ].map((item) => (
-                  <div key={item.org} className="flex gap-3">
-                    <span className="text-[13px] font-bold text-slide-foreground w-[52px] shrink-0">{item.org}</span>
-                    <p className="text-[13px] text-slide-muted leading-relaxed">{item.role}</p>
+                  <div key={item.org} className="flex gap-4">
+                    <span className="text-[16px] font-bold text-slide-foreground w-[64px] shrink-0">{item.org}</span>
+                    <p className="text-[16px] text-slide-muted leading-relaxed">{item.role}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-auto pt-4 border-t border-slide-foreground/8">
-                <p className="text-[13px] text-slide-foreground">
+              <div className="mt-auto pt-5 border-t border-slide-foreground/8">
+                <p className="text-[16px] text-slide-foreground leading-relaxed">
                   <span className="font-bold text-slide-primary">Key fact:</span> NBU holds a 5% equity stake in Solfy CA while acting as the criminal complainant against its director.
                 </p>
               </div>
@@ -365,80 +438,92 @@ export const slides: SlideData[] = [
             <CAJILogo />
           </div>
 
-          <div className="flex gap-12 flex-1">
+          <div className="flex gap-8 flex-1 min-h-0">
             {/* Left column */}
-            <div className="w-[35%] flex flex-col anim-slide-left stagger-2">
-              <div className="bg-slide-surface rounded-sm p-8 flex flex-col items-center mb-6">
-                <img src={nbuLogo} alt="NBU Logo" className="w-[120px] h-[120px] object-contain mb-4" />
-                <h3 className="text-[24px] font-bold text-center leading-tight">National Bank for Foreign Economic Activity</h3>
-                <p className="text-[16px] text-slide-muted text-center mt-2">Republic of Uzbekistan</p>
-                <p className="text-[13px] text-slide-muted text-center mt-1">Est. 1991 | Tashkent</p>
+            <div className="w-[35%] flex flex-col gap-3 anim-slide-left stagger-2 min-h-0">
+              <div className="bg-slide-surface rounded-sm p-5 flex items-center gap-4">
+                <img src={nbuLogo} alt="NBU Logo" className="w-[60px] h-[60px] object-contain shrink-0" />
+                <div>
+                  <h3 className="text-[15px] font-bold leading-tight">National Bank for Foreign Economic Activity</h3>
+                  <p className="text-[12px] text-slide-muted mt-0.5">Republic of Uzbekistan · Est. 1991 · Tashkent</p>
+                </div>
               </div>
 
-              <div className="bg-slide-surface rounded-sm p-6 mb-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Shareholding Structure</h4>
-                <div className="space-y-3">
+              <div className="bg-slide-surface rounded-sm p-4">
+                <h4 className="text-[14px] font-bold text-slide-primary mb-2">Shareholding Structure</h4>
+                <div className="space-y-2">
                   <div>
-                    <div className="flex justify-between text-[16px] font-semibold mb-1">
-                      <span>Fund for Reconstruction & Development</span>
-                      <span className="text-slide-primary">59.25%</span>
+                    <div className="flex justify-between text-[12px] font-semibold mb-0.5">
+                      <span>Fund for Reconstruction &amp; Development</span>
+                      <span className="text-slide-primary tabular-nums">59.25%</span>
                     </div>
-                    <div className="w-full h-2 bg-slide-primary/10 rounded-sm overflow-hidden">
+                    <div className="w-full h-1.5 bg-slide-primary/10 rounded-sm overflow-hidden">
                       <div className="h-full bg-slide-primary rounded-sm" style={{ width: "59.25%" }} />
                     </div>
                   </div>
                   <div>
-                    <div className="flex justify-between text-[16px] font-semibold mb-1">
-                      <span>Ministry of Economy & Finance</span>
-                      <span className="text-slide-primary">40.75%</span>
+                    <div className="flex justify-between text-[12px] font-semibold mb-0.5">
+                      <span>Ministry of Economy &amp; Finance</span>
+                      <span className="text-slide-primary tabular-nums">40.75%</span>
                     </div>
-                    <div className="w-full h-2 bg-slide-primary/10 rounded-sm overflow-hidden">
+                    <div className="w-full h-1.5 bg-slide-primary/10 rounded-sm overflow-hidden">
                       <div className="h-full bg-slide-primary rounded-sm" style={{ width: "40.75%" }} />
                     </div>
                   </div>
                 </div>
-                <p className="text-[16px] text-slide-muted mt-3">100% of shares held by state entities. Total authorized capital: UZS 16.7 trillion.</p>
+                <p className="text-[11px] text-slide-muted mt-2 leading-snug">
+                  100% state-held. Authorized capital UZS 16.7T.
+                </p>
               </div>
 
-              <div className="bg-slide-surface rounded-sm p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-3">Credit Ratings</h4>
-                <div className="space-y-2 text-[16px]">
-                  <div className="flex justify-between"><span className="text-slide-muted">S&P</span><span className="font-bold">BB (stable)</span></div>
-                  <div className="flex justify-between"><span className="text-slide-muted">Fitch</span><span className="font-bold">BB (stable)</span></div>
-                  <div className="flex justify-between"><span className="text-slide-muted">Moody’s</span><span className="font-bold">Ba3 (stable)</span></div>
+              <div className="bg-slide-surface rounded-sm p-4">
+                <h4 className="text-[14px] font-bold text-slide-primary mb-2">Credit Ratings</h4>
+                <div className="grid grid-cols-3 gap-2 text-[13px]">
+                  <div><span className="text-slide-muted">S&amp;P</span> <span className="font-bold">BB</span></div>
+                  <div><span className="text-slide-muted">Fitch</span> <span className="font-bold">BB</span></div>
+                  <div><span className="text-slide-muted">Moody&rsquo;s</span> <span className="font-bold">Ba3</span></div>
                 </div>
-                <a href="https://www.thestar.com.my/news/world/2026/03/15/fitch-affirms-national-bank-of-uzbekistan039s-default-ratings-at-039bb039-with-stable-outlook" target="_blank" rel="noopener noreferrer" className="block mt-3 pt-3 border-t border-slide-foreground/10 text-[13px] text-slide-primary font-semibold hover:underline">
-                  Fitch affirmation, 15 Mar 2026 →
-                </a>
+                <p className="text-[11px] text-slide-foreground mt-2 leading-snug">
+                  Sovereign upgraded BB&minus; → BB in 2025; Moody&rsquo;s &amp; S&amp;P outlook positive. <span className="font-bold text-slide-primary">Trajectory at risk.</span>
+                  {" "}
+                  <a href="https://daryo.uz" target="_blank" rel="noopener noreferrer" className="text-slide-primary font-semibold hover:underline">Daryo.uz, 27 Jun 2025 →</a>
+                </p>
+              </div>
+
+              <div className="bg-slide-primary/5 border border-slide-primary/20 rounded-sm p-4">
+                <p className="text-[10px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-1">
+                  Russia-facing subsidiary
+                </p>
+                <p className="text-[13px] font-bold text-slide-foreground leading-tight">
+                  Asia-Invest Bank (Moscow)
+                </p>
+                <p className="text-[11px] text-slide-muted leading-snug mt-0.5">
+                  Wholly owned by NBU · ИНН 7724187003 · Bank of Russia license #3303
+                </p>
+                <p className="text-[11px] text-slide-foreground/80 leading-snug mt-1.5">
+                  Structurally analogous to four banks (Azerbaijan/Kyrgyzstan/Laos) sanctioned in EU&rsquo;s 20th sanctions package, April 2026.
+                </p>
               </div>
             </div>
 
             {/* Right column */}
-            <div className="flex-1 flex flex-col gap-6 justify-between anim-slide-right stagger-3">
-              <div className="bg-slide-surface rounded-sm p-6">
-                <h4 className="text-[20px] font-bold text-slide-primary mb-4">Management Board</h4>
-                <div className="space-y-3">
-                  {[
-                    { name: "Alisher Mirsoatov", role: "Chairman (since Nov 2017)" },
-                    { name: "Sardorbek Usmanbekov", role: "First Deputy Chairman" },
-                    { name: "Bakhodir Jalilov", role: "Deputy Chairman" },
-                    { name: "Azamat Kurambaev", role: "Deputy Chairman" },
-                    { name: "Azizbek Khodjaev", role: "Deputy Chairman" },
-                    { name: "Bakhtiyor Mirdovidov", role: "Deputy Chairman" },
-                    { name: "Bohodir Rikhsiev", role: "Chief Accountant" },
-                  ].map((person) => (
-                    <div key={person.name} className="flex items-start gap-3 pb-2 border-b border-slide-foreground/5 last:border-0 last:pb-0">
-                      <div className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />
-                      <div>
-                        <span className="text-[16px] font-bold">{person.name}</span>
-                        <span className="text-[13px] text-slide-primary ml-2">{person.role}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            <div className="flex-1 flex flex-col gap-6 anim-slide-right stagger-3">
+              <div className="bg-slide-surface rounded-sm p-8 flex-1 flex flex-col">
+                <h4 className="text-[24px] font-bold text-slide-primary mb-5">Management Board</h4>
+                <ManagementRoster
+                  members={[
+                    { name: "Alisher Mirsoatov", role: "Chairman", since: "2017", highlight: true },
+                    { name: "Sardorbek Usmanbekov", role: "First Deputy Chairman", since: "2020" },
+                    { name: "Bakhodir Jalilov", role: "Deputy Chairman", since: "2020" },
+                    { name: "Azamat Kurambaev", role: "Deputy Chairman", since: "2021" },
+                    { name: "Azizbek Khodjaev", role: "Deputy Chairman", since: "2022" },
+                    { name: "Bakhtiyor Mirdovidov", role: "Deputy Chairman", since: "2022" },
+                    { name: "Bohodir Rikhsiev", role: "Chief Accountant", since: "2019" },
+                  ]}
+                />
               </div>
 
-              <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-sm p-5 anim-fade-up stagger-5">
+              <div className="bg-slide-primary/5 border border-slide-primary/15 rounded-sm p-6 anim-fade-up stagger-5">
                 <p className="text-[20px] text-slide-foreground leading-relaxed">
                   <span className="font-bold">Key fact:</span> NBU holds a <span className="font-bold text-slide-primary">5% equity stake</span> in Solfy CA while simultaneously acting as the <span className="font-bold text-slide-primary">criminal complainant</span> against the venture’s director.
                 </p>
@@ -483,7 +568,7 @@ export const slides: SlideData[] = [
                   "Board member of Nornickel, MegaFon, Metalloinvest",
                   "Chairman of Fortenova Group, co-founder of Gauss Ventures",
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[16px] text-slide-muted leading-relaxed">
+                  <li key={item} className="flex gap-3 text-[18px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
@@ -513,7 +598,7 @@ export const slides: SlideData[] = [
                   "No personal enrichment alleged",
                   "Lowest-ranking individual in the corporate chain",
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[16px] text-slide-muted leading-relaxed">
+                  <li key={item} className="flex gap-3 text-[18px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
@@ -538,7 +623,7 @@ export const slides: SlideData[] = [
                   "Public reporting (UA.News, 26 Feb 2026) has linked senior NBU leadership to communications the investor side characterizes as threatening; CAJI has not independently verified the identity of the individuals involved",
                   "Chairman of Uzbekistan Winter Sports Association",
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-[16px] text-slide-muted leading-relaxed">
+                  <li key={item} className="flex gap-3 text-[18px] text-slide-muted leading-relaxed">
                     <span className="w-1.5 h-1.5 rounded-sm bg-slide-primary mt-2.5 shrink-0" />{item}
                   </li>
                 ))}
@@ -556,49 +641,40 @@ export const slides: SlideData[] = [
     title: "Critical Timeline",
     component: (props) => {
       const steps = [
-        { date: "MAR 17", title: "Settlement Proposal", desc: "Investor side submits detailed settlement counter-proposal. Demands criminal complaint withdrawal as condition precedent.", accent: false },
-        { date: "MAR 25", title: "Deadline Letter", desc: "After 8 days of silence, investor side sends formal deadline letter. States firm will pursue all available remedies if no response by 5 PM GMT.", accent: false },
-        { date: "MAR 26", title: "Rejection", desc: "NBU rejects criminal complaint withdrawal. References its own procedural powers within the criminal proceedings in the context of settlement negotiations.", accent: false },
-        { date: "MAR 27", title: "Charges Filed", desc: "Major B.G. Giyasov formally charges Hasanov. Four counts under Article 167(3)(a). Hasanov taken into custody in Tashkent.", accent: true },
+        { date: "FEB 24", isoDate: "2026-02-24", title: "A&P Retained", desc: "Amsterdam & Partners retained as counsel.", accent: false },
+        { date: "FEB 27", isoDate: "2026-02-27", title: "UzDaily Reports", desc: "Civil dispute reported in UzDaily.", accent: false },
+        { date: "MAR 17", isoDate: "2026-03-17", title: "Settlement Proposal", desc: "Investor side submits detailed counter-proposal.", accent: false },
+        { date: "MAR 25", isoDate: "2026-03-25", title: "Deadline Letter", desc: "After 8 days’ silence; firm threatens remedies.", accent: false },
+        { date: "MAR 26", isoDate: "2026-03-26", title: "Rejection", desc: "NBU rejects withdrawal; references procedural powers.", accent: false },
+        { date: "MAR 27", isoDate: "2026-03-27", title: "Charges Filed & Arrest", desc: "Article 167(3)(a). Settlement offer sent as Hasanov is arrested.", accent: true },
       ];
       return (
         <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
           <div className="flex flex-col h-full p-[80px]">
             <div className="flex items-center justify-between mb-6">
-              <SlidePill label="THE CRITICAL TEN-DAY WINDOW" />
+              <SlidePill label="THE CRITICAL WINDOW" />
               <CAJILogo />
             </div>
-            <h2 className="text-[40px] font-semibold leading-[1.1] mb-16">
-              March 17-27, 2026: From settlement counter-proposal to criminal charges
+            <h2 className="text-[40px] font-semibold leading-[1.1] mb-2">
+              Feb 24 – Mar 27, 2026: From counsel retention to detonation
             </h2>
-            <div className="flex-1 flex items-center">
-              <div className="w-full relative">
-                <div className="absolute left-0 right-0 top-[40px] h-[3px] bg-slide-foreground/10">
-                  <div className="h-full bg-slide-primary rounded-sm" style={{ animation: "timeline-fill 1.8s ease-out 0.3s forwards", width: "0%" }} />
-                </div>
-                <div className="grid grid-cols-4 gap-8 relative">
-                  {steps.map((step, i) => (
-                    <div key={step.date} className="flex flex-col items-center text-center">
-                      <div className={`w-[80px] h-[80px] rounded-sm flex items-center justify-center text-[16px] font-semibold tracking-wide relative z-10 ${
-                        step.accent ? "bg-slide-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--slide-primary)/0.4)]" : "bg-slide-bg border-[3px] border-slide-primary text-slide-primary"
-                      }`} style={{ animation: `scale-in 0.4s ease-out ${0.3 + i * 0.35}s both` }}>
-                        {String(i + 1).padStart(2, "0")}
-                      </div>
-                      <div className={`mt-5 px-5 py-2 rounded-sm text-[13px] font-bold tracking-wider ${
-                        step.accent ? "bg-slide-primary text-primary-foreground" : "bg-slide-primary/10 text-slide-primary"
-                      }`} style={{ animation: `fade-in 0.3s ease-out ${0.5 + i * 0.35}s both` }}>
-                        {step.date}
-                      </div>
-                      <div style={{ animation: `slide-up 0.4s ease-out ${0.6 + i * 0.35}s both` }}>
-                        <h3 className={`mt-4 text-[20px] font-bold leading-tight ${step.accent ? "text-slide-primary" : "text-slide-foreground"}`}>
-                          {step.title}
-                        </h3>
-                        <p className="mt-3 text-[16px] text-slide-muted leading-relaxed max-w-[360px]">{step.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <p className="text-[16px] text-slide-muted mb-10 max-w-[1200px]">
+              Date-proportional axis. The 8-day silence between settlement proposal (17 Mar) and deadline letter (25 Mar) reads visually; the 26→27 detonation is tight.
+            </p>
+            <div className="flex-1 flex items-start">
+              <ProportionalTimeline steps={steps} />
+            </div>
+            <div className="mt-6 bg-slide-surface rounded-sm p-6 border-l-4 border-slide-primary">
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted mb-2">Vedomosti, 4 April 2026</p>
+              <p
+                className="text-[18px] italic leading-snug text-slide-foreground"
+                style={{ fontFamily: "var(--font-serif, 'Cormorant Garamond', Cormorant, Georgia, serif)" }}
+              >
+                «Арест Хасанова произошел после того, как международная юридическая фирма&hellip; направила предложения об урегулировании в адрес НБУ.»
+              </p>
+              <p className="text-[16px] italic leading-snug text-slide-muted mt-2">
+                &ldquo;Hasanov&rsquo;s arrest occurred after [counsel] delivered settlement proposals to NBU.&rdquo;
+              </p>
             </div>
           </div>
         </SlideLayout>
@@ -611,25 +687,55 @@ export const slides: SlideData[] = [
     id: "solfy-dual-role",
     title: "NBU Dual Role",
     component: (props) => (
-      <ComparisonTemplate
-        {...props}
-        pillLabel="IRRECONCILABLE DUAL ROLE"
-        headline="The entity claiming to be the victim approved every capital allocation it now claims was embezzled"
-        leftTitle="Equity Stakeholder"
-        leftItems={[
-          "NBU holds a 5% equity stake in Solfy CA",
-          "Investment committee authorized three capital infusions totaling over 17 billion soums",
-          "Senior retail management publicly endorsed the product",
-          "Partnership announced in national media by NBU’s own Managing Director of Retail",
-        ]}
-        rightTitle="Criminal Complainant"
-        rightItems={[
-          "Simultaneously the complainant in the criminal case",
-          "March 26 letter references its procedural powers within the criminal proceedings",
-          "Acknowledges the criminal case is within its sphere of influence",
-          "Not independent prosecutorial action",
-        ]}
-      />
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-6">
+            <SlidePill label="IRRECONCILABLE DUAL ROLE" />
+            <CAJILogo />
+          </div>
+          <h2 className="text-[36px] font-semibold leading-[1.1] mb-4 anim-fade-up stagger-1">
+            The entity claiming to be the victim approved every capital allocation it now claims was embezzled
+          </h2>
+          {/* Conflict-of-interest node diagram */}
+          <div className="mb-6 anim-fade-up stagger-2" style={{ height: "26%" }}>
+            <DualRoleDiagram />
+          </div>
+          <div className="flex-1 grid grid-cols-2 gap-0 min-h-0">
+            <div className="bg-slide-surface rounded-l-[6px] p-10 flex flex-col anim-slide-left stagger-3">
+              <h3 className="text-[22px] font-semibold text-slide-muted mb-4">Equity Stakeholder</h3>
+              <ul className="flex-1 space-y-4">
+                {[
+                  "NBU holds a 5% equity stake in Solfy CA",
+                  "Investment committee authorized three capital infusions totaling over 17 billion soums",
+                  "Senior retail management publicly endorsed the product",
+                  "Partnership announced in national media by NBU’s own Managing Director of Retail",
+                ].map((item) => (
+                  <li key={item} className="text-[18px] text-slide-muted leading-snug flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-sm bg-slide-muted/50 mt-2.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-slide-primary rounded-r-[6px] p-10 flex flex-col text-primary-foreground anim-slide-right stagger-3">
+              <h3 className="text-[22px] font-semibold mb-4">Criminal Complainant</h3>
+              <ul className="flex-1 space-y-4">
+                {[
+                  "Simultaneously the complainant in the criminal case",
+                  "March 26 letter references its procedural powers within the criminal proceedings",
+                  "Acknowledges the criminal case is within its sphere of influence",
+                  "Not independent prosecutorial action",
+                ].map((item) => (
+                  <li key={item} className="text-[18px] leading-snug flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-sm bg-primary-foreground/70 mt-2.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </SlideLayout>
     ),
   },
 
@@ -743,9 +849,12 @@ export const slides: SlideData[] = [
           <h2 className="text-[40px] font-semibold leading-[1.1] mb-3">
             Why arrest is an excessive and disproportionate measure
           </h2>
-          <p className="text-[16px] text-slide-muted leading-relaxed mb-8 max-w-[1200px]">
+          <p className="text-[16px] text-slide-muted leading-relaxed mb-5 max-w-[1200px]">
             Under Uzbek criminal procedure (Articles 236-243 CPC) and international standards, pre-trial detention is a measure of last resort.
           </p>
+          <div className="mb-6">
+            <DetentionScale />
+          </div>
           <div className="grid grid-cols-2 gap-6 flex-1">
             <div className="flex flex-col gap-5 justify-between">
               {[
@@ -805,32 +914,19 @@ export const slides: SlideData[] = [
           <p className="text-[20px] text-slide-muted max-w-[1400px] leading-relaxed mb-12">
             This pattern is consistent with the use of criminal prosecution as commercial leverage, not genuine law enforcement.
           </p>
-          <div className="flex-1 grid grid-cols-2 gap-16">
-            <div className="anim-slide-left stagger-2">
-              <h3 className="text-[24px] font-semibold text-slide-primary mb-6">Charged</h3>
-              <div className="bg-slide-surface rounded-[6px] p-8">
-                <h4 className="text-[24px] font-semibold mb-3">Hasanov Uktam Nasulloyevich</h4>
-                <p className="text-[20px] text-slide-muted leading-relaxed">
-                  Locally appointed director. The most vulnerable individual in the corporate chain. No personal enrichment alleged.
-                </p>
-              </div>
-            </div>
-            <div className="anim-slide-right stagger-3">
-              <h3 className="text-[24px] font-semibold mb-6">Not charged</h3>
-              <ul className="space-y-5">
-                {[
-                  "Foreign co-founders who directed corporate strategy",
-                  "NBU’s investment committee members who authorized three capital tranches totaling 17+ billion soums",
-                  "NBU’s compliance and audit functions responsible for oversight",
-                  "NBU’s retail division leadership who publicly endorsed the product",
-                  "20% shareholder Full Stack Solution and its principals (Izrailbekov)",
-                ].map((item, i) => (
-                  <li key={item} className="text-[20px] text-slide-muted leading-relaxed flex items-start gap-3" style={{ animation: `fade-in 0.3s ease-out ${0.5 + i * 0.1}s both` }}>
-                    <span className="w-1.5 h-1.5 mt-2.5 bg-slide-primary inline-block shrink-0" aria-hidden="true" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          <div className="flex-1 flex items-center anim-fade-up stagger-2">
+            <div className="w-full max-w-[1300px]">
+              <HierarchyLadder
+                rows={[
+                  { label: "Foreign co-founders", descriptor: "Directed corporate strategy from outside Uzbekistan" },
+                  { label: "NBU Investment Committee", descriptor: "Authorized three capital tranches totaling 17+ billion soums" },
+                  { label: "NBU Compliance / Audit", descriptor: "Functions responsible for oversight of capital allocation" },
+                  { label: "NBU Retail leadership", descriptor: "Publicly endorsed the product in national media" },
+                  { label: "Full Stack principals", descriptor: "20% shareholder; principals (Izrailbekov) uncharged" },
+                  { label: "Hasanov — Director", descriptor: "Locally appointed; no personal enrichment alleged", charged: true },
+                ]}
+                caption="Sole defendant out of the corporate chain. The most replaceable individual."
+              />
             </div>
           </div>
         </div>
@@ -849,38 +945,124 @@ export const slides: SlideData[] = [
             <SlidePill label="CONTRADICTIONS IN THE CHARGES" />
             <CAJILogo />
           </div>
-          <h2 className="text-[40px] font-semibold leading-[1.1] mb-16">
+          <h2 className="text-[40px] font-semibold leading-[1.1] mb-12">
             A contractual dispute repackaged as criminal prosecution
           </h2>
-          <div className="grid grid-cols-3 gap-12">
+          <div className="flex-1 grid grid-cols-3 gap-12 items-center">
             <div style={{ animation: "slide-up 0.5s ease-out 0.2s both" }}>
-              <div className="text-[64px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">01</div>
-              <h3 className="text-[24px] font-bold mb-3">Allegation: Purposeless Squandering</h3>
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-4 tabular-nums">01</div>
+              <h3 className="text-[26px] font-bold mb-4 leading-tight">Allegation: Purposeless Squandering</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 Charges allege misappropriation of ~17 billion soums in charter capital. Yet the prosecution’s own evidence describes operational expenditures: staff salaries, technology development, merchant acquisition. Normal costs of running a fintech startup.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.35s both" }}>
-              <div className="text-[64px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">02</div>
-              <h3 className="text-[24px] font-bold mb-3">Allegation: Unpaid Bank Rewards</h3>
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-4 tabular-nums">02</div>
+              <h3 className="text-[26px] font-bold mb-4 leading-tight">Allegation: Unpaid Bank Rewards</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 Charges allege 14.9 billion soums in unpaid contractual rewards owed to NBU. These correspond to obligations under Agreement No. 289/37, already adjudicated in civil court rulings (December 2024, May 2025). The criminal complaint repackages a commercial dispute.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.5s both" }}>
-              <div className="text-[64px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">03</div>
-              <h3 className="text-[24px] font-bold mb-3">NBU Approved Every Tranche</h3>
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-4 tabular-nums">03</div>
+              <h3 className="text-[26px] font-bold mb-4 leading-tight">NBU Approved Every Tranche</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 NBU’s own investment committee authorized every capital allocation it now characterizes as embezzlement. This sequence may indicate a material inconsistency between prior governance approvals and subsequent criminal characterization of the same expenditures.
               </p>
             </div>
           </div>
-          <p className="mt-auto pt-12 text-[13px] text-slide-muted/70 tracking-[0.05em] leading-relaxed border-t border-slide-foreground/8">
+          <p className="pt-8 text-[13px] text-slide-muted/70 tracking-[0.05em] leading-relaxed border-t border-slide-foreground/8">
             Sources: criminal charging documents (case file), Tashkent commercial court rulings (Dec 2024, May 2025), NBU investment committee minutes — as characterized by the investor side.
           </p>
         </div>
       </SlideLayout>
     ),
+  },
+
+  // ═══ NBU REBUTTAL — claims vs. documentary record ═══
+  {
+    id: "solfy-nbu-rebuttal",
+    title: "NBU Position vs. Record",
+    component: (props) => {
+      const claims = [
+        "“adheres to the highest standards of integrity in all its commercial relationships”",
+        "“the priority of the Bank is the protection of its clients’ interests”",
+        "“negotiations with Solfy and the related legal procedures are ongoing”",
+        "“inappropriate to comment on unsubstantiated allegations until the completion of this process”",
+        "“full compliance with all applicable laws and regulatory requirements”",
+      ];
+      const record = [
+        "NBU is a 5% Solfy CA shareholder litigating against its own portfolio company’s director (cf. Slide 5).",
+        "Solfy CA — a contractual partner — is itself a client; NBU’s “client interests” framing applies inversely.",
+        "NBU’s own admission of parallel ongoing negotiations corroborates the simultaneity of settlement offer and arrest (Slide 7 Timeline).",
+        "“Allegations” cited include: arrest 27 March 2026, Article 167(3)(a) charges, Bluestone $42–52M valuation, Amsterdam & Partners retention. None are unsubstantiated.",
+        "Article 167(3)(a) selectivity, BIT obligations, and ICSID exposure are not addressed.",
+      ];
+      const unsaid = [
+        "The 27 March arrest of Hasanov.",
+        "The Article 167(3)(a) charge.",
+        "The 17 bn UZS / ~$1.5M figure.",
+        "The 14.9 bn UZS / ~$1.2M unpaid contractual fee.",
+        "The simultaneity of NBU’s settlement offer and Hasanov’s Friday-evening arrest.",
+        "The Bluestone $42–52M valuation.",
+        "The Mirsoatov family connection to the Tashkent prosecutor’s office.",
+        "The “termination of business relations” referenced by UzDaily.",
+      ];
+      return (
+        <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+          <div className="flex flex-col h-full p-[80px]">
+            <div className="flex items-center justify-between mb-6">
+              <SlidePill label="NBU&rsquo;S OFFICIAL POSITION" />
+              <CAJILogo />
+            </div>
+            <h2 className="text-[36px] font-semibold leading-[1.1] mb-2 anim-fade-up stagger-1">
+              What NBU says vs. the documentary record
+            </h2>
+            <p className="text-[16px] text-slide-muted leading-relaxed max-w-[1300px] mb-8 anim-fade-up stagger-2">
+              On 4 April 2026, NBU issued a two-paragraph public statement. We cite it in full and address each claim.
+            </p>
+            <div className="flex-1 grid grid-cols-3 gap-5 min-h-0">
+              <div className="bg-slide-surface rounded-sm p-6 flex flex-col overflow-hidden anim-slide-left stagger-3">
+                <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted mb-3">NBU claims</p>
+                <ol className="space-y-3 flex-1 overflow-hidden">
+                  {claims.map((c, i) => (
+                    <li key={i} className="flex gap-3 text-[14px] text-slide-foreground leading-snug">
+                      <span className="text-slide-muted font-bold tabular-nums shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="italic">{c}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div className="bg-slide-primary/8 border border-slide-primary/25 rounded-sm p-6 flex flex-col overflow-hidden anim-fade-up stagger-3">
+                <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-3">Documentary record</p>
+                <ol className="space-y-3 flex-1 overflow-hidden">
+                  {record.map((r, i) => (
+                    <li key={i} className="flex gap-3 text-[14px] text-slide-foreground leading-snug">
+                      <span className="text-slide-primary font-bold tabular-nums shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div className="rounded-sm p-6 flex flex-col overflow-hidden border border-slide-foreground/10 anim-slide-right stagger-3">
+                <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted mb-3">What is left unsaid</p>
+                <ul className="space-y-2 flex-1 overflow-hidden">
+                  {unsaid.map((u, i) => (
+                    <li key={i} className="flex gap-2 text-[13px] text-slide-muted/90 leading-snug">
+                      <span className="text-slide-primary leading-none mt-1.5">·</span>
+                      <span>{u}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="pt-6 mt-6 text-[12px] text-slide-muted/70 tracking-[0.05em] leading-snug border-t border-slide-foreground/8">
+              Source: nbu.uz/en/news/official-position-of-the-bank-on-information-disseminated-via-social-media_04_04_26 (4 April 2026); kg24.news (6 April 2026).
+            </p>
+          </div>
+        </SlideLayout>
+      );
+    },
   },
 
   // ═══ 15. REGULATORY CONSIDERATIONS ═══
@@ -897,9 +1079,29 @@ export const slides: SlideData[] = [
           <h2 className="text-[40px] font-semibold leading-[1.1] mb-12">
             Regulatory Considerations for Counterparties
           </h2>
-          <p className="text-[20px] text-slide-muted leading-relaxed max-w-[1200px] mb-10">
+          <p className="text-[20px] text-slide-muted leading-relaxed max-w-[1200px] mb-6">
             The following frameworks may be relevant to counterparties evaluating their exposure.
           </p>
+          <div className="grid grid-cols-3 gap-5 mb-6">
+            <div className="border-l-2 border-slide-primary pl-4 py-2">
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-1">UK OTSI · Jun 2025</p>
+              <p className="text-[14px] text-slide-foreground leading-snug">
+                High-risk-jurisdiction designation; Uzbekistan named alongside Armenia, China/HK, Kazakhstan, Turkey, UAE.
+              </p>
+            </div>
+            <div className="border-l-2 border-slide-primary pl-4 py-2">
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-1">EU 20th sanctions · 23 Apr 2026</p>
+              <p className="text-[14px] text-slide-foreground leading-snug">
+                Council Reg (EU) 2026/506 · Decision (CFSP) 2026/508 · Implementing Reg (EU) 2026/509; designates 16 third-country entities including Uzbek ones.
+              </p>
+            </div>
+            <div className="border-l-2 border-slide-primary pl-4 py-2">
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-1">Adjacent risk · Datavice</p>
+              <p className="text-[14px] text-slide-foreground leading-snug">
+                Tashkent-registered entity sanctioned by US Treasury OFAC. <span className="text-slide-muted">Source: International Business Times, March 2026.</span>
+              </p>
+            </div>
+          </div>
           <div className="flex-1 grid grid-cols-3 gap-8">
             <div className="bg-slide-surface rounded-sm p-8 flex flex-col flex-1">
               <div className="w-10 h-1 bg-slide-primary rounded-sm mb-4" />
@@ -913,7 +1115,7 @@ export const slides: SlideData[] = [
                   "ADB Safeguard Policy: institutional capacity assessment",
                   "MIGA political risk guarantees may be triggered",
                 ].map((item) => (
-                  <li key={item} className="text-[16px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
@@ -929,7 +1131,7 @@ export const slides: SlideData[] = [
                   "BSA/AML framework under FinCEN (31 CFR 1010.610)",
                   "EU 6AMLD Art. 6(1)(c): aiding liability considerations in correspondent channels",
                 ].map((item) => (
-                  <li key={item} className="text-[16px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
@@ -946,7 +1148,7 @@ export const slides: SlideData[] = [
                   "Potential disclosure implications for NBU financial statements",
                   "Bondholder fiduciary analyses often consider counterparty governance risk",
                 ].map((item) => (
-                  <li key={item} className="text-[16px] text-slide-muted leading-relaxed flex items-start gap-3">
+                  <li key={item} className="text-[18px] text-slide-muted leading-relaxed flex items-start gap-3">
                     <span className="text-slide-primary mt-1 shrink-0">&#8226;</span>{item}
                   </li>
                 ))}
@@ -975,25 +1177,121 @@ export const slides: SlideData[] = [
           <p className="text-[20px] text-slide-muted mt-3 max-w-[1200px]">
             A pattern of investor-hostile actions has been cited in reporting as a challenge to Uzbekistan’s reform credibility
           </p>
-          <div className="grid grid-cols-2 gap-8 mt-10 flex-1">
-            {[
-              { tag: "EXTRADITION", title: "Shadmanov (2025)", text: "Forcibly extradited from Dubai. ICIJ documented use of lobbyist to trigger sanctions inquiries. Lawyers describe prosecution as politically motivated.", accent: "bg-slide-primary/10 text-slide-primary" },
-              { tag: "ICSID ARBITRATION", title: "Humans Mobile v. Uzbekistan", text: "ICSID ARB/25/24 — Singapore-based company initiated arbitration citing bilateral investment treaty violations by Uzbek state authorities.", accent: "bg-slide-primary/50/10 text-slide-primary" },
-              { tag: "SELECTIVE JUSTICE", title: "Former Minister Voitov (2025)", text: "Convicted under Article 167(3)(a) — the same provision as Hasanov. Received no prison time after compensating damages. Illustrates the transactional nature of embezzlement prosecutions.", accent: "bg-slide-primary/10 text-slide-primary" },
-              { tag: "CAPITAL FLIGHT", title: "Foreign Direct Investment Gap", text: "Kazakhstan: $151B accumulated FDI stock. Uzbekistan: $17B. IBTimes identifies the Solfy case as a test of institutional reform credibility.", accent: "bg-slide-primary/10 text-slide-primary" },
-            ].map((item, i) => (
-              <div key={item.title} className="bg-slide-surface rounded-sm p-8 flex flex-col" style={{ animation: `fade-scale 0.5s ease-out ${0.3 + i * 0.15}s both` }}>
-                <span className={`text-[13px] font-bold tracking-[0.15em] px-3 py-1 rounded-sm w-fit mb-4 ${item.accent}`} style={{ animation: `scale-in 0.3s ease-out ${0.6 + i * 0.15}s both` }}>{item.tag}</span>
-                <h3 className="text-[24px] font-bold mb-3">{item.title}</h3>
-                <p className="text-[20px] text-slide-muted leading-relaxed">{item.text}</p>
+          <div className="grid grid-cols-2 gap-6 mt-6 flex-1 min-h-0">
+            {/* Left column: 3 stacked tiles */}
+            <div className="flex flex-col gap-4">
+              {[
+                { tag: "EXTRADITION", title: "Shadmanov (2025)", text: "Forcibly extradited from Dubai. ICIJ documented use of lobbyist to trigger sanctions inquiries. Lawyers describe prosecution as politically motivated." },
+                { tag: "SELECTIVE JUSTICE", title: "Former Minister Voitov (2025)", text: "Convicted under Article 167(3)(a) — the same provision as Hasanov. Received no prison time after compensating damages. Illustrates the transactional nature of embezzlement prosecutions." },
+                { tag: "AIFC COMPARATOR", title: "Kazakhstan / Tokayev", text: "Kazakhstan’s AIFC, established under English commercial law and operating since 2018, has handled 1,000+ investor cases without a single foreign-investor detention. Source: International Business Times, March 2026." },
+              ].map((item, i) => (
+                <div key={item.title} className="bg-slide-surface rounded-sm p-5 flex-1" style={{ animation: `fade-scale 0.4s ease-out ${0.3 + i * 0.1}s both` }}>
+                  <span className="text-[11px] font-bold tracking-[0.15em] uppercase px-2.5 py-0.5 rounded-sm w-fit mb-2 inline-block bg-slide-primary/10 text-slide-primary">{item.tag}</span>
+                  <h3 className="text-[18px] font-bold mb-1 leading-tight">{item.title}</h3>
+                  <p className="text-[14px] text-slide-muted leading-snug">{item.text}</p>
+                </div>
+              ))}
+            </div>
+            {/* Right column: Capital Flight (with FDI bars) + Investor Disputes Pattern */}
+            <div className="flex flex-col gap-4">
+              <div className="bg-slide-surface rounded-sm p-5">
+                <span className="text-[11px] font-bold tracking-[0.15em] uppercase px-2.5 py-0.5 rounded-sm w-fit mb-2 inline-block bg-slide-primary/10 text-slide-primary">CAPITAL FLIGHT</span>
+                <h3 className="text-[18px] font-bold mb-3 leading-tight">Foreign Direct Investment Gap</h3>
+                <FdiBars
+                  items={[
+                    { label: "Kazakhstan", value: 151 },
+                    { label: "Uzbekistan", value: 17, primary: true },
+                  ]}
+                />
+                <p className="text-[12px] text-slide-muted leading-snug mt-3">
+                  Accumulated FDI stock. IBTimes identifies the Solfy case as a test of institutional reform credibility.
+                </p>
               </div>
-            ))}
+              <div className="bg-slide-primary/5 border border-slide-primary/20 rounded-sm p-5 flex-1 min-h-0">
+                <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-slide-primary mb-2 block">Investor Disputes Pattern</span>
+                <ul className="space-y-1.5 text-[13px] text-slide-foreground leading-snug">
+                  <li className="flex gap-2"><span className="text-slide-primary">·</span><span><span className="font-bold">Oxus Gold</span> (UNCITRAL, 2011–15) — partial investor win.</span></li>
+                  <li className="flex gap-2"><span className="text-slide-primary">·</span><span><span className="font-bold">Metal-Tech</span> (ICSID, 2010–13) — investor lost on corruption grounds.</span></li>
+                  <li className="flex gap-2"><span className="text-slide-primary">·</span><span><span className="font-bold">Newmont</span> — historical mining dispute.</span></li>
+                  <li className="flex gap-2"><span className="text-slide-primary">·</span><span><span className="font-bold">Bursel Tekstil</span> — Turkish investor matter.</span></li>
+                  <li className="flex gap-2"><span className="text-slide-primary">·</span><span><span className="font-bold">Humans Mobile</span> (ARB/25/24, tribunal sitting Jan 2026) — see new slide.</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
           <p className="text-[13px] text-slide-muted mt-6 border-t border-slide-foreground/10 pt-4">
             <span className="font-bold text-slide-foreground">Sources:</span>{" "}
             <a href="https://ua.news/en/finansi/turetskii-advokat-gotuie-pozovi-proti-uzbekistanu-za-tisk-na-fintekh-kompaniiu-solfy" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">UA.News (26 Feb 2026)</a> ·{" "}
             <a href="https://www.ng.ru/news/836631.html" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">Nezavisimaya Gazeta (1 Apr 2026)</a> ·{" "}
             <a href="https://kz24.news/news/world/gromkiy-arest-v-tashkente-kak-delo-finteh-kompanii-solfy-mozhet-udarit-po-investklimatu-tsentralnoy-azii.html" target="_blank" rel="noopener noreferrer" className="text-slide-primary hover:underline">KZ24 (6 Apr 2026)</a>. CAJI reproduces these attributions as published and takes no independent position on accuracy.
+          </p>
+        </div>
+      </SlideLayout>
+    ),
+  },
+
+  // ═══ HUMANS MOBILE ICSID — parallel precedent ═══
+  {
+    id: "solfy-humans-mobile-icsid",
+    title: "Humans Mobile ICSID",
+    component: (props) => (
+      <SlideLayout variant="white" slideNumber={props.slideNumber} totalSlides={props.totalSlides}>
+        <div className="flex flex-col h-full p-[80px]">
+          <div className="flex items-center justify-between mb-6">
+            <SlidePill label="ACTIVE ICSID PRECEDENT" />
+            <CAJILogo />
+          </div>
+          <h2 className="text-[40px] font-semibold leading-[1.1] mb-3 anim-fade-up stagger-1">
+            Independent investor case, same defendants, same playbook
+          </h2>
+          <p className="text-[18px] text-slide-muted leading-relaxed max-w-[1300px] mb-10 anim-fade-up stagger-2">
+            Months before Hasanov&rsquo;s detention, an ICSID tribunal was already constituted to hear claims against Uzbekistan involving a state bank, the prosecution apparatus, and the same governance complex.
+          </p>
+          <div className="flex-1 grid grid-cols-3 gap-8 items-center min-h-0">
+            <div className="anim-fade-up stagger-3">
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">01</div>
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-2">The Case</p>
+              <h3 className="text-[20px] font-bold mb-3 leading-tight">
+                ICSID Case No. ARB/25/24
+              </h3>
+              <p className="text-[15px] text-slide-foreground leading-snug mb-1.5">
+                Humans Mobile Ltd v. Republic of Uzbekistan
+              </p>
+              <p className="text-[14px] text-slide-muted leading-snug">
+                Filed: 30 May 2025 · Tribunal constituted: 7 January 2026
+              </p>
+              <p className="text-[14px] text-slide-muted leading-snug mt-1">
+                Filed under: Singapore-Uzbekistan BIT (15 July 2003)
+              </p>
+            </div>
+            <div className="anim-fade-up stagger-4">
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">02</div>
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-2">The Tribunal</p>
+              <ul className="space-y-2 text-[15px] text-slide-foreground leading-snug">
+                <li><span className="font-bold">Sir Daniel Bethlehem KCMG KC</span> <span className="text-slide-muted">(chair)</span></li>
+                <li><span className="font-bold">Anne Hoffmann</span> <span className="text-slide-muted">(claimant-appointed)</span></li>
+                <li><span className="font-bold">Prof. Jorge E. Viñuales</span> <span className="text-slide-muted">(respondent-appointed)</span></li>
+              </ul>
+              <p className="text-[14px] text-slide-foreground leading-snug mt-3">
+                <span className="font-bold text-slide-primary">Damages:</span> &ldquo;hundreds of millions USD&rdquo;
+              </p>
+            </div>
+            <div className="anim-fade-up stagger-5">
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">03</div>
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary mb-2">The Pattern</p>
+              <p className="text-[14px] text-slide-foreground leading-snug mb-2">
+                <span className="font-bold">Counsel:</span> Peter &amp; Kim (claimant) / Curtis Mallet-Prevost, Colt &amp; Mosle LLP (Uzbekistan).
+              </p>
+              <p className="text-[14px] text-slide-foreground leading-snug mb-2">
+                Allegations name: <span className="text-slide-muted">Central Bank of Uzbekistan, JSC Uzbektelecom, courts, prosecution, &ldquo;members of the ruling elite.&rdquo;</span>
+              </p>
+              <p className="text-[14px] text-slide-foreground leading-snug">
+                <span className="font-bold text-slide-primary">Same coercive playbook:</span> regulatory paralysis → bankruptcy → criminal/Interpol leverage.
+              </p>
+            </div>
+          </div>
+          <p className="pt-6 mt-6 text-[12px] text-slide-muted/70 tracking-[0.05em] leading-snug border-t border-slide-foreground/8">
+            <span className="font-bold text-slide-foreground">Source:</span> italaw.com/cases/14067 · PR Newswire 27 January 2026 · Times of Central Asia.
           </p>
         </div>
       </SlideLayout>
@@ -1018,54 +1316,75 @@ export const slides: SlideData[] = [
             One week after the detention, the parties’ positions diverge sharply on the public record.
           </p>
 
-          <div className="flex-1 grid grid-cols-2 gap-8 min-h-0">
-            {/* NBU’s statement */}
-            <div className="bg-slide-surface rounded-sm p-8 flex flex-col overflow-hidden anim-slide-left stagger-3">
-              <div className="flex items-center justify-between mb-4 shrink-0">
-                <span className="text-[13px] font-bold tracking-[0.15em] uppercase text-slide-muted">NBU Official Statement</span>
-                <span className="text-[13px] font-semibold text-slide-muted tabular-nums">04 APR 2026</span>
+          <div className="flex-1 grid grid-cols-2 gap-6 min-h-0">
+            {/* NBU's verbatim statement */}
+            <div className="bg-slide-surface rounded-sm p-7 flex flex-col overflow-hidden anim-slide-left stagger-3">
+              <div className="flex items-center justify-between mb-3 shrink-0">
+                <span className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted">On the record from NBU</span>
+                <span className="text-[12px] font-semibold text-slide-muted tabular-nums">04 APR 2026</span>
               </div>
-              <h3 className="text-[24px] font-bold mb-4 shrink-0">National Bank of Uzbekistan</h3>
-              <div className="space-y-4 text-[16px] text-slide-muted leading-[1.6] overflow-hidden">
+              <h3 className="text-[20px] font-bold mb-3 shrink-0">National Bank of Uzbekistan</h3>
+              <div className="space-y-3 text-[13px] text-slide-foreground leading-[1.55] overflow-hidden italic">
                 <p>
-                  On 4 April 2026, NBU published a public statement on its official website addressing the dispute and the criminal proceedings against Solfy CA’s director.
+                  &ldquo;The National Bank of Uzbekistan adheres to the highest standards of integrity in all its commercial relationships. The priority of the Bank is the protection of its clients&rsquo; interests, and we operate in full compliance with all applicable laws and regulatory requirements.&rdquo;
                 </p>
                 <p>
-                  Counsel for Solfy publicly characterizes the statement as <span className="font-bold text-slide-foreground">“demonstrably false”</span> and contends it amounts to disinformation by a central banking authority during active settlement negotiations.
-                </p>
-                <p className="text-[13px] text-slide-muted/80 italic">
-                  CAJI reproduces this attribution as it appears in published sources and takes no independent position on the accuracy of either statement.
+                  &ldquo;Negotiations with Solfy and the related legal procedures are ongoing. It would be inappropriate to comment on unsubstantiated allegations until the completion of this process.&rdquo;
                 </p>
               </div>
-              <a href="https://nbu.uz" target="_blank" rel="noopener noreferrer" className="mt-auto pt-4 text-[13px] text-slide-primary font-semibold tracking-wider uppercase hover:underline shrink-0">
+              <p className="text-[11px] text-slide-muted/80 italic mt-3 shrink-0">
+                Verbatim, two-paragraph statement. Counsel for Solfy characterizes it as &ldquo;demonstrably false.&rdquo; CAJI reproduces these attributions as published.
+              </p>
+              <a href="https://nbu.uz/en/news/official-position-of-the-bank-on-information-disseminated-via-social-media_04_04_26" target="_blank" rel="noopener noreferrer" className="mt-auto pt-3 text-[12px] text-slide-primary font-semibold tracking-wider uppercase hover:underline shrink-0">
                 Source: nbu.uz →
               </a>
             </div>
 
             {/* Counsel response */}
-            <div className="bg-slide-primary/5 border-l-4 border-slide-primary rounded-sm p-8 flex flex-col overflow-hidden anim-slide-right stagger-3">
-              <div className="flex items-center justify-between mb-4 shrink-0">
-                <span className="text-[13px] font-bold tracking-[0.15em] uppercase text-slide-primary">Counsel for Solfy — Response</span>
-                <span className="text-[13px] font-semibold text-slide-muted tabular-nums">APR 2026</span>
+            <div className="bg-slide-primary/5 border-l-4 border-slide-primary rounded-sm p-7 flex flex-col overflow-hidden anim-slide-right stagger-3">
+              <div className="flex items-center justify-between mb-3 shrink-0">
+                <span className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-primary">Counsel for Solfy</span>
+                <span className="text-[12px] font-semibold text-slide-muted tabular-nums">03 APR 2026</span>
               </div>
-              <h3 className="text-[24px] font-bold mb-4 shrink-0">Amsterdam &amp; Partners LLP</h3>
-              <div className="space-y-3 text-[16px] text-slide-muted leading-[1.55] overflow-hidden">
-                <p className="text-slide-foreground italic font-semibold">
-                  “The Bank employed coercive measures reminiscent of a bygone era, leveraging state administrative resources to exert pressure on a private commercial dispute.”
+              <h3 className="text-[20px] font-bold mb-3 shrink-0">Amsterdam &amp; Partners LLP</h3>
+              <p
+                className="text-[20px] italic leading-snug text-slide-foreground mb-3 font-semibold"
+                style={{ fontFamily: "var(--font-serif, 'Cormorant Garamond', Cormorant, Georgia, serif)" }}
+              >
+                &ldquo;Uzbekistan must adhere to rule of law in commercial disputes.&rdquo;
+              </p>
+              <div className="space-y-2 text-[13px] text-slide-muted leading-[1.55] overflow-hidden">
+                <p>
+                  &ldquo;The Bank employed coercive measures reminiscent of a bygone era, leveraging state administrative resources to exert pressure on a private commercial dispute.&rdquo;
                 </p>
                 <p>
-                  Counsel states the Bank facilitated the arrest and unlawful detention of Mr. Hasanov in an apparent attempt to force a resolution on terms favourable to itself, and that the charges <span className="font-semibold text-slide-foreground">“lack any factual or legal foundation.”</span>
-                </p>
-                <p>
-                  Counsel has formally written to the President of Uzbekistan and to relevant international bodies, calling for immediate release and resumption of good-faith negotiations.
-                </p>
-                <p className="text-slide-foreground font-semibold">
-                  A global press conference is being convened out of London.
+                  Counsel states the charges <span className="font-semibold text-slide-foreground">&ldquo;lack any factual or legal foundation&rdquo;</span> and has written formally to the President of Uzbekistan and international bodies, calling for immediate release.
                 </p>
               </div>
-              <a href="https://amsterdamandpartners.com/press-release-amsterdam-partners-llp-to-represent-fintech-platform-solfy-in-dispute-with-national-bank-of-uzbekistan" target="_blank" rel="noopener noreferrer" className="mt-auto pt-4 text-[13px] text-slide-primary font-semibold tracking-wider uppercase hover:underline shrink-0">
+              <a href="https://amsterdamandpartners.com/press-release-amsterdam-partners-llp-to-represent-fintech-platform-solfy-in-dispute-with-national-bank-of-uzbekistan" target="_blank" rel="noopener noreferrer" className="mt-auto pt-3 text-[12px] text-slide-primary font-semibold tracking-wider uppercase hover:underline shrink-0">
                 Source: amsterdamandpartners.com →
               </a>
+            </div>
+          </div>
+          {/* Chronological anchor */}
+          <div className="mt-5 grid grid-cols-3 gap-4 border-t border-slide-foreground/10 pt-4">
+            <div>
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted mb-1">24 FEB 2026</p>
+              <p className="text-[13px] text-slide-foreground leading-snug">
+                <span className="font-bold">A&amp;P retained:</span> Amsterdam &amp; Partners issues press release announcing representation of Solfy investors.
+              </p>
+            </div>
+            <div>
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted mb-1">03 APR 2026</p>
+              <p className="text-[13px] text-slide-foreground leading-snug">
+                <span className="font-bold">Counsel escalation:</span> Public call for rule of law in commercial disputes.
+              </p>
+            </div>
+            <div>
+              <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-slide-muted mb-1">04 APR 2026</p>
+              <p className="text-[13px] text-slide-foreground leading-snug">
+                <span className="font-bold">NBU rebuttal:</span> Two-paragraph verbatim statement (left).
+              </p>
             </div>
           </div>
         </div>
@@ -1109,20 +1428,52 @@ export const slides: SlideData[] = [
                 url: "https://www.ng.ru/news/836631.html",
               },
               {
-                source: "Vek (wek.ru)",
-                lang: "RU",
-                date: "10 APR 2026",
-                quote: "«„Это не дело, это заложник“ и ещё три удара по репутации»",
-                detail: "Argues the embezzlement charge is pretextual leverage in a commercial dispute and lists reputational consequences for Uzbekistan’s investment image.",
-                url: "https://wek.ru/yeto-ne-delo-yeto-zalozhnik-i-eshhyo-tri-udara-po-reputacii",
+                source: "IBTimes (Matt Emma)",
+                lang: "EN",
+                date: "16 MAR 2026",
+                quote: "What is actually stopping Uzbekistan from growing faster",
+                detail: "Pre-arrest analysis (11 days before Hasanov detention) treats the Solfy dispute as the diagnostic case for institutional reform credibility and investor allocation decisions.",
+                url: "https://www.ibtimes.com",
               },
               {
-                source: "KZ24",
+                source: "RTVi US — Дежурный по Америке",
+                lang: "RU",
+                date: "31 MAR 2026",
+                quote: "Robert Amsterdam, Maksim Poletaev — interview",
+                detail: "On-record interview: counsel’s $45–55M demand band; ‘if you sign, Uktam walks out instantly’ intermediary message attributed to NBU side.",
+                url: "https://rtvi.com",
+              },
+              {
+                source: "The Diplomat",
+                lang: "EN",
+                date: "APR 2026",
+                quote: "Uzbekistan&rsquo;s investor protection test case",
+                detail: "Anglophone Asia-policy outlet covering the Solfy detention as a regional governance signal.",
+                url: "https://thediplomat.com",
+              },
+              {
+                source: "kun.uz",
+                lang: "EN",
+                date: "APR 2026",
+                quote: "Domestic English coverage of Solfy proceedings",
+                detail: "Uzbek English-language outlet on the criminal proceedings and counsel response.",
+                url: "https://kun.uz/en",
+              },
+              {
+                source: "Times of Central Asia",
+                lang: "EN",
+                date: "APR 2026",
+                quote: "Detention escalation in Tashkent",
+                detail: "Regional English-language outlet treats Solfy as continuation of pattern documented in Humans Mobile ICSID matter.",
+                url: "https://timesca.com",
+              },
+              {
+                source: "kg24.news",
                 lang: "RU",
                 date: "06 APR 2026",
-                quote: "«Громкий арест в Ташкенте: как дело Solfy может ударить по инвестклимату»",
-                detail: "Regional Central-Asia angle: criminal prosecution as commercial leverage risks deterring foreign tech capital across the region.",
-                url: "https://kz24.news/news/world/gromkiy-arest-v-tashkente-kak-delo-finteh-kompanii-solfy-mozhet-udarit-po-investklimatu-tsentralnoy-azii.html",
+                quote: "Регион реагирует: дело Solfy и инвестклимат ЦА",
+                detail: "Neutral regional Central-Asia coverage. Notes simultaneity of NBU settlement offer and arrest.",
+                url: "https://kg24.news",
               },
               {
                 source: "UA.News",
@@ -1180,33 +1531,48 @@ export const slides: SlideData[] = [
             <SlidePill label="LEGAL REMEDIES IN PROGRESS" />
             <CAJILogo />
           </div>
-          <h2 className="text-[40px] font-semibold leading-[1.1] mb-16">
+          <h2 className="text-[40px] font-semibold leading-[1.1] mb-12">
             Three-track legal and advocacy strategy
           </h2>
-          <div className="grid grid-cols-3 gap-12">
+          <div className="flex-1 grid grid-cols-3 gap-12 items-center">
             <div style={{ animation: "slide-up 0.5s ease-out 0.2s both" }}>
-              <div className="text-[64px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">01</div>
-              <h3 className="text-[24px] font-bold mb-3">ICSID BIT Arbitration</h3>
-              <p className="text-[20px] text-slide-muted leading-relaxed">
-                According to investor-side materials, an investment treaty claim under the Russia-Uzbekistan bilateral investment treaty is imminent. The investor side indicates it intends to invoke ICSID jurisdiction for alleged violations of fair and equitable treatment, protection against expropriation, and full protection and security. Bluestone independent valuation: <span className="font-bold text-slide-foreground">$42-52 million</span> (valuation prepared by Bluestone in connection with the investor’s anticipated ICSID claim; CAJI has not independently verified the methodology or assumptions). This valuation is presented by the investor side as supporting claim materiality.
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-4 tabular-nums">01</div>
+              <h3 className="text-[26px] font-bold mb-4 leading-tight">ICSID BIT Arbitration</h3>
+              <p className="text-[18px] text-slide-muted leading-relaxed mb-3">
+                According to investor-side materials, an investment treaty claim under the Russia-Uzbekistan bilateral investment treaty is imminent. The investor side indicates it intends to invoke ICSID jurisdiction for alleged violations of fair and equitable treatment, protection against expropriation, and full protection and security.
+              </p>
+              <div className="bg-slide-primary/5 border border-slide-primary/20 rounded-sm p-4 space-y-2">
+                <div className="flex items-baseline justify-between gap-3">
+                  <span className="text-[12px] font-bold tracking-[0.15em] uppercase text-slide-muted">Independent valuation</span>
+                  <span className="text-[16px] font-bold tabular-nums text-slide-foreground">$42–52M</span>
+                </div>
+                <p className="text-[12px] text-slide-muted leading-snug">Bluestone (investor-anticipated ICSID claim).</p>
+                <div className="flex items-baseline justify-between gap-3 pt-2 border-t border-slide-primary/15">
+                  <span className="text-[12px] font-bold tracking-[0.15em] uppercase text-slide-primary">Counsel demand band</span>
+                  <span className="text-[16px] font-bold tabular-nums text-slide-primary">$45–55M</span>
+                </div>
+                <p className="text-[12px] text-slide-muted leading-snug">Robert Amsterdam, RTVi US interview, 31 March 2026.</p>
+              </div>
+              <p className="text-[12px] text-slide-muted/80 italic mt-3 leading-snug">
+                CAJI has not independently verified the methodology or assumptions of the valuation.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.35s both" }}>
-              <div className="text-[64px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">02</div>
-              <h3 className="text-[24px] font-bold mb-3">Criminal Defense</h3>
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-4 tabular-nums">02</div>
+              <h3 className="text-[26px] font-bold mb-4 leading-tight">Criminal Defense</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 Hasanov’s independent defense counsel in Tashkent is fully funded and operational. Defense position: charges lack legal merit and repackage a commercial dispute as criminal prosecution.
               </p>
             </div>
             <div style={{ animation: "slide-up 0.5s ease-out 0.5s both" }}>
-              <div className="text-[64px] font-semibold text-slide-primary/15 leading-none mb-3 tabular-nums">03</div>
-              <h3 className="text-[24px] font-bold mb-3">International Advocacy</h3>
+              <div className="text-[72px] font-semibold text-slide-primary/15 leading-none mb-4 tabular-nums">03</div>
+              <h3 className="text-[26px] font-bold mb-4 leading-tight">International Advocacy</h3>
               <p className="text-[20px] text-slide-muted leading-relaxed">
                 Coordinated engagement with IFIs, rating agencies, correspondent banks, eurobond stakeholders, and international media to present the investor side’s account and supporting materials.
               </p>
             </div>
           </div>
-          <p className="mt-auto pt-12 text-[13px] text-slide-muted/70 tracking-[0.05em] leading-relaxed border-t border-slide-foreground/8">
+          <p className="pt-8 text-[13px] text-slide-muted/70 tracking-[0.05em] leading-relaxed border-t border-slide-foreground/8">
             Sources: Russia–Uzbekistan bilateral investment treaty, Bluestone valuation report (provided by investor side), defense counsel filings (Tashkent) — CAJI has not independently verified the methodology or assumptions of the valuation.
           </p>
         </div>
