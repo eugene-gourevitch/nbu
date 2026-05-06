@@ -32,7 +32,9 @@ const LazySlideThumb = ({ slide, index, totalSlides, onClick, isActive }: {
     <button
       ref={ref}
       onClick={onClick}
-      className={`group relative aspect-video rounded-sm overflow-hidden border-2 transition-all hover:scale-[1.02] ${
+      aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+      aria-current={isActive ? "true" : undefined}
+      className={`group relative aspect-video rounded-sm overflow-hidden border-2 transition-[transform,border-color,box-shadow] duration-200 ease-out hover:scale-[1.01] ${
         isActive ? "border-primary ring-2 ring-primary/30" : "border-border hover:border-primary/50"
       }`}
     >
@@ -160,7 +162,7 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
       <div className="min-h-screen bg-secondary p-8">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold">All Slides</h2>
-          <button onClick={() => setShowGrid(false)} className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-sm text-sm font-medium">
+          <button onClick={() => setShowGrid(false)} aria-label="Close grid view" className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-sm text-sm font-medium">
             <Minimize2 size={16} /> Close Grid
           </button>
         </div>
@@ -194,10 +196,10 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
     }>
       {/* Sidebar thumbnails -- desktop only */}
       {!isFullscreen && viewMode === "desktop" && (
-        <div className="w-[260px] bg-background border-r border-border overflow-y-auto p-4 space-y-3 shrink-0">
+        <div className="w-[280px] lg:w-[300px] bg-background border-r border-border overflow-y-auto p-4 space-y-3 shrink-0">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Slides</span>
-            <button onClick={() => setShowGrid(true)} className="text-muted-foreground hover:text-foreground transition-colors">
+            <button onClick={() => setShowGrid(true)} aria-label="Open grid view" className="text-muted-foreground hover:text-foreground transition-colors">
               <Grid3X3 size={16} />
             </button>
           </div>
@@ -205,13 +207,15 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
             <div key={slide.id}>
               <button
                 onClick={() => setCurrentSlide(i)}
-                className={`w-full aspect-video rounded-sm overflow-hidden border-2 transition-all ${
+                aria-label={`Go to slide ${i + 1}: ${slide.title}`}
+                aria-current={i === currentSlide ? "true" : undefined}
+                className={`w-full aspect-video rounded-sm overflow-hidden border-2 transition-[border-color,box-shadow] duration-200 ${
                   i === currentSlide ? "border-primary ring-2 ring-primary/20" : "border-border hover:border-primary/40"
                 }`}
               >
                 <ScaledSlide>{slide.component({ slideNumber: i + 1, totalSlides: slides.length })}</ScaledSlide>
               </button>
-              <p className="text-[11px] text-muted-foreground mt-1 truncate">{slide.title}</p>
+              <p className="text-[12px] font-medium tracking-tight text-muted-foreground mt-1 truncate">{slide.title}</p>
             </div>
           ))}
         </div>
@@ -221,15 +225,15 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
       <div className="flex-1 flex flex-col">
         {/* Toolbar */}
         {!isFullscreen && (
-          <div className={`flex items-center justify-between bg-background border-b border-border ${
-            viewMode === "phone" ? "px-3 py-2" : "px-6 py-3"
+          <div className={`flex items-center justify-between bg-background/85 backdrop-blur-md border-b border-border supports-[backdrop-filter]:bg-background/70 ${
+            viewMode === "phone" ? "px-3 py-2" : "px-6 py-2.5"
           }`}>
             {/* Left: title + counter */}
             <div className="flex items-center gap-3">
               {viewMode === "desktop" && (
-                <span className="text-sm font-semibold">{title}</span>
+                <span className="text-[13px] font-semibold tracking-tight">{title}</span>
               )}
-              <span className="text-xs text-muted-foreground tabular-nums">
+              <span className="text-xs font-medium text-foreground/60 tabular-nums" aria-live="polite" aria-atomic="true">
                 {currentSlide + 1} / {slides.length}
               </span>
             </div>
@@ -246,12 +250,13 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
                   <button
                     key={mode}
                     onClick={() => switchView(mode)}
-                    className={`p-1.5 rounded-md transition-all ${
+                    className={`p-1.5 rounded-md transition-[background-color,color,box-shadow] duration-150 ${
                       viewMode === mode
                         ? "bg-background shadow-sm text-foreground"
                         : "text-muted-foreground hover:text-foreground"
                     }`}
                     title={label}
+                    aria-label={label}
                   >
                     <Icon size={viewMode === "phone" ? 14 : 16} />
                   </button>
@@ -262,6 +267,7 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
               <button
                 onClick={goPrev}
                 disabled={currentSlide === 0}
+                aria-label="Previous slide"
                 className="p-2 rounded-md hover:bg-secondary transition-colors disabled:opacity-30"
               >
                 <ChevronLeft size={viewMode === "phone" ? 16 : 18} />
@@ -269,6 +275,7 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
               <button
                 onClick={goNext}
                 disabled={currentSlide === slides.length - 1}
+                aria-label="Next slide"
                 className="p-2 rounded-md hover:bg-secondary transition-colors disabled:opacity-30"
               >
                 <ChevronRight size={viewMode === "phone" ? 16 : 18} />
@@ -280,19 +287,23 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
                   <div className="w-px h-5 bg-border mx-1" />
                   <button
                     onClick={() => setShowGrid(true)}
+                    aria-label="Open grid view"
+                    title="Open grid view (G)"
                     className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
                   >
                     Grid
                   </button>
                   <button
                     onClick={openPrintView}
+                    aria-label="Open print/PDF view"
                     className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
                   >
                     <FileDown size={14} /> PDF
                   </button>
                   <button
                     onClick={toggleFullscreen}
-                    className="flex items-center gap-1.5 px-4 py-1.5 bg-primary text-primary-foreground rounded-sm text-xs font-semibold hover:opacity-90 transition-opacity"
+                    aria-label="Enter presentation mode"
+                    className="flex items-center gap-2 px-5 py-1.5 bg-primary text-primary-foreground rounded-[6px] text-xs font-semibold hover:opacity-90 transition-opacity"
                   >
                     <Maximize2 size={14} /> Present
                   </button>
@@ -303,7 +314,8 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
               {viewMode === "tablet" && (
                 <button
                   onClick={toggleFullscreen}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground rounded-sm text-xs font-semibold hover:opacity-90 transition-opacity ml-1"
+                  aria-label="Enter presentation mode"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground rounded-[6px] text-xs font-semibold hover:opacity-90 transition-opacity ml-1"
                 >
                   <Maximize2 size={14} /> Present
                 </button>
@@ -325,6 +337,10 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
           onTouchEnd={onTouchEnd}
         >
           <div
+            role="region"
+            aria-roledescription="slide"
+            aria-label={`Slide ${currentSlide + 1} of ${slides.length}: ${slides[currentSlide].title}`}
+            tabIndex={0}
             className={`overflow-hidden ${
               viewMode === "phone"
                 ? "w-full h-full"
@@ -360,7 +376,8 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
                   <button
                     key={i}
                     onClick={() => setCurrentSlide(i)}
-                    className={`rounded-sm transition-all ${
+                    aria-label={`Go to slide ${i + 1}`}
+                    className={`rounded-sm transition-[width,height,background-color] duration-200 ${
                       i === currentSlide
                         ? "w-6 h-2 bg-primary"
                         : "w-2 h-2 bg-foreground/20 hover:bg-foreground/40"
@@ -374,23 +391,25 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
           {/* Fullscreen nav + counter pill */}
           {isFullscreen && (
             <>
-              <div className={`absolute top-4 right-4 bg-slide-bg/10 text-primary-foreground/60 text-[12px] px-3 py-1 rounded-sm backdrop-blur-sm transition-opacity duration-300 ${cursorVisible ? "opacity-100" : "opacity-0"}`}>
-                {currentSlide + 1} / {slides.length}
+              <div aria-live="polite" className={`absolute top-4 right-4 bg-slide-bg/10 text-primary-foreground/60 text-[13px] tracking-[0.15em] uppercase px-3 py-1 rounded-sm backdrop-blur-sm transition-opacity duration-300 ${cursorVisible ? "opacity-100" : "opacity-0"}`}>
+                {String(currentSlide + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
               </div>
               <div className={`absolute inset-x-0 bottom-0 flex items-center justify-center gap-4 h-[48px] bg-slide-foreground/40 backdrop-blur-sm transition-opacity duration-300 ${cursorVisible ? "opacity-100" : "opacity-0"}`}>
                 <button
                   onClick={goPrev}
                   disabled={currentSlide === 0}
+                  aria-label="Previous slide"
                   className="p-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors disabled:opacity-30"
                 >
                   <ChevronLeft size={20} />
                 </button>
-                <span className="text-sm font-medium text-primary-foreground/70">
+                <span aria-live="polite" className="text-[13px] font-semibold tracking-[0.1em] uppercase text-primary-foreground/70">
                   {currentSlide + 1} / {slides.length}
                 </span>
                 <button
                   onClick={goNext}
                   disabled={currentSlide === slides.length - 1}
+                  aria-label="Next slide"
                   className="p-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors disabled:opacity-30"
                 >
                   <ChevronRight size={20} />

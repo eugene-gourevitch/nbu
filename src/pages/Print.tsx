@@ -29,13 +29,27 @@ const Print = () => {
             font-family: 'Inter', sans-serif;
             font-size: 14px;
             color: hsl(var(--primary-foreground));
-            background: hsl(var(--foreground));
+            background: hsl(var(--slide-foreground));
             position: sticky;
             top: 0;
             z-index: 100;
           }
         }
         @media print {
+          *, *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+          }
+          /* Reset opacity/transform for animation classes that use opacity:0 as base state */
+          .anim-fade-up,
+          .anim-fade-in,
+          .anim-scale-in,
+          .anim-slide-left,
+          .anim-slide-right {
+            opacity: 1 !important;
+            transform: none !important;
+          }
           .print-hint { display: none !important; }
           @page {
             size: 1920px 1080px;
@@ -54,7 +68,7 @@ const Print = () => {
         }
       `}</style>
       <div className="print-hint">
-        Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong>) to save as PDF. Set margins to "None" and enable "Background graphics" for best results.
+        Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong>) to save as PDF. Set margins to “None” and enable “Background graphics” for best results.
       </div>
       {slides.map((slide, i) => (
         <div

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -51,6 +51,16 @@
     --sidebar-accent-foreground: 0 0% 4%;
     --sidebar-border: 40 10% 81%;
     --sidebar-ring: 352 76% 37%;
+
+    /* Rationalized type scale (1920×1080 canvas) */
+    --type-display: 88px;
+    --type-h1: 56px;
+    --type-h2: 40px;
+    --type-h3: 24px;
+    --type-body: 20px;
+    --type-meta: 16px;
+    --type-caption: 13px;
+    --type-micro: 11px;
   }
 
   .dark {
@@ -97,6 +107,7 @@
   h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
+    letter-spacing: -0.005em;
   }
 }
 
@@ -114,8 +125,7 @@
   height: 1080px;
   left: 50%;
   top: 50%;
-  margin-left: -960px;
-  margin-top: -540px;
+  transform: translate(-50%, -50%);
   transform-origin: center center;
 }
 
@@ -127,21 +137,10 @@
 /* Blue pattern background for CTA slides */
 .caji-pattern {
   background-color: hsl(var(--slide-primary));
-  background-image: 
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 20px,
-      hsl(var(--slide-foreground) / 0.18) 20px,
-      hsl(var(--slide-foreground) / 0.18) 22px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 20px,
-      hsl(var(--slide-bg) / 0.18) 20px,
-      hsl(var(--slide-bg) / 0.18) 22px
-    );
+  background-image:
+    linear-gradient(135deg, hsl(var(--slide-primary)) 0%, hsl(var(--slide-primary)) 55%, hsl(var(--slide-primary) / 0.86) 100%),
+    radial-gradient(ellipse at top right, hsl(var(--slide-bg) / 0.06), transparent 60%);
+  background-blend-mode: normal, overlay;
 }
 
 /* Presentation fullscreen */
@@ -200,25 +199,20 @@
   to { width: 100%; }
 }
 
-@keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.4); }
-  50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.7); }
-}
-
 @keyframes slow-zoom {
   from { transform: scale(1); }
   to { transform: scale(1.06); }
 }
 
 /* Stagger delay utilities */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.35s; }
-.stagger-4 { animation-delay: 0.5s; }
-.stagger-5 { animation-delay: 0.65s; }
-.stagger-6 { animation-delay: 0.8s; }
-.stagger-7 { animation-delay: 0.95s; }
-.stagger-8 { animation-delay: 1.1s; }
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.12s; }
+.stagger-3 { animation-delay: 0.20s; }
+.stagger-4 { animation-delay: 0.30s; }
+.stagger-5 { animation-delay: 0.42s; }
+.stagger-6 { animation-delay: 0.55s; }
+.stagger-7 { animation-delay: 0.65s; }
+.stagger-8 { animation-delay: 0.75s; }
 
 /* Base animation application */
 .anim-fade-up {
@@ -244,6 +238,14 @@
 .anim-slide-right {
   opacity: 0;
   animation: slide-in-right 0.5s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Prevent overscroll bounce on mobile presentation */

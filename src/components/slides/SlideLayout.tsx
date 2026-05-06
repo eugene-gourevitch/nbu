@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import CAJILogo from "./CAJILogo";
 
 interface SlideLayoutProps {
   children: ReactNode;
@@ -58,18 +59,24 @@ const SlideLayout = ({
         {children}
       </div>
       {/* Footer with slide number and confidentiality */}
-      {(slideNumber || showConfidentiality) && (
-        <div className={`absolute bottom-0 left-0 right-0 z-20 flex items-center justify-between px-[80px] py-[30px] ${footerTextColor[variant]}`}>
-          <span className="text-[11px] tracking-[0.2em] uppercase">
-            {showConfidentiality && "CONFIDENTIAL"}
-          </span>
-          {slideNumber && totalSlides && (
-            <span className="text-[14px] font-semibold tabular-nums">
-              {String(slideNumber).padStart(2, "0")} / {String(totalSlides).padStart(2, "0")}
-            </span>
+      <div className={`absolute bottom-0 left-0 right-0 z-20 flex items-center justify-between px-[80px] pt-[24px] pb-[28px] border-t border-slide-foreground/8 ${footerTextColor[variant]}`}>
+        <div className="flex items-center gap-4 text-[13px] tracking-[0.18em] uppercase">
+          <CAJILogo size={22} variant={variant === "white" ? "dark" : "light"} showText={false} />
+          <span className="w-px h-3 bg-current opacity-30" />
+          {showConfidentiality && (
+            <>
+              <span>CONFIDENTIAL</span>
+              <span className="w-px h-3 bg-current opacity-30" />
+            </>
           )}
+          <span>v1.0 · MAY 2026</span>
         </div>
-      )}
+        {slideNumber && totalSlides && (
+          <span className="text-[14px] font-semibold tabular-nums">
+            {String(slideNumber).padStart(2, "0")} / {String(totalSlides).padStart(2, "0")}
+          </span>
+        )}
+      </div>
     </div>
   );
 };
