@@ -28,7 +28,7 @@ const ScaledSlide = ({ children, className = "" }: ScaledSlideProps) => {
     <div ref={containerRef} className={`slide-container ${className}`}>
       <div
         className="slide-wrapper slide-content"
-        style={{ transform: `scale(${scale})` }}
+        style={{ transform: `translate(-50%, -50%) scale(${scale})` }}
       >
         {children}
       </div>
