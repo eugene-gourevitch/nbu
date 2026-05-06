@@ -25,5 +25,4 @@ dist-ssr
 .vercel
 
 # Deck build artifacts
-audit-deck*.pdf
-audit-pass*.pdf
+audit-*.pdf

@@ -68,7 +68,7 @@ const Print = () => {
         }
       `}</style>
       <div className="print-hint">
-        Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong>) to save as PDF. Set margins to “None” and enable “Background graphics” for best results.
+        Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong>) to save as PDF. For best results: set paper size to <strong>Custom 1920×1080 px</strong> (or any 16:9 size), margins “None”, “Background graphics” on, “Headers and footers” off. Letter or A4 will distort the deck.
       </div>
       {slides.map((slide, i) => (
         <div

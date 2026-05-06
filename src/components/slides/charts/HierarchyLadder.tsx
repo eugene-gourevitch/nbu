@@ -18,7 +18,9 @@ const HierarchyLadder = ({ rows, caption }: HierarchyLadderProps) => {
         {rows.map((row, i) => (
           <div
             key={row.label}
-            className={`flex items-center gap-4 rounded-sm px-6 py-4 ${
+            className={`flex items-center gap-4 rounded-sm px-6 ${
+              row.charged ? "py-6" : "py-4"
+            } ${
               row.charged
                 ? "bg-slide-primary text-primary-foreground"
                 : "bg-slide-surface text-slide-foreground"
@@ -26,8 +28,8 @@ const HierarchyLadder = ({ rows, caption }: HierarchyLadderProps) => {
             style={{ animation: `slide-up 0.4s ease-out ${0.2 + i * 0.08}s both` }}
           >
             <span
-              className={`text-[18px] leading-none ${
-                row.charged ? "text-primary-foreground" : "text-slide-muted"
+              className={`leading-none ${
+                row.charged ? "text-primary-foreground text-[22px]" : "text-slide-muted text-[18px]"
               }`}
               aria-hidden="true"
             >
@@ -35,22 +37,26 @@ const HierarchyLadder = ({ rows, caption }: HierarchyLadderProps) => {
             </span>
             <div className="flex-1 min-w-0">
               <p
-                className={`text-[18px] font-bold leading-tight ${
-                  row.charged ? "text-primary-foreground" : "text-slide-foreground"
+                className={`font-semibold leading-tight ${
+                  row.charged
+                    ? "text-primary-foreground text-[22px]"
+                    : "text-slide-foreground text-[18px]"
                 }`}
               >
                 {row.label}
               </p>
               <p
-                className={`text-[14px] leading-snug ${
-                  row.charged ? "text-primary-foreground/80" : "text-slide-muted"
+                className={`leading-snug ${
+                  row.charged
+                    ? "text-primary-foreground/80 text-[16px]"
+                    : "text-slide-muted text-[13px]"
                 }`}
               >
                 {row.descriptor}
               </p>
             </div>
             {row.charged && (
-              <span className="text-[11px] font-bold tracking-[0.18em] uppercase bg-primary-foreground/20 px-3 py-1 rounded-sm shrink-0">
+              <span className="text-[13px] font-bold tracking-[0.18em] uppercase bg-primary-foreground/20 px-4 py-1.5 rounded-sm shrink-0">
                 Charged
               </span>
             )}
@@ -58,7 +64,9 @@ const HierarchyLadder = ({ rows, caption }: HierarchyLadderProps) => {
         ))}
       </div>
       {caption && (
-        <p className="text-[13px] text-slide-muted/80 mt-4 italic leading-snug">{caption}</p>
+        <p className="text-[18px] font-semibold not-italic text-slide-foreground text-center mt-6 leading-snug">
+          {caption}
+        </p>
       )}
     </div>
   );

@@ -40,7 +40,7 @@ const CapTableBar = ({ segments, caption }: CapTableBarProps) => {
                 seg.highlight ? "bg-slide-primary" : "bg-slide-foreground/15"
               }`}
             />
-            <span className={seg.highlight ? "font-bold text-slide-primary" : "text-slide-muted"}>
+            <span className={seg.highlight ? "font-semibold text-slide-primary" : "text-slide-muted"}>
               {seg.label}
             </span>
             <span className="font-semibold tabular-nums text-slide-foreground">{seg.pct}%</span>

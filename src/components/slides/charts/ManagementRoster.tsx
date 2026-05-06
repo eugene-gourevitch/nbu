@@ -42,15 +42,15 @@ const ManagementRoster = ({ members }: ManagementRosterProps) => {
                   : "border-slide-foreground/30 text-slide-foreground"
               }`}
             >
-              <span className="text-[12px] font-bold tabular-nums">{initialsOf(m.name)}</span>
+              <span className="text-[13px] font-semibold tabular-nums">{initialsOf(m.name)}</span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[16px] font-bold leading-tight">{m.name}</p>
+              <p className="text-[16px] font-semibold leading-tight">{m.name}</p>
               <p className="text-[13px] text-slide-primary leading-tight">{m.role}</p>
             </div>
             {m.since && (
               <div className="flex flex-col items-end shrink-0 w-[110px]">
-                <span className="text-[10px] tracking-[0.15em] uppercase text-slide-muted">
+                <span className="text-[11px] tracking-[0.15em] uppercase text-slide-muted">
                   since {m.since}
                 </span>
                 <div className="w-full h-1 bg-slide-foreground/10 rounded-sm mt-1 overflow-hidden">

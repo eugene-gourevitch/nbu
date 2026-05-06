@@ -12,7 +12,7 @@ const FdiBars = ({ items }: FdiBarsProps) => {
         const pct = (item.value / max) * 100;
         return (
           <div key={item.label} className="flex items-center gap-3">
-            <span className="w-[110px] shrink-0 text-[14px] font-semibold text-slide-foreground">
+            <span className="w-[110px] shrink-0 text-[13px] font-semibold text-slide-foreground">
               {item.label}
             </span>
             <div className="flex-1 h-6 bg-slide-foreground/5 rounded-sm overflow-hidden">
@@ -21,7 +21,7 @@ const FdiBars = ({ items }: FdiBarsProps) => {
                 style={{ width: `${pct}%` }}
               />
             </div>
-            <span className="text-[14px] font-bold tabular-nums text-slide-foreground w-[70px] text-right">
+            <span className="text-[13px] font-semibold tabular-nums text-slide-foreground w-[70px] text-right">
               ${item.value}B{item.suffix ?? ""}
             </span>
           </div>
