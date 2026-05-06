@@ -94,8 +94,13 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
     }
   }, []);
 
-  const openPrintView = useCallback(() => {
-    window.open("/print", "_blank");
+  const downloadPdf = useCallback(() => {
+    const a = document.createElement("a");
+    a.href = "/CAJI-NBU-Investor-Alert.pdf";
+    a.download = "CAJI-NBU-Investor-Alert.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }, []);
 
   useEffect(() => {
@@ -294,8 +299,9 @@ const PresentationViewer = ({ slides = defaultSlides, title = "CAJI Presentation
                     Grid
                   </button>
                   <button
-                    onClick={openPrintView}
-                    aria-label="Open print/PDF view"
+                    onClick={downloadPdf}
+                    aria-label="Download deck as PDF"
+                    title="Download 1920×1080 PDF"
                     className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
                   >
                     <FileDown size={14} /> PDF

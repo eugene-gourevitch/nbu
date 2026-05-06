@@ -1622,7 +1622,7 @@ export const slides: SlideData[] = [
 
             {/* CTA Button */}
             <a
-              href="https://www.caji.org"
+              href="https://calendly.com/caji-info/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-4 bg-slide-primary hover:bg-slide-primary/90 text-primary-foreground rounded-sm px-10 py-5 mb-10 transition-colors group" style={{ animation: "fade-scale 0.5s ease-out 0.6s both" }}
